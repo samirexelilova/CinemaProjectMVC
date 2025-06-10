@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StreamitMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37efe258835f35bd024203dc0f33a2d55c5e8271")]
 [assembly: System.Reflection.AssemblyProductAttribute("StreamitMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StreamitMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

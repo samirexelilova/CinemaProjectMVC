@@ -13,7 +13,7 @@ namespace StreamitMVC.Controllers
             return View();
         }
 
-        public IActionResult Playlist()
+        public IActionResult WatchList()
         {
             return View();
         }
@@ -23,7 +23,7 @@ namespace StreamitMVC.Controllers
             return View();
         }
 
-        public IActionResult Cast()
+        public IActionResult Actors()
         {
             return View();
         }

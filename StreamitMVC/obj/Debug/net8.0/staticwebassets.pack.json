@@ -1,0 +1,3381 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\core\\libs.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\core\\libs.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\custom.css",
+      "PackagePath": "staticwebassets\\admin\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\custom.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\custom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\customizer.css",
+      "PackagePath": "staticwebassets\\admin\\css\\customizer.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\customizer.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\customizer.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\dashboard-custom.css",
+      "PackagePath": "staticwebassets\\admin\\css\\dashboard-custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\dashboard-custom.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\dashboard-custom.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\bootstrap\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\bootstrap\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\bootstrap\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\bootstrap\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\bootstrap\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\bootstrap\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\custom.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\custom.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\customizer.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\customizer.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\dashboard-custom.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\dashboard-custom.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\pro.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\pro.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\rtl.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\maps\\streamit.min.css.map",
+      "PackagePath": "staticwebassets\\admin\\css\\maps\\streamit.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\pro.css",
+      "PackagePath": "staticwebassets\\admin\\css\\pro.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\pro.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\pro.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\rtl.css",
+      "PackagePath": "staticwebassets\\admin\\css\\rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\rtl.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\streamit.css",
+      "PackagePath": "staticwebassets\\admin\\css\\streamit.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\css\\streamit.min.css",
+      "PackagePath": "staticwebassets\\admin\\css\\streamit.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag-01.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag-02.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag-03.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag-04.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag-05.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag-05.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag-06.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag-06.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\Flag\\flag001.png",
+      "PackagePath": "staticwebassets\\admin\\images\\Flag\\flag001.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\01.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\02.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\03.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\04.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\05.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\06.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\07.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\07.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\08.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\09.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\10.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\11.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\12.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\13.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\14.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\15.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\16.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\17.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\18.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\18.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\19.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\19.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\20.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\20.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\avtar_1.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\avtar_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\avtar_2.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\avtar_2.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\avtar_3.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\avtar_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\avtar_4.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\avtar_4.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\avatars\\avtar_5.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatars\\avtar_5.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\08.png",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\09.png",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\10.png",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\11.png",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\12.png",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\13.png",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\expand-window.json",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\expand-window.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\fb.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\fb.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\gm.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\gm.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\im.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\im.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\li.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\li.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\brands\\open-letter.json",
+      "PackagePath": "staticwebassets\\admin\\images\\brands\\open-letter.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dark-loader.gif",
+      "PackagePath": "staticwebassets\\admin\\images\\dark-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dashboard\\01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\dashboard\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dashboard\\02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\dashboard\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dashboard\\03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\dashboard\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dashboard\\04.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\dashboard\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dashboard\\05.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\dashboard\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\dashboard\\06.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\dashboard\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\error\\02.png",
+      "PackagePath": "staticwebassets\\admin\\images\\error\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\error\\404.png",
+      "PackagePath": "staticwebassets\\admin\\images\\error\\404.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\error\\500.png",
+      "PackagePath": "staticwebassets\\admin\\images\\error\\500.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\error\\maintenance.png",
+      "PackagePath": "staticwebassets\\admin\\images\\error\\maintenance.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\admin\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\01.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\04.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\08.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\09.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\10.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\11.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\12.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\13.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\14.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\15.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\16.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\17.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\18.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\18.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\19.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\19.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\20.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\20.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\21.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\21.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\22.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\22.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\expand-window.json",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\expand-window.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\open-letter.json",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\open-letter.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\icon\\pdf.png",
+      "PackagePath": "staticwebassets\\admin\\images\\icon\\pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\loader-unscreen.gif",
+      "PackagePath": "staticwebassets\\admin\\images\\loader-unscreen.gif"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\loader.gif",
+      "PackagePath": "staticwebassets\\admin\\images\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\login\\login.png",
+      "PackagePath": "staticwebassets\\admin\\images\\login\\login.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\login\\mail.png",
+      "PackagePath": "staticwebassets\\admin\\images\\login\\mail.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\logo-full-white.png",
+      "PackagePath": "staticwebassets\\admin\\images\\logo-full-white.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\logo-full.png",
+      "PackagePath": "staticwebassets\\admin\\images\\logo-full.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\logo-white.png",
+      "PackagePath": "staticwebassets\\admin\\images\\logo-white.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\logo.png",
+      "PackagePath": "staticwebassets\\admin\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\04.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\05.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\06.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\07.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\08.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\09.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\movie-thumb\\10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\movie-thumb\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\07.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\08.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\09.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\100.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\11.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\12.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\13.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\14.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\15.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\16.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\17.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\18.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\19.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\20.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\21 (2).jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\21 (2).jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\22.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\23.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\24.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\25.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\26.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\27.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\28.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\42.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\42.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\42.png",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\42.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\43.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\43.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\44.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\44.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\45.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\45.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\46.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\46.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\47.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\47.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\48.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\48.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\49.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\49.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\a1.png",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\a1.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\a2.png",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\a2.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\a3.png",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\a3.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\a4.png",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\a4.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\img-success.png",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\img-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\man.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\man.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\p1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\p1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\p2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\p2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\page-load-loader.gif",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\page-load-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\profile-bg.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\profile-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\tag_blue.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\tag_blue.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\page-img\\tag_red.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\page-img\\tag_red.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\pages\\03-page.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pages\\03-page.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\pages\\img-success.png",
+      "PackagePath": "staticwebassets\\admin\\images\\pages\\img-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\11.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\12.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\13.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\14.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\15.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\16.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\17.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\18.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\19.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\20.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\8.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\products\\9.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\products\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\rating\\01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\rating\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\01.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\02.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\03.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\04.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\05.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\06.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\08.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\09.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\10.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\11.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\12.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\13.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\14.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\15.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\16.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\17.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\18.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\18.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\19.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\19.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\20.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\20.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\shapes\\21.png",
+      "PackagePath": "staticwebassets\\admin\\images\\shapes\\21.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\04.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\04_.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\04_.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\05.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\06.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\07.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\08.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\09.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\show-thumb\\10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\show-thumb\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\04.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\04.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\05.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\05.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\07.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\07.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\08.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\09.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\10.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\11.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\12.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\13.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\14.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\data.json",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\data.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\data1.json",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\data1.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\data2.json",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\data2.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\flag-01.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\flag-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\flag-02.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\flag-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\flag-03.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\flag-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\flag-04.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\flag-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\flag-05.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\flag-05.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\flag-06.png",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\flag-06.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\img-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\jpg.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\jpg.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\match-code.json",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\match-code.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\xml.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\xml.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\small\\zip.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\small\\zip.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\01.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\02.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\03.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\04.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\05.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\06.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\07.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\08.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\11.png",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\user-1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\user-2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\user-3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\user-4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\user-5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\user\\user-6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user\\user-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\bg-red-green.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\bg-red-green.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\bg-yellow-blue.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\bg-yellow-blue.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\icon-bank.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\icon-bank.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\icon-factory.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\icon-factory.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\icon-np-1.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\icon-np-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\icon-np-2.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\icon-np-2.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\images\\vectormap\\icon-np-3.png",
+      "PackagePath": "staticwebassets\\admin\\images\\vectormap\\icon-np-3.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\chart-custom.js",
+      "PackagePath": "staticwebassets\\admin\\js\\chart-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\charts\\dashboard.js",
+      "PackagePath": "staticwebassets\\admin\\js\\charts\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\charts\\vectore-chart.js",
+      "PackagePath": "staticwebassets\\admin\\js\\charts\\vectore-chart.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\charts\\widgetcharts.js",
+      "PackagePath": "staticwebassets\\admin\\js\\charts\\widgetcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\core\\external.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\core\\external.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\core\\libs.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\core\\libs.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\dual-tone-icon-search-filter.js",
+      "PackagePath": "staticwebassets\\admin\\js\\dual-tone-icon-search-filter.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\iqonic-script\\setting.js",
+      "PackagePath": "staticwebassets\\admin\\js\\iqonic-script\\setting.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\iqonic-script\\setting.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\iqonic-script\\setting.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\iqonic-script\\utility.js",
+      "PackagePath": "staticwebassets\\admin\\js\\iqonic-script\\utility.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\iqonic-script\\utility.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\iqonic-script\\utility.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\outline-icon-search-filter.js",
+      "PackagePath": "staticwebassets\\admin\\js\\outline-icon-search-filter.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\apexcharts.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\apexcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\calender.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\calender.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\choice.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\choice.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\circle-progress.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\circle-progress.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\countdown.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\countdown.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\custom-circle-progress.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\custom-circle-progress.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\flatpickr.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\flatpickr.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\form-wizard.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\form-wizard.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\fslightbox.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\fslightbox.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\image-croper.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\image-croper.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\kanban.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\kanban.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\quill.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\quill.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\rating.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\rating.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\select2.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\select2.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\slider-tabs.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\slider-tabs.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\sweet-alert.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\sweet-alert.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\swiper-slider.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\swiper-slider.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\tour.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\tour.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\plugins\\uppy.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins\\uppy.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\setting-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\setting-init.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\sidebar.js",
+      "PackagePath": "staticwebassets\\admin\\js\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\solid-icon-search-filter.js",
+      "PackagePath": "staticwebassets\\admin\\js\\solid-icon-search-filter.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\js\\streamit.js",
+      "PackagePath": "staticwebassets\\admin\\js\\streamit.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\apexcharts\\dist\\apexchart.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\apexcharts\\dist\\apexchart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\apexcharts\\dist\\apexcharts.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\apexcharts\\dist\\apexcharts.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\button-hover\\css\\hover-min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\button-hover\\css\\hover-min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\choiceJS\\script\\choices.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\choiceJS\\script\\choices.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\choiceJS\\style\\choices.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\choiceJS\\style\\choices.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\cropper\\dist\\cropper.common.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\cropper\\dist\\cropper.common.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\cropper\\dist\\cropper.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\cropper\\dist\\cropper.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\cropper\\dist\\cropper.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\cropper\\dist\\cropper.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\cropper\\dist\\cropper.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\cropper\\dist\\cropper.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\cropper\\dist\\cropper.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\cropper\\dist\\cropper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\cropper\\dist\\cropper.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\cropper\\dist\\cropper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\flatpickr\\dist\\flatpickr.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\flatpickr\\dist\\flatpickr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\flatpickr\\dist\\flatpickr.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\flatpickr\\dist\\flatpickr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\main.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\main.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\bootstrap\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\bootstrap\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales-all.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales-all.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales-all.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales-all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\af.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar-dz.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar-dz.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar-kw.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar-kw.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar-ly.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar-ly.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar-ma.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar-ma.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar-sa.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar-sa.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar-tn.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ar.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\bg.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\bs.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ca.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\cs.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\da.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\de.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\el.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\en-au.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\en-gb.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\en-nz.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\en-nz.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\es-us.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\es-us.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\es.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\et.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\eu.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\fa.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\fi.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\fr-ca.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\fr-ch.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\fr-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\fr.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\gl.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\he.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\hi.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\hr.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\hu.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\id.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\is.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\it.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ja.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ka.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\kk.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ko.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\lb.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\lb.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\lt.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\lv.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\mk.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ms.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\nb.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\nl.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\nn.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\nn.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\pl.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\pt-br.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\pt.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ro.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\ru.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\sk.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\sl.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\sq.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\sr-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\sr.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\sv.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\th.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\tr.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\uk.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\vi.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\zh-cn.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\locales\\zh-tw.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\locales\\zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\main.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\main.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\core\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\core\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\main.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\main.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\daygrid\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\daygrid\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\google-calendar\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\google-calendar\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\interaction\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\interaction\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\main.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\main.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\list\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\list\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\luxon\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\luxon\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment-timezone\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment-timezone\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\moment\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\moment\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\rrule\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\rrule\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\README.md",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\main.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\main.d.ts",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\main.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\main.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\main.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\fullcalendar\\timegrid\\package.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\timegrid\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\jquery-bar-rating\\dist\\jquery-barrating.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-bar-rating\\dist\\jquery-barrating.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\language\\english.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\language\\english.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\language\\french.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\language\\french.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\language\\german.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\language\\german.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\language\\hindi.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\language\\hindi.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\language\\japanese.json",
+      "PackagePath": "staticwebassets\\admin\\vendor\\language\\japanese.json"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\images\\layers-2x.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\images\\layers-2x.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\images\\layers.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\images\\layers.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\images\\marker-icon-2x.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\images\\marker-icon-2x.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\images\\marker-icon.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\images\\marker-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\images\\marker-shadow.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\images\\marker-shadow.png"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet-src.esm.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet-src.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet-src.esm.js.map",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet-src.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet-src.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet-src.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet-src.js.map",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet-src.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\leaflet\\leaflet.js.map",
+      "PackagePath": "staticwebassets\\admin\\vendor\\leaflet\\leaflet.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\lodash\\lodash.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lodash\\lodash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\masonry\\masonry.pkgd.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\masonry\\masonry.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\moment.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\noUiSilder\\script\\nouislider.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\noUiSilder\\script\\nouislider.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\noUiSilder\\script\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\noUiSilder\\script\\nouislider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\noUiSilder\\style\\nouislider.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\noUiSilder\\style\\nouislider.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\noUiSilder\\style\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\noUiSilder\\style\\nouislider.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.bubble.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.bubble.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.core.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.core.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.core.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.core.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.min.js.map",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\quill\\quill.snow.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\quill\\quill.snow.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\select2\\dist\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\select2\\dist\\css\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\select2\\dist\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\select2\\dist\\js\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\sheperd\\dist\\css\\sheperd.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sheperd\\dist\\css\\sheperd.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\sheperd\\dist\\js\\sheperd.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sheperd\\dist\\js\\sheperd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\sortable\\Sortable.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sortable\\Sortable.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\sortable\\Sortable.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sortable\\Sortable.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\swiperSlider\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\swiperSlider\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\swiperSlider\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\swiperSlider\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\uppy\\uppy.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\uppy\\uppy.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\admin\\vendor\\uppy\\uppy.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\uppy\\uppy.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\css\\core\\libs.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\core\\libs.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\css\\custom.min848f.css",
+      "PackagePath": "staticwebassets\\assets\\css\\custom.min848f.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\css\\rtl.min848f.css",
+      "PackagePath": "staticwebassets\\assets\\css\\rtl.min848f.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\css\\streamit.min848f.css",
+      "PackagePath": "staticwebassets\\assets\\css\\streamit.min848f.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\Fantacy.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\Fantacy.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog10.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog10.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog11.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog11.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog12.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog12.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog4.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog4.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog5.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog5.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog6.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog6.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog7.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog7.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog8.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog8.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\blog9.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog9.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\08.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\08.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\09.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\09.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\10.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\10.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\11.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\11.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\12.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\12.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\footer\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\footer\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\footer\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\footer\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\footer\\apple.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\apple.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\footer\\google-play.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\google-play.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\g1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\g1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\g2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\g2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\g3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\g3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\g4.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\g4.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\genre\\g5.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\genre\\g5.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\loader.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\logo-hotstar.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-hotstar.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\logo-hulu.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-hulu.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\logo-prime.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-prime.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\logo.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\mega-menu\\home.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\home.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\mega-menu\\movie.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\movie.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\mega-menu\\new-home.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\new-home.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\mega-menu\\shop-home.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\shop-home.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\mega-menu\\tv-show.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\tv-show.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\mega-menu\\video.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\video.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\banner1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\banner1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\banner2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\banner2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\banner3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\banner3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\imdb-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\imdb-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\latest\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\latest\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\movie-banner-1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\movie-banner-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\movie-banner-2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\movie-banner-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\movie-banner-3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\movie-banner-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\ott1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\ott1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\ott2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\ott2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\ott3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\ott3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\playlist\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\playlist\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\suggested\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\top-picks\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\top-picks\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\trending-label.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\trending-label.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\upcoming\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\upcoming\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\404-bg-patten.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\404-bg-patten.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\404-text.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\404-text.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\404-two.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\404-two.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\404.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\404.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\bg-rectangle.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\bg-rectangle.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\box-pattern.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\box-pattern.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\coming-soon.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\coming-soon.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\map.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\map.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\profile.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\profile.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\team1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\team1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\team2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\team2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\team3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\team3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\team4.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\team4.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\pages\\texure.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\pages\\texure.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\parallax\\parallex.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\parallax\\parallex.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\avatar.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\avatar.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\bg-img.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\bg-img.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\capton-america.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\capton-america.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\deadpool.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\deadpool.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\location.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\location.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\card\\multipal.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\card\\multipal.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\08.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\08.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\09.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\09.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\11.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\11.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\12.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\12.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\14.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\14.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\categories\\15.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\categories\\15.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\08.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\08.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\09.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\09.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\10.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\10.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\11.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\11.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\12.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\12.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\product\\30.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\product\\30.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\slider-01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\slider-01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\slider-02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\slider-02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\shop\\slider-03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\slider-03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tab-slider\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tab-slider\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tab-slider\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tab-slider\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tab-slider\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tab-slider\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\08.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\08.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-10\\09.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-10\\09.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\08.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\08.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\09.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\09.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\top-ten-number\\10.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\top-ten-number\\10.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\banner-1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\banner-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\banner-2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\banner-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\banner-3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\banner-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\episodes\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\episodes\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\episodes\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\episodes\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\episodes\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\episodes\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\episodes\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\episodes\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\episodes\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\episodes\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\episodes\\main-banner.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\episodes\\main-banner.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\01.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\01.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\02.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\02.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\03.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\03.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\04.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\04.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\05.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\05.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\06.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\06.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\07.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\08.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\08.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\09.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\09.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\10.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\10.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\11.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\11.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\12.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\12.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\13.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\13.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\14.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\14.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\15.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\15.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\16.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\16.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\17.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\17.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\18.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\18.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\19.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\19.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\20.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\20.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\21.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\21.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\22.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\22.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\23.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\23.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\24.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\24.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\25.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\25.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\26.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\26.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\27.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\27.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\28.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\28.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\29.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\29.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\30.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\30.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\31.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\31.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\32.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\32.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\33.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\33.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\34.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\34.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\35.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\35.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\tv-show\\season\\36.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\tv-show\\season\\36.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\user1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\banner-1.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\video\\banner-1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\banner-2.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\video\\banner-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\banner-3.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\video\\banner-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\sample-video.mp4",
+      "PackagePath": "staticwebassets\\assets\\images\\video\\sample-video.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\trailer.mp4",
+      "PackagePath": "staticwebassets\\assets\\images\\video\\trailer.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\core\\external.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\core\\external.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\core\\libs.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\core\\libs.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\plugins\\countdown.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\countdown.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\plugins\\fslightbox.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\fslightbox.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\plugins\\nouslider.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\nouslider.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\plugins\\select2.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\select2.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\plugins\\sweet-alert.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\sweet-alert.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\setting-init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\setting-init.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\setting.js",
+      "PackagePath": "staticwebassets\\assets\\js\\setting.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\streamit.js",
+      "PackagePath": "staticwebassets\\assets\\js\\streamit.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\swiper.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swiper.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\js\\utility.js",
+      "PackagePath": "staticwebassets\\assets\\js\\utility.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\assets\\vendor\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.eot"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.eot"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-Broken.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.eot"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-bulk.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-light.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-light.eot"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-light.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-light.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-light.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\Iconly-light.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\Iconly-light.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\iconly.eot",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\iconly.eot"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\iconly.svg",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\iconly.svg"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\iconly.ttf",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\iconly.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\iconly\\fonts\\iconly.woff",
+      "PackagePath": "staticwebassets\\assets\\vendor\\iconly\\fonts\\iconly.woff"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\lodash\\lodash.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\lodash\\lodash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\noUiSilder\\script\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\noUiSilder\\script\\nouislider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\noUiSilder\\style\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\noUiSilder\\style\\nouislider.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\sweetalert2\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\sweetalert2\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\sweetalert2\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\sweetalert2\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\swiperSlider\\swiper.min.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\swiperSlider\\swiper.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\swiperSlider\\swiper.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\swiperSlider\\swiper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\video\\video-js.css",
+      "PackagePath": "staticwebassets\\assets\\vendor\\video\\video-js.css"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\video\\video.min.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\video\\video.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\videojs-youtube-master\\youtube.js",
+      "PackagePath": "staticwebassets\\assets\\vendor\\videojs-youtube-master\\youtube.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.StreamitMVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.StreamitMVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.StreamitMVC.props",
+      "PackagePath": "build\\StreamitMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.StreamitMVC.props",
+      "PackagePath": "buildMultiTargeting\\StreamitMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.StreamitMVC.props",
+      "PackagePath": "buildTransitive\\StreamitMVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
