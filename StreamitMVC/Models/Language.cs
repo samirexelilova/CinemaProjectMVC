@@ -10,5 +10,6 @@ namespace StreamitMVC.Models
         public string FlagIcon { get; set; } // Bayraq ikonunun şəkili
         public List<Movie> Movies { get; set; }  // Bu dildə olan filmlər
         public List<Subtitle> Subtitles { get; set; }  // Bu dildə olan bütün altyazılar
+        public List<Session> Sessions { get; set; } 
     }
 }

@@ -14,8 +14,13 @@ namespace StreamitMVC.Models
         public Hall Hall { get; set; }
         public int CinemaId { get; set; }
         public Cinema Cinema { get; set; }
-        public decimal Price { get; set; }
+        public int HallPriceId { get; set; }  // Zal tipinin qiyməti ilə əlaqə
+        public HallPrice HallPrice { get; set; }
         public int LanguageId { get; set; }
         public Language Language { get; set; }
+        public int AvailableSeats { get; set; }
+        public List<Booking> Bookings { get; set; } 
+        public List<Ticket> Tickets { get; set; } 
+        public List<BasketItem> BasketItems { get; set; } 
     }
 }

@@ -4,6 +4,7 @@
     {
         Reserved,   
         Paid,       
-        Cancelled   
+        Cancelled,
+        Confirmed
     }
 }

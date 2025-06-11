@@ -9,9 +9,5 @@ namespace StreamitMVC.Controllers
             return View();
         }
 
-        public IActionResult MovieIndex()
-        {
-            return View();
-        }
     }
 }

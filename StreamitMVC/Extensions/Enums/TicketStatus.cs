@@ -6,7 +6,6 @@
         Reserved,    
         Sold,        
         Cancelled,
-        Purchased,
         Expired
     }
 }
