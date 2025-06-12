@@ -7452,6 +7452,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WJ46ZkZH4i7weUq56q487ZPNgISSzN9bvUjlTJ82two="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"40270"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022WJ46ZkZH4i7weUq56q487ZPNgISSzN9bvUjlTJ82two=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Jun 2025 09:40:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/popular/squidgame2photo.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame2photo.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"221577"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 11:36:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/popular/squidgame2photo.xbckpw9u50.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame2photo.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"xbckpw9u50"},{"Name":"integrity","Value":"sha256-kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE="},{"Name":"label","Value":"_content/StreamitMVC/assets/images/movies/popular/squidgame2photo.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"221577"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 11:36:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/popular/squidgame3photo.b85jwlvqvs.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame3photo.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"b85jwlvqvs"},{"Name":"integrity","Value":"sha256-O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM="},{"Name":"label","Value":"_content/StreamitMVC/assets/images/movies/popular/squidgame3photo.webp"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1522306"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 08:28:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/popular/squidgame3photo.webp">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame3photo.webp'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1522306"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 08:28:23 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/recommended/01.7dxce4cjra.webp">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\recommended\01.webp'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
@@ -7619,6 +7643,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-s9mr3j/kohAcAxYtg9Vda3XDzR5n/QC7rNHgpM2TdmA="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"21740"},{"Name":"Content-Type","Value":"image/webp"},{"Name":"ETag","Value":"\u0022s9mr3j/kohAcAxYtg9Vda3XDzR5n/QC7rNHgpM2TdmA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Jun 2025 09:40:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/squidgame3.e3667wjs1i.mp4">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\squidgame3.mp4'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e3667wjs1i"},{"Name":"integrity","Value":"sha256-poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo="},{"Name":"label","Value":"_content/StreamitMVC/assets/images/movies/squidgame3.mp4"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12468551"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 08:26:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/squidgame3.mp4">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\squidgame3.mp4'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"12468551"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 08:26:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/movies/suggested/01.t8ap5ligzl.webp">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\suggested\01.webp'))</AssetFile>
@@ -9419,6 +9455,18 @@
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-eycYcyErUoBb\u002Bx72qyntWUEydA2Fs4emOfmyZYNO64A="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1965783"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022eycYcyErUoBb\u002Bx72qyntWUEydA2Fs4emOfmyZYNO64A=\u0022"},{"Name":"Last-Modified","Value":"Tue, 10 Jun 2025 09:40:51 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/video/squidgame3.e3667wjs1i.mp4">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\squidgame3.mp4'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"e3667wjs1i"},{"Name":"integrity","Value":"sha256-poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo="},{"Name":"label","Value":"_content/StreamitMVC/assets/images/video/squidgame3.mp4"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12468551"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 08:26:02 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/video/squidgame3.mp4">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\squidgame3.mp4'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"12468551"},{"Name":"Content-Type","Value":"video/mp4"},{"Name":"ETag","Value":"\u0022poQt5woHlP\u002Bd5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Jun 2025 08:26:02 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/StreamitMVC/assets/images/video/trailer.asb6mvxjp1.mp4">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\trailer.mp4'))</AssetFile>

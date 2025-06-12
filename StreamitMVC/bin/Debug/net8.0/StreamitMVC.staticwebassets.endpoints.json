@@ -50925,6 +50925,170 @@
       ]
     },
     {
+      "Route": "assets/images/movies/popular/squidgame2photo.webp",
+      "AssetFile": "assets/images/movies/popular/squidgame2photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "221577"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 11:36:42 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/squidgame2photo.xbckpw9u50.webp",
+      "AssetFile": "assets/images/movies/popular/squidgame2photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "221577"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 11:36:42 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbckpw9u50"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/squidgame2photo.webp"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/squidgame3photo.b85jwlvqvs.webp",
+      "AssetFile": "assets/images/movies/popular/squidgame3photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1522306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:28:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b85jwlvqvs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/squidgame3photo.webp"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/squidgame3photo.webp",
+      "AssetFile": "assets/images/movies/popular/squidgame3photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1522306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:28:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/recommended/01.7dxce4cjra.webp",
       "AssetFile": "assets/images/movies/recommended/01.webp",
       "Selectors": [],
@@ -52069,6 +52233,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-s9mr3j/kohAcAxYtg9Vda3XDzR5n/QC7rNHgpM2TdmA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/squidgame3.e3667wjs1i.mp4",
+      "AssetFile": "assets/images/movies/squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/squidgame3.mp4"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/squidgame3.mp4",
+      "AssetFile": "assets/images/movies/squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
         }
       ]
     },
@@ -64369,6 +64615,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-eycYcyErUoBb+x72qyntWUEydA2Fs4emOfmyZYNO64A="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/video/squidgame3.e3667wjs1i.mp4",
+      "AssetFile": "assets/images/video/squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/video/squidgame3.mp4"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/video/squidgame3.mp4",
+      "AssetFile": "assets/images/video/squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
         }
       ]
     },

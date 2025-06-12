@@ -36,6 +36,7 @@ namespace StreamitMVC.DAL
         public DbSet<Subtitle> Subtitles { get; set; }
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Slide> Slides { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

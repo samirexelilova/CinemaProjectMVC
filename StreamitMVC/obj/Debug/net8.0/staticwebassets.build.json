@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8gdegV3iX/ytTwwZMxFkoKogf8J3q2MKJMpQGEcTFZM=",
+  "Hash": "MDy3eqfS6ssGxa4wdMwb2OcuY7azg5Ro98ZGdWr+hMs=",
   "Source": "StreamitMVC",
   "BasePath": "_content/StreamitMVC",
   "Mode": "Default",
@@ -13058,6 +13058,48 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\07.webp"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame2photo.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/squidgame2photo#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "xbckpw9u50",
+      "Integrity": "kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\squidgame2photo.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame3photo.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/squidgame3photo#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "b85jwlvqvs",
+      "Integrity": "O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\squidgame3photo.webp"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\01.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -13350,6 +13392,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\related\\07.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\squidgame3.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/squidgame3#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\squidgame3.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\01.webp",
@@ -16500,6 +16563,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\video\\sample-video.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\squidgame3.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/video/squidgame3#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\video\\squidgame3.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\trailer.mp4",
@@ -68560,6 +68644,170 @@
       ]
     },
     {
+      "Route": "assets/images/movies/popular/squidgame2photo.xbckpw9u50.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame2photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "221577"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 11:36:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xbckpw9u50"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/squidgame2photo.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/squidgame2photo.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame2photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "221577"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 11:36:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/squidgame3photo.b85jwlvqvs.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame3photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1522306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:28:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b85jwlvqvs"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/squidgame3photo.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/squidgame3photo.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame3photo.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1522306"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:28:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/recommended/01.7dxce4cjra.webp",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\01.webp",
       "Selectors": [],
@@ -69704,6 +69952,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-s9mr3j/kohAcAxYtg9Vda3XDzR5n/QC7rNHgpM2TdmA="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/squidgame3.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/squidgame3.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/squidgame3.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
         }
       ]
     },
@@ -82004,6 +82334,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-eycYcyErUoBb+x72qyntWUEydA2Fs4emOfmyZYNO64A="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/video/squidgame3.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/video/squidgame3.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/video/squidgame3.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\squidgame3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 12 Jun 2025 08:26:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
         }
       ]
     },

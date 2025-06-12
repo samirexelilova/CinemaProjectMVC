@@ -731,7 +731,7 @@ namespace StreamitMVC.Migrations
                     b.Property<TimeSpan>("Duration")
                         .HasColumnType("time");
 
-                    b.Property<decimal?>("ImdbRating")
+                    b.Property<decimal>("ImdbRating")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool>("IsDeleted")
@@ -1147,6 +1147,53 @@ namespace StreamitMVC.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("Sessions");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.Slide", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("time");
+
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ImdbRating")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TrailerVideo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Slides");
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.Subtitle", b =>

@@ -11178,6 +11178,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\07.webp'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame2photo.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/movies/popular/squidgame2photo.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xbckpw9u50</Fingerprint>
+      <Integrity>kzv0/quAMJuv/1FDmii0G6KXSyDK7MPLAeK3k1d1NkE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame2photo.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame3photo.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/movies/popular/squidgame3photo.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>b85jwlvqvs</Fingerprint>
+      <Integrity>O6Ulg94eGYIro1vkcb95ECILiR6PexkLv4VHTDqbYlM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\squidgame3photo.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\recommended\01.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>StreamitMVC</SourceId>
@@ -11429,6 +11465,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\related\07.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\squidgame3.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/movies/squidgame3.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e3667wjs1i</Fingerprint>
+      <Integrity>poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\squidgame3.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\suggested\01.webp'))">
       <SourceType>Package</SourceType>
@@ -14129,6 +14183,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\sample-video.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\squidgame3.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/video/squidgame3.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e3667wjs1i</Fingerprint>
+      <Integrity>poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\squidgame3.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\video\trailer.mp4'))">
       <SourceType>Package</SourceType>

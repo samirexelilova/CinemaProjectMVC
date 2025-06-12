@@ -619,6 +619,8 @@ wwwroot\assets\images\movies\popular\04.webp
 wwwroot\assets\images\movies\popular\05.webp
 wwwroot\assets\images\movies\popular\06.webp
 wwwroot\assets\images\movies\popular\07.webp
+wwwroot\assets\images\movies\popular\squidgame2photo.webp
+wwwroot\assets\images\movies\popular\squidgame3photo.webp
 wwwroot\assets\images\movies\recommended\01.webp
 wwwroot\assets\images\movies\recommended\02.webp
 wwwroot\assets\images\movies\recommended\03.webp
@@ -633,6 +635,7 @@ wwwroot\assets\images\movies\related\04.webp
 wwwroot\assets\images\movies\related\05.webp
 wwwroot\assets\images\movies\related\06.webp
 wwwroot\assets\images\movies\related\07.webp
+wwwroot\assets\images\movies\squidgame3.mp4
 wwwroot\assets\images\movies\suggested\01.webp
 wwwroot\assets\images\movies\suggested\02.webp
 wwwroot\assets\images\movies\suggested\03.webp
@@ -783,6 +786,7 @@ wwwroot\assets\images\video\banner-1.webp
 wwwroot\assets\images\video\banner-2.webp
 wwwroot\assets\images\video\banner-3.webp
 wwwroot\assets\images\video\sample-video.mp4
+wwwroot\assets\images\video\squidgame3.mp4
 wwwroot\assets\images\video\trailer.mp4
 wwwroot\assets\js\core\external.min.js
 wwwroot\assets\js\core\libs.min.js

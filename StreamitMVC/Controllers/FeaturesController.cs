@@ -8,11 +8,6 @@ namespace StreamitMVC.Controllers
         {
             return View();
         }
-        public IActionResult RelatedMerchandise()
-        {
-            return View();
-        }
-
         public IActionResult WatchList()
         {
             return View();
@@ -24,6 +19,10 @@ namespace StreamitMVC.Controllers
         }
 
         public IActionResult Actors()
+        {
+            return View();
+        }
+        public IActionResult Tags()
         {
             return View();
         }

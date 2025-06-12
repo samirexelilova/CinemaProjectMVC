@@ -1,0 +1,68 @@
+﻿@using StreamitMVC.ViewModels.Category
+
+@model List<GetCategoryVM>
+@{
+    int count = 0;
+}
+<div class="content-inner container-fluid pb-0" id="page_layout">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <div class="header-title">
+                        <h4 class="card-title">Bootstrap Datatable</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="mb-3">
+                        Images in Bootstrap are made responsive with <code>.img-fluid</code>.
+                        <code>max-width: 100%;</code> and
+                        <code>height: auto;</code> are applied to the image so that it scales with the parent element.
+                    </p>
+                    <div class="table-responsive border rounded py-4">
+                        <table id="datatable" class="table " data-toggle="data-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Name</th>
+                                    <th>Əlaqəli Filmlər</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (GetCategoryVM item in Model)
+                                {
+                                    count++;
+
+                                    <tr>
+                                    
+                                        <td>
+                                            @count
+                                        </td>
+                                        <td>@item.Name</td>
+                                        <td>
+                                            @foreach (var mc in item.Movies)
+                                            {
+                                                <span class="badge bg-secondary">@mc.Name</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a asp-controller="Category" asp-action="Update" asp-route-id="@item.Id">Edit</a> |
+                                            <a asp-controller="Category" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                      
+                                    </tr>
+                                }
+                          
+                            </tbody>
+                          
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

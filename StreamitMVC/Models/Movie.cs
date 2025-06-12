@@ -11,7 +11,7 @@ namespace StreamitMVC.Models
         public TimeSpan Duration { get; set; }
         public string Director { get; set; }
         public string Country { get; set; }
-        public decimal? ImdbRating { get; set; }
+        public decimal ImdbRating { get; set; }
         public string Description { get; set; }
         public int AgeRestriction { get; set; }
         public DateTime ReleaseDate { get; set; } //filmin ne zaman cixdigi tarix

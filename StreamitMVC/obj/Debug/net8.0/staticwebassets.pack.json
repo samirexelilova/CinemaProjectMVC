@@ -2485,6 +2485,14 @@
       "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\07.webp"
     },
     {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame2photo.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\squidgame2photo.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame3photo.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\squidgame3photo.webp"
+    },
+    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\01.webp",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\01.webp"
     },
@@ -2539,6 +2547,10 @@
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\07.webp",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\07.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\squidgame3.mp4",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\squidgame3.mp4"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\01.webp",
@@ -3139,6 +3151,10 @@
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\sample-video.mp4",
       "PackagePath": "staticwebassets\\assets\\images\\video\\sample-video.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\squidgame3.mp4",
+      "PackagePath": "staticwebassets\\assets\\images\\video\\squidgame3.mp4"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\video\\trailer.mp4",
