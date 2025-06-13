@@ -1,9 +1,8 @@
 ﻿using StreamitMVC.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace StreamitMVC.ViewModels
 {
-    public class GetCategoryVM
+    public class GetTagVM
     {
         public int Id { get; set; }
         public string Name { get; set; }

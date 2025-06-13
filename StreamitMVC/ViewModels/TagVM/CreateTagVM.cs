@@ -3,10 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StreamitMVC.ViewModels
 {
-    public class GetCategoryVM
+    public class CreateTagVM
     {
-        public int Id { get; set; }
+        [Required]
         public string Name { get; set; }
-        public List<Movie>? Movies { get; set; }
+        public List<int>? SelectedMovieIds { get; set; }
+        public List<Movie>? AllMovies { get; set; }
     }
 }

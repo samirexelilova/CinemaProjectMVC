@@ -1,4 +1,4 @@
-﻿@model CreateCategoryVM
+﻿@model CreateTagVM
 
 <div class="content-inner container-fluid pb-0" id="page_layout">
     <div>
@@ -7,14 +7,14 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <div class="header-title">
-                            <h4 class="card-title">Basic Form</h4>
+                            <h4 class="card-title">Create Tag</h4>
                         </div>
                     </div>
                     <div class="card-body">
                         <form method="post">
                             <div class="form-group">
                                 <label class="form-label" asp-for="Name">Name</label>
-                                <input asp-for="Name"  class="form-control" >
+                                <input asp-for="Name" class="form-control">
                                 <span class="text-danger" asp-validation-for="Name"></span>
                             </div>
                             <div class="form-group mt-3">

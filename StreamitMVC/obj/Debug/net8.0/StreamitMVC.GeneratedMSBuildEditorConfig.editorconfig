@@ -36,8 +36,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Movie/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Movie/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Movie/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTW92aWVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Tag/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Tag/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/_ViewImports.cshtml]
@@ -76,12 +100,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Movie/Detail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcRGV0YWlsLmNzaHRtbA==
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Movie/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcSW5kZXguY3NodG1s
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Pages/AboutUs.cshtml]

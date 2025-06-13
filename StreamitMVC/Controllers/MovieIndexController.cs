@@ -6,11 +6,11 @@ using StreamitMVC.ViewModels;
 
 namespace StreamitMVC.Controllers
 {
-    public class MovieController : Controller
+    public class MovieIndexController : Controller
     {
         private readonly AppDbContext _context;
 
-        public MovieController(AppDbContext context)
+        public MovieIndexController(AppDbContext context)
         {
             _context = context;
         }

@@ -7,39 +7,39 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
-    public class CategoryController:Controller
+    public class TagController : Controller
     {
         private readonly AppDbContext _context;
-        public CategoryController(AppDbContext context)
+        public TagController(AppDbContext context)
         {
             _context = context;
         }
         public async Task<IActionResult> Index()
         {
-            List<Category> categories = await _context.Categories
-             .Include(c => c.MovieCategories)
+            List<Tag> tags = await _context.Tags
+             .Include(c => c.MovieTags)
              .ThenInclude(mc => mc.Movie)
              .ToListAsync();
 
-            List<GetCategoryVM> categoryVMs = categories.Select(c => new GetCategoryVM
+            List<GetTagVM> tagVm = tags.Select(c => new GetTagVM
             {
                 Id = c.Id,
                 Name = c.Name,
-                Movies = c.MovieCategories.Select(mc => mc.Movie).ToList()
+                Movies = c.MovieTags.Select(mc => mc.Movie).ToList()
             }).ToList();
 
-            return View(categoryVMs);
+            return View(tagVm);
         }
         public IActionResult Create()
         {
-            CreateCategoryVM model = new CreateCategoryVM
+            CreateTagVM model = new CreateTagVM
             {
                 AllMovies = _context.Movies.ToList()
             };
             return View(model);
         }
         [HttpPost]
-        public async Task<IActionResult> Create(CreateCategoryVM model)
+        public async Task<IActionResult> Create(CreateTagVM model)
         {
             if (!ModelState.IsValid)
             {
@@ -47,16 +47,16 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 return View(model);
             }
 
-            Category category = new Category
+            Tag tag = new Tag
             {
                 Name = model.Name,
-                MovieCategories = model.SelectedMovieIds.Select(id => new MovieCategory
+                MovieTags = model.SelectedMovieIds.Select(id => new MovieTag
                 {
                     MovieId = id
                 }).ToList()
             };
 
-            _context.Categories.Add(category);
+            _context.Tags.Add(tag);
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
@@ -64,16 +64,16 @@ namespace StreamitMVC.Areas.Admin.Controllers
         {
             if (id is null || id <= 0) return BadRequest();
 
-            Category? category = await _context.Categories
-                .Include(c => c.MovieCategories)
+            Tag? tag = await _context.Tags
+                .Include(c => c.MovieTags)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
-            if (category is null) return NotFound();
+            if (tag is null) return NotFound();
 
-            UpdateCategoryVM vm = new UpdateCategoryVM
+            UpdateTagVM vm = new UpdateTagVM
             {
-                Name = category.Name,
-                SelectedMovieIds = category.MovieCategories.Select(mc => mc.MovieId).ToList(),
+                Name = tag.Name,
+                SelectedMovieIds = tag.MovieTags.Select(mc => mc.MovieId).ToList(),
                 AllMovies = await _context.Movies.ToListAsync()
             };
 
@@ -81,7 +81,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? id, UpdateCategoryVM model)
+        public async Task<IActionResult> Update(int? id, UpdateTagVM model)
         {
             if (id is null || id <= 0) return BadRequest();
 
@@ -91,23 +91,23 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 return View(model);
             }
 
-            Category? existed = await _context.Categories
-                .Include(c => c.MovieCategories)
+            Tag? existed = await _context.Tags
+                .Include(c => c.MovieTags)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (existed is null) return NotFound();
 
             existed.Name = model.Name;
 
-            _context.MovieCategories.RemoveRange(existed.MovieCategories);
+            _context.MovieTags.RemoveRange(existed.MovieTags);
 
             if (model.SelectedMovieIds != null)
             {
-                existed.MovieCategories = model.SelectedMovieIds
-                    .Select(movieId => new MovieCategory
+                existed.MovieTags = model.SelectedMovieIds
+                    .Select(movieId => new MovieTag
                     {
                         MovieId = movieId,
-                        CategoryId = existed.Id
+                        TagId = existed.Id
                     }).ToList();
             }
 
@@ -119,13 +119,13 @@ namespace StreamitMVC.Areas.Admin.Controllers
         {
             if (id is null || id <= 0) return BadRequest();
 
-            Category? category = await _context.Categories
-                .Include(c => c.MovieCategories)
+            Tag? tag = await _context.Tags
+                .Include(c => c.MovieTags)
                 .FirstOrDefaultAsync(c => c.Id == id);
 
-            if (category is null) return NotFound();
+            if (tag is null) return NotFound();
 
-            _context.Categories.Remove(category);
+            _context.Tags.Remove(tag);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
