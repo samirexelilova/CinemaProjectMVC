@@ -1,0 +1,62 @@
+﻿@model List<GetActorVM>
+@{
+    int count = 0;
+}
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title mb-0">Actor</h4>
+                    <a asp-action="Create" class="btn btn-success">Create</a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive border rounded py-4">
+                        <table id="datatable" class="table" data-toggle="data-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Şəkil</th>
+                                    <th>Ad Soyad</th>
+                                    <th>Vəzifə</th>
+                                    <th>Doğum</th>
+                                    <th>Film Sayı</th>
+                                    <th>Sosial Media</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>
+                                            <img src="~/assets/images/cast/@item.Photo" class="img-fluid" style="width: 80px; height: auto;" />
+                                        </td>
+                                        <td>@item.FullName</td>
+                                        <td>@item.PositionName</td>
+                                        <td>@(item.Born?.ToString("dd.MM.yyyy") ?? "-")</td>
+                                        <td>
+                                            <span class="badge bg-primary">@item.FilmCount film</span>
+                                        </td>
+                                        <td>
+                                            @foreach (var sm in item.SocialMedias)
+                                            {
+                                                <span class="badge bg-secondary">@sm.Platform</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

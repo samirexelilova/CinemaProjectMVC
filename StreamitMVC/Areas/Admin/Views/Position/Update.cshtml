@@ -1,0 +1,27 @@
+﻿@model UpdatePositionVM
+
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Update Position</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="form-group">
+                                <label class="form-label" asp-for="Name">Name</label>
+                                <input asp-for="Name" class="form-control">
+                                <span class="text-danger" asp-validation-for="Name"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

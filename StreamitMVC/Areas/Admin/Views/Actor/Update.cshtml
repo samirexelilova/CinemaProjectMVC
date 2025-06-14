@@ -1,0 +1,144 @@
+﻿@model UpdateActorVM
+
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <div class="header-title">
+                        <h4 class="card-title">Update Actor</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Update" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <img width="200px" height="150px" src="~/assets/images/cast/@Model.Image" />
+                            <input asp-for="Image" type="hidden" value="@Model.Image" class="form-control" placeholder="Photo">
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Name" class="form-label">Name</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label asp-for="Surname" class="form-label">Surname</label>
+                            <input asp-for="Surname" class="form-control" />
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="Photo" class="form-label">Change Photo</label>
+                            <input asp-for="Photo" type="file" class="form-control" />
+                            <span asp-validation-for="Photo" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label asp-for="PositionId" class="form-label">Position</label>
+                            <select asp-for="PositionId" class="form-control" asp-items="@(new SelectList(Model.Positions, "Id", "Name"))">
+                                <option value="">-- Select Position --</option>
+                            </select>
+                            <span asp-validation-for="PositionId" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label asp-for="Description" class="form-label">Description</label>
+                            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label asp-for="Award" class="form-label">Award</label>
+                            <input asp-for="Award" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label asp-for="Born" class="form-label">Born</label>
+                            <input asp-for="Born" type="date" class="form-control" />
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label asp-for="Parents" class="form-label">Parents</label>
+                            <input asp-for="Parents" class="form-control" />
+                        </div>
+
+                        <hr />
+
+                        <div class="form-group mt-3">
+                            <label class="form-label">Social Media Links</label>
+                            <div id="socialMediaContainer">
+                                @if (Model.SocialMedias != null && Model.SocialMedias.Any())
+                                {
+                                    for (int i = 0; i < Model.SocialMedias.Count; i++)
+                                    {
+                                        <div class="input-group mb-2 social-media-item">
+                                            <select asp-for="SocialMedias[i].Platform" class="form-select" asp-items="Html.GetEnumSelectList<StreamitMVC.Extensions.Enums.SocialMediaPlatform>()">
+                                                <option value="">-- Select Platform --</option>
+                                            </select>
+                                            <input asp-for="SocialMedias[i].Url" class="form-control" placeholder="URL" />
+                                            <button type="button" class="btn btn-danger remove-social-media">Remove</button>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="input-group mb-2 social-media-item">
+                                        <select class="form-select" name="SocialMedias[0].Platform">
+                                            <option value="">-- Select Platform --</option>
+                                            <option value="Instagram">Instagram</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <option value="Github">Github</option>
+                                            <option value="TikTok">TikTok</option>
+                                            <option value="YouTube">YouTube</option>
+                                        </select>
+                                        <input type="url" name="SocialMedias[0].Url" class="form-control" placeholder="URL" />
+                                        <button type="button" class="btn btn-danger remove-social-media">Remove</button>
+                                    </div>
+                                }
+                            </div>
+                            <button type="button" class="btn btn-secondary mt-2" id="addSocialMediaBtn">Add Social Media</button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-4">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function () {
+            let index = @Model.SocialMedias?.Count ?? 1;
+
+            document.getElementById('addSocialMediaBtn').addEventListener('click', function () {
+                const container = document.getElementById('socialMediaContainer');
+                const div = document.createElement('div');
+                div.classList.add('input-group', 'mb-2', 'social-media-item');
+                div.innerHTML = `
+                    <select class="form-select" name="SocialMedias[${index}].Platform" required>
+                        <option value="">-- Select Platform --</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="Github">Github</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="YouTube">YouTube</option>
+                    </select>
+                    <input type="url" name="SocialMedias[${index}].Url" class="form-control" placeholder="URL" required />
+                    <button type="button" class="btn btn-danger remove-social-media">Remove</button>
+                `;
+                container.appendChild(div);
+                index++;
+            });
+
+            document.getElementById('socialMediaContainer').addEventListener('click', function (e) {
+                if (e.target.classList.contains('remove-social-media')) {
+                    e.target.closest('.social-media-item').remove();
+                }
+            });
+        })();
+    </script>
+}
