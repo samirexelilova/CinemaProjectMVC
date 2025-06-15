@@ -526,6 +526,9 @@ wwwroot\assets\css\core\libs.min.css
 wwwroot\assets\css\custom.min848f.css
 wwwroot\assets\css\rtl.min848f.css
 wwwroot\assets\css\streamit.min848f.css
+wwwroot\assets\images\289a78bd-ad2c-49ec-aeac-dc6a0697af51.webp
+wwwroot\assets\images\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg
+wwwroot\assets\images\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg
 wwwroot\assets\images\blog\01.webp
 wwwroot\assets\images\blog\blog1.webp
 wwwroot\assets\images\blog\blog10.webp
@@ -540,11 +543,11 @@ wwwroot\assets\images\blog\blog7.webp
 wwwroot\assets\images\blog\blog8.webp
 wwwroot\assets\images\blog\blog9.webp
 wwwroot\assets\images\blog\Fantacy.webp
+wwwroot\assets\images\cast\00b59e50-a44b-47ea-b0fb-83dda76041ed.jpg
 wwwroot\assets\images\cast\01.webp
 wwwroot\assets\images\cast\02.webp
 wwwroot\assets\images\cast\03.webp
 wwwroot\assets\images\cast\04.webp
-wwwroot\assets\images\cast\04414035-b65a-4a81-b8e8-a67086e5ab64.avif
 wwwroot\assets\images\cast\05.webp
 wwwroot\assets\images\cast\06.webp
 wwwroot\assets\images\cast\07.webp
@@ -553,11 +556,10 @@ wwwroot\assets\images\cast\09.webp
 wwwroot\assets\images\cast\10.webp
 wwwroot\assets\images\cast\11.webp
 wwwroot\assets\images\cast\12.webp
-wwwroot\assets\images\cast\54fdb95d-e421-4b1f-9e75-0c2c85b46a08.webp
 wwwroot\assets\images\cast\5d81ea80-b1ce-4bca-a0cd-e2139d4276ae.jpg
 wwwroot\assets\images\cast\62ed954b-650c-4551-9cdc-b54ee9e7244c.avif
-wwwroot\assets\images\cast\c06b4246-c1f6-484a-ac4f-6b9e12d5fd12.avif
 wwwroot\assets\images\cast\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png
+wwwroot\assets\images\cast\def14837-aec5-4a06-a383-02f799465a1f.webp
 wwwroot\assets\images\continue-watch\01.webp
 wwwroot\assets\images\continue-watch\02.webp
 wwwroot\assets\images\continue-watch\03.webp
@@ -565,6 +567,7 @@ wwwroot\assets\images\continue-watch\04.webp
 wwwroot\assets\images\continue-watch\05.webp
 wwwroot\assets\images\continue-watch\06.webp
 wwwroot\assets\images\favicon.ico
+wwwroot\assets\images\fb34ef83-7ad8-4dc8-8015-b94ef710f50e.webp
 wwwroot\assets\images\footer\01.webp
 wwwroot\assets\images\footer\02.webp
 wwwroot\assets\images\footer\03.webp
@@ -794,6 +797,7 @@ wwwroot\assets\images\video\banner-3.webp
 wwwroot\assets\images\video\sample-video.mp4
 wwwroot\assets\images\video\squidgame3.mp4
 wwwroot\assets\images\video\trailer.mp4
+wwwroot\assets\images\website-images\dc74a06c-6845-4fbe-8fe3-3b92c9b0ee63.jpg
 wwwroot\assets\js\core\external.min.js
 wwwroot\assets\js\core\libs.min.js
 wwwroot\assets\js\plugins\countdown.js
@@ -806,6 +810,8 @@ wwwroot\assets\js\setting-init.js
 wwwroot\assets\js\streamit.js
 wwwroot\assets\js\swiper.js
 wwwroot\assets\js\utility.js
+wwwroot\assets\subtitles\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt
+wwwroot\assets\subtitles\ad84eb62-c207-460b-8347-223ecd62e65c.txt
 wwwroot\assets\vendor\animate.min.css
 wwwroot\assets\vendor\font-awesome\css\all.min.css
 wwwroot\assets\vendor\font-awesome\webfonts\fa-brands-400.ttf

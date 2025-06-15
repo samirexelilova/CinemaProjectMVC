@@ -1,0 +1,94 @@
+﻿@* @model List<GetSubtitleVM>
+
+
+
+<h2>Subtitle-lər</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Yeni Subtitle əlavə et</a>
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Film Adı</th>
+            <th>Dil</th>
+            <th>Fayl Yolu</th>
+            <th>Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var subtitle in Model)
+        {
+            <tr>
+                <td>@subtitle.MovieName</td>
+                <td>@subtitle.LanguageName</td>
+                <td>@subtitle.FilePath</td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@subtitle.Id" class="btn btn-sm btn-warning">Redaktə et</a> |
+                    <a asp-action="Delete" asp-route-id="@subtitle.Id" class="btn btn-sm btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+ *@
+
+
+ @model List<GetSubtitleVM>
+@{
+    int count = 0;
+}
+<div class="content-inner container-fluid pb-0" id="page_layout">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title mb-0">Tag</h4>
+                    <a asp-action="Create" class="btn btn-success">Create</a>
+                </div>
+                <div class="card-body">
+                    <p class="mb-3">
+                        Images in Bootstrap are made responsive with <code>.img-fluid</code>.
+                        <code>max-width: 100%;</code> and
+                        <code>height: auto;</code> are applied to the image so that it scales with the parent element.
+                    </p>
+                    <div class="table-responsive border rounded py-4">
+                        <table id="datatable" class="table " data-toggle="data-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Film Adı</th>
+                                    <th>Dil</th>
+                                    <th>Fayl Yolu</th>
+                                    <th>Əməliyyatlar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var subtitle in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@subtitle.MovieName</td>
+                                        <td>@subtitle.LanguageName</td>
+                                        <td>@subtitle.FilePath</td>
+                                        <td>
+                                            <a asp-action="Update" asp-route-id="@subtitle.Id" class="btn btn-sm btn-warning">Update</a> |
+                                            <a asp-action="Delete" asp-route-id="@subtitle.Id" class="btn btn-sm btn-danger">Remove</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

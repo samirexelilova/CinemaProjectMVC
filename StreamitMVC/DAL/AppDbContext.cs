@@ -25,6 +25,7 @@ namespace StreamitMVC.DAL
         public DbSet<MovieActor> MovieActors { get; set; }
         public DbSet<MovieCategory> MovieCategories { get; set; }
         public DbSet<MovieTag> MovieTags { get; set; }
+        public DbSet<MovieLanguage> MovieLanguages { get; set; }
         public DbSet<Notification> Notifications { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Position> Positions { get; set; }

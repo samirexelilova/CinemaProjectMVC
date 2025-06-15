@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Extensions.Enums;
+using StreamitMVC.Migrations;
 using StreamitMVC.Models;
 using StreamitMVC.Utilities.Enums;
 using StreamitMVC.Utilities.Extensions;
@@ -67,14 +68,23 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 model.Positions = _context.Positions.ToList();
                 return View(model);
             }
-
-            string photoFileName = null;
-
-            if (model.Photo != null && model.Photo.Length > 0)
+            if (model.Photo == null)
             {
-                photoFileName = await model.Photo.CreateFileAsync(_env.WebRootPath,"assets", "images", "cast");
+                ModelState.AddModelError(nameof(CreateActorVM.Photo), "Zəhmət olmasa şəkil seçin.");
+                return View();
             }
 
+            if (!model.Photo.ValidateType("image/"))
+            {
+                ModelState.AddModelError(nameof(CreateActorVM.Photo), " Bu File Type duzgun deyil");
+                return View();
+            }
+            if (!model.Photo.ValidateSize(FileSize.MB, 1))
+            {
+                ModelState.AddModelError(nameof(CreateActorVM.Photo), " File size 2 mb dan boyuk ola bilmez ");
+                return View();
+            }
+            string photoFileName = await model.Photo.CreateFileAsync(_env.WebRootPath, "assets", "images", "cast");
             Actor actor = new Actor
             {
                 Name = model.Name,

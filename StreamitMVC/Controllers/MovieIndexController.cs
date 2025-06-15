@@ -14,14 +14,15 @@ namespace StreamitMVC.Controllers
         {
             _context = context;
         }
-      
 
 
-          public IActionResult Index()
-           {
+
+        public IActionResult Index()
+        {
             var movies = _context.Movies
-                .Include(m => m.Language)
-                  .ToList();
+            .Include(m => m.MovieLanguages)
+             .ThenInclude(ml => ml.Language)
+           .ToList();
 
             MovieVM vm = new MovieVM
             {
@@ -42,12 +43,13 @@ namespace StreamitMVC.Controllers
             Movie? movie = await _context.Movies
                   .Include(m => m.MovieCategories)
                  .ThenInclude(mc => mc.Category)
-                .Include(m=>m.Language)
-                .Include(m=>m.Subtitles)
-                .Include(m=>m.Sessions)
-                .Include(m=>m.MovieActors)
-                .ThenInclude(m=>m.Actor)
-                .Include(m=>m.Reviews)
+                .Include(m => m.MovieLanguages)
+                .ThenInclude(ml => ml.Language)
+                .Include(m => m.Subtitles)
+                .Include(m => m.Sessions)
+                .Include(m => m.MovieActors)
+                .ThenInclude(m => m.Actor)
+                .Include(m => m.Reviews)
                 .Include(m => m.MovieTags)
                  .ThenInclude(m => m.Tag)
                 .FirstOrDefaultAsync(p => p.Id == id);

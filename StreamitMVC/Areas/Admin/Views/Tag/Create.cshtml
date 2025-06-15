@@ -21,7 +21,6 @@
                                 <label asp-for="SelectedMovieIds" class="form-label">Movies</label>
                                 <select asp-for="SelectedMovieIds" class="form-control" multiple>
                                     <option selected disabled>Choose Category</option>
-
                                     @foreach (var movie in Model.AllMovies)
                                     {
                                         <option value="@movie.Id">@movie.Name</option>

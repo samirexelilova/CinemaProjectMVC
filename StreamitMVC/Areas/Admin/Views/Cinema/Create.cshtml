@@ -1,0 +1,65 @@
+﻿@model CreateCinemaVM
+
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Basic Form</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="form-label" asp-for="Name">Name</label>
+                                <input asp-for="Name" class="form-control">
+                                <span class="text-danger" asp-validation-for="Name"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" asp-for="Photo">Photo</label>
+                                <input asp-for="Photo" action="image/*" class="form-control">
+                                <span class="text-danger" asp-validation-for="Photo"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" asp-for="Address">Address</label>
+                                <input asp-for="Address" class="form-control">
+                                <span class="text-danger" asp-validation-for="Address"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" asp-for="ContactNumber">Contact Number</label>
+                                <input asp-for="ContactNumber" class="form-control" id="phoneInput" placeholder="+994 (__) ___-__-__" >
+                                <span class="text-danger" asp-validation-for="ContactNumber"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" asp-for="OpenTime">OpenTime</label>
+                                <input asp-for="OpenTime" type="time" class="form-control">
+                                <span class="text-danger" asp-validation-for="OpenTime"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" asp-for="CloseTime">CloseTime</label>
+                                <input asp-for="CloseTime" type="time"  class="form-control">
+                                <span class="text-danger" asp-validation-for="CloseTime"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery və Inputmask CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var input = document.getElementById('phoneInput');
+        var im = new Inputmask("+994 (99) 999-99-99");
+        im.mask(input);
+    });
+</script>

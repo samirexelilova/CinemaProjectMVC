@@ -737,9 +737,6 @@ namespace StreamitMVC.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("LanguageId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -760,8 +757,6 @@ namespace StreamitMVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LanguageId");
 
                     b.ToTable("Movies");
                 });
@@ -814,6 +809,29 @@ namespace StreamitMVC.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("MovieCategories");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.MovieLanguage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("MovieLanguages");
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.MovieTag", b =>
@@ -1483,17 +1501,6 @@ namespace StreamitMVC.Migrations
                     b.Navigation("HallType");
                 });
 
-            modelBuilder.Entity("StreamitMVC.Models.Movie", b =>
-                {
-                    b.HasOne("StreamitMVC.Models.Language", "Language")
-                        .WithMany("Movies")
-                        .HasForeignKey("LanguageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Language");
-                });
-
             modelBuilder.Entity("StreamitMVC.Models.MovieActor", b =>
                 {
                     b.HasOne("StreamitMVC.Models.Actor", "Actor")
@@ -1528,6 +1535,25 @@ namespace StreamitMVC.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.MovieLanguage", b =>
+                {
+                    b.HasOne("StreamitMVC.Models.Language", "Language")
+                        .WithMany("MovieLanguages")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StreamitMVC.Models.Movie", "Movie")
+                        .WithMany("MovieLanguages")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Language");
 
                     b.Navigation("Movie");
                 });
@@ -1785,7 +1811,7 @@ namespace StreamitMVC.Migrations
 
             modelBuilder.Entity("StreamitMVC.Models.Language", b =>
                 {
-                    b.Navigation("Movies");
+                    b.Navigation("MovieLanguages");
 
                     b.Navigation("Sessions");
 
@@ -1797,6 +1823,8 @@ namespace StreamitMVC.Migrations
                     b.Navigation("MovieActors");
 
                     b.Navigation("MovieCategories");
+
+                    b.Navigation("MovieLanguages");
 
                     b.Navigation("MovieTags");
 

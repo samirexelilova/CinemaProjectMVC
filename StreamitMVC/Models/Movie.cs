@@ -15,13 +15,12 @@ namespace StreamitMVC.Models
         public string Description { get; set; }
         public int AgeRestriction { get; set; }
         public DateTime ReleaseDate { get; set; } //filmin ne zaman cixdigi tarix
-        public int LanguageId { get; set; }
-        public Language Language { get; set; }  // Filmin dili
         public List<Subtitle> Subtitles { get; set; }  // Filmin altyazıları
         public List<Session> Sessions { get; set; }  // Filmin seansları
         public List<MovieActor> MovieActors { get; set; }
         public List<MovieTag> MovieTags { get; set; }
         public List<MovieCategory> MovieCategories { get; set; }
+        public List<MovieLanguage> MovieLanguages { get; set; }
         public List<Review> Reviews { get; set; }
 
     }

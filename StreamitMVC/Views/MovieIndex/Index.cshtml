@@ -21,6 +21,16 @@
                                         data-animation-in="fadeInLeft" data-delay-in="0.6">
                                        @item.Name
                                     </h1>
+                                    @foreach (var movie in Model.Movies)
+                                    {
+                                        <h3>@movie.Name</h3>
+                                        <ul>
+                                            @foreach (var ml in movie.MovieLanguages)
+                                            {
+                                                <li>@ml.Language.Name</li>
+                                            }
+                                        </ul>
+                                    }
                                     <div class="flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft"
                                          style="opacity: 1;">
                                         <div class="slider-ratting d-flex align-items-center gap-3">
@@ -65,7 +75,7 @@
                                         </p>
                                     </div>
                                     <div class="iq-button" data-animation-in="fadeInUp" data-delay-in="1.2">
-                                        <a asp-controller="Movie" asp-action="detail" asp-route-id="@item.Id" class="btn text-uppercase position-relative">
+                                        <a asp-controller="MovieIndex" asp-action="detail" asp-route-id="@item.Id" class="btn text-uppercase position-relative">
                                             <span class="button-text">Play Now</span>
                                             <i class="fa-solid fa-play"></i>
                                         </a>
@@ -159,14 +169,14 @@
                                 <div class="iq-card card-hover">
                                     <div class="block-images position-relative w-100">
                                         <div class="img-box w-100">
-                                            <a asp-controller="Movie" asp-action="detail" asp-route-id="@movie.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                            <a asp-controller="MovieIndex" asp-action="detail" asp-route-id="@movie.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                             <img src="~/assets/images/movies/popular/@movie.Photo" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
                                         </div>
                                         <div class="card-description with-transition">
                                             <div class="cart-content">
                                                 <div class="content-left">
                                                     <h5 class="iq-title text-capitalize">
-                                                        <a asp-controller="Movie" asp-action="detail" asp-route-id="@movie.Id">@movie.Name</a>
+                                                        <a asp-controller="MovieIndex" asp-action="detail" asp-route-id="@movie.Id">@movie.Name</a>
                                                     </h5>
                                                     <div class="movie-time d-flex align-items-center my-2">
                                                         <span class="movie-time-text font-normal">
@@ -226,7 +236,7 @@
                                                 </li>
                                             </ul>
                                             <div class="iq-button">
-                                                <a asp-controller="Movie" asp-action="detail" asp-route-id="@movie.Id" class="btn text-uppercase position-relative rounded-circle">
+                                                <a asp-controller="MovieIndex" asp-action="detail" asp-route-id="@movie.Id" class="btn text-uppercase position-relative rounded-circle">
                                                     <i class="fa-solid fa-play ms-0"></i>
                                                 </a>
                                             </div>
