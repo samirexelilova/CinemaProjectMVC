@@ -21,7 +21,6 @@ namespace StreamitMVC.Areas.Admin.Controllers
             _env = env;
         }
 
-        // Index
         public async Task<IActionResult> Index()
         {
             List<GetCinemaVM> cinemaVMs = await _context.Cinemas.Select(s =>

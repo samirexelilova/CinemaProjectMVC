@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TqRXkyQ3pJ4BJ2LEZkmn6j9EVShkciAOaHld31xMBM0=",
+  "Hash": "qRvvoiDpldfFVbHjoUgSGGcCtDM1sJ/VioP1k8LPu1g=",
   "Source": "StreamitMVC",
   "BasePath": "_content/StreamitMVC",
   "Mode": "Default",
@@ -11817,6 +11817,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\def14837-aec5-4a06-a383-02f799465a1f.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k0nppbusr8",
+      "Integrity": "xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\01.webp",
@@ -64054,6 +64075,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 12:30:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.k0nppbusr8.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 12:30:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k0nppbusr8"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI="
         }
       ]
     },

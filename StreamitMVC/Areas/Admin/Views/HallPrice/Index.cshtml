@@ -1,0 +1,52 @@
+﻿@model List<GetHallPrice>
+
+@{
+    int count = 0;
+}
+
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title mb-0">Zal Qiymətləri</h4>
+                    <a asp-action="Create" class="btn btn-success">Əlavə et</a>
+                </div>
+                <div class="card-body">
+                    <p class="mb-3">
+                        Zal tipinə və həftənin gününə görə qiymətlər.
+                    </p>
+                    <div class="table-responsive border rounded py-4">
+                        <table id="datatable" class="table" data-toggle="data-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Zal Tipi</th>
+                                    <th>Gün</th>
+                                    <th>Qiymət</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@item.HallTypeName</td>
+                                        <td>@(item.DayOfWeek.HasValue ? item.DayOfWeek.ToString() : "Bütün Günlər")</td>
+                                        <td>@item.Price</td>
+                                        <td>
+                                            <a asp-action="Update" asp-route-id="@item.Id">Edit</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

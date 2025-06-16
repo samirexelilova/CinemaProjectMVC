@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label" asp-for="Photo">Photo</label>
-                                <input asp-for="Photo" action="image/*" class="form-control">
+                                <input asp-for="Photo" class="form-control">
                                 <span class="text-danger" asp-validation-for="Photo"></span>
                             </div>
                             <div class="form-group">
@@ -29,18 +29,22 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label" asp-for="ContactNumber">Contact Number</label>
-                                <input asp-for="ContactNumber" class="form-control" id="phoneInput" placeholder="+994 (__) ___-__-__" >
+                                <input asp-for="ContactNumber" class="form-control"
+                                       id="phoneInput"
+                                       placeholder="+994 (__) ___-__-__"
+                                       required
+                                      />
                                 <span class="text-danger" asp-validation-for="ContactNumber"></span>
                             </div>
 
                             <div class="form-group">
                                 <label class="form-label" asp-for="OpenTime">OpenTime</label>
-                                <input asp-for="OpenTime" type="time" class="form-control">
+                                <input asp-for="OpenTime" type="time" class="form-control" >
                                 <span class="text-danger" asp-validation-for="OpenTime"></span>
                             </div>
                             <div class="form-group">
                                 <label class="form-label" asp-for="CloseTime">CloseTime</label>
-                                <input asp-for="CloseTime" type="time"  class="form-control">
+                                <input asp-for="CloseTime" type="time" class="form-control" >
                                 <span class="text-danger" asp-validation-for="CloseTime"></span>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -52,14 +56,18 @@
     </div>
 </div>
 
-<!-- jQuery və Inputmask CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/inputmask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.8/jquery.inputmask.min.js"></script>
 
 <script>
     $(document).ready(function () {
-        var input = document.getElementById('phoneInput');
-        var im = new Inputmask("+994 (99) 999-99-99");
-        im.mask(input);
+        $('#phoneInput').inputmask({
+            mask: "+994 (99) 999-99-99",
+            placeholder: "_",
+            showMaskOnHover: false,
+            showMaskOnFocus: true,
+            autoUnmask: false,
+            clearIncomplete: false
+        });
     });
 </script>

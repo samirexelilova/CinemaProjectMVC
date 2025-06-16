@@ -15,7 +15,6 @@ namespace StreamitMVC.ViewModels
 
         [Required]
         [Display(Name = "Contact Number")]
-        [Phone]
         public string ContactNumber { get; set; }
 
         [Required]

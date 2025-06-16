@@ -1,0 +1,62 @@
+﻿@model UpdateHallVM
+
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-8">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Zal Redaktəsi</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="form-group mb-3">
+                                <label asp-for="Name" class="form-label">Zalın adı</label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="CinemaId" class="form-label">Kinozal</label>
+                                <select asp-for="CinemaId" asp-items="@(new SelectList(Model.Cinemas, "Id", "Name"))" class="form-control">
+                                    <option value="">Seçin</option>
+                                </select>
+                                <span asp-validation-for="CinemaId" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Capacity" class="form-label">Tutumu (ümumi oturacaq sayı)</label>
+                                <input asp-for="Capacity" type="number" min="1" class="form-control" />
+                                <span asp-validation-for="Capacity" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="Rows" class="form-label">Sıra sayı</label>
+                                <input asp-for="Rows" type="number" min="1" class="form-control" />
+                                <span asp-validation-for="Rows" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="SeatsPerRow" class="form-label">Hər sırada oturacaq sayı</label>
+                                <input asp-for="SeatsPerRow" type="number" min="1" class="form-control" />
+                                <span asp-validation-for="SeatsPerRow" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label asp-for="HallTypeId" class="form-label">Zal tipi</label>
+                                <select asp-for="HallTypeId" asp-items="@(new SelectList(Model.HallTypes, "Id", "Name"))" class="form-control">
+                                    <option value="">Seçin</option>
+                                </select>
+                                <span asp-validation-for="HallTypeId" class="text-danger"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Yadda saxla</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@model CreateHallPrice
+
+
+
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Qiymət əlavə et</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="form-group">
+                                <label class="form-label" asp-for="HallTypeId">Zal Tipi</label>
+                                <select asp-for="HallTypeId" asp-items="@(new SelectList(Model.HallTypes, "Id", "Name"))" class="form-control">
+                                    <option value="">Seçin</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="HallTypeId"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" asp-for="DayOfWeek">Həftənin günü</label>
+                                <select asp-for="DayOfWeek" class="form-control">
+                                    <option value="">Seçin</option>
+                                    @foreach (DayOfWeek day in Enum.GetValues(typeof(DayOfWeek)))
+                                    {
+                                        <option value="@((int)day)">@day</option>
+                                    }
+                                </select>
+                                <span class="text-danger" asp-validation-for="DayOfWeek"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" asp-for="Price">Qiymət</label>
+                                <input asp-for="Price" class="form-control" />
+                                <span class="text-danger" asp-validation-for="Price"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Əlavə et</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

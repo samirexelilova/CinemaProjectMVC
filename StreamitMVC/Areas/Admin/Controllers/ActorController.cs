@@ -104,7 +104,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
                     })
                     .ToList()
             };
-
+            actor.CreatedAt = DateTime.Now;
             _context.Actors.Add(actor);
             await _context.SaveChangesAsync();
 

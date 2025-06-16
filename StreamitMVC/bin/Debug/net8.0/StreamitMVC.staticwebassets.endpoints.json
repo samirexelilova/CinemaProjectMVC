@@ -46087,6 +46087,88 @@
       ]
     },
     {
+      "Route": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "AssetFile": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 12:30:44 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.k0nppbusr8.jpg",
+      "AssetFile": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17790"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 16 Jun 2025 12:30:44 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k0nppbusr8"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg"
+        }
+      ]
+    },
+    {
       "Route": "assets/images/continue-watch/01.md99a9b3kq.webp",
       "AssetFile": "assets/images/continue-watch/01.webp",
       "Selectors": [],
