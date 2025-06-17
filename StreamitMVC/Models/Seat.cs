@@ -10,8 +10,8 @@ namespace StreamitMVC.Models
 
         public int RowNumber { get; set; }    
         public int SeatNumber { get; set; }
-        public int SeatTypeId { get; set; }  // Və ya HallTypeId
-        public SeatType SeatType { get; set; }  // Əlavə class lazımdır
+        public int SeatTypeId { get; set; } 
+        public SeatType SeatType { get; set; }  
         public List<BasketItem> BasketItems { get; set; }
         public List<Ticket> Tickets { get; set; }
     }

@@ -1,54 +1,32 @@
-﻿@model List<GetHallVM>
+﻿@model List<StreamitMVC.ViewModels.GetHallVM>
 
-@{
-    int count = 0;
-}
+<h2>Hall List</h2>
+<a asp-area="Admin" asp-controller="hall" asp-action="create" >create</a>
 
-<div class="content-inner container-fluid pb-0" id="page_layout">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h4 class="card-title mb-0">Zal Siyahısı</h4>
-                    <a asp-action="Create" class="btn btn-success">Əlavə et</a>
-                </div>
-                <div class="card-body">
-                    <p class="mb-3">
-                        Kinoteatr zalları və onların məlumatları.
-                    </p>
-                    <div class="table-responsive border rounded py-4">
-                        <table id="datatable" class="table" data-toggle="data-table">
-                            <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>Zal Adı</th>
-                                    <th>Kinoteatr</th>
-                                    <th>Tutum</th>
-                                    <th>Zal Tipi</th>
-                                    <th>Əməliyyatlar</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
-                                    count++;
-                                    <tr>
-                                        <td>@count</td>
-                                        <td>@item.Name</td>
-                                        <td>@item.CinemaName</td>
-                                        <td>@item.Capacity</td>
-                                        <td>@item.HallTypeName</td>
-                                        <td>
-                                            <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Düzəliş</a> |
-                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a>
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cinema</th>
+            <th>Hall Type</th>
+            <th>Capacity</th>
+            <th>Seats</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hall in Model)
+        {
+            <tr>
+                <td>@hall.Name</td>
+                <td>@hall.CinemaName</td>
+                <td>@hall.HallTypeName</td>
+                <td>@hall.Capacity</td>
+                <td>
+                    <a asp-area="Admin" asp-controller="Seat" asp-action="Index" asp-route-hallId="@hall.Id">View Seats</a>
+                    <a asp-controller="hall" asp-action="update" asp-route-id="@hall.Id">Update</a>
+                    <a asp-controller="hall" asp-action="delete" asp-route-id="@hall.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
