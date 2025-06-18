@@ -1,0 +1,35 @@
+﻿@model List<Session>
+
+
+<a asp-action="create" >Create</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Film</th>
+            <th>Zal</th>
+            <th>Kinoteatr</th>
+            <th>Dil</th>
+            <th>Başlama vaxtı</th>
+            <th>Bitmə vaxtı</th>
+            <th>Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Movie?.Name</td>
+                <td>@item.Hall?.Name</td>
+                <td>@item.Cinema?.Name</td>
+                <td>@item.Language?.Name</td>
+                <td>@item.StartTime.ToString("g")</td>
+                <td>@item.EndTime.ToString("g")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Düzəliş</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
