@@ -9540,6 +9540,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\649aa786-0837-4aeb-8cfa-bff20c979f53.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ewkznw2dvs</Fingerprint>
+      <Integrity>clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\649aa786-0837-4aeb-8cfa-bff20c979f53.webp'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>StreamitMVC</SourceId>
@@ -14634,12 +14652,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\utility.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt'))">
       <SourceType>Package</SourceType>
       <SourceId>StreamitMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/StreamitMVC</BasePath>
-      <RelativePath>assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt</RelativePath>
+      <RelativePath>assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14650,14 +14668,14 @@
       <Integrity>cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\ad84eb62-c207-460b-8347-223ecd62e65c.txt'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\deb013ea-8684-4902-9e64-701e5db20c40.txt'))">
       <SourceType>Package</SourceType>
       <SourceId>StreamitMVC</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/StreamitMVC</BasePath>
-      <RelativePath>assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt</RelativePath>
+      <RelativePath>assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14668,7 +14686,7 @@
       <Integrity>cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\ad84eb62-c207-460b-8347-223ecd62e65c.txt'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\subtitles\deb013ea-8684-4902-9e64-701e5db20c40.txt'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\vendor\animate.min.css'))">
       <SourceType>Package</SourceType>

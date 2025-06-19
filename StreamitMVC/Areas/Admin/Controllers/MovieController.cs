@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
+using StreamitMVC.Services;
+using StreamitMVC.Services.Interfaces;
 using StreamitMVC.Utilities.Extensions;
 using StreamitMVC.ViewModels.CreateMovieVM;
 
@@ -11,11 +13,13 @@ namespace StreamitMVC.Areas.Admin.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _env;
+        private IPricingService _pricingService;
 
-        public MovieController(AppDbContext context,IWebHostEnvironment env)
+        public MovieController(AppDbContext context,IWebHostEnvironment env, IPricingService pricingService)
         {
             _context = context;
             _env = env;
+            _pricingService = pricingService;
         }
         //public IActionResult Index()
         //{
@@ -62,6 +66,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
 
         //    return RedirectToAction("Index");
         //}
+
 
     }
 }

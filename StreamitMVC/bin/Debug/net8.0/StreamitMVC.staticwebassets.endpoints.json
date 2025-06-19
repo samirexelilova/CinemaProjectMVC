@@ -43463,6 +43463,88 @@
       ]
     },
     {
+      "Route": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.ewkznw2dvs.webp",
+      "AssetFile": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2450"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 19:14:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ewkznw2dvs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "AssetFile": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2450"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 19:14:31 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/6b26f27b-953b-4313-bbaa-b7b4f5dce70a.ak5s3xvu76.jpg",
       "AssetFile": "assets/images/6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg",
       "Selectors": [],
@@ -66669,8 +66751,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
-      "AssetFile": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
+      "Route": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
+      "AssetFile": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -66695,7 +66777,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:12:05 GMT"
+          "Value": "Thu, 19 Jun 2025 19:12:08 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66706,8 +66788,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.x0de0qid5h.txt",
-      "AssetFile": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
+      "Route": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.x0de0qid5h.txt",
+      "AssetFile": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -66732,7 +66814,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:12:05 GMT"
+          "Value": "Thu, 19 Jun 2025 19:12:08 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66746,13 +66828,13 @@
         },
         {
           "Name": "label",
-          "Value": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt"
+          "Value": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt"
         }
       ]
     },
     {
-      "Route": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt",
-      "AssetFile": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt",
+      "Route": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt",
+      "AssetFile": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -66777,7 +66859,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:07:34 GMT"
+          "Value": "Thu, 19 Jun 2025 19:21:08 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66788,8 +66870,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.x0de0qid5h.txt",
-      "AssetFile": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt",
+      "Route": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.x0de0qid5h.txt",
+      "AssetFile": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -66814,7 +66896,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:07:34 GMT"
+          "Value": "Thu, 19 Jun 2025 19:21:08 GMT"
         }
       ],
       "EndpointProperties": [
@@ -66828,7 +66910,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt"
+          "Value": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt"
         }
       ]
     },

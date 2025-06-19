@@ -1,51 +1,76 @@
 ﻿@model CreateSessionVM
 
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between">
+                        <div class="header-title">
+                            <h4 class="card-title">Create Session</h4>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="StartTime" class="form-label">Start Time</label>
+                                <input asp-for="StartTime" type="datetime-local" class="form-control" />
+                                <span class="text-danger" asp-validation-for="StartTime"></span>
+                            </div>
 
+                            <div class="form-group">
+                                <label asp-for="EndTime" class="form-label">End Time</label>
+                                <input asp-for="EndTime" type="datetime-local" class="form-control" />
+                                <span class="text-danger" asp-validation-for="EndTime"></span>
+                            </div>
 
-<h2>Yeni Seans Yarat</h2>
+                            <div class="form-group">
+                                <label asp-for="MovieId">Movie</label>
+                                <select asp-for="MovieId" asp-items="new SelectList(Model.Movies, nameof(Movie.Id), nameof(Movie.Name))" class="form-control">
+                                    <option disabled selected>Choose movie</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="MovieId"></span>
+                            </div>
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="Session.StartTime"></label>
-        <input asp-for="Session.StartTime" class="form-control" type="datetime-local" />
+                            <div class="form-group">
+                                <label asp-for="HallId">Hall</label>
+                                <select asp-for="HallId" asp-items="new SelectList(Model.Halls, nameof(Hall.Id), nameof(Hall.Name))" class="form-control">
+                                    <option disabled selected>Choose hall</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="HallId"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CinemaId">Cinema</label>
+                                <select asp-for="CinemaId" asp-items="new SelectList(Model.Cinemas, nameof(Cinema.Id), nameof(Cinema.Name))" class="form-control">
+                                    <option disabled selected>Choose cinema</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="CinemaId"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="HallPriceId">Hall Price</label>
+                                <select asp-for="HallPriceId" asp-items="new SelectList(Model.HallPrices, nameof(HallPrice.Id), nameof(HallPrice.Price))" class="form-control">
+                                    <option disabled selected>Choose price</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="HallPriceId"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="LanguageId">Language</label>
+                                <select asp-for="LanguageId" asp-items="new SelectList(Model.Languages, nameof(Language.Id), nameof(Language.Name))" class="form-control">
+                                    <option disabled selected>Choose language</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="LanguageId"></span>
+                            </div>
+
+                           
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label asp-for="Session.EndTime"></label>
-        <input asp-for="Session.EndTime" class="form-control" type="datetime-local" />
-    </div>
-
-    <div class="form-group">
-        <label>Film</label>
-        <select asp-for="Session.MovieId" class="form-control"
-                asp-items="@(Model.Movies != null ? new SelectList(Model.Movies, "Id", "Name") : new SelectList(Enumerable.Empty<SelectListItem>()))">
-        </select>
-
-    </div>
-    <div class="form-group">
-        <label>Zal</label>
-        <select asp-for="Session.HallId" class="form-control" asp-items="@(new SelectList(Model.Halls, "Id", "Name"))"></select>
-    </div>
-
-    <div class="form-group">
-        <label>Kinoteatr</label>
-        <select asp-for="Session.CinemaId" class="form-control" asp-items="@(new SelectList(Model.Cinemas, "Id", "Name"))"></select>
-    </div>
-
-    <div class="form-group">
-        <label>Zal Qiyməti</label>
-        <select asp-for="Session.HallPriceId" class="form-control" asp-items="@(new SelectList(Model.HallPrices, "Id", "Type"))"></select>
-    </div>
-
-    <div class="form-group">
-        <label>Seans Dili</label>
-        <select asp-for="Session.LanguageId" class="form-control" asp-items="@(new SelectList(Model.Languages, "Id", "Name"))"></select>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Session.AvailableSeats"></label>
-        <input asp-for="Session.AvailableSeats" class="form-control" />
-    </div>
-
-    <button type="submit" class="btn btn-primary">Yarat</button>
-</form>
+</div>

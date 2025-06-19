@@ -1,35 +1,57 @@
-﻿@model List<Session>
-
-
-<a asp-action="create" >Create</a>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Film</th>
-            <th>Zal</th>
-            <th>Kinoteatr</th>
-            <th>Dil</th>
-            <th>Başlama vaxtı</th>
-            <th>Bitmə vaxtı</th>
-            <th>Əməliyyatlar</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.Movie?.Name</td>
-                <td>@item.Hall?.Name</td>
-                <td>@item.Cinema?.Name</td>
-                <td>@item.Language?.Name</td>
-                <td>@item.StartTime.ToString("g")</td>
-                <td>@item.EndTime.ToString("g")</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Düzəliş</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Sil</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+﻿@model List<GetSessionVM>
+@{
+    int count = 0;
+}
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h4 class="card-title mb-0">Session List</h4>
+                    <a asp-action="Create" class="btn btn-success">Create</a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive border rounded py-4">
+                        <table class="table" data-toggle="data-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Movie</th>
+                                    <th>Hall</th>
+                                    <th>Cinema</th>
+                                    <th>Language</th>
+                                    <th>Start</th>
+                                    <th>End</th>
+                                    <th>Seats</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@item.MovieName</td>
+                                        <td>@item.HallName</td>
+                                        <td>@item.CinemaName</td>
+                                        <td>@item.LanguageName</td>
+                                        <td>@item.StartTime.ToString("g")</td>
+                                        <td>@item.EndTime.ToString("g")</td>
+                                        <td>@item.AvailableSeats</td>
+                                        <td>@item.Price</td>
+                                        <td>
+                                            <a asp-action="Update" asp-route-id="@item.Id">Edit</a> |
+                                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

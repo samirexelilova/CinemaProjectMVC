@@ -528,6 +528,7 @@ wwwroot\assets\css\rtl.min848f.css
 wwwroot\assets\css\streamit.min848f.css
 wwwroot\assets\images\289a78bd-ad2c-49ec-aeac-dc6a0697af51.webp
 wwwroot\assets\images\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg
+wwwroot\assets\images\649aa786-0837-4aeb-8cfa-bff20c979f53.webp
 wwwroot\assets\images\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg
 wwwroot\assets\images\blog\01.webp
 wwwroot\assets\images\blog\blog1.webp
@@ -811,8 +812,8 @@ wwwroot\assets\js\setting-init.js
 wwwroot\assets\js\streamit.js
 wwwroot\assets\js\swiper.js
 wwwroot\assets\js\utility.js
-wwwroot\assets\subtitles\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt
-wwwroot\assets\subtitles\ad84eb62-c207-460b-8347-223ecd62e65c.txt
+wwwroot\assets\subtitles\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt
+wwwroot\assets\subtitles\deb013ea-8684-4902-9e64-701e5db20c40.txt
 wwwroot\assets\vendor\animate.min.css
 wwwroot\assets\vendor\font-awesome\css\all.min.css
 wwwroot\assets\vendor\font-awesome\webfonts\fa-brands-400.ttf

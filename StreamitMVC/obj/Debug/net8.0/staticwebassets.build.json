@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qRvvoiDpldfFVbHjoUgSGGcCtDM1sJ/VioP1k8LPu1g=",
+  "Hash": "8IbdzEaTk7KNg/6mzL7Fy77e7MxVYS4wt2mgGMyW480=",
   "Source": "StreamitMVC",
   "BasePath": "_content/StreamitMVC",
   "Mode": "Default",
@@ -11147,6 +11147,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ewkznw2dvs",
+      "Integrity": "clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\649aa786-0837-4aeb-8cfa-bff20c979f53.webp"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -17090,12 +17111,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\js\\utility.js"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
       "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208#[.{fingerprint}]?.txt",
+      "RelativePath": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e#[.{fingerprint}]?.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -17108,15 +17129,15 @@
       "Integrity": "cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\subtitles\\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt"
+      "OriginalItemSpec": "wwwroot\\assets\\subtitles\\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\ad84eb62-c207-460b-8347-223ecd62e65c.txt",
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\deb013ea-8684-4902-9e64-701e5db20c40.txt",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
       "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c#[.{fingerprint}]?.txt",
+      "RelativePath": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40#[.{fingerprint}]?.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -17129,7 +17150,7 @@
       "Integrity": "cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\subtitles\\ad84eb62-c207-460b-8347-223ecd62e65c.txt"
+      "OriginalItemSpec": "wwwroot\\assets\\subtitles\\deb013ea-8684-4902-9e64-701e5db20c40.txt"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\animate.min.css",
@@ -61455,6 +61476,88 @@
       ]
     },
     {
+      "Route": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.ewkznw2dvs.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2450"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 19:14:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ewkznw2dvs"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2450"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 19 Jun 2025 19:14:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-clROjJZtsbbbDsKUp81GraQmhhNhfvmjsdCMXBfJK8U="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/6b26f27b-953b-4313-bbaa-b7b4f5dce70a.ak5s3xvu76.jpg",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg",
       "Selectors": [],
@@ -84661,8 +84764,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.x0de0qid5h.txt",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
+      "Route": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.x0de0qid5h.txt",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -84683,7 +84786,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:12:05 GMT"
+          "Value": "Thu, 19 Jun 2025 19:12:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -84697,7 +84800,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt"
+          "Value": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt"
         },
         {
           "Name": "integrity",
@@ -84706,8 +84809,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\5c6fb30d-aaf4-4e80-ae5a-65f06cbfe208.txt",
+      "Route": "assets/subtitles/a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -84728,7 +84831,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:12:05 GMT"
+          "Value": "Thu, 19 Jun 2025 19:12:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -84743,8 +84846,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.x0de0qid5h.txt",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\ad84eb62-c207-460b-8347-223ecd62e65c.txt",
+      "Route": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.x0de0qid5h.txt",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\deb013ea-8684-4902-9e64-701e5db20c40.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -84765,7 +84868,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:07:34 GMT"
+          "Value": "Thu, 19 Jun 2025 19:21:08 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -84779,7 +84882,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt"
+          "Value": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt"
         },
         {
           "Name": "integrity",
@@ -84788,8 +84891,8 @@
       ]
     },
     {
-      "Route": "assets/subtitles/ad84eb62-c207-460b-8347-223ecd62e65c.txt",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\ad84eb62-c207-460b-8347-223ecd62e65c.txt",
+      "Route": "assets/subtitles/deb013ea-8684-4902-9e64-701e5db20c40.txt",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\deb013ea-8684-4902-9e64-701e5db20c40.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -84810,7 +84913,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 15 Jun 2025 18:07:34 GMT"
+          "Value": "Thu, 19 Jun 2025 19:21:08 GMT"
         },
         {
           "Name": "Cache-Control",
