@@ -295,37 +295,34 @@
                                                 <td>@item.Session.Cinema?.Name</td>
                                                 <td>@item.Session.Hall?.Name</td>
                                                 <td>
-                                                    <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                                                        @* Filmin Orijinal Dili *@
-                                                        @if (Model.Movie.MovieLanguages != null && Model.Movie.MovieLanguages.Any())
+                                                    <div style="display: flex; align-items: center; gap: 20px;">
+
+                                                        @*  Orijinal Dil (Seansın dili) *@
+                                                        @if (item.Session.Language != null)
                                                         {
-                                                            var originalLanguage = Model.Movie.MovieLanguages.First();
                                                             <div style="display: flex; align-items: center; padding: 4px 8px;">
-                                                                <img src="~/assets/images/@(originalLanguage.Language.FlagIcon)"
-                                                                     alt="@originalLanguage.Language.Name"
-                                                                     style="width:30px; height:21px;"
-                                                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" />
+                                                                <img src="~/assets/images/@item.Session.Language.FlagIcon"
+                                                                     alt="@item.Session.Language.Name"
+                                                                     style="width:30px; height:21px; border-radius: 4px;"
+                                                                     onerror="this.style.display='none';" />
                                                             </div>
                                                         }
 
-                                                        @* Altyazılar (Subtitles) *@
-                                                        @if (Model.Movie.Subtitles != null && Model.Movie.Subtitles.Any())
+                                                        @* Subtitrlər (Seansın altyazı dili) *@
+                                                        @if (item.Session.Subtitle?.Language != null)
                                                         {
-                                                            foreach (var subtitle in Model.Movie.Subtitles)
-                                                            {
-                                                                <div style="display: flex; align-items: center; border: 1px solid #999; border-radius: 4px; padding: 2px 6px; font-weight: bold; font-size: 12px; background:#eee;color:black;">
-                                                                    <span>@subtitle.Language.Code.ToUpper()</span>
-                                                                    <span style="display:none; font-weight:bold; color:#666; font-size:12px;">
-                                                                        @subtitle.Language.Code.ToUpper()
-                                                                    </span>
-                                                                </div>
-                                                            }
+                                                            <div style="display: flex; align-items: center; gap: 6px; font-weight: bold; font-size: 13px; color: black;">
+                                                                <span>@item.Session.Subtitle.Language.Code.ToUpper()</span>
+                                                            </div>
                                                         }
+
                                                     </div>
                                                 </td>
+
+
                                                 <td>@item.Price.ToString("0.00") AZN</td>
                                                 <td>
-                                                    <a asp-controller="Booking" asp-action="SelectSeat" asp-route-sessionId="@item.Session.Id" class="btn btn-sm btn-primary">
+                                                    <a asp-controller="Booking" asp-action="seats" asp-route-sessionId="@item.Session.Id" class="btn btn-sm btn-primary">
                                                         Yerlər
                                                     </a>
                                                 </td>

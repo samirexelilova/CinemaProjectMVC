@@ -1,14 +1,15 @@
 ﻿
 using StreamitMVC.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace StreamitMVC.ViewModels.CreateMovieVM
+namespace StreamitMVC.ViewModels
 {
     public class CreateMovieVM
     {
         public string Name { get; set; }
-        public IFormFile Photo { get; set; }
-        public IFormFile TrailerVideoFile { get; set; }
-        public IFormFile VideoUrlFile { get; set; }
+        public IFormFile PhotoFile { get; set; }
+        public IFormFile TrailerVideo { get; set; }
+        public IFormFile VideoFile { get; set; }
         public TimeSpan Duration { get; set; }
         public string Director { get; set; }
         public string Country { get; set; }
@@ -16,16 +17,28 @@ namespace StreamitMVC.ViewModels.CreateMovieVM
         public string Description { get; set; }
         public int AgeRestriction { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public int LanguageId { get; set; }
 
+        // Seçmək üçün ID-lər
         public List<int>? SelectedCategoryIds { get; set; }
         public List<int>? SelectedTagIds { get; set; }
-        public List<int>? SelectedActorIds { get; set; }
+        public List<int>? SelectedLanguageIds { get; set; }
+        public List<int>? SelectedSubtitleIds { get; set; }
 
-        public List<Category> AllCategories { get; set; }
-        public List<Tag> AllTags { get; set; }
-        public List<Actor> AllActors { get; set; }
-        public List<Language> AllLanguages { get; set; }
+        // Dropdown list üçün
+        public List<Category>? Categories { get; set; }
+        public List<Tag>? Tags { get; set; }
+        public List<Actor>? Actors { get; set; }
+        public List<Language>? Languages { get; set; }
+        public List<Subtitle>? Subtitles { get; set; }
+
+        public List<ActorWithRole>? ActorRoles { get; set; }
+
+        public class ActorWithRole
+        {
+            public int ActorId { get; set; }
+            public string Role { get; set; }
+        }
     }
+
 
 }

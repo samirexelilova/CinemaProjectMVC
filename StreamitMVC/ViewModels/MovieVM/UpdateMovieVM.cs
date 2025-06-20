@@ -1,6 +1,9 @@
-﻿namespace StreamitMVC.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace StreamitMVC.ViewModels
 {
     public class UpdateMovieVM
     {
+      
     }
 }

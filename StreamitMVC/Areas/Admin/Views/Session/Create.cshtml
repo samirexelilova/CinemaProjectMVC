@@ -27,8 +27,8 @@
 
                             <div class="form-group">
                                 <label asp-for="MovieId">Movie</label>
-                                <select asp-for="MovieId" asp-items="new SelectList(Model.Movies, nameof(Movie.Id), nameof(Movie.Name))" class="form-control">
-                                    <option disabled selected>Choose movie</option>
+                                <select asp-for="MovieId" id="movieSelect" asp-items="new SelectList(Model.Movies, nameof(Movie.Id), nameof(Movie.Name))" class="form-control">
+                                    <option value="0" disabled selected>Choose movie</option>
                                 </select>
                                 <span class="text-danger" asp-validation-for="MovieId"></span>
                             </div>
@@ -36,7 +36,7 @@
                             <div class="form-group">
                                 <label asp-for="HallId">Hall</label>
                                 <select asp-for="HallId" asp-items="new SelectList(Model.Halls, nameof(Hall.Id), nameof(Hall.Name))" class="form-control">
-                                    <option disabled selected>Choose hall</option>
+                                    <option value="0" disabled selected>Choose hall</option>
                                 </select>
                                 <span class="text-danger" asp-validation-for="HallId"></span>
                             </div>
@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <label asp-for="CinemaId">Cinema</label>
                                 <select asp-for="CinemaId" asp-items="new SelectList(Model.Cinemas, nameof(Cinema.Id), nameof(Cinema.Name))" class="form-control">
-                                    <option disabled selected>Choose cinema</option>
+                                    <option value="0" disabled selected>Choose cinema</option>
                                 </select>
                                 <span class="text-danger" asp-validation-for="CinemaId"></span>
                             </div>
@@ -52,20 +52,27 @@
                             <div class="form-group">
                                 <label asp-for="HallPriceId">Hall Price</label>
                                 <select asp-for="HallPriceId" asp-items="new SelectList(Model.HallPrices, nameof(HallPrice.Id), nameof(HallPrice.Price))" class="form-control">
-                                    <option disabled selected>Choose price</option>
+                                    <option value="0" disabled selected>Choose price</option>
                                 </select>
                                 <span class="text-danger" asp-validation-for="HallPriceId"></span>
                             </div>
 
                             <div class="form-group">
                                 <label asp-for="LanguageId">Language</label>
-                                <select asp-for="LanguageId" asp-items="new SelectList(Model.Languages, nameof(Language.Id), nameof(Language.Name))" class="form-control">
-                                    <option disabled selected>Choose language</option>
+                                <select asp-for="LanguageId" id="languageSelect" asp-items="new SelectList(Model.Languages, nameof(Language.Id), nameof(Language.Name))" class="form-control">
+                                    <option value="0" disabled selected>Choose language</option>
                                 </select>
                                 <span class="text-danger" asp-validation-for="LanguageId"></span>
                             </div>
 
-                           
+                            <div class="form-group">
+                                <label asp-for="SubtitleId">Subtitle</label>
+                                <select asp-for="SubtitleId" id="subtitleSelect" class="form-control">
+                                    <option value="">-- Altyazı seçin --</option>
+                                </select>
+                                <span class="text-danger" asp-validation-for="SubtitleId"></span>
+                            </div>
+
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
@@ -74,3 +81,42 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const movieSelect = document.getElementById('movieSelect');
+        const languageSelect = document.getElementById('languageSelect');
+        const subtitleSelect = document.getElementById('subtitleSelect');
+
+        function loadSubtitles() {
+            const movieId = movieSelect.value;
+            const languageId = languageSelect.value;
+
+            subtitleSelect.innerHTML = '<option value="">-- Altyazı seçin --</option>';
+
+            if (movieId && movieId !== '0' && languageId && languageId !== '0') {
+                fetch(`/Admin/Session/GetSubtitles?movieId=${movieId}&languageId=${languageId}`)
+                    .then(response => response.json())
+                    .then(subtitles => {
+                        subtitles.forEach(subtitle => {
+                            const option = document.createElement('option');
+                            option.value = subtitle.id;
+                            option.textContent = subtitle.name;
+                            subtitleSelect.appendChild(option);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading subtitles:', error);
+                    });
+            }
+        }
+
+        movieSelect.addEventListener('change', loadSubtitles);
+        languageSelect.addEventListener('change', loadSubtitles);
+
+        if (movieSelect.value && movieSelect.value !== '0' &&
+            languageSelect.value && languageSelect.value !== '0') {
+            loadSubtitles();
+        }
+    });
+</script>

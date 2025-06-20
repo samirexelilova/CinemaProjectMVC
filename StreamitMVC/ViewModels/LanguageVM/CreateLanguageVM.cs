@@ -11,7 +11,6 @@ namespace StreamitMVC.ViewModels
         [Required]
         public string Code { get; set; }
         public IFormFile FlagImage { get; set; }
-        public List<int>? SelectedMovieIds { get; set; }
         public List<Movie>? AllMovies { get; set; }
     }
 }

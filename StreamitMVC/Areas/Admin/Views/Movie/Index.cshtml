@@ -1,5 +1,97 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<GetMovieVM>
+
 @{
+    ViewData["Title"] = "Filmlər";
 }
+
+<h1>Filmlər</h1>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Şəkil</th>
+            <th>Ad</th>
+            <th>Rejissor</th>
+            <th>IMDb</th>
+            <th>Müddət</th>
+            <th>Çıxış Tarixi</th>
+            <th>Yaş Məhdudiyyəti</th>
+            <th>Ölkə</th>
+            <th>Trailer</th>
+            <th>Video</th>
+            <th>Kateqoriyalar</th>
+            <th>Taglar</th>
+            <th>Aktyorlar</th>
+            <th>Dillər</th>
+            <th>Subtitrlər</th>
+            <th>Seanslar</th>
+            <th>Rəylər</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/assets/images/movies/popular/@item.Photo" width="100" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Director</td>
+                <td>@item.ImdbRating</td>
+                <td>@item.Duration</td>
+                <td>@item.ReleaseDate.ToShortDateString()</td>
+                <td>@item.AgeRestriction+</td>
+                <td>@item.Country</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.TrailerVideo))
+                    {
+                        <a href="@item.TrailerVideo" target="_blank">İzlət</a>
+                    }
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.VideoUrl))
+                    {
+                        <a href="@item.VideoUrl" target="_blank">Video</a>
+                    }
+                </td>
+                <td>
+                    @foreach (var c in item.Categories)
+                    {
+                        <span class="badge bg-primary">@c.Name</span>
+                    }
+                </td>
+                <td>
+                    @foreach (var t in item.Tags)
+                    {
+                        <span class="badge bg-secondary">@t.Name</span>
+                    }
+                </td>
+                <td>
+                    @foreach (var a in item.Actors)
+                    {
+                        <span class="badge bg-success">@a.Name</span>
+                    }
+                </td>
+                <td>
+                    @foreach (var l in item.Languages)
+                    {
+                        <span class="badge bg-info">@l.Name</span>
+                    }
+                </td>
+                <td>
+                    @foreach (var s in item.Subtitles)
+                    {
+                        <span class="badge bg-dark">@s.Name</span>
+                    }
+                </td>
+                <td>@item.SessionCount</td>
+                <td>@item.ReviewCount</td>
+                <td>
+                    <a  asp-action="Update" asp-route-id="@item.Id">Edit</a> |
+                    <a  asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -9,6 +9,7 @@
         public string CinemaName { get; set; }
         public string HallName { get; set; }
         public string LanguageName { get; set; }
+        public string SubtitleName { get; set; }
         public int AvailableSeats { get; set; }
         public decimal Price { get; set; }
     }

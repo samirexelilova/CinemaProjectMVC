@@ -114,44 +114,48 @@ namespace StreamitMVC.Areas.Admin.Controllers
         {
             if (id == null || id <= 0) return BadRequest();
 
+            // Əvvəlcə drop-down-lar üçün lazımi məlumatları yüklə (view üçün)
+            model.AllMovies = await _context.Movies.ToListAsync();
+            model.AllLanguages = await _context.Languages.ToListAsync();
+
             if (!ModelState.IsValid)
             {
-                model.AllMovies = await _context.Movies.ToListAsync();
-                model.AllLanguages = await _context.Languages.ToListAsync();
+                // Əgər model valid deyil, view-ə qaytar
                 return View(model);
             }
 
-            var subtitle = await _context.Subtitles
-                .FirstOrDefaultAsync(s => s.Id == id);
-
+            var subtitle = await _context.Subtitles.FirstOrDefaultAsync(s => s.Id == id);
             if (subtitle == null) return NotFound();
 
+            // Fayl seçilibsə yoxlamaları et
             if (model.SubtitleFile != null)
             {
+                // Fayl tipi yoxla
                 if (!model.SubtitleFile.ValidateType("text/") && !model.SubtitleFile.ValidateType("application/octet-stream"))
                 {
                     ModelState.AddModelError(nameof(model.SubtitleFile), "Subtitrlər üçün fayl tipi düzgün deyil.");
-                    model.AllMovies = await _context.Movies.ToListAsync();
-                    model.AllLanguages = await _context.Languages.ToListAsync();
-                    return View(model);
-                }
-                if (!model.SubtitleFile.ValidateSize(FileSize.MB, 5))
-                {
-                    ModelState.AddModelError(nameof(model.SubtitleFile), "Fayl ölçüsü 5MB-dan böyük ola bilməz.");
-                    model.AllMovies = await _context.Movies.ToListAsync();
-                    model.AllLanguages = await _context.Languages.ToListAsync();
                     return View(model);
                 }
 
+                // Fayl ölçüsü yoxla
+                if (!model.SubtitleFile.ValidateSize(FileSize.MB, 5))
+                {
+                    ModelState.AddModelError(nameof(model.SubtitleFile), "Fayl ölçüsü 5MB-dan böyük ola bilməz.");
+                    return View(model);
+                }
+
+                // Faylı yüklə və köhnəsini sil
                 string fileName = await model.SubtitleFile.CreateFileAsync(_env.WebRootPath, "assets", "subtitles");
                 subtitle.FilePath.DeleteFile(_env.WebRootPath, "assets", "subtitles");
                 subtitle.FilePath = fileName;
             }
 
+            // Digər sahələri yenilə
             subtitle.MovieId = model.MovieId;
             subtitle.LanguageId = model.LanguageId;
 
             await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
 

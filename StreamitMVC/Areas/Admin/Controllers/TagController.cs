@@ -16,44 +16,36 @@ namespace StreamitMVC.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            List<Tag> tags = await _context.Tags
-             .Include(c => c.MovieTags)
-             .ThenInclude(mc => mc.Movie)
-             .ToListAsync();
+            List<GetTagVM> tagVMs = await _context.Tags
+                .Where(c => !c.IsDeleted)
+                .Include(c => c.MovieTags)
+                .AsNoTracking()
+                .Select(p => new GetTagVM
+                {
+                    Id = p.Id,
+                    Name = p.Name,
+                    MovieCount = p.MovieTags.Count 
+                })
+                .ToListAsync();
 
-            List<GetTagVM> tagVm = tags.Select(c => new GetTagVM
-            {
-                Id = c.Id,
-                Name = c.Name,
-                Movies = c.MovieTags.Select(mc => mc.Movie).ToList()
-            }).ToList();
-
-            return View(tagVm);
+            return View(tagVMs);
         }
+
         public IActionResult Create()
         {
-            CreateTagVM model = new CreateTagVM
-            {
-                AllMovies = _context.Movies.ToList()
-            };
-            return View(model);
+            return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateTagVM model)
         {
             if (!ModelState.IsValid)
             {
-                model.AllMovies = _context.Movies.ToList();
                 return View(model);
             }
 
             Tag tag = new Tag
             {
-                Name = model.Name,
-                MovieTags = model.SelectedMovieIds.Select(id => new MovieTag
-                {
-                    MovieId = id
-                }).ToList()
+                Name = model.Name
             };
 
             _context.Tags.Add(tag);
@@ -72,9 +64,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
 
             UpdateTagVM vm = new UpdateTagVM
             {
-                Name = tag.Name,
-                SelectedMovieIds = tag.MovieTags.Select(mc => mc.MovieId).ToList(),
-                AllMovies = await _context.Movies.ToListAsync()
+                Name = tag.Name
             };
 
             return View(vm);
@@ -83,33 +73,20 @@ namespace StreamitMVC.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int? id, UpdateTagVM model)
         {
-            if (id is null || id <= 0) return BadRequest();
-
             if (!ModelState.IsValid)
             {
-                model.AllMovies = await _context.Movies.ToListAsync();
-                return View(model);
+                return View();
             }
-
-            Tag? existed = await _context.Tags
-                .Include(c => c.MovieTags)
-                .FirstOrDefaultAsync(c => c.Id == id);
-
-            if (existed is null) return NotFound();
-
-            existed.Name = model.Name;
-
-            _context.MovieTags.RemoveRange(existed.MovieTags);
-
-            if (model.SelectedMovieIds != null)
+            bool result = await _context.Tags.AnyAsync(p => p.Name == model.Name && p.Id != id);
+            if (result)
             {
-                existed.MovieTags = model.SelectedMovieIds
-                    .Select(movieId => new MovieTag
-                    {
-                        MovieId = movieId,
-                        TagId = existed.Id
-                    }).ToList();
+                ModelState.AddModelError(nameof(UpdateTagVM.Name), $"{model.Name} bu adli tag artiq movcuddur");
+                return View();
             }
+            Tag? existed = await _context.Tags.FirstOrDefaultAsync(p => p.Id == id);
+
+            if (existed.Name == model.Name) return RedirectToAction(nameof(Index));
+            existed.Name = model.Name;
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
@@ -118,14 +95,12 @@ namespace StreamitMVC.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int? id)
         {
             if (id is null || id <= 0) return BadRequest();
+            Tag? existed = await _context.Tags.FirstOrDefaultAsync(p => p.Id == id);
 
-            Tag? tag = await _context.Tags
-                .Include(c => c.MovieTags)
-                .FirstOrDefaultAsync(c => c.Id == id);
+            if (existed is null) return NotFound();
 
-            if (tag is null) return NotFound();
+            _context.Tags.Remove(existed);
 
-            _context.Tags.Remove(tag);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

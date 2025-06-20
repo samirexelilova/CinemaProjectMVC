@@ -2117,12 +2117,8 @@
       "PackagePath": "staticwebassets\\assets\\images\\289a78bd-ad2c-49ec-aeac-dc6a0697af51.webp"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\649aa786-0837-4aeb-8cfa-bff20c979f53.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\649aa786-0837-4aeb-8cfa-bff20c979f53.webp"
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\45e1f775-b0dd-45f9-a8f4-b0eeacac0d39.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\45e1f775-b0dd-45f9-a8f4-b0eeacac0d39.webp"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg",
@@ -2281,6 +2277,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\continue-watch\\06.webp"
     },
     {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\e3d95642-9193-4934-bfc6-45358f19e624.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\e3d95642-9193-4934-bfc6-45358f19e624.jpg"
+    },
+    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\favicon.ico",
       "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
     },
@@ -2405,6 +2405,18 @@
       "PackagePath": "staticwebassets\\assets\\images\\mega-menu\\video.webp"
     },
     {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\2dfbc156-dec1-45d8-9ca9-ee03b3f79a42.mp4",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\2dfbc156-dec1-45d8-9ca9-ee03b3f79a42.mp4"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\3a23bdcc-1355-4655-b910-869c2dbaaf17.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\3a23bdcc-1355-4655-b910-869c2dbaaf17.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\77911bcb-178a-4f07-98ea-ad66fec4fa68.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\77911bcb-178a-4f07-98ea-ad66fec4fa68.webp"
+    },
+    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\banner1.webp",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\banner1.webp"
     },
@@ -2415,6 +2427,10 @@
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\banner3.webp",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\banner3.webp"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\f3735ce6-91e4-4f9b-9a61-e6e07362e58d.mp4",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\f3735ce6-91e4-4f9b-9a61-e6e07362e58d.mp4"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\imdb-logo.svg",
@@ -2529,14 +2545,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\07.webp"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame2photo.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\squidgame2photo.webp"
-    },
-    {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\squidgame3photo.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\squidgame3photo.webp"
-    },
-    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\01.webp",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\recommended\\01.webp"
     },
@@ -2591,10 +2599,6 @@
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\related\\07.webp",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\related\\07.webp"
-    },
-    {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\squidgame3.mp4",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\squidgame3.mp4"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\suggested\\01.webp",
@@ -3257,12 +3261,32 @@
       "PackagePath": "staticwebassets\\assets\\js\\utility.js"
     },
     {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\402ed766-2118-45fa-b699-a526fa280b9e.txt",
+      "PackagePath": "staticwebassets\\assets\\subtitles\\402ed766-2118-45fa-b699-a526fa280b9e.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\607104da-89de-49ad-a04a-78552d2a50e5.txt",
+      "PackagePath": "staticwebassets\\assets\\subtitles\\607104da-89de-49ad-a04a-78552d2a50e5.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\9d21f110-b53e-47e3-8c03-40c5826dbd4b.txt",
+      "PackagePath": "staticwebassets\\assets\\subtitles\\9d21f110-b53e-47e3-8c03-40c5826dbd4b.txt"
+    },
+    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt",
       "PackagePath": "staticwebassets\\assets\\subtitles\\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\deb013ea-8684-4902-9e64-701e5db20c40.txt",
-      "PackagePath": "staticwebassets\\assets\\subtitles\\deb013ea-8684-4902-9e64-701e5db20c40.txt"
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\b4cbe2bb-9080-4782-a880-4c72f8a1857d.txt",
+      "PackagePath": "staticwebassets\\assets\\subtitles\\b4cbe2bb-9080-4782-a880-4c72f8a1857d.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\d99ce5a7-0a59-4b12-9858-bfbcd82177a1.txt",
+      "PackagePath": "staticwebassets\\assets\\subtitles\\d99ce5a7-0a59-4b12-9858-bfbcd82177a1.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\ec24c120-b741-473b-a864-343fbc583f43.txt",
+      "PackagePath": "staticwebassets\\assets\\subtitles\\ec24c120-b741-473b-a864-343fbc583f43.txt"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\vendor\\animate.min.css",

@@ -4,7 +4,7 @@ namespace StreamitMVC.Models
 {
     public class Subtitle:BaseEntity
     {
-            public int MovieId { get; set; }
+        public int MovieId { get; set; }
             public Movie Movie { get; set; }
 
             public int LanguageId { get; set; }

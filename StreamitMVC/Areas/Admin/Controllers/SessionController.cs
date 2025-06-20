@@ -52,7 +52,8 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 Halls = await _context.Halls.ToListAsync(),
                 Cinemas = await _context.Cinemas.ToListAsync(),
                 HallPrices = await _context.HallPrices.ToListAsync(),
-                Languages = await _context.Languages.ToListAsync()
+                Languages = await _context.Languages.ToListAsync(),
+                Subtitles = new List<Subtitle>()
             };
             return View(vm);
         }
@@ -66,6 +67,17 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 sessionVM.Cinemas = await _context.Cinemas.ToListAsync();
                 sessionVM.HallPrices = await _context.HallPrices.ToListAsync();
                 sessionVM.Languages = await _context.Languages.ToListAsync();
+
+                if (sessionVM.MovieId != 0 && sessionVM.LanguageId != 0)
+                {
+                    sessionVM.Subtitles = await _context.Subtitles
+                        .Where(s => s.MovieId == sessionVM.MovieId && s.LanguageId == sessionVM.LanguageId)
+                        .ToListAsync();
+                }
+                else
+                {
+                    sessionVM.Subtitles = new List<Subtitle>();
+                }
 
                 return View(sessionVM);
             }
@@ -81,6 +93,10 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 sessionVM.HallPrices = await _context.HallPrices.ToListAsync();
                 sessionVM.Languages = await _context.Languages.ToListAsync();
 
+                sessionVM.Subtitles = await _context.Subtitles
+                    .Where(s => s.MovieId == sessionVM.MovieId && s.LanguageId == sessionVM.LanguageId)
+                    .ToListAsync();
+
                 return View(sessionVM);
             }
 
@@ -93,7 +109,8 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 CinemaId = sessionVM.CinemaId,
                 HallPriceId = sessionVM.HallPriceId,
                 LanguageId = sessionVM.LanguageId,
-                AvailableSeats = hall.Capacity
+                AvailableSeats = hall.Capacity,
+                SubtitleId = sessionVM.SubtitleId
             };
 
             await _context.Sessions.AddAsync(session);
@@ -168,5 +185,27 @@ namespace StreamitMVC.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        [HttpGet]
+        public async Task<IActionResult> GetSubtitles(int movieId, int languageId)
+        {
+            if (movieId == 0 || languageId == 0)
+            {
+                return Json(new List<object>());
+            }
+
+            var subtitles = await _context.Subtitles
+                .Include(s => s.Language)
+                .Where(s => s.MovieId == movieId && s.LanguageId != languageId)
+                .Select(s => new 
+                {
+                    Id = s.Id,
+                    Name = s.Language.Name,
+                    Code = s.Language.Code
+                })
+                .ToListAsync();
+
+            return Json(subtitles);
+        }
+       
     }
 }

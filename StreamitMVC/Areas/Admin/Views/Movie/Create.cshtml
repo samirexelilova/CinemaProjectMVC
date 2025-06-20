@@ -1,145 +1,128 @@
-﻿@using StreamitMVC.ViewModels.CreateMovieVM
-@model CreateMovieVM
+﻿@model CreateMovieVM
 
-<div class="content-inner container-fluid pb-0" id="page_layout">
-    <div class="row">
-        <div class="col-sm-12 col-lg-10">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between">
-                    <div class="header-title">
-                        <h4 class="card-title">Create Movie</h4>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <form method="post" enctype="multipart/form-data">
-                        <div class="row">
-                            <!-- Name -->
-                            <div class="form-group col-md-6">
-                                <label asp-for="Name" class="form-label">Movie Name</label>
-                                <input asp-for="Name" class="form-control" />
-                                <span class="text-danger" asp-validation-for="Name"></span>
-                            </div>
 
-                            <!-- Photo -->
-                            <div class="form-group col-md-6">
-                                <label asp-for="Photo" class="form-label">Photo</label>
-                                <input asp-for="Photo" type="file" class="form-control" />
-                                <span class="text-danger" asp-validation-for="Photo"></span>
-                            </div>
 
-                            <!-- Trailer Video -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="TrailerVideoFile" class="form-label">Trailer Video</label>
-                                <input asp-for="TrailerVideoFile" type="file" class="form-control" />
-                                <span class="text-danger" asp-validation-for="TrailerVideoFile"></span>
-                            </div>
+<h2>Yeni Film Əlavə Et</h2>
 
-                            <!-- Main Video -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="VideoUrlFile" class="form-label">Full Video</label>
-                                <input asp-for="VideoUrlFile" type="file" class="form-control" />
-                                <span class="text-danger" asp-validation-for="VideoUrlFile"></span>
-                            </div>
-
-                            <!-- Duration -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="Duration" class="form-label">Duration</label>
-                                <input asp-for="Duration" class="form-control" />
-                                <span class="text-danger" asp-validation-for="Duration"></span>
-                            </div>
-
-                            <!-- Director -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="Director" class="form-label">Director</label>
-                                <input asp-for="Director" class="form-control" />
-                                <span class="text-danger" asp-validation-for="Director"></span>
-                            </div>
-
-                            <!-- Country -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="Country" class="form-label">Country</label>
-                                <input asp-for="Country" class="form-control" />
-                                <span class="text-danger" asp-validation-for="Country"></span>
-                            </div>
-
-                            <!-- IMDb Rating -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="ImdbRating" class="form-label">IMDb Rating</label>
-                                <input asp-for="ImdbRating" class="form-control" />
-                                <span class="text-danger" asp-validation-for="ImdbRating"></span>
-                            </div>
-
-                            <!-- Age Restriction -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="AgeRestriction" class="form-label">Age Restriction</label>
-                                <input asp-for="AgeRestriction" class="form-control" />
-                                <span class="text-danger" asp-validation-for="AgeRestriction"></span>
-                            </div>
-
-                            <!-- Release Date -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="ReleaseDate" class="form-label">Release Date</label>
-                                <input asp-for="ReleaseDate" type="date" class="form-control" />
-                                <span class="text-danger" asp-validation-for="ReleaseDate"></span>
-                            </div>
-
-                            <!-- Language -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label asp-for="LanguageId" class="form-label">Language</label>
-                                <select asp-for="LanguageId" class="form-control" asp-items="@(new SelectList(Model.AllLanguages, "Id", "Name"))">
-                                    <option disabled selected>Choose language</option>
-                                </select>
-                                <span class="text-danger" asp-validation-for="LanguageId"></span>
-                            </div>
-
-                            <!-- Description -->
-                            <div class="form-group col-md-12 mt-3">
-                                <label asp-for="Description" class="form-label">Description</label>
-                                <textarea asp-for="Description" class="form-control" rows="4"></textarea>
-                                <span class="text-danger" asp-validation-for="Description"></span>
-                            </div>
-
-                            <!-- Categories -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label class="form-label">Categories</label>
-                                <select asp-for="SelectedCategoryIds" multiple class="form-control">
-                                    @foreach (var cat in Model.AllCategories)
-                                    {
-                                        <option value="@cat.Id">@cat.Name</option>
-                                    }
-                                </select>
-                            </div>
-
-                            <!-- Tags -->
-                            <div class="form-group col-md-6 mt-3">
-                                <label class="form-label">Tags</label>
-                                <select asp-for="SelectedTagIds" multiple class="form-control">
-                                    @foreach (var tag in Model.AllTags)
-                                    {
-                                        <option value="@tag.Id">@tag.Name</option>
-                                    }
-                                </select>
-                            </div>
-
-                            <!-- Actors -->
-                            <div class="form-group col-md-12 mt-3">
-                                <label class="form-label">Actors</label>
-                                <select asp-for="SelectedActorIds" multiple class="form-control">
-                                    @foreach (var actor in Model.AllActors)
-                                    {
-                                        <option value="@actor.Id">@actor.Name @actor.Surname</option>
-                                    }
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="mt-4 text-end">
-                            <button type="submit" class="btn btn-primary">Create Movie</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<form asp-action="Create" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Film Adı</label>
+        <input asp-for="Name" class="form-control" />
     </div>
-</div>
 
+    <div class="mb-3">
+        <label asp-for="PhotoFile" class="form-label">Şəkil</label>
+        <input asp-for="PhotoFile" type="file" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="TrailerVideo" class="form-label">Trailer URL</label>
+        <input asp-for="TrailerVideo" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="VideoFile" class="form-label">Video Fayl</label>
+        <input asp-for="VideoFile" type="file" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Duration" class="form-label">Müddət</label>
+        <input asp-for="Duration" type="time" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Director" class="form-label">Rejissor</label>
+        <input asp-for="Director" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Country" class="form-label">Ölkə</label>
+        <input asp-for="Country" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImdbRating" class="form-label">IMDb</label>
+        <input asp-for="ImdbRating" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Təsvir</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AgeRestriction" class="form-label">Yaş Məhdudiyyəti</label>
+        <input asp-for="AgeRestriction" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ReleaseDate" class="form-label">Çıxış Tarixi</label>
+        <input asp-for="ReleaseDate" type="date" class="form-control" />
+    </div>
+ 
+    <div class="mb-3">
+        <label>Kateqoriyalar</label>
+        @foreach (var c in Model.Categories)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="@c.Id" name="SelectedCategoryIds" />
+                <label class="form-check-label">@c.Name</label>
+            </div>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label>Taglar</label>
+        @foreach (var t in Model.Tags)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="@t.Id" name="SelectedTagIds" />
+                <label class="form-check-label">@t.Name</label>
+            </div>
+        }
+    </div>
+
+    <h4>Aktyorlar və Rollar</h4>
+    @for (int i = 0; i < 1; i++) 
+    {
+        <div class="mb-3 border p-2 rounded">
+            <label>Aktyor seçin</label>
+            <select name="ActorRoles[@i].ActorId" class="form-control">
+                <option disabled selected>-- Aktyoru seçin --</option>
+                @foreach (var actor in Model.Actors)
+                {
+                    <option value="@actor.Id">@actor.Name @actor.Surname</option>
+                }
+            </select>
+
+            <label class="mt-2">Rol</label>
+            <input type="text" name="ActorRoles[@i].Role" class="form-control" placeholder="Rolun adını yazın" />
+        </div>
+    }
+
+
+    <div class="mb-3">
+        <label>Dillər</label>
+        @foreach (var l in Model.Languages)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="@l.Id" name="SelectedLanguageIds" />
+                <label class="form-check-label">@l.Name</label>
+            </div>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label>Subtitrlər</label>
+        @foreach (var s in Model.Subtitles)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="@s.Id" name="SelectedSubtitleIds" />
+                <label class="form-check-label">@s.Language.Name</label>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-success">Əlavə et</button>
+</form>

@@ -527,8 +527,7 @@ wwwroot\assets\css\custom.min848f.css
 wwwroot\assets\css\rtl.min848f.css
 wwwroot\assets\css\streamit.min848f.css
 wwwroot\assets\images\289a78bd-ad2c-49ec-aeac-dc6a0697af51.webp
-wwwroot\assets\images\3b9024e7-4ee3-4599-87e0-94db210a61dd.jpg
-wwwroot\assets\images\649aa786-0837-4aeb-8cfa-bff20c979f53.webp
+wwwroot\assets\images\45e1f775-b0dd-45f9-a8f4-b0eeacac0d39.webp
 wwwroot\assets\images\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg
 wwwroot\assets\images\blog\01.webp
 wwwroot\assets\images\blog\blog1.webp
@@ -568,6 +567,7 @@ wwwroot\assets\images\continue-watch\03.webp
 wwwroot\assets\images\continue-watch\04.webp
 wwwroot\assets\images\continue-watch\05.webp
 wwwroot\assets\images\continue-watch\06.webp
+wwwroot\assets\images\e3d95642-9193-4934-bfc6-45358f19e624.jpg
 wwwroot\assets\images\favicon.ico
 wwwroot\assets\images\fb34ef83-7ad8-4dc8-8015-b94ef710f50e.webp
 wwwroot\assets\images\footer\01.webp
@@ -599,9 +599,13 @@ wwwroot\assets\images\mega-menu\new-home.webp
 wwwroot\assets\images\mega-menu\shop-home.webp
 wwwroot\assets\images\mega-menu\tv-show.webp
 wwwroot\assets\images\mega-menu\video.webp
+wwwroot\assets\images\movies\2dfbc156-dec1-45d8-9ca9-ee03b3f79a42.mp4
+wwwroot\assets\images\movies\3a23bdcc-1355-4655-b910-869c2dbaaf17.webp
+wwwroot\assets\images\movies\77911bcb-178a-4f07-98ea-ad66fec4fa68.webp
 wwwroot\assets\images\movies\banner1.webp
 wwwroot\assets\images\movies\banner2.webp
 wwwroot\assets\images\movies\banner3.webp
+wwwroot\assets\images\movies\f3735ce6-91e4-4f9b-9a61-e6e07362e58d.mp4
 wwwroot\assets\images\movies\imdb-logo.svg
 wwwroot\assets\images\movies\latest\01.webp
 wwwroot\assets\images\movies\latest\02.webp
@@ -630,8 +634,6 @@ wwwroot\assets\images\movies\popular\04.webp
 wwwroot\assets\images\movies\popular\05.webp
 wwwroot\assets\images\movies\popular\06.webp
 wwwroot\assets\images\movies\popular\07.webp
-wwwroot\assets\images\movies\popular\squidgame2photo.webp
-wwwroot\assets\images\movies\popular\squidgame3photo.webp
 wwwroot\assets\images\movies\recommended\01.webp
 wwwroot\assets\images\movies\recommended\02.webp
 wwwroot\assets\images\movies\recommended\03.webp
@@ -646,7 +648,6 @@ wwwroot\assets\images\movies\related\04.webp
 wwwroot\assets\images\movies\related\05.webp
 wwwroot\assets\images\movies\related\06.webp
 wwwroot\assets\images\movies\related\07.webp
-wwwroot\assets\images\movies\squidgame3.mp4
 wwwroot\assets\images\movies\suggested\01.webp
 wwwroot\assets\images\movies\suggested\02.webp
 wwwroot\assets\images\movies\suggested\03.webp
@@ -812,8 +813,13 @@ wwwroot\assets\js\setting-init.js
 wwwroot\assets\js\streamit.js
 wwwroot\assets\js\swiper.js
 wwwroot\assets\js\utility.js
+wwwroot\assets\subtitles\402ed766-2118-45fa-b699-a526fa280b9e.txt
+wwwroot\assets\subtitles\607104da-89de-49ad-a04a-78552d2a50e5.txt
+wwwroot\assets\subtitles\9d21f110-b53e-47e3-8c03-40c5826dbd4b.txt
 wwwroot\assets\subtitles\a14b22f8-a83a-4f8c-869e-85d149a8223e.txt
-wwwroot\assets\subtitles\deb013ea-8684-4902-9e64-701e5db20c40.txt
+wwwroot\assets\subtitles\b4cbe2bb-9080-4782-a880-4c72f8a1857d.txt
+wwwroot\assets\subtitles\d99ce5a7-0a59-4b12-9858-bfbcd82177a1.txt
+wwwroot\assets\subtitles\ec24c120-b741-473b-a864-343fbc583f43.txt
 wwwroot\assets\vendor\animate.min.css
 wwwroot\assets\vendor\font-awesome\css\all.min.css
 wwwroot\assets\vendor\font-awesome\webfonts\fa-brands-400.ttf

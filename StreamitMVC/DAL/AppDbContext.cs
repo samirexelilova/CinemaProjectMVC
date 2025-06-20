@@ -101,7 +101,18 @@ namespace StreamitMVC.DAL
                 .WithMany(s => s.Tickets)
                 .HasForeignKey(t => t.SessionId)
                 .OnDelete(DeleteBehavior.NoAction);
+   
+            modelBuilder.Entity<Subtitle>()
+                .HasOne(s => s.Movie)
+                .WithMany(m => m.Subtitles)
+                .HasForeignKey(s => s.MovieId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Session>()
+     .HasOne(s => s.Subtitle)
+     .WithMany()
+     .HasForeignKey(s => s.SubtitleId)
+     .OnDelete(DeleteBehavior.Cascade);
         }
 
 

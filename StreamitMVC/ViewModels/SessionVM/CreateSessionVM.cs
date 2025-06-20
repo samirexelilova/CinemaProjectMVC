@@ -25,6 +25,10 @@ namespace StreamitMVC.ViewModels
         public List<Cinema>? Cinemas { get; set; } 
         public List<Hall>? Halls { get; set; } 
         public List<HallPrice>? HallPrices { get; set; } 
-        public List<Language>? Languages { get; set; } 
+        public List<Language>? Languages { get; set; }
+
+        public List<Subtitle>? Subtitles { get; set; }
+
+        public int? SubtitleId { get; set; }  // Seçilmiş altyazı
     }
 }

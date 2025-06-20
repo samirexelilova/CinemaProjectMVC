@@ -1152,6 +1152,9 @@ namespace StreamitMVC.Migrations
                     b.Property<DateTime>("StartTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("SubtitleId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CinemaId");
@@ -1163,6 +1166,8 @@ namespace StreamitMVC.Migrations
                     b.HasIndex("LanguageId");
 
                     b.HasIndex("MovieId");
+
+                    b.HasIndex("SubtitleId");
 
                     b.ToTable("Sessions");
                 });
@@ -1237,6 +1242,10 @@ namespace StreamitMVC.Migrations
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -1686,6 +1695,10 @@ namespace StreamitMVC.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
+                    b.HasOne("StreamitMVC.Models.Subtitle", "Subtitle")
+                        .WithMany()
+                        .HasForeignKey("SubtitleId");
+
                     b.Navigation("Cinema");
 
                     b.Navigation("Hall");
@@ -1695,6 +1708,8 @@ namespace StreamitMVC.Migrations
                     b.Navigation("Language");
 
                     b.Navigation("Movie");
+
+                    b.Navigation("Subtitle");
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.Subtitle", b =>

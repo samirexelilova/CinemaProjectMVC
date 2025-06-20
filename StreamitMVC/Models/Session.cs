@@ -18,6 +18,8 @@ namespace StreamitMVC.Models
         public HallPrice HallPrice { get; set; }
         public int LanguageId { get; set; }
         public Language Language { get; set; }
+        public int? SubtitleId { get; set; }  
+        public Subtitle Subtitle { get; set; }
         public int AvailableSeats { get; set; }
         public List<Booking> Bookings { get; set; } 
         public List<Ticket> Tickets { get; set; } 

@@ -77,11 +77,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
             {
                 Name = model.Name,
                 Code = model.Code,
-                FlagIcon = fileName,
-                MovieLanguages = model.SelectedMovieIds.Select(id => new MovieLanguage
-                {
-                    MovieId = id
-                }).ToList()
+                FlagIcon = fileName
             };
 
             await _context.Languages.AddAsync(language);
@@ -106,7 +102,6 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 Name = language.Name,
                 Code = language.Code,
                 ExistedFlagImage = language.FlagIcon,
-                SelectedMovieIds = language.MovieLanguages.Select(mc => mc.MovieId).ToList(),
                 AllMovies = await _context.Movies.ToListAsync()
             };
 
@@ -152,15 +147,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
 
             _context.MovieLanguages.RemoveRange(existed.MovieLanguages);
 
-            if (model.SelectedMovieIds != null)
-            {
-                existed.MovieLanguages = model.SelectedMovieIds
-                    .Select(movieId => new MovieLanguage
-                    {
-                        MovieId = movieId,
-                        LanguageId = existed.Id
-                    }).ToList();
-            }
+           
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
