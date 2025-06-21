@@ -3,48 +3,128 @@
   "WorkspaceRootPath": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\views\\movieindex\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\views\\movieindex\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\booking\\selectseats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\booking\\selectseats.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\booking\\viewbasket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\booking\\viewbasket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\viewmodels\\bookingvm\\seatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\viewmodels\\bookingvm\\seatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\session.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\session\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\session\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\seattype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\seattype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\movie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\movie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\seat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\movie\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\movie\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\views\\movieindex\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\views\\movieindex\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\movie\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\movie\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\viewmodels\\bookingvm\\selectseatsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\viewmodels\\bookingvm\\selectseatsvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\viewmodels\\movievm\\sessionwithpriceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\viewmodels\\movievm\\sessionwithpriceviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\viewmodels\\movievm\\detailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\viewmodels\\movievm\\detailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\cinema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\cinema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\language.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\language.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\subtitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\subtitle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\halltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\halltype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\hallprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\hallprice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\hall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\hall.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\cinemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\cinemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\movie\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\movie\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\actorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\actorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\movie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\movie\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\movie\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\movie\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\sessioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\session\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\views\\session\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\controllers\\cinemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\areas\\admin\\controllers\\cinemacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\areas\\admin\\views\\language\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -65,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\movieactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\movieactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|c:\\users\\rinat_pc\\desktop\\streamitmvc\\streamitmvc\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA54F7B8-D1D1-4EA3-A775-818D8F5345B2}|StreamitMVC\\StreamitMVC.csproj|solutionrelative:streamitmvc\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,33 +166,293 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAAAAUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T18:43:42.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ViewBasket.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Booking\\ViewBasket.cshtml",
+              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Booking\\ViewBasket.cshtml",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Booking\\ViewBasket.cshtml",
+              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Booking\\ViewBasket.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAiwFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T18:42:45.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SelectSeats.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Booking\\SelectSeats.cshtml",
+              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Booking\\SelectSeats.cshtml",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Booking\\SelectSeats.cshtml*",
+              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Booking\\SelectSeats.cshtml*",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAAAG4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-20T20:06:38.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Booking.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T19:20:48.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Seat.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Seat.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Seat.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Seat.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Seat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:51:58.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SeatType.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\SeatType.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\SeatType.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\SeatType.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\SeatType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:54:46.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Session.cs",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Session.cs",
               "RelativeDocumentMoniker": "StreamitMVC\\Models\\Session.cs",
               "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Session.cs",
               "RelativeToolTip": "StreamitMVC\\Models\\Session.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA7wAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAkwBsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T19:04:24.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "SeatViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\BookingVM\\SeatViewModel.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\ViewModels\\BookingVM\\SeatViewModel.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\BookingVM\\SeatViewModel.cs",
+              "RelativeToolTip": "StreamitMVC\\ViewModels\\BookingVM\\SeatViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:59:16.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Detail.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Views\\MovieIndex\\Detail.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Views\\MovieIndex\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Views\\MovieIndex\\Detail.cshtml*",
-              "RelativeToolTip": "StreamitMVC\\Views\\MovieIndex\\Detail.cshtml*",
-              "ViewState": "AgIAACcBAAAAAAAAAAAiwEABAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Views\\MovieIndex\\Detail.cshtml",
+              "RelativeToolTip": "StreamitMVC\\Views\\MovieIndex\\Detail.cshtml",
+              "ViewState": "AgIAADABAAAAAAAAAAAAAEsBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T19:01:20.478Z",
+              "WhenOpened": "2025-06-21T18:06:09.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BasketItem.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\BasketItem.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\BasketItem.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\BasketItem.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\BasketItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:55:21.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Basket.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Basket.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Basket.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Basket.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Basket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:55:16.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SelectSeatsVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\BookingVM\\SelectSeatsVM.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\ViewModels\\BookingVM\\SelectSeatsVM.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\BookingVM\\SelectSeatsVM.cs",
+              "RelativeToolTip": "StreamitMVC\\ViewModels\\BookingVM\\SelectSeatsVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T19:25:44.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SessionWithPriceViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\MovieVM\\SessionWithPriceViewModel.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\ViewModels\\MovieVM\\SessionWithPriceViewModel.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\MovieVM\\SessionWithPriceViewModel.cs",
+              "RelativeToolTip": "StreamitMVC\\ViewModels\\MovieVM\\SessionWithPriceViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T20:09:06.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DetailVM.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\MovieVM\\DetailVM.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\ViewModels\\MovieVM\\DetailVM.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\MovieVM\\DetailVM.cs",
+              "RelativeToolTip": "StreamitMVC\\ViewModels\\MovieVM\\DetailVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T18:04:04.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cinema.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Cinema.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Cinema.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Cinema.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Cinema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:57:35.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Language.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Language.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Language.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Language.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Language.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:57:26.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Subtitle.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Subtitle.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Subtitle.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Subtitle.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Subtitle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:57:20.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HallType.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\HallType.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\HallType.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\HallType.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\HallType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:57:06.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "HallPrice.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\HallPrice.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\HallPrice.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\HallPrice.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\HallPrice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:57:00.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Hall.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Hall.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Hall.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Hall.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Hall.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:55:33.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Ticket.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T17:55:06.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Movie.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Movie.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Movie.cs",
+              "RelativeToolTip": "StreamitMVC\\Models\\Movie.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T13:52:37.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Update.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Update.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Update.cshtml",
@@ -129,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 22,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\DAL\\AppDbContext.cs",
               "RelativeDocumentMoniker": "StreamitMVC\\DAL\\AppDbContext.cs",
@@ -142,46 +478,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 27,
               "Title": "SessionController.cs",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\SessionController.cs",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\SessionController.cs",
               "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\SessionController.cs",
               "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\SessionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAMoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T14:18:03.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T14:18:03.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MovieController.cs",
-              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
-              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
-              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
-              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwMcAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "ActorController.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
+              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T13:52:04.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T18:48:00.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 26,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
+              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
+              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
+              "ViewState": "AgIAAHgAAAAAjq0IGq4fwBIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-20T13:52:30.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Index.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Index.cshtml",
               "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Index.cshtml",
               "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Index.cshtml",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAACQAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAASwFoAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T14:11:36.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T14:11:36.368Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 28,
+              "Title": "MovieController.cs",
+              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
+              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
+              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
+              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\MovieController.cs",
+              "ViewState": "AgIAALkAAAAAAAAAAAAiwLgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T13:52:04.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Session\\Index.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Session\\Index.cshtml",
@@ -189,12 +546,11 @@
               "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Session\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T14:20:46.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T14:20:46.098Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 30,
               "Title": "CinemaController.cs",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\CinemaController.cs",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\CinemaController.cs",
@@ -202,38 +558,11 @@
               "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\CinemaController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T18:47:58.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T18:47:58.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
-              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
-              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Movie\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T13:52:30.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ActorController.cs",
-              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
-              "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
-              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
-              "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Controllers\\ActorController.cs",
-              "ViewState": "AgIAALYAAAAAAAAAAAAAAMoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T18:48:00.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 31,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Language\\Index.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Language\\Index.cshtml",
@@ -241,12 +570,11 @@
               "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Language\\Index.cshtml",
               "ViewState": "AgIAACYAAAAAAAAAAAAAADQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T18:49:14.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T18:49:14.57Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 32,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Areas\\Admin\\Views\\Session\\Create.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Areas\\Admin\\Views\\Session\\Create.cshtml",
@@ -254,12 +582,11 @@
               "RelativeToolTip": "StreamitMVC\\Areas\\Admin\\Views\\Session\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T14:18:25.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T14:18:25.51Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Views\\MovieIndex\\Index.cshtml",
               "RelativeDocumentMoniker": "StreamitMVC\\Views\\MovieIndex\\Index.cshtml",
@@ -267,12 +594,11 @@
               "RelativeToolTip": "StreamitMVC\\Views\\MovieIndex\\Index.cshtml",
               "ViewState": "AgIAAJIAAAAAAAAAAAAAAKUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-20T18:38:38.156Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T18:38:38.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 34,
               "Title": "CreateMovieVM.cs",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\ViewModels\\MovieVM\\CreateMovieVM.cs",
               "RelativeDocumentMoniker": "StreamitMVC\\ViewModels\\MovieVM\\CreateMovieVM.cs",
@@ -280,12 +606,11 @@
               "RelativeToolTip": "StreamitMVC\\ViewModels\\MovieVM\\CreateMovieVM.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAkwBcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T13:53:00.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-20T13:53:00.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 35,
               "Title": "MovieActor.cs",
               "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\MovieActor.cs",
               "RelativeDocumentMoniker": "StreamitMVC\\Models\\MovieActor.cs",
@@ -294,18 +619,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-20T13:59:03.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Movie.cs",
-              "RelativeDocumentMoniker": "StreamitMVC\\Models\\Movie.cs",
-              "ToolTip": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\Models\\Movie.cs",
-              "RelativeToolTip": "StreamitMVC\\Models\\Movie.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T13:52:37.273Z"
             }
           ]
         }

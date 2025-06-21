@@ -1,3 +1,0 @@
-C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\wwwroot\assets\images\movies\9befcf98-548b-43fc-91d4-1a0513db2dc8.mp4
-C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\wwwroot\assets\images\movies\eaf1d1fa-42e9-4540-9e48-2bce4b28af25.mp4
-C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\wwwroot\assets\images\movies\popular\squidgame2photo.webp

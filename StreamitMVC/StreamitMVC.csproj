@@ -19,6 +19,7 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Views\Account\" />
     <Folder Include="wwwroot\assets\images\cinema\" />
     <Folder Include="wwwroot\assets\subtitles\" />
   </ItemGroup>
