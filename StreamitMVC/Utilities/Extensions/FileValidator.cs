@@ -59,5 +59,14 @@ namespace StreamitMVC.Utilities.Extensions
             }
 
         }
+        public static string NormalizeText(this string input)
+        {
+            input = input.Trim();
+            if (input.Any(char.IsDigit))
+            {
+                return null;
+            }
+            return char.ToUpper(input[0]) + input.Substring(1).ToLower();
+        }
     }
 }
