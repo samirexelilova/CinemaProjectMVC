@@ -793,6 +793,7 @@ wwwroot\assets\images\tv-show\season\33.webp
 wwwroot\assets\images\tv-show\season\34.webp
 wwwroot\assets\images\tv-show\season\35.webp
 wwwroot\assets\images\tv-show\season\36.webp
+wwwroot\assets\images\user\0a812204-a07c-490d-950b-a677466af73c.jpg
 wwwroot\assets\images\user\user1.webp
 wwwroot\assets\images\video\banner-1.webp
 wwwroot\assets\images\video\banner-2.webp

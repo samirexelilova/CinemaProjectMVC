@@ -39,7 +39,7 @@ namespace StreamitMVC.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(registerVM);
             }
 
             string normalizedName = registerVM.Name.NormalizeText();
@@ -47,13 +47,14 @@ namespace StreamitMVC.Controllers
 
             if (normalizedName is null)
             {
-                ModelState.AddModelError(nameof(registerVM.Name), "Adda regem ola bilmez");
-                return View();
+                ModelState.AddModelError(nameof(registerVM.Name), "Adda rəqəm ola bilməz");
+                return View(registerVM);
             }
+
             if (normalizedSurname is null)
             {
-                ModelState.AddModelError(nameof(registerVM.Surname), "Soyadda regem ola bilmez");
-                return View();
+                ModelState.AddModelError(nameof(registerVM.Surname), "Soyadda rəqəm ola bilməz");
+                return View(registerVM);
             }
 
             string? fileName = null;
@@ -61,17 +62,18 @@ namespace StreamitMVC.Controllers
             {
                 if (!registerVM.ImageFile.ValidateType("image/"))
                 {
-                    ModelState.AddModelError("ImageFile", "Yalnız şəkil faylı ola bilər");
-                    return View();
+                    ModelState.AddModelError(nameof(registerVM.ImageFile), "Yalnız şəkil faylı ola bilər");
+                    return View(registerVM);
                 }
 
                 if (!registerVM.ImageFile.ValidateSize(FileSize.MB, 2))
                 {
-                    ModelState.AddModelError("ImageFile", "Şəklin ölçüsü maksimum 2MB ola bilər");
-                    return View();
+                    ModelState.AddModelError(nameof(registerVM.ImageFile), "Şəklin ölçüsü maksimum 2MB ola bilər");
+                    return View(registerVM);
                 }
 
-                fileName = await registerVM.ImageFile.CreateFileAsync(WebHostEnvironment.WebRootPath, "assets", "images", "user");
+                fileName = await registerVM.ImageFile.CreateFileAsync(
+                    WebHostEnvironment.WebRootPath, "assets", "images", "user");
             }
 
             AppUser appUser = new AppUser
@@ -94,14 +96,15 @@ namespace StreamitMVC.Controllers
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-                return View();
+                return View(registerVM);
             }
 
             await _userManager.AddToRoleAsync(appUser, UserRole.Member.ToString());
-            await _signInManager.SignInAsync(appUser, false);
+            await _signInManager.SignInAsync(appUser, isPersistent: false);
 
             return RedirectToAction(nameof(HomeController.Index), "home");
         }
+
         public IActionResult Login()
         {
             return View();

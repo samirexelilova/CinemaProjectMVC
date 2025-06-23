@@ -108,7 +108,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
             if (user == null)
             {
                 TempData["Error"] = "Bilet rezerv etmək üçün login olmalısınız";
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Login", "Account", new { area = "" });
             }
 
             var basket = await _context.Baskets
@@ -157,7 +157,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
 
             TempData["Success"] = $"{SelectedSeatIds.Count} oturacaq səbətə əlavə edildi";
-            return RedirectToAction("Index", "Basket", new { area = "" });
+            return RedirectToAction("Index", "Basket");
         }
 
         public async Task<IActionResult> ViewBasket()

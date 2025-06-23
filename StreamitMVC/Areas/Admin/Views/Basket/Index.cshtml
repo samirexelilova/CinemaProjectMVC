@@ -1,0 +1,32 @@
+﻿@model StreamitMVC.Models.Basket
+
+<h2>Səbətiniz</h2>
+
+@if (Model.Items != null && Model.Items.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Film</th>
+                <th>Oturacaq</th>
+                <th>Qiymət</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.Session.Movie.Name</td>
+                    <td>@item.Seat.RowNumber - @item.Seat.SeatNumber</td>
+                    <td>@item.Price ₼</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p><strong>Cəmi:</strong> @Model.TotalPrice ₼</p>
+}
+else
+{
+    <p>Səbətiniz boşdur</p>
+}

@@ -23,7 +23,6 @@ namespace StreamitMVC.ViewModels
         [Compare(nameof(Password))]
         public string ConfirmPassword { get; set; }
 
-        [Required]
         public Gender Gender { get; set; }
 
         public IFormFile? ImageFile { get; set; } 

@@ -1,4 +1,5 @@
-﻿@model RegisterVM
+﻿@using StreamitMVC.Extensions.Enums
+@model RegisterVM
 
 <div style="background: url('~/assets/images/pages/01.webp'); background-size: cover; background-repeat: no-repeat; position: relative; min-height: 100vh;">
     <div class="container py-5">
@@ -7,7 +8,7 @@
                 <div class="user-login-card bg-body p-4 rounded shadow">
                     <h4 class="text-center mb-5">Create Your Account</h4>
 
-                    <form asp-action="Register" method="post">
+                    <form asp-action="Register" method="post" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                         <div class="row row-cols-1 row-cols-lg-2 g-2 g-lg-5">
@@ -40,6 +41,28 @@
                                 <label asp-for="ConfirmPassword" class="text-white fw-500 mb-2"></label>
                                 <input asp-for="ConfirmPassword" class="form-control rounded-0" type="password" />
                                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Gender"></label>
+                                <select asp-for="Gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+                                    <option value="">-- Cins seçin --</option>
+                                </select>
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+                            <div class="col">
+                                <label asp-for="ImageFile" class="text-white fw-500 mb-2"></label>
+                                <input asp-for="ImageFile" type="file" class="form-control rounded-0" />
+                                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                            </div>
+                            <div class="col">
+                                <label asp-for="BirthDate" class="text-white fw-500 mb-2"></label>
+                                <input asp-for="BirthDate" class="form-control rounded-0" type="date" />
+                                <span asp-validation-for="BirthDate" class="text-danger"></span>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="Address" class="text-white fw-500 mb-2"></label>
+                                <textarea asp-for="Address" class="form-control rounded-0" rows="3"></textarea>
+                                <span asp-validation-for="Address" class="text-danger"></span>
                             </div>
                         </div>
 
