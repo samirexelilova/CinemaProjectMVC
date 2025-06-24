@@ -142,7 +142,6 @@ namespace StreamitMVC.Controllers
                 }
 
                 trailerPath = await vm.TrailerVideo.CreateFileAsync(_env.WebRootPath, "assets", "images", "movies");
-                return View(vm);
 
             }
 

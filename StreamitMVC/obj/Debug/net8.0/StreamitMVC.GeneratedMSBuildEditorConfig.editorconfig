@@ -32,10 +32,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWN0b3JcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Basket/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmFza2V0XEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Booking/SelectSeats.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQm9va2luZ1xTZWxlY3RTZWF0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -214,6 +210,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Basket/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Blog/Index.cshtml]

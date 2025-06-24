@@ -16,7 +16,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
         private readonly IWebHostEnvironment _env;
         private readonly UserManager<AppUser> _userManager;
 
-        public BookingController(AppDbContext context, IWebHostEnvironment env,UserManager<AppUser> userManager)
+        public BookingController(AppDbContext context, IWebHostEnvironment env, UserManager<AppUser> userManager)
         {
             _context = context;
             _env = env;
@@ -120,20 +120,21 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 basket = new Basket
                 {
                     UserId = user.Id,
-                    Items = new List<BasketItem>()
+                    Items = new List<BasketItem>(),
+                    TotalPrice = 0
                 };
                 _context.Baskets.Add(basket);
                 await _context.SaveChangesAsync();
             }
 
-            decimal seatPrice = session.HallPrice.Price; 
+            decimal seatPrice = session.HallPrice.Price;
+            int addedSeatsCount = 0;
 
             foreach (var seatId in SelectedSeatIds)
             {
-                var existingItem = basket.Items
-                    .FirstOrDefault(i => i.SessionId == sessionId && i.SeatId == seatId);
-
-                if (existingItem == null)
+                var existingItem = await _context.BasketItems.AnyAsync(i =>
+                    i.BasketId == basket.Id && i.SessionId == sessionId && i.SeatId == seatId);
+                if (!existingItem) 
                 {
                     var basketItem = new BasketItem
                     {
@@ -144,20 +145,29 @@ namespace StreamitMVC.Areas.Admin.Controllers
                     };
 
                     _context.BasketItems.Add(basketItem);
+                    addedSeatsCount++;
                 }
             }
 
-            await _context.SaveChangesAsync();
+            if (addedSeatsCount > 0)
+            {
+                await _context.SaveChangesAsync();
 
-            basket.TotalPrice = await _context.BasketItems
-                .Where(bi => bi.BasketId == basket.Id)
-                .SumAsync(bi => bi.Price);
+                basket.TotalPrice = await _context.BasketItems
+                    .Where(bi => bi.BasketId == basket.Id)
+                    .SumAsync(bi => bi.Price);
 
-            _context.Baskets.Update(basket);
-            await _context.SaveChangesAsync();
+                _context.Baskets.Update(basket);
+                await _context.SaveChangesAsync();
 
-            TempData["Success"] = $"{SelectedSeatIds.Count} oturacaq səbətə əlavə edildi";
-            return RedirectToAction("Index", "Basket");
+                TempData["Success"] = $"{addedSeatsCount} oturacaq səbətə əlavə edildi";
+            }
+            else
+            {
+                TempData["Info"] = "Seçilmiş oturacaqlar artıq səbətdə mövcuddur";
+            }
+
+            return RedirectToAction("Index", "Basket", new { area = "" });
         }
 
         public async Task<IActionResult> ViewBasket()
@@ -200,13 +210,15 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Element tapılmadı" });
             }
 
-            _context.BasketItems.Remove(basketItem);
-
             var basket = basketItem.Basket;
-            basket.TotalPrice -= basketItem.Price;
 
-            if (basket.TotalPrice < 0)
-                basket.TotalPrice = 0;
+            _context.BasketItems.Remove(basketItem);
+            await _context.SaveChangesAsync();
+
+            basket.TotalPrice = await _context.BasketItems
+                .Where(bi => bi.BasketId == basket.Id)
+                .Select(bi => (decimal?)bi.Price)
+                .SumAsync() ?? 0;
 
             _context.Baskets.Update(basket);
             await _context.SaveChangesAsync();
