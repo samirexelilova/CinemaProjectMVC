@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using StreamitMVC.DAL;
 using StreamitMVC.Models;
 using StreamitMVC.Utilities.Enums;
 using StreamitMVC.Utilities.Extensions;
@@ -15,18 +16,20 @@ namespace StreamitMVC.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-
+        private readonly AppDbContext _context;
         private readonly IWebHostEnvironment WebHostEnvironment;
 
         public AccountController(
             UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
             RoleManager<IdentityRole> roleManager,
-            IWebHostEnvironment webHostEnvironment)
+            IWebHostEnvironment webHostEnvironment,
+            AppDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _context = context;
             WebHostEnvironment = webHostEnvironment;
         }
         public IActionResult Register()
@@ -164,5 +167,27 @@ namespace StreamitMVC.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+        public async Task<IActionResult> MyTickets()
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var tickets = await _context.Tickets
+        .Include(t => t.Seat)
+            .ThenInclude(s => s.SeatType)
+        .Include(t => t.Session)
+            .ThenInclude(s => s.Movie)
+        .Include(t => t.Booking)
+        .Where(t => t.Booking.UserId == user.Id)
+        .OrderByDescending(t => t.PurchasedAt)
+        .ToListAsync();
+
+            return View(tickets);
+        }
+
     }
 }

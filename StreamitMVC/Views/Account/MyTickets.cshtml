@@ -1,0 +1,41 @@
+﻿@model List<Ticket>
+
+@{
+    ViewData["Title"] = "Mənim Biletlərim";
+}
+
+
+@if (!Model.Any())
+{
+    <p>Sən hələ heç bir bilet almamısan.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Bilet ID</th>
+                <th>Seans</th>
+                <th>Oturacaq</th>
+                <th>Oturacaq Tipi</th>
+                <th>Qiymət</th>
+                <th>Alınma Tarixi</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.Id</td>
+                    <td>@ticket.Session.Movie.Name (@ticket.Session.StartTime.ToLocalTime().ToString("g"))</td>
+                    <td>@ticket.Seat.RowNumber-@ticket.Seat.SeatNumber</td>
+                    <td>@ticket.Seat.SeatType.Name</td>
+                    <td>@ticket.Price.ToString("C")</td>
+                    <td>@ticket.PurchasedAt.ToLocalTime().ToString("g")</td>
+                    <td>@ticket.Status.ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

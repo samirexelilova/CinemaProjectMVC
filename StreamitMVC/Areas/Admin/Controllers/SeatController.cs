@@ -6,7 +6,6 @@ using StreamitMVC.ViewModels;
 
 namespace StreamitMVC.Areas.Admin.Controllers
 {
-
     [Area("Admin")]
     public class SeatController : Controller
     {

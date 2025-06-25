@@ -250,30 +250,30 @@ namespace StreamitMVC.Areas.Admin.Controllers
             return Json(new { success = true });
         }
 
-        public async Task<IActionResult> Checkout()
-        {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
-            {
-                return RedirectToAction("Login", "Account");
-            }
+        //public async Task<IActionResult> Checkout()
+        //{
+        //    var user = await _userManager.GetUserAsync(User);
+        //    if (user == null)
+        //    {
+        //        return RedirectToAction("Login", "Account");
+        //    }
 
-            var basket = await _context.Baskets
-                .Include(b => b.Items)
-                    .ThenInclude(i => i.Session)
-                        .ThenInclude(s => s.Movie)
-                .Include(b => b.Items)
-                    .ThenInclude(i => i.Seat)
-                .FirstOrDefaultAsync(b => b.UserId == user.Id);
+        //    var basket = await _context.Baskets
+        //        .Include(b => b.Items)
+        //            .ThenInclude(i => i.Session)
+        //                .ThenInclude(s => s.Movie)
+        //        .Include(b => b.Items)
+        //            .ThenInclude(i => i.Seat)
+        //        .FirstOrDefaultAsync(b => b.UserId == user.Id);
 
-            if (basket == null || !basket.Items.Any())
-            {
-                TempData["Error"] = "Səbətiniz boşdu";
-                return RedirectToAction("Index", "Home");
-            }
+        //    if (basket == null || !basket.Items.Any())
+        //    {
+        //        TempData["Error"] = "Səbətiniz boşdu";
+        //        return RedirectToAction("Index", "Home");
+        //    }
 
-            return View(basket);
-        }
+        //    return View(basket);
+        //}
 
         [HttpPost]
         public async Task<IActionResult> CompleteOrder()
@@ -281,7 +281,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return Json(new { success = false, message = "Istifadeci tapılmadı" });
+                return Json(new { success = false, message = "İstifadəçi tapılmadı" });
             }
 
             var basket = await _context.Baskets
@@ -293,7 +293,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
 
             if (basket == null || !basket.Items.Any())
             {
-                return Json(new { success = false, message = "Səbət bosdu" });
+                return Json(new { success = false, message = "Səbət boşdur" });
             }
 
             var bookings = new List<Booking>();
@@ -310,36 +310,38 @@ namespace StreamitMVC.Areas.Admin.Controllers
                         BookingDate = DateTime.Now,
                         Status = BookingStatus.Reserved,
                         TotalAmount = item.Price,
-                        Tickets = new List<Ticket>()
-                    };
-
-                    var ticket = new Ticket
+                        Tickets = new List<Ticket>
+                {
+                    new Ticket
                     {
                         SeatId = item.SeatId,
                         SessionId = item.SessionId,
                         Price = item.Price,
                         Status = TicketStatus.Reserved
+                    }
+                }
                     };
 
-                    newBooking.Tickets.Add(ticket);
                     bookings.Add(newBooking);
                 }
                 else
                 {
-                    var ticket = new Ticket
+                    existingBooking.Tickets.Add(new Ticket
                     {
                         SeatId = item.SeatId,
                         SessionId = item.SessionId,
                         Price = item.Price,
                         Status = TicketStatus.Reserved
-                    };
-
-                    existingBooking.Tickets.Add(ticket);
+                    });
                     existingBooking.TotalAmount += item.Price;
                 }
             }
 
             await _context.Bookings.AddRangeAsync(bookings);
+            foreach (var booking in bookings)
+            {
+                _context.Tickets.AddRange(booking.Tickets);
+            }
 
             _context.BasketItems.RemoveRange(basket.Items);
             basket.TotalPrice = 0;
@@ -347,8 +349,214 @@ namespace StreamitMVC.Areas.Admin.Controllers
 
             await _context.SaveChangesAsync();
 
-            return Json(new { success = true, message = "Ödəniş tamamlandı və biletler rezerv olundu" });
+            return Json(new { success = true, message = "Rezervasiya uğurla tamamlandı" });
+        }
+        
+
+        [HttpPost]
+        public async Task<IActionResult> Checkout()
+        {
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var basket = await _context.Baskets
+                .Include(b => b.Items)
+                    .ThenInclude(i => i.Session)
+                .Include(b => b.Items)
+                    .ThenInclude(i => i.Seat)
+                .FirstOrDefaultAsync(b => b.UserId == user.Id);
+
+            if (basket == null || !basket.Items.Any())
+            {
+                TempData["Error"] = "Səbət boşdur";
+                return RedirectToAction("Index", "Basket");
+            }
+
+            var seatIds = basket.Items.Select(i => i.SeatId).ToList();
+            var sessionId = basket.Items.First().SessionId;
+
+            var reservedSeats = await _context.Tickets
+                .Where(t => seatIds.Contains(t.SeatId) &&
+                            t.SessionId == sessionId &&
+                            (t.Status == TicketStatus.Sold || t.Status == TicketStatus.Reserved))
+                .Select(t => t.SeatId)
+                .ToListAsync();
+
+            if (reservedSeats.Any())
+            {
+                TempData["Error"] = "Səbətdəki bəzi oturacaqlar artıq satılıb.";
+                return RedirectToAction("Index", "Basket");
+            }
+
+            // Sold tipini tap
+            var soldSeatType = await _context.SeatTypes.FirstOrDefaultAsync(st => st.Name == "Sold");
+            if (soldSeatType == null)
+            {
+                TempData["Error"] = "Sistem xətası: 'Sold' oturacaq tipi tapılmadı.";
+                return RedirectToAction("Index", "Basket");
+            }
+
+            // Booking obyektini yarat
+            var booking = new Booking
+            {
+                UserId = user.Id,
+                SessionId = sessionId,
+                BookingDate = DateTime.UtcNow,
+                Status = BookingStatus.Paid,
+                TotalAmount = basket.TotalPrice
+            };
+            await _context.Bookings.AddAsync(booking);
+            await _context.SaveChangesAsync(); // Booking.Id üçün
+
+            // Hər bilet üçün Ticket yarat və SeatType dəyiş
+            foreach (var item in basket.Items)
+            {
+                var ticket = new Ticket
+                {
+                    BookingId = booking.Id,
+                    SeatId = item.SeatId,
+                    SessionId = item.SessionId,
+                    Price = item.Price,
+                    Status = TicketStatus.Sold,
+                    PurchasedAt = DateTime.UtcNow
+                };
+
+                await _context.Tickets.AddAsync(ticket);
+
+                // Oturacağın statusunu dəyiş: SeatTypeId -> Sold
+                item.Seat.SeatTypeId = soldSeatType.Id;
+            }
+
+            // Səbəti təmizlə
+            _context.BasketItems.RemoveRange(basket.Items);
+            basket.TotalPrice = 0;
+            _context.Baskets.Update(basket);
+
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Biletlər uğurla alındı!";
+            return RedirectToAction("MyTickets", "Account", new { area = "" });
         }
 
+        //[HttpPost]
+        //public async Task<IActionResult> CreateStripeSession()
+        //{
+        //    var user = await _userManager.GetUserAsync(User);
+        //    if (user == null) return RedirectToAction("Login", "Account");
+
+        //    var basket = await _context.Baskets
+        //        .Include(b => b.Items)
+        //            .ThenInclude(i => i.Session)
+        //        .Include(b => b.Items)
+        //            .ThenInclude(i => i.Seat)
+        //        .FirstOrDefaultAsync(b => b.UserId == user.Id);
+
+        //    if (basket == null || !basket.Items.Any())
+        //    {
+        //        TempData["Error"] = "Səbət boşdur";
+        //        return RedirectToAction("Index", "Basket");
+        //    }
+
+        //    var reservedSeats = await _context.Tickets
+        //        .Where(t => basket.Items.Select(i => i.SeatId).Contains(t.SeatId)
+        //                    && t.SessionId == basket.Items.First().SessionId
+        //                    && (t.Status == TicketStatus.Sold || t.Status == TicketStatus.Reserved))
+        //        .ToListAsync();
+
+        //    if (reservedSeats.Any())
+        //    {
+        //        TempData["Error"] = "Bəzi oturacaqlar artıq satılmışdır.";
+        //        return RedirectToAction("Index", "Basket");
+        //    }
+
+        //    var domain = $"{Request.Scheme}://{Request.Host}";
+        //    var options = new SessionCreateOptions
+        //    {
+        //        PaymentMethodTypes = new List<string> { "card" },
+        //        LineItems = basket.Items.Select(item => new SessionLineItemOptions
+        //        {
+        //            PriceData = new SessionLineItemPriceDataOptions
+        //            {
+        //                UnitAmount = (long)(item.Price * 100),
+        //                Currency = "usd",
+        //                ProductData = new SessionLineItemPriceDataProductDataOptions
+        //                {
+        //                    Name = $"Film: {item.Session.Movie.Title}, Yer: {item.Seat.Row}-{item.Seat.Number}"
+        //                }
+        //            },
+        //            Quantity = 1
+        //        }).ToList(),
+        //        Mode = "payment",
+        //        SuccessUrl = domain + Url.Action("Success"),
+        //        CancelUrl = domain + Url.Action("Cancel")
+        //    };
+
+        //    var service = new SessionService();
+        //    var session = service.Create(options);
+
+        //    return Redirect(session.Url);
+        //}
+
+        //public async Task<IActionResult> Success()
+        //{
+        //    var user = await _userManager.GetUserAsync(User);
+        //    if (user == null) return RedirectToAction("Login", "Account");
+
+        //    var basket = await _context.Baskets
+        //        .Include(b => b.Items)
+        //            .ThenInclude(i => i.Session)
+        //        .Include(b => b.Items)
+        //            .ThenInclude(i => i.Seat)
+        //        .FirstOrDefaultAsync(b => b.UserId == user.Id);
+
+        //    if (basket == null || !basket.Items.Any())
+        //    {
+        //        TempData["Error"] = "Səbətdə bilet tapılmadı";
+        //        return RedirectToAction("Index", "Basket");
+        //    }
+
+        //    var booking = new Booking
+        //    {
+        //        UserId = user.Id,
+        //        SessionId = basket.Items.First().SessionId,
+        //        BookingDate = DateTime.UtcNow,
+        //        TotalAmount = basket.Items.Sum(i => i.Price),
+        //        Status = BookingStatus.Paid
+        //    };
+        //    _context.Bookings.Add(booking);
+        //    await _context.SaveChangesAsync();
+
+        //    foreach (var item in basket.Items)
+        //    {
+        //        var ticket = new Ticket
+        //        {
+        //            BookingId = booking.Id,
+        //            SeatId = item.SeatId,
+        //            SessionId = item.SessionId,
+        //            Price = item.Price,
+        //            Status = TicketStatus.Sold,
+        //            PurchasedAt = DateTime.UtcNow
+        //        };
+        //        _context.Tickets.Add(ticket);
+        //        item.Seat.Status = SeatStatus.Sold;
+        //    }
+
+        //    _context.BasketItems.RemoveRange(basket.Items);
+        //    basket.TotalPrice = 0;
+        //    await _context.SaveChangesAsync();
+
+        //    TempData["Success"] = "Ödəniş uğurla tamamlandı və bilet yaradıldı.";
+        //    return RedirectToAction("MyTickets", "Account");
+        //}
+
+        //public IActionResult Cancel()
+        //{
+        //    TempData["Error"] = "Ödəniş ləğv edildi.";
+        //    return RedirectToAction("Index", "Basket");
+        //}
     }
 }
