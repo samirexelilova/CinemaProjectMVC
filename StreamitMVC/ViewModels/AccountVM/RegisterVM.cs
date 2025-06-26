@@ -31,6 +31,8 @@ namespace StreamitMVC.ViewModels
         public DateTime? BirthDate { get; set; }
 
         public string? Address { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; }
     }
 
 }

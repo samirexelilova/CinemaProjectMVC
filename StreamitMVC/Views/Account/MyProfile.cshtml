@@ -1,0 +1,279 @@
+﻿@model MyProfileVM
+
+<div class="section-padding service-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <div class="acc-left-menu p-4 mb-5 mb-lg-0 mb-md-0">
+                    <div class="product-menu">
+                        <ul class="list-inline m-0 nav nav-tabs flex-column bg-transparent border-0" role="tablist">
+                            <li class="pb-3 nav-item">
+                                <button class="nav-link active p-0 bg-transparent" data-bs-toggle="tab"
+                                        data-bs-target="#dashboard" type="button" role="tab" aria-selected="true">
+                                    <i class="fas fa-tachometer-alt"></i><span class="ms-2">Dashboard</span>
+                                </button>
+                            </li>
+                            <li class="py-3 nav-item">
+                                <button class="nav-link p-0 bg-transparent" data-bs-toggle="tab"
+                                        data-bs-target="#orders" type="button" role="tab" aria-selected="true">
+                                    <i class="fas fa-list"></i><span class="ms-2">Orders</span>
+                                </button>
+                            </li>
+
+                            <li class="py-3 nav-item">
+                                <button class="nav-link p-0 bg-transparent" data-bs-toggle="tab"
+                                        data-bs-target="#address" type="button" role="tab" aria-selected="true">
+                                    <i class="fas fa-map-marker-alt"></i><span class="ms-2">Address</span>
+                                </button>
+                            </li>
+                            <li class="py-3 nav-item">
+                                <button class="nav-link p-0 bg-transparent" data-bs-toggle="tab"
+                                        data-bs-target="#account-details" type="button" role="tab" aria-selected="true">
+                                    <i class="fas fa-user"></i><span class="ms-2">Account details</span>
+                                </button>
+                            </li>
+                            <li class="pt-3 nav-item">
+                                <a asp-action="Logout" asp-controller="Account" class="nav-link p-0 bg-transparent" role="tab">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="ms-2">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <div class="tab-content" id="product-menu-content">
+                    <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                        <div class="myaccount-content text-body p-4">
+                            <p>Hello Jenny (not Jenny? <a asp-action="Logout" asp-controller="Account">Log out</a>)</p>
+                            <p>
+                                From your account dashboard you can view your <a href="javascript:void(0)">recent orders</a>,
+                                manage your <a href="javascript:void(0)">shipping and billing addresses</a>, and <a href="javascript:void(0)">edit your password and account details</a>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="orders" role="tabpanel">
+                        <div class="orders-table text-body p-4">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="border-bottom">
+                                            <th class="fw-bolder p-3">Order</th>
+                                            <th class="fw-bolder p-3">Date</th>
+                                            <th class="fw-bolder p-3">Status</th>
+                                            <th class="fw-bolder p-3">Total</th>
+                                            <th class="fw-bolder p-3">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var booking in Model.Bookings)
+                                        {
+                                            <tr class="border-bottom">
+                                                <td class="text-primary fs-6">#@booking.Id</td>
+                                                <td>@booking.BookingDate.ToString("MMMM dd, yyyy")</td>
+                                                <td>@booking.Status</td>
+                                                <td>$@booking.TotalAmount.ToString("F2") for @booking.TicketCount ticket(s)</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <div class="iq-button">
+                                                            <a href="@Url.Action("Pay", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
+                                                                <span class="button-text">pay</span>
+                                                                <i class="fa-solid fa-play"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="iq-button">
+                                                            <a href="@Url.Action("Details", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
+                                                                <span class="button-text">view</span>
+                                                                <i class="fa-solid fa-play"></i>
+                                                            </a>
+                                                        </div>
+                                                        <div class="iq-button">
+                                                            <a href="@Url.Action("Cancel", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
+                                                                <span class="button-text">cancel</span>
+                                                                <i class="fa-solid fa-play"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                                @if (!Model.Bookings.Any())
+                                {
+                                    <div class="alert alert-warning mt-3">Sifariş tapılmadı.</div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="address" role="tabpanel">
+                        <div class="text-body p-4">
+                            <p class="my-3">The following address will be used on the checkout page by default.</p>
+
+                            <div class="d-flex align-items-center justify-content-between my-5 gap-2 flex-wrap">
+                                <h4 class="mb-0">Billing Address.</h4>
+                                <div class="iq-button">
+                                    <a href="#" class="btn text-uppercase position-relative" data-bs-toggle="collapse"
+                                       data-bs-target="#edit-address" aria-expanded="false">
+                                        <span class="button-text">Edit</span>
+                                        <i class="fa-solid fa-play"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Edit form -->
+                            <div id="edit-address" class="collapse">
+                                <div class="text-body mb-4">
+                                    <form method="post" asp-action="UpdateProfile" asp-controller="Account">
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">First name <span class="text-danger">*</span></label>
+                                            <input type="text" name="Name" value="@Model.User.Name" class="form-control" required />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">Last name <span class="text-danger">*</span></label>
+                                            <input type="text" name="Surname" value="@Model.User.Surname" class="form-control" required />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">Gender</label>
+                                            <input type="text" name="Gender" value="@Model.User.Gender" class="form-control" disabled />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">Birth Date</label>
+                                            <input type="date" name="BirthDate"
+                                                   value="@(Model.User.BirthDate?.ToString("yyyy-MM-dd"))"
+                                                   class="form-control" />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">Address</label>
+                                            <input type="text" name="Address" value="@Model.User.Address" class="form-control" />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">Email <span class="text-danger">*</span></label>
+                                            <input type="email" name="Email" value="@Model.User.Email" class="form-control" required />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <label class="mb-2">Phone <span class="text-danger">*</span></label>
+                                            <input type="tel" name="PhoneNumber" value="@Model.User.PhoneNumber" class="form-control" required />
+                                        </div>
+
+                                        <div class="form-group mb-5">
+                                            <div class="iq-button">
+                                                <button type="submit" class="btn text-uppercase position-relative">
+                                                    <span class="button-text">Save Address</span>
+                                                    <i class="fa-solid fa-play"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="edit-address w-100">
+                                    <tr>
+                                        <td class="label-name p-2">Name</td>
+                                        <td class="seprator p-2"><span>:</span></td>
+                                        <td class="p-2">@Model.User.Name @Model.User.Surname</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-name p-2">Gender</td>
+                                        <td class="seprator p-2"><span>:</span></td>
+                                        <td class="p-2">@Model.User.Gender</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-name p-2">Birth Date</td>
+                                        <td class="seprator p-2"><span>:</span></td>
+                                        <td class="p-2">
+                                            @(Model.User.BirthDate.HasValue ? Model.User.BirthDate.Value.ToString("MMMM dd, yyyy") : "-")
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-name p-2">Address</td>
+                                        <td class="seprator p-2"><span>:</span></td>
+                                        <td class="p-2">@Model.User.Address</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-name p-2">E-mail</td>
+                                        <td class="seprator p-2"><span>:</span></td>
+                                        <td class="p-2">@Model.User.Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label-name p-2">Phone</td>
+                                        <td class="seprator p-2"><span>:</span></td>
+                                        <td class="p-2">@Model.User.PhoneNumber</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="account-details" role="tabpanel">
+                        <div class="p-4 text-body">
+                            <form asp-action="UpdateAccountDetails" method="post">
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">First name <span class="text-danger">*</span></label>
+                                    <input asp-for="AccountDetails.Name" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">Last name <span class="text-danger">*</span></label>
+                                    <input asp-for="AccountDetails.Surname" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">Display name <span class="text-danger">*</span></label>
+                                    <input asp-for="AccountDetails.DisplayName" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">Email address <span class="text-danger">*</span></label>
+                                    <input asp-for="AccountDetails.Email" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">Phone number</label>
+                                    <input asp-for="AccountDetails.PhoneNumber" class="form-control" />
+                                </div>
+
+                                <h4 class="fw-normal mb-5">Password change</h4>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">Current password</label>
+                                    <input asp-for="AccountDetails.CurrentPassword" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">New password</label>
+                                    <input asp-for="AccountDetails.NewPassword" class="form-control" />
+                                </div>
+
+                                <div class="form-group mb-5">
+                                    <label class="mb-2">Confirm new password</label>
+                                    <input asp-for="AccountDetails.ConfirmPassword" class="form-control" />
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary text-uppercase">
+                                        <span class="button-text">Save Changes</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿@model List<Review>
+
+<h2>Reviews Panel</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>User</th>
+            <th>Rating</th>
+            <th>Comment</th>
+            <th>Status</th>
+            <th>Actions</th>
+            <th>Likes</th>
+            <th>Dislikes</th>
+         
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var review in Model)
+        {
+            <tr>
+                <td>@review.Movie?.Name</td>
+                <td>@review.User?.Name @review.User?.Surname </td>
+                <td>@review.Rating</td>
+                <td>@review.Comment</td>
+                <td>@review.Status</td>
+                <td>@review.LikeCount</td>
+                <td>@review.DislikeCount</td>
+                <td>
+                    <a asp-action="Approve" asp-route-id="@review.Id" class="btn btn-success btn-sm">Approve</a>
+                    <a asp-action="Reject" asp-route-id="@review.Id" class="btn btn-danger btn-sm">Reject</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -7,6 +7,7 @@ using StreamitMVC.Models;
 using StreamitMVC.Utilities.Enums;
 using StreamitMVC.Utilities.Extensions;
 using StreamitMVC.ViewModels;
+using StreamitMVC.ViewModels.AccountVM;
 
 namespace StreamitMVC.Controllers
 {
@@ -88,7 +89,8 @@ namespace StreamitMVC.Controllers
                 Gender = registerVM.Gender,
                 BirthDate = registerVM.BirthDate,
                 Address = registerVM.Address,
-                Image = fileName
+                Image = fileName,
+                PhoneNumber = registerVM.PhoneNumber
             };
 
             IdentityResult result = await _userManager.CreateAsync(appUser, registerVM.Password);
@@ -188,6 +190,389 @@ namespace StreamitMVC.Controllers
 
             return View(tickets);
         }
+
+        [HttpGet]
+           public async Task<IActionResult> MyProfile()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login");
+
+            var bookings = await _context.Bookings
+                .Where(b => b.UserId == user.Id)
+                .Include(b => b.Session).ThenInclude(s => s.Movie)
+                .OrderByDescending(b => b.BookingDate)
+                .Select(b => new BookingViewModel
+                {
+                    Id = b.Id,
+                    BookingDate = b.BookingDate,
+                    Status = b.Status,
+                    TotalAmount = b.TotalAmount,
+                    TicketCount = b.Tickets.Count,
+                    SessionName = b.Session.Movie.Name,
+                    SessionDate = b.Session.StartTime
+                })
+                .ToListAsync();
+
+            var reviews = await _context.Reviews
+                .Where(r => r.UserId == user.Id)
+                .Include(r => r.Movie)
+                .OrderByDescending(r => r.CreatedAt)
+                .Select(r => new ReviewViewModel
+                {
+                    Id = r.Id,
+                    MovieName = r.Movie.Name,
+                    Comment = r.Comment,
+                    Rating = r.Rating,
+                    CreatedAt = r.CreatedAt
+                })
+                .ToListAsync();
+
+            var viewModel = new MyProfileVM
+            {
+                User = new UserProfileViewModel
+                {
+                    Name = user.Name,
+                    Surname = user.Surname,
+                    Gender = user.Gender,
+                    Image = user.Image,
+                    BirthDate = user.BirthDate,
+                    Address = user.Address,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber
+                },
+                AccountDetails = new AccountDetailsViewModel
+                {
+                    Name = user.Name,
+                    Surname = user.Surname,
+                    DisplayName = user.UserName,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber
+                },
+                Bookings = bookings,
+                Reviews = reviews
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateProfile(UserProfileViewModel model)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return RedirectToAction("Login");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                model.Message = "Please fill all required fields correctly.";
+                model.IsSuccess = false;
+
+                var bookings = await _context.Bookings
+                    .Where(b => b.UserId == user.Id)
+                    .Include(b => b.Session).ThenInclude(s => s.Movie)
+                    .OrderByDescending(b => b.BookingDate)
+                    .Select(b => new BookingViewModel
+                    {
+                        Id = b.Id,
+                        BookingDate = b.BookingDate,
+                        Status = b.Status,
+                        TotalAmount = b.TotalAmount,
+                        TicketCount = b.Tickets.Count,
+                        SessionName = b.Session.Movie.Name,
+                        SessionDate = b.Session.StartTime
+                    })
+                    .ToListAsync();
+
+                var reviews = await _context.Reviews
+                    .Where(r => r.UserId == user.Id)
+                    .Include(r => r.Movie)
+                    .OrderByDescending(r => r.CreatedAt)
+                    .Select(r => new ReviewViewModel
+                    {
+                        Id = r.Id,
+                        MovieName = r.Movie.Name,
+                        Comment = r.Comment,
+                        Rating = r.Rating,
+                        CreatedAt = r.CreatedAt
+                    })
+                    .ToListAsync();
+
+                var fullModel = new MyProfileVM
+                {
+                    User = model,
+                    Bookings = bookings,
+                    Reviews = reviews
+                };
+
+                return View("MyProfile", fullModel);
+            }
+
+            user.Name = model.Name;
+            user.Surname = model.Surname;
+            user.Gender = model.Gender;
+            user.Image = model.Image;
+            user.BirthDate = model.BirthDate;
+            user.Address = model.Address;
+            user.Email = model.Email;
+            user.PhoneNumber = model.PhoneNumber;
+
+            var result = await _userManager.UpdateAsync(user);
+
+            model.Message = result.Succeeded
+                ? "Profile updated successfully!"
+                : "Failed to update profile. Please try again.";
+            model.IsSuccess = result.Succeeded;
+
+            var userBookings = await _context.Bookings
+                .Where(b => b.UserId == user.Id)
+                .Include(b => b.Session).ThenInclude(s => s.Movie)
+                .OrderByDescending(b => b.BookingDate)
+                .Select(b => new BookingViewModel
+                {
+                    Id = b.Id,
+                    BookingDate = b.BookingDate,
+                    Status = b.Status,
+                    TotalAmount = b.TotalAmount,
+                    TicketCount = b.Tickets.Count,
+                    SessionName = b.Session.Movie.Name,
+                    SessionDate = b.Session.StartTime
+                })
+                .ToListAsync();
+
+            var userReviews = await _context.Reviews
+                .Where(r => r.UserId == user.Id)
+                .Include(r => r.Movie)
+                .OrderByDescending(r => r.CreatedAt)
+                .Select(r => new ReviewViewModel
+                {
+                    Id = r.Id,
+                    MovieName = r.Movie.Name,
+                    Comment = r.Comment,
+                    Rating = r.Rating,
+                    CreatedAt = r.CreatedAt
+                })
+                .ToListAsync();
+
+            var finalModel = new MyProfileVM
+            {
+                User = model,
+                Bookings = userBookings,
+                Reviews = userReviews
+            };
+
+            return View("MyProfile", finalModel);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateAccountDetails(AccountDetailsViewModel model)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login");
+
+            if (!ModelState.IsValid)
+            {
+                model.Message = "Zəhmət olmasa məlumatları düzgün doldurun.";
+                model.IsSuccess = false;
+
+                var viewModel = new MyProfileVM
+                {
+                    AccountDetails = model,
+                    User = new UserProfileViewModel
+                    {
+                        Name = user.Name,
+                        Surname = user.Surname,
+                        Gender = user.Gender,
+                        Image = user.Image,
+                        BirthDate = user.BirthDate,
+                        Address = user.Address,
+                        Email = user.Email,
+                        PhoneNumber = user.PhoneNumber
+                    },
+                    Bookings = await _context.Bookings
+                        .Where(b => b.UserId == user.Id)
+                        .Include(b => b.Session).ThenInclude(s => s.Movie)
+                        .OrderByDescending(b => b.BookingDate)
+                        .Select(b => new BookingViewModel
+                        {
+                            Id = b.Id,
+                            BookingDate = b.BookingDate,
+                            Status = b.Status,
+                            TotalAmount = b.TotalAmount,
+                            TicketCount = b.Tickets.Count,
+                            SessionName = b.Session.Movie.Name,
+                            SessionDate = b.Session.StartTime
+                        })
+                        .ToListAsync(),
+                    Reviews = await _context.Reviews
+                        .Where(r => r.UserId == user.Id)
+                        .Include(r => r.Movie)
+                        .OrderByDescending(r => r.CreatedAt)
+                        .Select(r => new ReviewViewModel
+                        {
+                            Id = r.Id,
+                            MovieName = r.Movie.Name,
+                            Comment = r.Comment,
+                            Rating = r.Rating,
+                            CreatedAt = r.CreatedAt
+                        })
+                        .ToListAsync()
+                };
+
+                return View("MyProfile", viewModel);
+            }
+
+            user.Name = model.Name;
+            user.Surname = model.Surname;
+            user.Email = model.Email;
+            user.PhoneNumber = model.PhoneNumber;
+            user.UserName = model.DisplayName;
+
+            var updateResult = await _userManager.UpdateAsync(user);
+
+            if (!string.IsNullOrWhiteSpace(model.NewPassword))
+            {
+                if (model.NewPassword != model.ConfirmPassword)
+                {
+                    model.Message = "Yeni şifrə və təsdiqi uyğun gəlmir.";
+                    model.IsSuccess = false;
+                    return await ReturnMyProfileVM(user, model);
+                }
+
+                var passwordResult = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+                if (!passwordResult.Succeeded)
+                {
+                    model.Message = "Cari şifrə düzgün deyil və ya yeni şifrə tələblərə cavab vermir.";
+                    model.IsSuccess = false;
+                    return await ReturnMyProfileVM(user, model);
+                }
+            }
+
+            model.Message = updateResult.Succeeded ? "Hesab məlumatları yeniləndi." : "Xəta baş verdi.";
+            model.IsSuccess = updateResult.Succeeded;
+
+            return await ReturnMyProfileVM(user, model);
+        }
+
+        private async Task<IActionResult> ReturnMyProfileVM(AppUser user, AccountDetailsViewModel model)
+        {
+            var viewModel = new MyProfileVM
+            {
+                AccountDetails = model,
+                User = new UserProfileViewModel
+                {
+                    Name = user.Name,
+                    Surname = user.Surname,
+                    Gender = user.Gender,
+                    Image = user.Image,
+                    BirthDate = user.BirthDate,
+                    Address = user.Address,
+                    Email = user.Email,
+                    PhoneNumber = user.PhoneNumber
+                },
+                Bookings = await _context.Bookings
+                    .Where(b => b.UserId == user.Id)
+                    .Include(b => b.Session).ThenInclude(s => s.Movie)
+                    .OrderByDescending(b => b.BookingDate)
+                    .Select(b => new BookingViewModel
+                    {
+                        Id = b.Id,
+                        BookingDate = b.BookingDate,
+                        Status = b.Status,
+                        TotalAmount = b.TotalAmount,
+                        TicketCount = b.Tickets.Count,
+                        SessionName = b.Session.Movie.Name,
+                        SessionDate = b.Session.StartTime
+                    })
+                    .ToListAsync(),
+                Reviews = await _context.Reviews
+                    .Where(r => r.UserId == user.Id)
+                    .Include(r => r.Movie)
+                    .OrderByDescending(r => r.CreatedAt)
+                    .Select(r => new ReviewViewModel
+                    {
+                        Id = r.Id,
+                        MovieName = r.Movie.Name,
+                        Comment = r.Comment,
+                        Rating = r.Rating,
+                        CreatedAt = r.CreatedAt
+                    })
+                    .ToListAsync()
+            };
+
+            return View("MyProfile", viewModel);
+        }
+
+
+        //[HttpPost]
+        //public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        TempData["Error"] = "Please provide valid password information.";
+        //        return RedirectToAction("MyProfile");
+        //    }
+
+        //    var user = await _userManager.GetUserAsync(User);
+        //    if (user == null)
+        //    {
+        //        return RedirectToAction("Login");
+        //    }
+
+        //    var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+
+        //    if (result.Succeeded)
+        //    {
+        //        await _signInManager.RefreshSignInAsync(user);
+        //        TempData["Success"] = "Password changed successfully!";
+        //    }
+        //    else
+        //    {
+        //        TempData["Error"] = "Failed to change password. Please check your current password.";
+        //    }
+
+        //    return RedirectToAction("MyProfile");
+        //}
+
+        //[HttpPost]
+        //public async Task<IActionResult> CancelOrder(int orderId)
+        //{
+        //    var user = await _userManager.GetUserAsync(User);
+        //    var order = await _context.Orders
+        //        .FirstOrDefaultAsync(o => o.Id == orderId && o.UserId == user.Id);
+
+        //    if (order != null && order.Status != "Completed" && order.Status != "Cancelled")
+        //    {
+        //        order.Status = "Cancelled";
+        //        await _context.SaveChangesAsync();
+        //        TempData["Success"] = "Order cancelled successfully!";
+        //    }
+        //    else
+        //    {
+        //        TempData["Error"] = "Unable to cancel this order.";
+        //    }
+
+        //    return RedirectToAction("MyProfile");
+        //}
+
+        //[HttpGet]
+        //public async Task<IActionResult> OrderDetails(int id)
+        //{
+        //    var user = await _userManager.GetUserAsync(User);
+        //    var order = await _context.Orders
+        //        .Include(o => o.OrderItems)
+        //        .ThenInclude(oi => oi.Product)
+        //        .FirstOrDefaultAsync(o => o.Id == id && o.UserId == user.Id);
+
+        //    if (order == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return View(order);
+        //}
+
 
     }
 }

@@ -38,6 +38,7 @@ namespace StreamitMVC.DAL
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Slide> Slides { get; set; }
+        public DbSet<ReviewReaction> ReviewReactions { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -113,6 +114,18 @@ namespace StreamitMVC.DAL
      .WithMany()
      .HasForeignKey(s => s.SubtitleId)
      .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<ReviewReaction>()
+         .HasOne(r => r.Review)
+         .WithMany()
+         .HasForeignKey(r => r.ReviewId)
+         .OnDelete(DeleteBehavior.NoAction); 
+
+            modelBuilder.Entity<ReviewReaction>()
+                .HasOne(r => r.User)
+                .WithMany() 
+                .HasForeignKey(r => r.UserId)
+                .OnDelete(DeleteBehavior.NoAction); 
         }
 
 

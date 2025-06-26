@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
+using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models;
 using StreamitMVC.Services;
 using StreamitMVC.Services.Interfaces;
@@ -49,7 +50,7 @@ namespace StreamitMVC.Controllers
                 .Include(m => m.MovieLanguages)
                     .ThenInclude(ml => ml.Language)
                 .Include(m => m.Subtitles)
-                    .ThenInclude(su => su.Language)  
+                    .ThenInclude(su => su.Language)
                 .Include(m => m.Sessions)
                     .ThenInclude(s => s.Hall)
                         .ThenInclude(h => h.HallType)
@@ -62,34 +63,36 @@ namespace StreamitMVC.Controllers
                     .ThenInclude(s => s.Language)
                 .Include(m => m.MovieActors)
                     .ThenInclude(m => m.Actor)
-                .Include(m => m.Reviews)
                 .Include(m => m.MovieTags)
                     .ThenInclude(m => m.Tag)
+               .Include(m => m.Reviews.Where(r => r.Status == ReviewStatus.Approved))
+                .ThenInclude(r => r.User)
                 .FirstOrDefaultAsync(p => p.Id == id);
-
 
             if (movie is null) return NotFound();
 
             var categoryIds = movie.MovieCategories.Select(mc => mc.CategoryId).ToList();
 
             var sessionPrices = movie.Sessions
-    .Select(s => new SessionWithPriceViewModel
-    {
-        Session = s,
-        Price = _pricingService.CalculateSessionPrice(s)
-    }).ToList();
+                .Select(s => new SessionWithPriceViewModel
+                {
+                    Session = s,
+                    Price = _pricingService.CalculateSessionPrice(s)
+                }).ToList();
 
             DetailVM detailVm = new DetailVM()
             {
                 Movie = movie,
                 RelatedMovies = await _context.Movies
-        .Where(m => m.Id != movie.Id &&
-            m.MovieCategories.Any(mc => categoryIds.Contains(mc.CategoryId)))
-        .ToListAsync(),
+                    .Where(m => m.Id != movie.Id &&
+                        m.MovieCategories.Any(mc => categoryIds.Contains(mc.CategoryId)))
+                    .ToListAsync(),
                 SessionPrices = sessionPrices
             };
+
             return View(detailVm);
         }
+
 
     }
 

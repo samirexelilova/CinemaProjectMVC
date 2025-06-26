@@ -14832,6 +14832,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\user\231c4272-53fa-43a3-878d-27870140e52b.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\user\398bf604-d664-44cf-aa6d-b6d3627a1c76.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/user/398bf604-d664-44cf-aa6d-b6d3627a1c76.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>q0oo3io87r</Fingerprint>
+      <Integrity>mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\user\398bf604-d664-44cf-aa6d-b6d3627a1c76.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\user\82a33aa7-6d27-4ac8-9be5-694bc50ae91c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/user/82a33aa7-6d27-4ac8-9be5-694bc50ae91c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>q0oo3io87r</Fingerprint>
+      <Integrity>mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\user\82a33aa7-6d27-4ac8-9be5-694bc50ae91c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\user\user1.webp'))">
       <SourceType>Package</SourceType>
       <SourceId>StreamitMVC</SourceId>

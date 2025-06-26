@@ -291,6 +291,7 @@ namespace StreamitMVC.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
@@ -1052,6 +1053,39 @@ namespace StreamitMVC.Migrations
                     b.ToTable("Reviews");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.ReviewReaction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsLike")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ReviewId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReviewId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ReviewReactions");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.Seat", b =>
                 {
                     b.Property<int>("Id")
@@ -1242,10 +1276,6 @@ namespace StreamitMVC.Migrations
 
                     b.Property<int>("MovieId")
                         .HasColumnType("int");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -1644,6 +1674,25 @@ namespace StreamitMVC.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.ReviewReaction", b =>
+                {
+                    b.HasOne("StreamitMVC.Models.Review", "Review")
+                        .WithMany()
+                        .HasForeignKey("ReviewId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("StreamitMVC.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Review");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.Seat", b =>
                 {
                     b.HasOne("StreamitMVC.Models.Hall", "Hall")
@@ -1697,7 +1746,8 @@ namespace StreamitMVC.Migrations
 
                     b.HasOne("StreamitMVC.Models.Subtitle", "Subtitle")
                         .WithMany()
-                        .HasForeignKey("SubtitleId");
+                        .HasForeignKey("SubtitleId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("Cinema");
 
@@ -1723,7 +1773,7 @@ namespace StreamitMVC.Migrations
                     b.HasOne("StreamitMVC.Models.Movie", "Movie")
                         .WithMany("Subtitles")
                         .HasForeignKey("MovieId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Language");
