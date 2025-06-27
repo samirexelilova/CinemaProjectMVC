@@ -12,5 +12,6 @@ namespace StreamitMVC.Models
         public decimal TotalPrice { get; set; }
         public int? CouponId { get; set; }
         public Coupon? Coupon { get; set; }
+        public DateTime LastUpdated { get; set; } = DateTime.UtcNow;
     }
 }

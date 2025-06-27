@@ -11,5 +11,8 @@ namespace StreamitMVC.ViewModels
         public Movie Movie { get; set; }
         public Session Session { get; set; }
         public List<SeatViewModel> Seats { get; set; }
+        public string ErrorMessage { get; set; }
+        public int MaxSeatsPerBooking { get; set; } = 6;
+
     }
 }

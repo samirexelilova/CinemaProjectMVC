@@ -17,6 +17,7 @@ namespace StreamitMVC.Models
         public TicketStatus Status { get; set; } = TicketStatus.Available;
         public DateTime? UsedAt { get; set; }
         public DateTime PurchasedAt { get; set; } = DateTime.Now; //Biletin alındığı vaxt
+        public DateTime? ExpiresAt { get; set; }
     }
 
   

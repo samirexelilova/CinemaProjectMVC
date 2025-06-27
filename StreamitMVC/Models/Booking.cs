@@ -15,7 +15,8 @@ namespace StreamitMVC.Models
 
         public BookingStatus Status { get; set; }=BookingStatus.Reserved;
         public decimal TotalAmount { get; set; }  // Ümumi məbləğ
-        public List<Ticket> Tickets { get; set; } 
+        public List<Ticket> Tickets { get; set; }
+        public DateTime? ExpiresAt { get; set; }
     }
 
    

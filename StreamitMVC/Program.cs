@@ -25,11 +25,11 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 builder.Services.AddScoped<IPricingService, PricingService>();
 
-//builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 var app = builder.Build();
 app.UseStaticFiles();
 
-//StripeConfiguration.ApiKey = builder.Configuration["Stripe:Secretkey"];
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:Secretkey"];
 app.MapControllerRoute(
     "admin",
     "{area:exists}/{controller=home}/{action=index}/{id?}"
