@@ -8,11 +8,11 @@
     <div class="movie-banner">
         <div class="swiper swiper-banner-container" data-swiper="banner-detail-slider">
             <div class="swiper-wrapper">
-                @foreach (var item in Model.Slides)
+                @foreach (var item in Model.Movies)
                 {
                     <div class="swiper-slide movie-banner-1 p-0">
                         <div class="movie-banner-image">
-                            <img src="~/assets/images/movies/@item.Image" alt="movie-banner-image">
+                            <img src="~/assets/images/movies/popular/@item.Photo" alt="movie-banner-image">
                         </div>
                         <div class="shows-content h-100">
                             <div class="row align-items-center h-100">
@@ -21,16 +21,7 @@
                                         data-animation-in="fadeInLeft" data-delay-in="0.6">
                                        @item.Name
                                     </h1>
-                                    @foreach (var movie in Model.Movies)
-                                    {
-                                        <h3>@movie.Name</h3>
-                                        <ul>
-                                            @foreach (var ml in movie.MovieLanguages)
-                                            {
-                                                <li>@ml.Language.Name</li>
-                                            }
-                                        </ul>
-                                    }
+                                  
                                     <div class="flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft"
                                          style="opacity: 1;">
                                         <div class="slider-ratting d-flex align-items-center gap-3">
@@ -67,7 +58,8 @@
                                                 <i class="fa-solid fa-circle"></i>
                                             </span>
                                             <span class="trending-year font-normal">
-                                               @item.ReleaseDate.Month @item.ReleaseDate.Year
+                                                @item.ReleaseDate.ToString("MMMM")
+                                                @item.ReleaseDate.Year
                                             </span>
                                         </div>
                                         <p class="movie-banner-text line-count-3" data-animation-in="fadeInUp" data-delay-in="1.2">

@@ -19,7 +19,12 @@
                                     <i class="fas fa-list"></i><span class="ms-2">Orders</span>
                                 </button>
                             </li>
-
+                            <li class="py-3 nav-item">
+                                <a asp-action="MyTickets" asp-controller="Account" class="nav-link p-0 bg-transparent" role="tab">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span class="ms-2">My Tickets</span>
+                                </a>
+                            </li>
                             <li class="py-3 nav-item">
                                 <button class="nav-link p-0 bg-transparent" data-bs-toggle="tab"
                                         data-bs-target="#address" type="button" role="tab" aria-selected="true">
@@ -76,12 +81,7 @@
                                                 <td>$@booking.TotalAmount.ToString("F2") for @booking.TicketCount ticket(s)</td>
                                                 <td>
                                                     <div class="d-flex align-items-center gap-2">
-                                                        <div class="iq-button">
-                                                            <a href="@Url.Action("Pay", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
-                                                                <span class="button-text">pay</span>
-                                                                <i class="fa-solid fa-play"></i>
-                                                            </a>
-                                                        </div>
+                                                      
                                                         <div class="iq-button">
                                                             <a href="@Url.Action("Details", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
                                                                 <span class="button-text">view</span>
@@ -89,10 +89,12 @@
                                                             </a>
                                                         </div>
                                                         <div class="iq-button">
-                                                            <a href="@Url.Action("Cancel", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
-                                                                <span class="button-text">cancel</span>
-                                                                <i class="fa-solid fa-play"></i>
-                                                            </a>
+                                                            <form asp-action="Cancel" asp-controller="Booking" method="post" onsubmit="return confirm('Sifarişi ləğv etmək istədiyinizə əminsiniz?')">
+                                                                <input type="hidden" name="id" value="@booking.Id" />
+                                                                <button type="submit" class="btn btn-danger">
+                                                                    Cancel
+                                                                </button>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </td>

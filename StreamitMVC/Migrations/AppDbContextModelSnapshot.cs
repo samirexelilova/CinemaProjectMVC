@@ -937,7 +937,8 @@ namespace StreamitMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookingId");
+                    b.HasIndex("BookingId")
+                        .IsUnique();
 
                     b.ToTable("Payments");
                 });
@@ -1639,8 +1640,8 @@ namespace StreamitMVC.Migrations
             modelBuilder.Entity("StreamitMVC.Models.Payment", b =>
                 {
                     b.HasOne("StreamitMVC.Models.Booking", "Booking")
-                        .WithMany()
-                        .HasForeignKey("BookingId")
+                        .WithOne("Payment")
+                        .HasForeignKey("StreamitMVC.Models.Payment", "BookingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1844,6 +1845,9 @@ namespace StreamitMVC.Migrations
 
             modelBuilder.Entity("StreamitMVC.Models.Booking", b =>
                 {
+                    b.Navigation("Payment")
+                        .IsRequired();
+
                     b.Navigation("Tickets");
                 });
 

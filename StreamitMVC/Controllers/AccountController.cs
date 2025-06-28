@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
+using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models;
 using StreamitMVC.Utilities.Enums;
 using StreamitMVC.Utilities.Extensions;
@@ -172,27 +173,62 @@ namespace StreamitMVC.Controllers
         public async Task<IActionResult> MyTickets()
         {
             var user = await _userManager.GetUserAsync(User);
-
             if (user == null)
             {
                 return RedirectToAction("Login");
             }
 
-            var tickets = await _context.Tickets
-        .Include(t => t.Seat)
-            .ThenInclude(s => s.SeatType)
-        .Include(t => t.Session)
-            .ThenInclude(s => s.Movie)
-        .Include(t => t.Booking)
-        .Where(t => t.Booking.UserId == user.Id)
-        .OrderByDescending(t => t.PurchasedAt)
-        .ToListAsync();
+            var allUserTickets = await _context.Tickets
+                .Include(t => t.Seat)
+                    .ThenInclude(s => s.SeatType)
+                .Include(t => t.Session)
+                    .ThenInclude(s => s.Movie)
+                .Include(t => t.Booking)
+                .Where(t => t.Booking.UserId == user.Id)
+                .OrderByDescending(t => t.PurchasedAt)
+                .ToListAsync();
 
-            return View(tickets);
+
+            var soldTickets = allUserTickets.Where(t => t.Status == TicketStatus.Sold).ToList();
+
+
+            var userBookings = await _context.Bookings
+             .Where(b => b.UserId == user.Id)
+             .ToListAsync();
+
+            var bookingIds = userBookings.Select(b => b.Id).ToList();
+
+            var payments = await _context.Payments
+                .Where(p => bookingIds.Contains(p.BookingId))
+                .ToListAsync();
+
+            foreach (var booking in userBookings)
+            {
+                var relatedPayments = payments.Where(p => p.BookingId == booking.Id).ToList();
+            }
+
+            return View(soldTickets);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Cancel(int id)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return Unauthorized();
+
+            var booking = await _context.Bookings
+                .FirstOrDefaultAsync(b => b.Id == id && b.UserId == user.Id);
+
+            if (booking == null)
+                return NotFound();
+
+            booking.Status = BookingStatus.Cancelled;
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("MyProfile"); 
+        }
         [HttpGet]
-           public async Task<IActionResult> MyProfile()
+        public async Task<IActionResult> MyProfile()
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null) return RedirectToAction("Login");

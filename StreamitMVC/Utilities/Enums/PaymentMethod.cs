@@ -7,9 +7,7 @@ namespace StreamitMVC.Extensions.Enums
     {
         CreditCard,
         DebitCard,
-        PayPal ,
-        BankTransfer ,
-        Kapital,
-        ABB
+        Stripe,
+        BankTransfer 
     }
 }

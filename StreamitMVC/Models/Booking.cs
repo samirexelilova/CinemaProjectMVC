@@ -17,6 +17,8 @@ namespace StreamitMVC.Models
         public decimal TotalAmount { get; set; }  // Ümumi məbləğ
         public List<Ticket> Tickets { get; set; }
         public DateTime? ExpiresAt { get; set; }
+        public Payment Payment { get; set; }
+
     }
 
    

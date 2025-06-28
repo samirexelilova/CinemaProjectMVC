@@ -28,24 +28,21 @@ namespace StreamitMVC.Controllers
 
         public async Task CleanOldSessions()
         {
-            var currentDate = DateTime.Now.Date;
-            var oneWeekAgo = currentDate.AddDays(-1);
+            var currentTime = DateTime.Now;
 
-            var oldSessions = await _context.Sessions
-                .Where(s => s.StartTime.Date < currentDate)
+            var finishedSessions = await _context.Sessions
+                .Where(s => s.StartTime.AddHours(3) < currentTime)
                 .ToListAsync();
 
-            if (oldSessions.Any())
+            if (finishedSessions.Any())
             {
-                var oldSessionIds = oldSessions.Select(s => s.Id).ToList();
+                var finishedSessionIds = finishedSessions.Select(s => s.Id).ToList();
                 var oldTickets = await _context.Tickets
-                    .Where(t => oldSessionIds.Contains(t.SessionId))
+                    .Where(t => finishedSessionIds.Contains(t.SessionId))
                     .ToListAsync();
 
                 _context.Tickets.RemoveRange(oldTickets);
-
-                _context.Sessions.RemoveRange(oldSessions);
-
+                _context.Sessions.RemoveRange(finishedSessions);
                 await _context.SaveChangesAsync();
             }
         }
@@ -140,10 +137,11 @@ namespace StreamitMVC.Controllers
                 return RedirectToAction("Index", "Home", new { error = "Seans tapılmadı" });
             }
 
-            if (session.StartTime <= DateTime.Now.AddMinutes(30))
+            var currentTime = DateTime.Now;
+            if (session.StartTime <= currentTime)
             {
                 return RedirectToAction("SelectSeats",
-                    new { sessionId, error = "Bu seansa bilet satışı başa çatıb" });
+                    new { sessionId, error = "Bu seans artıq başlayıb. Bilet almaq mümkün deyil." });
             }
 
             var user = await _userManager.GetUserAsync(User);
@@ -222,13 +220,13 @@ namespace StreamitMVC.Controllers
 
                 _context.Tickets.AddRange(ticketsToAdd);
                 _context.BasketItems.AddRange(basketItemsToAdd);
+                await _context.SaveChangesAsync();
 
                 basket.TotalPrice = await _context.BasketItems
                     .Where(bi => bi.BasketId == basket.Id)
-                    .SumAsync(bi => bi.Price) + (basketItemsToAdd.Count * seatPrice);
+                    .SumAsync(bi => bi.Price);
 
                 _context.Baskets.Update(basket);
-
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
 
@@ -324,29 +322,38 @@ namespace StreamitMVC.Controllers
                     Quantity = 1,
                 }).ToList(),
                 Mode = "payment",
-                SuccessUrl = domain + Url.Action("PaymentSuccess", "Booking"),
+                SuccessUrl = domain + Url.Action("PaymentSuccess", "Booking") + "?session_id={CHECKOUT_SESSION_ID}",
                 CancelUrl = domain + Url.Action("PaymentCancel", "Booking"),
                 Metadata = new Dictionary<string, string>
-            {
-                { "userId", user.Id },
-                { "basketId", basket.Id.ToString() }
-            }
+        {
+            { "userId", user.Id },
+            { "basketId", basket.Id.ToString() }
+        }
             };
 
             var service = new SessionService();
             var session = service.Create(options);
 
+            Console.WriteLine($"Stripe session created: {session.Id}");
+
             return Json(new { id = session.Id });
         }
-
         public async Task<IActionResult> PaymentSuccess(string session_id)
         {
+            Console.WriteLine($"PaymentSuccess started with session_id: {session_id}");
+
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
+            {
+                Console.WriteLine("User not found");
                 return RedirectToAction("Login", "Account");
+            }
+
+            Console.WriteLine($"User found: {user.Id}");
 
             if (string.IsNullOrEmpty(session_id))
             {
+                Console.WriteLine("Session ID is null or empty");
                 TempData["Error"] = "Ödəniş sessiyası tapılmadı.";
                 return RedirectToAction("Checkout");
             }
@@ -357,15 +364,18 @@ namespace StreamitMVC.Controllers
             try
             {
                 session = service.Get(session_id);
+                Console.WriteLine($"Stripe session retrieved: {session.Id}, Status: {session.PaymentStatus}");
             }
             catch (Exception ex)
             {
+                Console.WriteLine($"Stripe session error: {ex.Message}");
                 TempData["Error"] = "Ödəniş məlumatlarını əldə etmək mümkün olmadı.";
                 return RedirectToAction("Checkout");
             }
 
             if (session.PaymentStatus != "paid")
             {
+                Console.WriteLine($"Payment not completed. Status: {session.PaymentStatus}");
                 TempData["Error"] = "Ödəniş tamamlanmayıb.";
                 return RedirectToAction("Checkout");
             }
@@ -373,14 +383,18 @@ namespace StreamitMVC.Controllers
             string userId = session.Metadata.ContainsKey("userId") ? session.Metadata["userId"] : null;
             string basketIdStr = session.Metadata.ContainsKey("basketId") ? session.Metadata["basketId"] : null;
 
+            Console.WriteLine($"Metadata - userId: {userId}, basketId: {basketIdStr}");
+
             if (userId == null || basketIdStr == null)
             {
+                Console.WriteLine("Metadata is incomplete");
                 TempData["Error"] = "Ödəniş məlumatları tam deyil.";
                 return RedirectToAction("Checkout");
             }
 
             if (user.Id != userId)
             {
+                Console.WriteLine($"User ID mismatch. Current: {user.Id}, Metadata: {userId}");
                 TempData["Error"] = "İstifadəçi məlumatı uyğun gəlmir.";
                 return RedirectToAction("Checkout");
             }
@@ -393,17 +407,23 @@ namespace StreamitMVC.Controllers
 
             if (basket == null || !basket.Items.Any())
             {
+                Console.WriteLine($"Basket not found or empty. BasketId: {basketId}");
                 TempData["Error"] = "Səbət boşdur.";
                 return RedirectToAction("Checkout");
             }
+
+            Console.WriteLine($"Basket found with {basket.Items.Count} items");
 
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
                 var sessionGroups = basket.Items.GroupBy(i => i.SessionId);
+                Console.WriteLine($"Processing {sessionGroups.Count()} session groups");
 
                 foreach (var group in sessionGroups)
                 {
+                    Console.WriteLine($"Processing session group: {group.Key}");
+
                     var booking = new Booking
                     {
                         UserId = user.Id,
@@ -412,15 +432,49 @@ namespace StreamitMVC.Controllers
                         TotalAmount = group.Sum(i => i.Price),
                         Status = BookingStatus.Paid
                     };
+
                     _context.Bookings.Add(booking);
                     await _context.SaveChangesAsync();
+
+                    Console.WriteLine($"Created booking with ID: {booking.Id}, Amount: {booking.TotalAmount}");
+
+                    var payment = new Payment
+                    {
+                        Method = Extensions.Enums.PaymentMethod.Stripe,
+                        Amount = booking.TotalAmount,
+                        PaidAt = DateTime.Now,
+                        BookingId = booking.Id,
+                        Status = PaymentStatus.Completed,
+                        FailureReason = null
+                    };
+
+                    Console.WriteLine($"Creating payment: BookingId={payment.BookingId}, Amount={payment.Amount}, Method={payment.Method}");
+
+                    _context.Payments.Add(payment);
+
+                    var addedPayment = _context.Entry(payment);
+                    Console.WriteLine($"Payment EntityState before save: {addedPayment.State}");
+
+                    await _context.SaveChangesAsync();
+
+                    Console.WriteLine($"Payment saved with ID: {payment.Id}");
+
+                    var savedPayment = await _context.Payments.FirstOrDefaultAsync(p => p.Id == payment.Id);
+                    if (savedPayment != null)
+                    {
+                        Console.WriteLine($"Payment verified in database: ID={savedPayment.Id}, Amount={savedPayment.Amount}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("ERROR: Payment not found in database after save!");
+                    }
 
                     foreach (var item in group)
                     {
                         var ticket = await _context.Tickets
                             .FirstOrDefaultAsync(t => t.SeatId == item.SeatId &&
-                                                     t.SessionId == item.SessionId &&
-                                                     t.Status == TicketStatus.Reserved);
+                                                      t.SessionId == item.SessionId &&
+                                                      t.Status == TicketStatus.Reserved);
 
                         if (ticket != null)
                         {
@@ -428,8 +482,25 @@ namespace StreamitMVC.Controllers
                             ticket.BookingId = booking.Id;
                             ticket.PurchasedAt = DateTime.Now;
                             _context.Tickets.Update(ticket);
+                            Console.WriteLine($"Updated ticket {ticket.Id} to Sold status");
+                        }
+                        else
+                        {
+                            var newTicket = new Ticket
+                            {
+                                BookingId = booking.Id,
+                                SeatId = item.SeatId,
+                                SessionId = item.SessionId,
+                                Price = item.Price,
+                                Status = TicketStatus.Sold,
+                                PurchasedAt = DateTime.Now
+                            };
+                            _context.Tickets.Add(newTicket);
+                            Console.WriteLine($"Created new ticket for seat {item.SeatId}");
                         }
                     }
+
+                    await _context.SaveChangesAsync();
                 }
 
                 _context.BasketItems.RemoveRange(basket.Items);
@@ -439,16 +510,19 @@ namespace StreamitMVC.Controllers
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
 
+                Console.WriteLine("Transaction committed successfully");
+
                 TempData["Success"] = "Ödəniş uğurla tamamlandı! Biletləriniz hazırdır.";
                 return RedirectToAction("MyTickets", "Account");
             }
-            catch
+            catch (Exception ex)
             {
                 await transaction.RollbackAsync();
-                TempData["Error"] = "Ödəniş sonrası işləmə zamanı xəta baş verdi.";
+                Console.WriteLine($"Transaction failed: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+                TempData["Error"] = $"Ödəniş sonrası işləmə zamanı xəta baş verdi: {ex.Message}";
                 return RedirectToAction("Checkout");
             }
-
         }
 
         [HttpGet]

@@ -11106,6 +11106,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\96d4726f-6e70-4282-9856-7005a8d015b3.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\a7a14299-0c64-4c17-b163-ccee72067216.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/movies/a7a14299-0c64-4c17-b163-ccee72067216.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e3667wjs1i</Fingerprint>
+      <Integrity>poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\a7a14299-0c64-4c17-b163-ccee72067216.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4'))">
       <SourceType>Package</SourceType>
       <SourceId>StreamitMVC</SourceId>
@@ -11195,6 +11213,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\cd7016f5-b852-4ff3-bec6-5082e802fbe3.mp4'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/movies/dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>e3667wjs1i</Fingerprint>
+      <Integrity>poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\e13a933c-f835-4056-b599-f95303246910.mp4'))">
       <SourceType>Package</SourceType>
@@ -11843,6 +11879,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\47722491-a4b7-42d5-b29d-7ef191f8cbfc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\59effe55-2700-4384-9291-b818d5ba010d.webp'))">
+      <SourceType>Package</SourceType>
+      <SourceId>StreamitMVC</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/StreamitMVC</BasePath>
+      <RelativePath>assets/images/movies/popular/59effe55-2700-4384-9291-b818d5ba010d.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>54rhohnq34</Fingerprint>
+      <Integrity>e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\59effe55-2700-4384-9291-b818d5ba010d.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\images\movies\popular\a04b88bb-34df-4994-ad5f-5ffe6c439e5f.jpg'))">
       <SourceType>Package</SourceType>

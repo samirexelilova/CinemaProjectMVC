@@ -85,11 +85,11 @@ namespace StreamitMVC.DAL
                 .HasForeignKey(s => s.LanguageId)
                 .OnDelete(DeleteBehavior.NoAction);
 
-             modelBuilder.Entity<Ticket>()
-               .HasOne(t => t.Booking)
-            .WithMany(b => b.Tickets)
-              .HasForeignKey(t => t.BookingId)
-             .OnDelete(DeleteBehavior.NoAction);
+            modelBuilder.Entity<Ticket>()
+              .HasOne(t => t.Booking)
+           .WithMany(b => b.Tickets)
+             .HasForeignKey(t => t.BookingId)
+            .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Ticket>()
                 .HasOne(t => t.Seat)
@@ -102,7 +102,7 @@ namespace StreamitMVC.DAL
                 .WithMany(s => s.Tickets)
                 .HasForeignKey(t => t.SessionId)
                 .OnDelete(DeleteBehavior.NoAction);
-   
+
             modelBuilder.Entity<Subtitle>()
                 .HasOne(s => s.Movie)
                 .WithMany(m => m.Subtitles)
@@ -119,13 +119,19 @@ namespace StreamitMVC.DAL
          .HasOne(r => r.Review)
          .WithMany()
          .HasForeignKey(r => r.ReviewId)
-         .OnDelete(DeleteBehavior.NoAction); 
+         .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<ReviewReaction>()
                 .HasOne(r => r.User)
-                .WithMany() 
+                .WithMany()
                 .HasForeignKey(r => r.UserId)
-                .OnDelete(DeleteBehavior.NoAction); 
+                .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Booking>()
+    .HasOne(b => b.Payment)
+    .WithOne(p => p.Booking)
+    .HasForeignKey<Payment>(p => p.BookingId)
+    .OnDelete(DeleteBehavior.Cascade);
         }
 
 

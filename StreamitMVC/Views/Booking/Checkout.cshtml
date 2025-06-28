@@ -1,11 +1,8 @@
 ﻿@using Microsoft.Extensions.Options
 @using StreamitMVC.DAL
-@model StreamitMVC.Models.Basket
+@model Basket
 @inject IOptions<StripeSettings> Stripe
 
-@{
-    ViewData["Title"] = "Ödəniş";
-}
 
 <div class="container-fluid">
     <div class="row">

@@ -50597,6 +50597,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/a7a14299-0c64-4c17-b163-ccee72067216.e3667wjs1i.mp4",
+      "AssetFile": "assets/images/movies/a7a14299-0c64-4c17-b163-ccee72067216.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 07:29:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/a7a14299-0c64-4c17-b163-ccee72067216.mp4"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/a7a14299-0c64-4c17-b163-ccee72067216.mp4",
+      "AssetFile": "assets/images/movies/a7a14299-0c64-4c17-b163-ccee72067216.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 07:29:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/ad664b44-9ff4-4e38-80e0-9fad67bc8f20.e3667wjs1i.mp4",
       "AssetFile": "assets/images/movies/ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4",
       "Selectors": [],
@@ -50997,6 +51079,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 24 Jun 2025 18:04:32 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/dac1921d-2313-4409-8ccd-9c31c0009aa3.e3667wjs1i.mp4",
+      "AssetFile": "assets/images/movies/dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 07:29:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4",
+      "AssetFile": "assets/images/movies/dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 07:29:22 GMT"
         }
       ],
       "EndpointProperties": [
@@ -53955,6 +54119,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-yKV5lq7UcQei1b2RFt5pPMQODvp8CCc4Svf9gCabp68="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/59effe55-2700-4384-9291-b818d5ba010d.54rhohnq34.webp",
+      "AssetFile": "assets/images/movies/popular/59effe55-2700-4384-9291-b818d5ba010d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 07:29:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "54rhohnq34"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc="
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/59effe55-2700-4384-9291-b818d5ba010d.webp"
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/59effe55-2700-4384-9291-b818d5ba010d.webp",
+      "AssetFile": "assets/images/movies/popular/59effe55-2700-4384-9291-b818d5ba010d.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 28 Jun 2025 07:29:22 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc="
         }
       ]
     },

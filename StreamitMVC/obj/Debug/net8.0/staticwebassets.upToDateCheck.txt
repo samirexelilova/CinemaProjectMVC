@@ -615,11 +615,13 @@ wwwroot\assets\images\movies\77911bcb-178a-4f07-98ea-ad66fec4fa68.webp
 wwwroot\assets\images\movies\8080100e-070f-49eb-9ff4-abd27db4468c.mp4
 wwwroot\assets\images\movies\86560e43-2020-42b3-8057-45004820a74b.mp4
 wwwroot\assets\images\movies\96d4726f-6e70-4282-9856-7005a8d015b3.mp4
+wwwroot\assets\images\movies\a7a14299-0c64-4c17-b163-ccee72067216.mp4
 wwwroot\assets\images\movies\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4
 wwwroot\assets\images\movies\banner1.webp
 wwwroot\assets\images\movies\banner2.webp
 wwwroot\assets\images\movies\banner3.webp
 wwwroot\assets\images\movies\cd7016f5-b852-4ff3-bec6-5082e802fbe3.mp4
+wwwroot\assets\images\movies\dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4
 wwwroot\assets\images\movies\e13a933c-f835-4056-b599-f95303246910.mp4
 wwwroot\assets\images\movies\e69dab31-6e02-4e75-8790-70f9659b3d89.mp4
 wwwroot\assets\images\movies\ecbf16ef-4188-42c1-b5e2-dfb313164f57.mp4
@@ -656,6 +658,7 @@ wwwroot\assets\images\movies\popular\1fdbe33d-5900-443c-94f7-c181311eb2a2.jpg
 wwwroot\assets\images\movies\popular\38b51295-25da-4424-9107-4db685c003e5.jpg
 wwwroot\assets\images\movies\popular\3e20de57-e527-4d06-8770-da9240e792b2.jpg
 wwwroot\assets\images\movies\popular\47722491-a4b7-42d5-b29d-7ef191f8cbfc.jpg
+wwwroot\assets\images\movies\popular\59effe55-2700-4384-9291-b818d5ba010d.webp
 wwwroot\assets\images\movies\popular\a04b88bb-34df-4994-ad5f-5ffe6c439e5f.jpg
 wwwroot\assets\images\movies\popular\a1ef090e-2713-429d-a014-87531b9e8374.jpg
 wwwroot\assets\images\movies\popular\a30b3828-0399-45ed-8550-e400bef423f6.jpg
