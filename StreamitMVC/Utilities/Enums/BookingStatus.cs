@@ -5,6 +5,7 @@
         Reserved,   
         Paid,       
         Cancelled,
-        Confirmed
+        Confirmed,
+        Refunded
     }
 }

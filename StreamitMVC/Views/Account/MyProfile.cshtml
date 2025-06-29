@@ -1,4 +1,5 @@
-﻿@model MyProfileVM
+﻿@using StreamitMVC.Extensions.Enums
+@model MyProfileVM
 
 <div class="section-padding service-details">
     <div class="container">
@@ -51,11 +52,87 @@
                 <div class="tab-content" id="product-menu-content">
                     <div class="tab-pane fade show active" id="dashboard" role="tabpanel">
                         <div class="myaccount-content text-body p-4">
-                            <p>Hello Jenny (not Jenny? <a asp-action="Logout" asp-controller="Account">Log out</a>)</p>
+                            @if (TempData["Success"] != null)
+                            {
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <i class="fas fa-check-circle me-2"></i>
+                                    @TempData["Success"]
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                </div>
+                            }
+                            @if (TempData["Error"] != null)
+                            {
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    @TempData["Error"]
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                </div>
+                            }
+
+                            <p>Hello @Model.User.Name (not @Model.User.Surname? <a asp-action="Logout" asp-controller="Account">Log out</a>)</p>
                             <p>
-                                From your account dashboard you can view your <a href="javascript:void(0)">recent orders</a>,
-                                manage your <a href="javascript:void(0)">shipping and billing addresses</a>, and <a href="javascript:void(0)">edit your password and account details</a>.
+                                From your account dashboard you can view your <a href="javascript:void(0)" onclick="document.querySelector('[data-bs-target=\" #orders\"]').click()">recent orders</a>,
+                                manage your <a href="javascript:void(0)" onclick="document.querySelector('[data-bs-target=\" #address\"]').click()">shipping and billing addresses</a>, and <a href="javascript:void(0)" onclick="document.querySelector('[data-bs-target=\" #account-details\"]').click()">edit your password and account details</a>.
                             </p>
+
+                            @{
+                                var totalSpent = Model.Bookings.Where(b => b.Status == BookingStatus.Paid || b.Status == BookingStatus.Cancelled).Sum(b => b.TotalAmount);
+                            }
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-muted mb-2">Total Spent</h5>
+                                            <h3 class="text-primary mb-0">@totalSpent.ToString("F2") AZN</h3>
+                                            <small class="text-muted">Lifetime spending</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm mb-3">
+                                        <div class="card-body text-center">
+                                            <h5 class="card-title text-muted mb-2">Account Balance</h5>
+                                            <h3 class="text-success mb-0">@((Model.User.WalletBalance ?? 0).ToString("F2")) AZN</h3>
+                                            <small class="text-muted">Available for future purchases</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
+                                            <h5 class="mb-0">Recent Orders</h5>
+                                            <a href="javascript:void(0)" onclick="document.querySelector('[data-bs-target=\" #orders\"]').click()" class="btn btn-sm btn-outline-primary">View All</a>
+                                        </div>
+                                        <div class="card-body">
+                                            @if (Model.Bookings.Any())
+                                            {
+                                                <div class="row">
+                                                    @foreach (var status in Enum.GetValues<BookingStatus>())
+                                                    {
+                                                        var count = Model.Bookings.Count(b => b.Status == status);
+                                                        if (count > 0)
+                                                        {
+                                                            <div class="col-6 col-md-3 mb-3">
+                                                                <div class="text-center">
+                                                                    <div class="h4 mb-1">@count</div>
+                                                                    <small class="text-muted">@status.ToString()</small>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    }
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <p class="text-muted text-center mb-0">No orders yet</p>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="orders" role="tabpanel">
@@ -77,25 +154,106 @@
                                             <tr class="border-bottom">
                                                 <td class="text-primary fs-6">#@booking.Id</td>
                                                 <td>@booking.BookingDate.ToString("MMMM dd, yyyy")</td>
-                                                <td>@booking.Status</td>
-                                                <td>$@booking.TotalAmount.ToString("F2") for @booking.TicketCount ticket(s)</td>
                                                 <td>
-                                                    <div class="d-flex align-items-center gap-2">
-                                                      
-                                                        <div class="iq-button">
-                                                            <a href="@Url.Action("Details", "Booking", new { id = booking.Id })" class="btn text-uppercase position-relative">
-                                                                <span class="button-text">view</span>
-                                                                <i class="fa-solid fa-play"></i>
+                                                    @if (booking.Status == BookingStatus.Paid)
+                                                    {
+                                                        <span class="badge bg-success">Paid</span>
+                                                    }
+                                                    else if (booking.Status == BookingStatus.Cancelled)
+                                                    {
+                                                        <span class="badge bg-danger">Cancelled</span>
+                                                    }
+                                                    else if (booking.Status == BookingStatus.Reserved)
+                                                    {
+                                                        <span class="badge bg-warning">Reserved</span>
+                                                    }
+                                                    else if (booking.Status == BookingStatus.Refunded)
+                                                    {
+                                                        <span class="badge bg-info">Refunded</span>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <strong>@booking.TotalAmount.ToString("F2") AZN</strong><br>
+                                                    <small class="text-muted">@booking.TicketCount ticket(s)</small>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <div class="small text-muted">
+                                                            <i class="fas fa-calendar me-1"></i>
+                                                            @(booking.Session?.StartTime.ToString("MM/dd HH:mm") ?? "No session")
+                                                        </div>
+
+                                                        <div class="d-flex gap-2 flex-wrap">
+                                                            <a href="@Url.Action("Details", "Booking", new { id = booking.Id })"
+                                                               class="btn btn-outline-primary btn-sm">
+                                                                <i class="fas fa-eye me-1"></i>View
                                                             </a>
+
+                                                            @if (booking.Status == BookingStatus.Paid)
+                                                            {
+                                                                bool canCancel = true;
+                                                                string cancelMessage = "";
+
+                                                                if (booking.Session != null)
+                                                                {
+                                                                    var timeUntilSession = booking.Session.StartTime - DateTime.UtcNow;
+                                                                    canCancel = timeUntilSession.TotalHours >= 24;
+
+                                                                    if (!canCancel)
+                                                                    {
+                                                                        cancelMessage = "Cannot cancel (less than 24h)";
+                                                                    }
+                                                                }
+
+                                                                if (canCancel)
+                                                                {
+                                                                    <form asp-action="Cancel" asp-controller="Account" method="post"
+                                                                          onsubmit="return confirm('Sifarişi ləğv etmək istədiyinizə əminsiniz? Pul hesabınıza qaytarılacaq.')"
+                                                                          class="d-inline">
+                                                                        <input type="hidden" name="id" value="@booking.Id" />
+                                                                        <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                                            <i class="fas fa-times me-1"></i>Cancel
+                                                                        </button>
+                                                                    </form>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <button class="btn btn-secondary btn-sm" disabled title="@cancelMessage">
+                                                                        <i class="fas fa-ban me-1"></i>Cannot Cancel
+                                                                    </button>
+                                                                }
+                                                            }
+                                                            else if (booking.Status == BookingStatus.Cancelled)
+                                                            {
+                                                                <span class="badge bg-secondary">
+                                                                    <i class="fas fa-ban me-1"></i>Cancelled
+                                                                </span>
+                                                            }
+                                                            else if (booking.Status == BookingStatus.Refunded)
+                                                            {
+                                                                <span class="badge bg-info">
+                                                                    <i class="fas fa-undo me-1"></i>Refunded
+                                                                </span>
+                                                            }
+                                                            else if (booking.Status == BookingStatus.Reserved)
+                                                            {
+                                                                <span class="badge bg-warning">
+                                                                    <i class="fas fa-clock me-1"></i>Reserved
+                                                                </span>
+                                                            }
                                                         </div>
-                                                        <div class="iq-button">
-                                                            <form asp-action="Cancel" asp-controller="Booking" method="post" onsubmit="return confirm('Sifarişi ləğv etmək istədiyinizə əminsiniz?')">
-                                                                <input type="hidden" name="id" value="@booking.Id" />
-                                                                <button type="submit" class="btn btn-danger">
-                                                                    Cancel
-                                                                </button>
-                                                            </form>
-                                                        </div>
+
+                                                        @if (booking.Status == BookingStatus.Paid && booking.Session != null)
+                                                        {
+                                                            var timeUntilSession = booking.Session.StartTime - DateTime.UtcNow;
+                                                            if (timeUntilSession.TotalHours < 24)
+                                                            {
+                                                                <small class="text-warning">
+                                                                    <i class="fas fa-exclamation-triangle me-1"></i>
+                                                                    Cannot cancel (less than 24h before session)
+                                                                </small>
+                                                            }
+                                                        }
                                                     </div>
                                                 </td>
                                             </tr>
@@ -105,13 +263,14 @@
 
                                 @if (!Model.Bookings.Any())
                                 {
-                                    <div class="alert alert-warning mt-3">Sifariş tapılmadı.</div>
+                                    <div class="alert alert-info mt-3 text-center">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        Heç bir sifariş tapılmadı.
+                                    </div>
                                 }
                             </div>
                         </div>
                     </div>
-
-
                     <div class="tab-pane fade" id="address" role="tabpanel">
                         <div class="text-body p-4">
                             <p class="my-3">The following address will be used on the checkout page by default.</p>
@@ -127,7 +286,6 @@
                                 </div>
                             </div>
 
-                            <!-- Edit form -->
                             <div id="edit-address" class="collapse">
                                 <div class="text-body mb-4">
                                     <form method="post" asp-action="UpdateProfile" asp-controller="Account">
@@ -219,7 +377,6 @@
                         </div>
                     </div>
 
-
                     <div class="tab-pane fade" id="account-details" role="tabpanel">
                         <div class="p-4 text-body">
                             <form asp-action="UpdateAccountDetails" method="post">
@@ -273,7 +430,6 @@
                             </form>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

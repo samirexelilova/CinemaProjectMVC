@@ -1,13 +1,13 @@
-﻿namespace StreamitMVC.Extensions.Enums
+﻿namespace StreamitMVC.Extensions.Enums;
+
+public enum RefundStatus
 {
-    public enum RefundStatus
-    {
-        Pending, // Geri ödəmə gözləmədədir, hələ təsdiqlənməyib
+    Pending, // Geri ödəmə gözləmədədir, hələ təsdiqlənməyib
+    Completed,
 
-        Approved,// Geri ödəmə təsdiqlənib, həyata keçirilir
+    Approved,// Geri ödəmə təsdiqlənib, həyata keçirilir
 
-        Rejected ,// Geri ödəmə rədd edilib
-        Completed
+    Rejected,// Geri ödəmə rədd edilib
+    Failed
 
-    }
 }

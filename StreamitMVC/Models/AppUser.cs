@@ -11,7 +11,8 @@ namespace StreamitMVC.Models
         public string Image { get; set; }
         public string PhoneNumber { get; set; }
         public DateTime? BirthDate { get; set; }  
-        public string? Address { get; set; }  
+        public string? Address { get; set; }
+        public decimal? WalletBalance { get; set; }
         public List<Basket> Baskets { get; set; }
         public List<Booking> Bookings { get; set; }
         public List<Review> Reviews { get; set; }

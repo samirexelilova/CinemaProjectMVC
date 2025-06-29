@@ -209,23 +209,137 @@ namespace StreamitMVC.Controllers
 
             return View(soldTickets);
         }
-
         [HttpPost]
         public async Task<IActionResult> Cancel(int id)
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null) return Unauthorized();
+            try
+            {
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                {
+                    TempData["Error"] = "İstifadəçi tapılmadı. Yenidən daxil olun.";
+                    return RedirectToAction("Login");
+                }
 
-            var booking = await _context.Bookings
-                .FirstOrDefaultAsync(b => b.Id == id && b.UserId == user.Id);
 
-            if (booking == null)
-                return NotFound();
+                var booking = await _context.Bookings
+                    .Include(b => b.Session)
+                    .Include(b => b.Tickets)
+                    .FirstOrDefaultAsync(b => b.Id == id && b.UserId == user.Id);
 
-            booking.Status = BookingStatus.Cancelled;
-            await _context.SaveChangesAsync();
+                if (booking == null)
+                {
+                    TempData["Error"] = "Sifariş tapılmadı və ya sizə aid deyil.";
+                    return RedirectToAction("MyProfile");
+                }
 
-            return RedirectToAction("MyProfile"); 
+
+                if (booking.Status == BookingStatus.Cancelled || booking.Status == BookingStatus.Refunded)
+                {
+                    TempData["Error"] = "Bu sifariş artıq ləğv edilib və ya geri qaytarılıb.";
+                    return RedirectToAction("MyProfile");
+                }
+
+                if (booking.Status != BookingStatus.Paid)
+                {
+                    TempData["Error"] = $"Yalnız ödənilmiş sifarişlər ləğv edilə bilər. Cari status: {booking.Status}";
+                    return RedirectToAction("MyProfile");
+                }
+
+                if (booking.Session != null)
+                {
+                    var hoursSinceBooking = DateTime.Now - booking.CreatedAt; 
+                    if (hoursSinceBooking.TotalHours > 24)
+                    {
+                        TempData["Error"] = $"Sifariş verildikdən sonra 24 saat keçib. Ləğv edilə bilməz.";
+                        return RedirectToAction("MyProfile");
+                    }
+                }
+                var existingRefund = await _context.Refunds
+                    .FirstOrDefaultAsync(r => r.BookingId == booking.Id);
+
+                if (existingRefund != null)
+                {
+                    TempData["Error"] = "Bu sifariş üçün artıq geri ödəmə tələbi mövcuddur.";
+                    return RedirectToAction("MyProfile");
+                }
+
+                using var transaction = await _context.Database.BeginTransactionAsync();
+                try
+                {
+                    var currentUser = await _userManager.FindByIdAsync(user.Id);
+                    if (currentUser == null)
+                    {
+                        throw new Exception("İstifadəçi yenidən tapılmadı");
+                    }
+
+                    if (currentUser.WalletBalance == null)
+                    {
+                        currentUser.WalletBalance = 0;
+                    }
+
+                    var originalBalance = currentUser.WalletBalance.Value;
+
+                    booking.Status = BookingStatus.Cancelled;
+                    _context.Bookings.Update(booking);
+
+                    var ticketCount = 0;
+                    foreach (var ticket in booking.Tickets)
+                    {
+                        ticket.Status = TicketStatus.Cancelled;
+
+                        _context.Tickets.Update(ticket);
+                        ticketCount++;
+                    }
+
+
+                    currentUser.WalletBalance = (currentUser.WalletBalance ?? 0) + booking.TotalAmount;
+
+
+                    var userUpdateResult = await _userManager.UpdateAsync(currentUser);
+                    if (!userUpdateResult.Succeeded)
+                    {
+                        var errors = string.Join(", ", userUpdateResult.Errors.Select(e => e.Description));
+                        throw new Exception($"İstifadəçi məlumatları yenilənmədi: {errors}");
+                    }
+
+                    var payment = await _context.Payments
+                        .FirstOrDefaultAsync(p => p.BookingId == booking.Id);
+
+
+                    var refund = new Refund
+                    {
+                        BookingId = booking.Id,
+                        PaymentId = payment?.Id,
+                        Amount = booking.TotalAmount,
+                        Status = RefundStatus.Completed,
+                        RequestedAt = DateTime.Now,
+                        ProcessedAt = DateTime.Now,
+                        Reason = "İstifadəçi tərəfindən ləğv edildi"
+                    };
+
+                    _context.Refunds.Add(refund);
+
+                    var changesSaved = await _context.SaveChangesAsync();
+
+                    await transaction.CommitAsync();
+
+                    TempData["Success"] = $"Sifariş uğurla ləğv edildi. {booking.TotalAmount:F2} AZN hesabınıza əlavə edildi. Əvvəlki balans: {originalBalance:F2} AZN, Yeni balans: {currentUser.WalletBalance:F2} AZN";
+                    return RedirectToAction("MyProfile");
+                }
+                catch (Exception innerEx)
+                {
+                    await transaction.RollbackAsync();
+                    TempData["Error"] = $"Sifarişi ləğv etməkdə xəta baş verdi: {innerEx.Message}";
+                    return RedirectToAction("MyProfile");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"General error: {ex.Message}");
+                TempData["Error"] = $"Ümumi xəta baş verdi: {ex.Message}";
+                return RedirectToAction("MyProfile");
+            }
         }
         [HttpGet]
         public async Task<IActionResult> MyProfile()
@@ -274,7 +388,8 @@ namespace StreamitMVC.Controllers
                     BirthDate = user.BirthDate,
                     Address = user.Address,
                     Email = user.Email,
-                    PhoneNumber = user.PhoneNumber
+                    PhoneNumber = user.PhoneNumber,
+                    WalletBalance = user.WalletBalance ?? 0
                 },
                 AccountDetails = new AccountDetailsViewModel
                 {

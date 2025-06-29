@@ -28,11 +28,14 @@ else
             {
                 <tr>
                     <td>@ticket.Id</td>
-                    <td>@ticket.Session.Movie.Name (@ticket.Session.StartTime.ToLocalTime().ToString("g"))</td>
+                    <td>
+                        @ticket.Session.Movie.Name (@ticket.Session.StartTime.ToString("g")
+                        )
+                    </td>
                     <td>@ticket.Seat.RowNumber-@ticket.Seat.SeatNumber</td>
                     <td>@ticket.Seat.SeatType.Name</td>
                     <td>@ticket.Price.ToString("C")</td>
-                    <td>@ticket.PurchasedAt.ToLocalTime().ToString("g")</td>
+                    <td>@ticket.PurchasedAt.ToString("g")</td>
                     <td>@ticket.Status.ToString()</td>
                 </tr>
             }

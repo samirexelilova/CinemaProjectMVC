@@ -256,7 +256,6 @@
 
 <div class="cinema-container">
     <div class="container-fluid">
-        <!-- Mesaj göstərmə -->
         @if (TempData["Success"] != null)
         {
             <div class="alert alert-success alert-dismissible fade show">
@@ -284,7 +283,7 @@
                     <i class="fas fa-chair me-1"></i>
                     Cəmi oturacaq sayı: @Model.Seats.Count
                 </div>
-                <a asp-action="Edit" asp-controller="Hall" asp-route-id="@Model.Hall.Id" class="btn btn-warning mt-3">
+                <a asp-action="Update" asp-controller="Hall" asp-route-id="@Model.Hall.Id" class="btn btn-warning mt-3">
                     <i class="fas fa-edit"></i> Zalı redaktə et
                 </a>
             </div>
