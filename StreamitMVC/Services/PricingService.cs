@@ -7,21 +7,12 @@ namespace StreamitMVC.Services
     {
         public decimal CalculateSessionPrice(Session session)
         {
-            var sessionDay = session.StartTime.DayOfWeek;
+            if (session.Hall?.HallType == null || session.HallPrice == null)
+                return 0;
 
-            var hallType = session.Hall?.HallType;
-            if (hallType == null) return 0;
-
-            var hallPrice = hallType.HallPrices
-                .FirstOrDefault(p => p.DayOfWeek == sessionDay || p.DayOfWeek == null);
-
-            if (hallPrice == null) return 0;
-
-            decimal basePrice = hallPrice.Price;
-            decimal extra = hallType.ExtraCharge;
-
-            return basePrice + extra;
+            return session.HallPrice.Price * session.Hall.HallType.ExtraCharge;
         }
+
     }
 
 }

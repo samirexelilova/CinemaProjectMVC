@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models;
+using StreamitMVC.Services.Interfaces;
 using StreamitMVC.ViewModels;
 using Stripe;
 using Stripe.Checkout;
@@ -16,14 +17,15 @@ namespace StreamitMVC.Controllers
         private readonly IWebHostEnvironment _env;
         private readonly UserManager<AppUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly IPricingService _pricingService;
 
-        public BookingController(AppDbContext context, IWebHostEnvironment env, UserManager<AppUser> userManager, IConfiguration configuration)
+        public BookingController(AppDbContext context, IWebHostEnvironment env, UserManager<AppUser> userManager, IConfiguration configuration, IPricingService pricingService)
         {
             _context = context;
             _env = env;
             _userManager = userManager;
             _configuration = configuration;
-
+            _pricingService = pricingService;
         }
 
         public async Task CleanOldSessions()
@@ -52,14 +54,16 @@ namespace StreamitMVC.Controllers
             await CleanOldSessions();
 
             var session = await _context.Sessions
-                .Include(s => s.Movie)
-                .Include(s => s.Hall)
-                    .ThenInclude(h => h.Seats)
-                        .ThenInclude(seat => seat.SeatType)
-                .Include(s => s.Cinema)
-                .Include(s => s.HallPrice)
-                .FirstOrDefaultAsync(s => s.Id == sessionId);
-
+            .Include(s => s.Movie)
+            .Include(s => s.Hall)
+                .ThenInclude(h => h.Seats)
+                    .ThenInclude(seat => seat.SeatType)
+            .Include(s => s.Hall)
+                .ThenInclude(h => h.HallType)
+                    .ThenInclude(ht => ht.HallPrices) 
+            .Include(s => s.Cinema)
+            .Include(s => s.HallPrice)
+            .FirstOrDefaultAsync(s => s.Id == sessionId);
             if (session == null)
                 return NotFound("Seans tapılmadı");
 
@@ -126,11 +130,13 @@ namespace StreamitMVC.Controllers
             }
 
             var session = await _context.Sessions
-                .Include(s => s.Hall)
-                .Include(s => s.HallPrice)
-                .Include(s => s.Movie)
-                .Include(s => s.Cinema)
-                .FirstOrDefaultAsync(s => s.Id == sessionId);
+         .Include(s => s.Hall)
+             .ThenInclude(h => h.HallType)
+                 .ThenInclude(ht => ht.HallPrices) 
+         .Include(s => s.HallPrice)
+         .Include(s => s.Movie)
+         .Include(s => s.Cinema)
+         .FirstOrDefaultAsync(s => s.Id == sessionId);
 
             if (session == null)
             {
@@ -165,21 +171,24 @@ namespace StreamitMVC.Controllers
             {
                 var basket = await GetOrCreateUserBasket(user.Id);
 
+                decimal sessionPrice = _pricingService.CalculateSessionPrice(session);
+
                 var booking = new Booking
                 {
                     UserId = user.Id,
                     SessionId = sessionId,
                     Status = BookingStatus.Reserved,
                     BookingDate = DateTime.Now,
-                    TotalAmount = selectedSeatIds.Count * session.HallPrice.Price
+                    TotalAmount = selectedSeatIds.Count * sessionPrice 
                 };
 
                 _context.Bookings.Add(booking);
                 await _context.SaveChangesAsync();
 
-                decimal seatPrice = session.HallPrice.Price;
                 var ticketsToAdd = new List<Ticket>();
                 var basketItemsToAdd = new List<BasketItem>();
+
+                decimal seatPrice = session.HallPrice.Price;
 
                 foreach (var seatId in selectedSeatIds)
                 {
@@ -202,7 +211,7 @@ namespace StreamitMVC.Controllers
                         BookingId = booking.Id,
                         SeatId = seatId,
                         SessionId = sessionId,
-                        Price = seatPrice,
+                        Price = sessionPrice, 
                         Status = TicketStatus.Reserved,
                         PurchasedAt = DateTime.Now
                     };
@@ -213,7 +222,7 @@ namespace StreamitMVC.Controllers
                         BasketId = basket.Id,
                         SessionId = sessionId,
                         SeatId = seatId,
-                        Price = seatPrice
+                        Price = sessionPrice 
                     };
                     basketItemsToAdd.Add(basketItem);
                 }

@@ -25,6 +25,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
             var sessions = await _context.Sessions
                 .Include(s => s.Movie)
                 .Include(s => s.Hall)
+                    .ThenInclude(h => h.HallType) 
                 .Include(s => s.Cinema)
                 .Include(s => s.Language)
                 .Include(s => s.HallPrice)
@@ -37,35 +38,37 @@ namespace StreamitMVC.Areas.Admin.Controllers
                     HallName = s.Hall.Name,
                     CinemaName = s.Cinema.Name,
                     LanguageName = s.Language.Name,
-                    Price = s.HallPrice.Price,
+                    Price = s.HallPrice.Price * s.Hall.HallType.ExtraCharge,
                     AvailableSeats = s.AvailableSeats
                 })
                 .ToListAsync();
 
             return View(sessions);
         }
+
         public async Task<IActionResult> Create()
         {
             var vm = new CreateSessionVM
             {
                 Movies = await _context.Movies.ToListAsync(),
-                Halls = await _context.Halls.ToListAsync(),
+                Halls = await _context.Halls.Include(h => h.HallType).ToListAsync(), 
                 Cinemas = await _context.Cinemas.ToListAsync(),
-                HallPrices = await _context.HallPrices.ToListAsync(),
+                HallPrices = await _context.HallPrices.Include(hp => hp.HallType).ToListAsync(),
                 Languages = await _context.Languages.ToListAsync(),
                 Subtitles = new List<Subtitle>()
             };
             return View(vm);
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(CreateSessionVM sessionVM)
         {
             if (!ModelState.IsValid)
             {
                 sessionVM.Movies = await _context.Movies.ToListAsync();
-                sessionVM.Halls = await _context.Halls.ToListAsync();
+                sessionVM.Halls = await _context.Halls.Include(h => h.HallType).ToListAsync();
                 sessionVM.Cinemas = await _context.Cinemas.ToListAsync();
-                sessionVM.HallPrices = await _context.HallPrices.ToListAsync();
+                sessionVM.HallPrices = await _context.HallPrices.Include(hp => hp.HallType).ToListAsync();
                 sessionVM.Languages = await _context.Languages.ToListAsync();
 
                 if (sessionVM.MovieId != 0 && sessionVM.LanguageId != 0)
@@ -82,15 +85,18 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 return View(sessionVM);
             }
 
-            Hall? hall = await _context.Halls.FirstOrDefaultAsync(h => h.Id == sessionVM.HallId);
+            Hall? hall = await _context.Halls
+                .Include(h => h.HallType)
+                .FirstOrDefaultAsync(h => h.Id == sessionVM.HallId);
+
             if (hall == null)
             {
                 ModelState.AddModelError(nameof(sessionVM.HallId), "Seçilmiş zal tapılmadı.");
 
                 sessionVM.Movies = await _context.Movies.ToListAsync();
-                sessionVM.Halls = await _context.Halls.ToListAsync();
+                sessionVM.Halls = await _context.Halls.Include(h => h.HallType).ToListAsync();
                 sessionVM.Cinemas = await _context.Cinemas.ToListAsync();
-                sessionVM.HallPrices = await _context.HallPrices.ToListAsync();
+                sessionVM.HallPrices = await _context.HallPrices.Include(hp => hp.HallType).ToListAsync();
                 sessionVM.Languages = await _context.Languages.ToListAsync();
 
                 sessionVM.Subtitles = await _context.Subtitles
@@ -119,7 +125,6 @@ namespace StreamitMVC.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-
         public async Task<IActionResult> Update(int? id)
         {
             if (id is null || id <= 0) return BadRequest();
@@ -137,9 +142,9 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 HallPriceId = session.HallPriceId,
                 LanguageId = session.LanguageId,
                 Movies = await _context.Movies.ToListAsync(),
-                Halls = await _context.Halls.ToListAsync(),
+                Halls = await _context.Halls.Include(h => h.HallType).ToListAsync(),
                 Cinemas = await _context.Cinemas.ToListAsync(),
-                HallPrices = await _context.HallPrices.ToListAsync(),
+                HallPrices = await _context.HallPrices.Include(hp => hp.HallType).ToListAsync(),
                 Languages = await _context.Languages.ToListAsync()
             };
 
@@ -152,9 +157,9 @@ namespace StreamitMVC.Areas.Admin.Controllers
             if (!ModelState.IsValid)
             {
                 vm.Movies = await _context.Movies.ToListAsync();
-                vm.Halls = await _context.Halls.ToListAsync();
+                vm.Halls = await _context.Halls.Include(h => h.HallType).ToListAsync();
                 vm.Cinemas = await _context.Cinemas.ToListAsync();
-                vm.HallPrices = await _context.HallPrices.ToListAsync();
+                vm.HallPrices = await _context.HallPrices.Include(hp => hp.HallType).ToListAsync();
                 vm.Languages = await _context.Languages.ToListAsync();
                 return View(vm);
             }
