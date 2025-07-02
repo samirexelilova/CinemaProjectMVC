@@ -1,14 +1,18 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models;
+using StreamitMVC.Services.Interfaces;
 using StreamitMVC.Utilities.Enums;
 using StreamitMVC.Utilities.Extensions;
 using StreamitMVC.ViewModels;
 using StreamitMVC.ViewModels.AccountVM;
+using System.Security.Claims;
 
 namespace StreamitMVC.Controllers
 {
@@ -20,19 +24,22 @@ namespace StreamitMVC.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment WebHostEnvironment;
+        private readonly IEmailService _emailService;
 
         public AccountController(
             UserManager<AppUser> userManager,
             SignInManager<AppUser> signInManager,
             RoleManager<IdentityRole> roleManager,
             IWebHostEnvironment webHostEnvironment,
-            AppDbContext context)
+            AppDbContext context,
+             IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _context = context;
             WebHostEnvironment = webHostEnvironment;
+            _emailService = emailService;
         }
         public IActionResult Register()
         {
@@ -106,15 +113,53 @@ namespace StreamitMVC.Controllers
             }
 
             await _userManager.AddToRoleAsync(appUser, UserRole.Member.ToString());
-            await _signInManager.SignInAsync(appUser, isPersistent: false);
 
-            return RedirectToAction(nameof(HomeController.Index), "home");
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(appUser);
+            var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account",
+                new { token, email = appUser.Email }, Request.Scheme);
+
+            await _emailService.SendConfirmationEmailAsync(appUser.Email, confirmationLink);
+
+            TempData["Message"] = "Qeydiyyat uğurla tamamlandı! Email ünvanınıza göndərilən linkə klik edərək hesabınızı təsdiqlənməlisiniz.";
+            return RedirectToAction(nameof(RegisterConfirmation));
+        }
+
+        public IActionResult RegisterConfirmation()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            if (token == null || email == null)
+            {
+                return RedirectToAction(nameof(HomeController.Index), "Home");
+            }
+
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                TempData["Error"] = "İstifadəçi tapılmadı";
+                return RedirectToAction(nameof(HomeController.Index), "Home");
+            }
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            if (result.Succeeded)
+            {
+                TempData["Success"] = "Email ünvanınız uğurla təsdiqləndi! İndi daxil ola bilərsiniz.";
+                return RedirectToAction(nameof(Login));
+            }
+
+            TempData["Error"] = "Email təsdiqlənməsində xəta baş verdi";
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
         public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM loginVM, string? returnUrl)
         {
@@ -126,6 +171,12 @@ namespace StreamitMVC.Controllers
             if (user is null)
             {
                 ModelState.AddModelError(string.Empty, "İstifadəçi adı, email və ya şifrə yanlışdır");
+                return View();
+            }
+
+            if (!await _userManager.IsEmailConfirmedAsync(user))
+            {
+                ModelState.AddModelError(string.Empty, "Email ünvanınızı təsdiqlənməmisiniz. Zəhmət olmasa email ünvanınızı yoxlayın.");
                 return View();
             }
 
@@ -149,10 +200,171 @@ namespace StreamitMVC.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return RedirectToAction(nameof(ForgotPasswordConfirmation));
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var resetLink = Url.Action(nameof(ResetPassword), "Account",
+                new { token, email = user.Email }, Request.Scheme);
+
+            await _emailService.SendPasswordResetEmailAsync(user.Email, resetLink);
+
+            return RedirectToAction(nameof(ForgotPasswordConfirmation));
+        }
+
+        public IActionResult ForgotPasswordConfirmation()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            if (string.IsNullOrEmpty(token) || string.IsNullOrEmpty(email))
+            {
+                return BadRequest("Token və ya email yoxdur.");
+            }
+
+            var model = new ResetPasswordVM
+            {
+                Token = token,
+                Email = email
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ResetPasswordConfirmation");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model);
+        }
+        public IActionResult ResetPasswordConfirmation()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResendConfirmationEmail(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                TempData["Error"] = "İstifadəçi tapılmadı";
+                return RedirectToAction(nameof(Login));
+            }
+
+            if (await _userManager.IsEmailConfirmedAsync(user))
+            {
+                TempData["Info"] = "Email artıq təsdiqlənib";
+                return RedirectToAction(nameof(Login));
+            }
+
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var confirmationLink = Url.Action(nameof(ConfirmEmail), "Account",
+                new { token, email = user.Email }, Request.Scheme);
+
+            await _emailService.SendConfirmationEmailAsync(user.Email, confirmationLink);
+
+            TempData["Success"] = "Təsdiqləmə emaili yenidən göndərildi";
+            return RedirectToAction(nameof(Login));
+        }
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
+            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme); 
             return RedirectToAction("Index", "Home");
+        }
+        [HttpGet]
+        public IActionResult GoogleLogin(string? returnUrl = null)
+        {
+            var redirectUrl = Url.Action(nameof(GoogleResponse), "Account", new { returnUrl });
+
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties(GoogleDefaults.AuthenticationScheme, redirectUrl);
+
+            properties.Items["prompt"] = "select_account";
+
+            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GoogleResponse(string? returnUrl = null)
+        {
+            ExternalLoginInfo? loginInfo = await _signInManager.GetExternalLoginInfoAsync();
+
+            if (loginInfo == null)
+                return RedirectToAction(nameof(Login));
+
+            var signInResult = await _signInManager.ExternalLoginSignInAsync(loginInfo.LoginProvider, loginInfo.ProviderKey, isPersistent: false);
+            if (signInResult.Succeeded)
+                return RedirectToLocal(returnUrl);
+
+            var email = loginInfo.Principal.FindFirstValue(ClaimTypes.Email);
+            var name = loginInfo.Principal.FindFirstValue(ClaimTypes.GivenName);
+            var surname = loginInfo.Principal.FindFirstValue(ClaimTypes.Surname);
+
+            AppUser user = new AppUser
+            {
+                UserName = email,
+                Email = email,
+                Name = name ?? "Google",
+                Surname = surname ?? "User"
+            };
+
+            IdentityResult createResult = await _userManager.CreateAsync(user);
+            if (!createResult.Succeeded)
+            {
+                foreach (var error in createResult.Errors)
+                    ModelState.AddModelError("", error.Description);
+                return View("Login");
+            }
+
+            await _userManager.AddToRoleAsync(user, UserRole.Member.ToString());
+            await _userManager.AddLoginAsync(user, loginInfo);
+            await _signInManager.SignInAsync(user, isPersistent: false);
+
+            return RedirectToLocal(returnUrl);
+        }
+
+        private IActionResult RedirectToLocal(string? returnUrl)
+        {
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
+            return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 
         public async Task<IActionResult> CreateRoles()
@@ -221,7 +433,6 @@ namespace StreamitMVC.Controllers
                     return RedirectToAction("Login");
                 }
 
-
                 var booking = await _context.Bookings
                     .Include(b => b.Session)
                     .Include(b => b.Tickets)
@@ -233,53 +444,46 @@ namespace StreamitMVC.Controllers
                     return RedirectToAction("MyProfile");
                 }
 
-
                 if (booking.Status == BookingStatus.Cancelled || booking.Status == BookingStatus.Refunded)
                 {
                     TempData["Error"] = "Bu sifariş artıq ləğv edilib və ya geri qaytarılıb.";
                     return RedirectToAction("MyProfile");
                 }
 
-                if (booking.Status != BookingStatus.Paid)
+                if (booking.Status != BookingStatus.Paid && booking.Status != BookingStatus.Reserved)
                 {
-                    TempData["Error"] = $"Yalnız ödənilmiş sifarişlər ləğv edilə bilər. Cari status: {booking.Status}";
+                    TempData["Error"] = $"Yalnız ödənilmiş və ya rezerv edilmiş sifarişlər ləğv edilə bilər. Cari status: {booking.Status}";
                     return RedirectToAction("MyProfile");
                 }
 
                 if (booking.Session != null)
                 {
-                    var hoursSinceBooking = DateTime.Now - booking.CreatedAt; 
-                    if (hoursSinceBooking.TotalHours > 24)
+                    if (booking.Status == BookingStatus.Paid)
                     {
-                        TempData["Error"] = $"Sifariş verildikdən sonra 24 saat keçib. Ləğv edilə bilməz.";
-                        return RedirectToAction("MyProfile");
+                        var hoursSinceBooking = DateTime.Now - booking.BookingDate;
+                        if (hoursSinceBooking.TotalHours > 24)
+                        {
+                            TempData["Error"] = $"Sifariş verildikdən sonra 24 saat keçib. Ləğv edilə bilməz.";
+                            return RedirectToAction("MyProfile");
+                        }
                     }
                 }
-                var existingRefund = await _context.Refunds
-                    .FirstOrDefaultAsync(r => r.BookingId == booking.Id);
 
-                if (existingRefund != null)
+                if (booking.Status == BookingStatus.Paid)
                 {
-                    TempData["Error"] = "Bu sifariş üçün artıq geri ödəmə tələbi mövcuddur.";
-                    return RedirectToAction("MyProfile");
+                    var existingRefund = await _context.Refunds
+                        .FirstOrDefaultAsync(r => r.BookingId == booking.Id);
+
+                    if (existingRefund != null)
+                    {
+                        TempData["Error"] = "Bu sifariş üçün artıq geri ödəmə tələbi mövcuddur.";
+                        return RedirectToAction("MyProfile");
+                    }
                 }
 
                 using var transaction = await _context.Database.BeginTransactionAsync();
                 try
                 {
-                    var currentUser = await _userManager.FindByIdAsync(user.Id);
-                    if (currentUser == null)
-                    {
-                        throw new Exception("İstifadəçi yenidən tapılmadı");
-                    }
-
-                    if (currentUser.WalletBalance == null)
-                    {
-                        currentUser.WalletBalance = 0;
-                    }
-
-                    var originalBalance = currentUser.WalletBalance.Value;
-
                     booking.Status = BookingStatus.Cancelled;
                     _context.Bookings.Update(booking);
 
@@ -287,44 +491,63 @@ namespace StreamitMVC.Controllers
                     foreach (var ticket in booking.Tickets)
                     {
                         ticket.Status = TicketStatus.Cancelled;
-
                         _context.Tickets.Update(ticket);
                         ticketCount++;
                     }
 
-
-                    currentUser.WalletBalance = (currentUser.WalletBalance ?? 0) + booking.TotalAmount;
-
-
-                    var userUpdateResult = await _userManager.UpdateAsync(currentUser);
-                    if (!userUpdateResult.Succeeded)
+                    if (booking.Status == BookingStatus.Paid)
                     {
-                        var errors = string.Join(", ", userUpdateResult.Errors.Select(e => e.Description));
-                        throw new Exception($"İstifadəçi məlumatları yenilənmədi: {errors}");
+                        var currentUser = await _userManager.FindByIdAsync(user.Id);
+                        if (currentUser == null)
+                        {
+                            throw new Exception("İstifadəçi yenidən tapılmadı");
+                        }
+
+                        if (currentUser.WalletBalance == null)
+                        {
+                            currentUser.WalletBalance = 0;
+                        }
+
+                        var originalBalance = currentUser.WalletBalance.Value;
+
+                        currentUser.WalletBalance = (currentUser.WalletBalance ?? 0) + booking.TotalAmount;
+
+                        var userUpdateResult = await _userManager.UpdateAsync(currentUser);
+                        if (!userUpdateResult.Succeeded)
+                        {
+                            var errors = string.Join(", ", userUpdateResult.Errors.Select(e => e.Description));
+                            throw new Exception($"İstifadəçi məlumatları yenilənmədi: {errors}");
+                        }
+
+                        var payment = await _context.Payments
+                            .FirstOrDefaultAsync(p => p.BookingId == booking.Id);
+
+                        var refund = new Refund
+                        {
+                            BookingId = booking.Id,
+                            PaymentId = payment?.Id,
+                            Amount = booking.TotalAmount,
+                            Status = RefundStatus.Completed,
+                            RequestedAt = DateTime.Now,
+                            ProcessedAt = DateTime.Now,
+                            Reason = "İstifadəçi tərəfindən ləğv edildi"
+                        };
+
+                        _context.Refunds.Add(refund);
                     }
 
-                    var payment = await _context.Payments
-                        .FirstOrDefaultAsync(p => p.BookingId == booking.Id);
-
-
-                    var refund = new Refund
-                    {
-                        BookingId = booking.Id,
-                        PaymentId = payment?.Id,
-                        Amount = booking.TotalAmount,
-                        Status = RefundStatus.Completed,
-                        RequestedAt = DateTime.Now,
-                        ProcessedAt = DateTime.Now,
-                        Reason = "İstifadəçi tərəfindən ləğv edildi"
-                    };
-
-                    _context.Refunds.Add(refund);
-
                     var changesSaved = await _context.SaveChangesAsync();
-
                     await transaction.CommitAsync();
 
-                    TempData["Success"] = $"Sifariş uğurla ləğv edildi. {booking.TotalAmount:F2} AZN hesabınıza əlavə edildi. Əvvəlki balans: {originalBalance:F2} AZN, Yeni balans: {currentUser.WalletBalance:F2} AZN";
+                    if (booking.Status == BookingStatus.Paid)
+                    {
+                        TempData["Success"] = $"Sifariş uğurla ləğv edildi. {booking.TotalAmount:F2} AZN hesabınıza əlavə edildi.";
+                    }
+                    else
+                    {
+                        TempData["Success"] = $"Rezervasiya uğurla ləğv edildi. Oturacaqlar azad edildi.";
+                    }
+
                     return RedirectToAction("MyProfile");
                 }
                 catch (Exception innerEx)
@@ -467,7 +690,7 @@ namespace StreamitMVC.Controllers
             user.BirthDate = model.BirthDate;
             user.Address = model.Address;
             user.Email = model.Email;
-            user.PhoneNumber = model.PhoneNumber;
+            user.PhoneNumber = model.PhoneNumber ?? "Telefon nomresi yoxdur";
 
             var result = await _userManager.UpdateAsync(user);
 
@@ -534,7 +757,7 @@ namespace StreamitMVC.Controllers
                     {
                         Name = user.Name,
                         Surname = user.Surname,
-                        Gender = user.Gender,
+                        Gender = user.Gender ?? Gender.Others,
                         Image = user.Image,
                         BirthDate = user.BirthDate,
                         Address = user.Address,
@@ -615,7 +838,7 @@ namespace StreamitMVC.Controllers
                 {
                     Name = user.Name,
                     Surname = user.Surname,
-                    Gender = user.Gender,
+                    Gender = user.Gender ?? Gender.Others,
                     Image = user.Image,
                     BirthDate = user.BirthDate,
                     Address = user.Address,
@@ -656,36 +879,7 @@ namespace StreamitMVC.Controllers
         }
 
 
-        //[HttpPost]
-        //public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        TempData["Error"] = "Please provide valid password information.";
-        //        return RedirectToAction("MyProfile");
-        //    }
-
-        //    var user = await _userManager.GetUserAsync(User);
-        //    if (user == null)
-        //    {
-        //        return RedirectToAction("Login");
-        //    }
-
-        //    var result = await _userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
-
-        //    if (result.Succeeded)
-        //    {
-        //        await _signInManager.RefreshSignInAsync(user);
-        //        TempData["Success"] = "Password changed successfully!";
-        //    }
-        //    else
-        //    {
-        //        TempData["Error"] = "Failed to change password. Please check your current password.";
-        //    }
-
-        //    return RedirectToAction("MyProfile");
-        //}
-
+      
         //[HttpPost]
         //public async Task<IActionResult> CancelOrder(int orderId)
         //{

@@ -197,11 +197,12 @@
                                                                 if (booking.Session != null)
                                                                 {
                                                                     var timeUntilSession = booking.Session.StartTime - DateTime.UtcNow;
-                                                                    canCancel = timeUntilSession.TotalHours >= 24;
+                                                                    var hoursSinceBooking = DateTime.UtcNow - booking.BookingDate;
+                                                                    canCancel = hoursSinceBooking.TotalHours <= 24;
 
                                                                     if (!canCancel)
                                                                     {
-                                                                        cancelMessage = "Cannot cancel (less than 24h)";
+                                                                        cancelMessage = "Cannot cancel (more than 24h since booking)";
                                                                     }
                                                                 }
 
@@ -212,7 +213,7 @@
                                                                           class="d-inline">
                                                                         <input type="hidden" name="id" value="@booking.Id" />
                                                                         <button type="submit" class="btn btn-outline-danger btn-sm">
-                                                                            <i class="fas fa-times me-1"></i>Cancel
+                                                                            <i class="fas fa-times me-1"></i>Cancel & Refund
                                                                         </button>
                                                                     </form>
                                                                 }
@@ -222,6 +223,17 @@
                                                                         <i class="fas fa-ban me-1"></i>Cannot Cancel
                                                                     </button>
                                                                 }
+                                                            }
+                                                            else if (booking.Status == BookingStatus.Reserved)
+                                                            {
+                                                                <form asp-action="Cancel" asp-controller="Account" method="post"
+                                                                      onsubmit="return confirm('Rezervasiyanı ləğv etmək istədiyinizə əminsiniz? Oturacaqlar azad ediləcək.')"
+                                                                      class="d-inline">
+                                                                    <input type="hidden" name="id" value="@booking.Id" />
+                                                                    <button type="submit" class="btn btn-outline-warning btn-sm">
+                                                                        <i class="fas fa-times me-1"></i>Cancel Reservation
+                                                                    </button>
+                                                                </form>
                                                             }
                                                             else if (booking.Status == BookingStatus.Cancelled)
                                                             {
@@ -235,22 +247,16 @@
                                                                     <i class="fas fa-undo me-1"></i>Refunded
                                                                 </span>
                                                             }
-                                                            else if (booking.Status == BookingStatus.Reserved)
-                                                            {
-                                                                <span class="badge bg-warning">
-                                                                    <i class="fas fa-clock me-1"></i>Reserved
-                                                                </span>
-                                                            }
                                                         </div>
 
                                                         @if (booking.Status == BookingStatus.Paid && booking.Session != null)
                                                         {
-                                                            var timeUntilSession = booking.Session.StartTime - DateTime.UtcNow;
-                                                            if (timeUntilSession.TotalHours < 24)
+                                                            var hoursSinceBooking = DateTime.UtcNow - booking.BookingDate;
+                                                            if (hoursSinceBooking.TotalHours > 24)
                                                             {
                                                                 <small class="text-warning">
                                                                     <i class="fas fa-exclamation-triangle me-1"></i>
-                                                                    Cannot cancel (less than 24h before session)
+                                                                    Cannot cancel (more than 24h since booking)
                                                                 </small>
                                                             }
                                                         }
@@ -301,7 +307,7 @@
 
                                         <div class="form-group mb-5">
                                             <label class="mb-2">Gender</label>
-                                            <input type="text" name="Gender" value="@Model.User.Gender" class="form-control" disabled />
+                                            <input type="text" name="Gender" value="@Model.User.Gender" class="form-control" />
                                         </div>
 
                                         <div class="form-group mb-5">
@@ -406,21 +412,12 @@
                                 </div>
 
                                 <h4 class="fw-normal mb-5">Password change</h4>
-
-                                <div class="form-group mb-5">
-                                    <label class="mb-2">Current password</label>
-                                    <input asp-for="AccountDetails.CurrentPassword" class="form-control" />
+                                <div class="form-group mb-4">
+                                    <a asp-controller="Account" asp-action="ForgotPassword" class="btn btn-link p-0 text-decoration-none text-primary fw-bold">
+                                        Forgot Password?
+                                    </a>
                                 </div>
 
-                                <div class="form-group mb-5">
-                                    <label class="mb-2">New password</label>
-                                    <input asp-for="AccountDetails.NewPassword" class="form-control" />
-                                </div>
-
-                                <div class="form-group mb-5">
-                                    <label class="mb-2">Confirm new password</label>
-                                    <input asp-for="AccountDetails.ConfirmPassword" class="form-control" />
-                                </div>
 
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary text-uppercase">

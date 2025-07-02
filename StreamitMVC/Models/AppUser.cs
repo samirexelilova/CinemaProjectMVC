@@ -7,9 +7,9 @@ namespace StreamitMVC.Models
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public Gender Gender { get; set; }
-        public string Image { get; set; }
-        public string PhoneNumber { get; set; }
+        public Gender? Gender { get; set; }
+        public string? Image { get; set; }
+        public string? PhoneNumber { get; set; }
         public DateTime? BirthDate { get; set; }  
         public string? Address { get; set; }
         public decimal? WalletBalance { get; set; }

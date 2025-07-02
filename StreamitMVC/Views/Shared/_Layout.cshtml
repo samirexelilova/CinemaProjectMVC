@@ -314,7 +314,7 @@
                                             <li class="user-info d-flex align-items-center gap-3 mb-3">
                                                 @if (User.Identity != null && User.Identity.IsAuthenticated)
                                                 {
-                                                    @* <img src="~/assets/images/user/@Model.Image" class="img-fluid" /> *@
+                                                     @* <img src="~/assets/images/user/@Model.Image" class="img-fluid" /> *@
                                                     <span>@User.Identity.Name</span>
                                                 }
                                                 else
@@ -369,8 +369,26 @@
                                             }
                                             else
                                             {
-                                                <a asp-action="Login" asp-controller="Account">Login</a>
-                                                <a asp-action="Register" asp-controller="Account">Register</a>
+                                                <li>
+                                                    <a asp-action="Login" asp-controller="Account" class="iq-sub-card d-flex align-items-center gap-3 px-3 py-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd" d="M6 3a1 1 0 0 1 1-1h5.5a.5.5 0 0 1 0 1H7a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h5.5a.5.5 0 0 1 0 1H7a1 1 0 0 1-1-1V3z" />
+                                                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708L9.707 5.5a.5.5 0 1 0-.708.708L10.293 8l-1.294 1.293a.5.5 0 0 0 .708.708l2.147-2.147z" />
+                                                        </svg>
+                                                        <h6 class="mb-0 fw-normal" style="font-size: 18px;">Login</h6>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a asp-action="Register" asp-controller="Account" class="iq-sub-card d-flex align-items-center gap-3 px-3 py-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
+                                                            <path d="M6 8a3 3 0 1 0-3-3 3 3 0 0 0 3 3z" />
+                                                            <path fill-rule="evenodd" d="M6 9a5 5 0 0 0-5 5v1h10v-1a5 5 0 0 0-5-5z" />
+                                                            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5z" />
+                                                        </svg>
+                                                        <h6 class="mb-0 fw-normal" style="font-size: 18px;">Register</h6>
+                                                    </a>
+                                                </li>
+
                                             }
 
                                        

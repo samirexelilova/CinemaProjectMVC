@@ -282,3 +282,4 @@ C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\obj\Debug\net8.0\StreamitMVC.g
 C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\obj\Debug\net8.0\ref\StreamitMVC.dll
 C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\bin\Debug\net8.0\Stripe.net.dll
+C:\Users\Rinat_PC\Desktop\StreamitMVC\StreamitMVC\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.Google.dll
