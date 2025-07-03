@@ -256,8 +256,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xWaWV3QmFza2V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/ActorDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcQWN0b3JEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Actors.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcQWN0b3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcRmF2b3JpdGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Genres.cshtml]
@@ -270,10 +278,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Tags.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcVGFncy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/WatchList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcV2F0Y2hMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Home/Index.cshtml]

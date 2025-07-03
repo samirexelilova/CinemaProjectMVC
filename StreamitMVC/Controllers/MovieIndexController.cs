@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Extensions.Enums;
@@ -12,11 +13,14 @@ namespace StreamitMVC.Controllers
     {
         private readonly AppDbContext _context;
         private IPricingService _pricingService;
+        private readonly UserManager<AppUser> _userManager;
 
-        public MovieIndexController(AppDbContext context, IPricingService pricingService)
+        public MovieIndexController(AppDbContext context, IPricingService pricingService, UserManager<AppUser> userManager)
         {
             _context = context;
             _pricingService = pricingService;
+            _userManager = userManager;
+
         }
 
 
@@ -38,6 +42,7 @@ namespace StreamitMVC.Controllers
 
             return View(vm);
         }
+
 
         public async Task<IActionResult> Detail(int? id)
         {
@@ -61,16 +66,16 @@ namespace StreamitMVC.Controllers
             if (movie is null) return NotFound();
 
             var sessions = await _context.Sessions
-                 .Where(s => s.MovieId == movie.Id)
-                 .Include(s => s.Hall)
+                .Where(s => s.MovieId == movie.Id)
+                .Include(s => s.Hall)
                     .ThenInclude(h => h.HallType)
                         .ThenInclude(ht => ht.HallPrices)
-                 .Include(s => s.HallPrice)
-                  .Include(s => s.Cinema)
+                .Include(s => s.HallPrice)
+                .Include(s => s.Cinema)
                 .Include(s => s.Language)
-               .Include(s => s.Subtitle)
-                .ThenInclude(st => st.Language)
-                 .ToListAsync();
+                .Include(s => s.Subtitle)
+                    .ThenInclude(st => st.Language)
+                .ToListAsync();
 
             var sessionPrices = sessions
                 .Select(s => new SessionWithPriceViewModel
@@ -85,18 +90,32 @@ namespace StreamitMVC.Controllers
                     m.MovieCategories.Any(mc => categoryIds.Contains(mc.CategoryId)))
                 .ToListAsync();
 
+            bool isMovieFavorited = false;
+            List<Favorite> userFavorites = new List<Favorite>();
+
+            if (User.Identity.IsAuthenticated)
+            {
+                var userId = _userManager.GetUserId(User);
+                userFavorites = await _context.Favorites
+                    .Include(f => f.Movie)
+                    .Where(f => f.UserId == userId)
+                    .ToListAsync();
+
+                isMovieFavorited = userFavorites.Any(f => f.MovieId == movie.Id);
+            }
+
             DetailVM detailVm = new DetailVM
             {
                 Movie = movie,
                 RelatedMovies = relatedMovies,
-                SessionPrices = sessionPrices
+                SessionPrices = sessionPrices,
+                Favorites = userFavorites,
+                IsMovieFavorited = isMovieFavorited
             };
 
             return View(detailVm);
         }
 
 
-
     }
-
-}
+    }

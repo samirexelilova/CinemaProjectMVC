@@ -1,0 +1,211 @@
+﻿@model ActorVm
+<div class="section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-5">
+                <div class="cast-box position-relative">
+                    <img src="~/assets/images/cast/@Model.Actor.Photo" class="img-fluid object-cover w-100" alt="person" loading="lazy">
+                    <ul class="p-0 m-0 list-unstyled widget_social_media position-absolute w-100 text-center">
+                        <li>
+                            <a href="https://www.facebook.com/" class="position-relative">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" class="position-relative">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/" class="position-relative">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" class="position-relative">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <h5 class="mt-5 mb-4 text-white fw-500">Personal Details</h5>
+                <h6 class="font-size-18 text-white fw-500">Born :</h6>
+                <div class="seperator d-flex align-items-center flex-wrap mb-3">
+                    <span>@(Model?.Actor?.Born?.ToString("MMMM dd, yyyy") ?? "N/A")</span>
+                </div>
+                <h6 class="font-size-18 text-white fw-500">Parents & Relatives :</h6>
+                <p class="mb-0">@(Model?.Actor?.Parents ?? "N/A")</p>
+            </div>
+            <div class="col-lg-9 col-md-7 mt-5 mt-md-0">
+                <h4 class="fw-500">@(Model?.Actor?.Name ?? "Unknown") @(Model?.Actor?.Surname ?? "")</h4>
+                <div class="seperator d-flex align-items-center flex-wrap mb-3">
+                    <span class="circle"></span>
+                    <span class="fw-semibold">@(Model?.Actor?.Position?.Name ?? "N/A")</span>
+                </div>
+                <p>
+                    @(Model?.Actor?.Description ?? "No description available.")
+                </p>
+                <div class="awards-box border-bottom">
+                    <h5>Awards</h5>
+                    <span class="text-white fw-500">@(Model?.Actor?.Award ?? "No awards")</span>
+                </div>
+                <div class="pb-md-5">
+                    <h5 class="main-title text-capitalize mb-4">Most View Movies</h5>
+                    <div class="card-style-grid mb-5">
+                        <div class="row row-cols-xl-5 row-cols-sm-2 row-cols-1">
+                            @if (Model?.MostViewedMovies != null && Model.MostViewedMovies.Any())
+                            {
+                                @foreach (var movie in Model.MostViewedMovies)
+                                {
+                                    <div class="col mb-4">
+                                        <div class="iq-card card-hover">
+                                            <div class="block-images position-relative w-100">
+                                                <div class="img-box w-100">
+                                                    <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                                    <img src="~/assets/images/movies/popular/@movie.Photo" alt="@(movie.Name ?? "Movie")" class="img-fluid object-cover w-100 d-block border-0" />
+                                                </div>
+                                                <div class="card-description with-transition">
+                                                    <div class="cart-content">
+                                                        <div class="content-left">
+                                                            <h5 class="iq-title text-capitalize">
+                                                                <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id">@(movie.Name ?? "Unknown Movie")</a>
+                                                            </h5>
+                                                            <div class="movie-time d-flex align-items-center my-2">
+                                                                <span class="movie-time-text font-normal">
+                                                                    @(movie.Duration != TimeSpan.Zero ? movie.Duration.ToString(@"hh\:mm") : "N/A")
+                                                                </span>
+                                                            </div>
+                                                            @if (movie.MovieStats != null)
+                                                            {
+                                                                <div class="view-count">
+                                                                    <small class="text-muted">Views: @movie.MovieStats.ViewCount</small>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                            else
+                            {
+                                <div class="col-12">
+                                    <p class="text-muted">No movies available for this actor yet.</p>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-details trending-info">
+                    <ul class="nav nav-underline d-flex nav nav-pills align-items-center text-center mb-5 gap-5" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-bs-toggle="pill" href="#all" role="tab" aria-selected="true">
+                                All
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="pill" href="#movies" role="tab" aria-selected="false">
+                                Movies
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="all" class="tab-pane animated fadeInUp active show" role="tabpanel">
+                            <div class="description-content">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            @if (Model?.Movies != null && Model.Movies.Any())
+                                            {
+                                                @for (int i = 0; i < Model.Movies.Count; i++)
+                                                {
+                                                    var movie = Model.Movies[i];
+                                                    <tr>
+                                                        <td class="w-15">
+                                                            <img src="~/assets/images/movies/popular/@movie.Photo" alt="@(movie.Name ?? "Movie")" class="img-fluid person-img object-cover">
+                                                        </td>
+                                                        <td class="w-20">
+                                                            <div class="font-size-18 d-flex gap-4 text-white fw-500">
+                                                                <span>@(i + 1)</span>
+                                                                <span class="text-capitalize">
+                                                                    <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id" class="text-white text-decoration-none">
+                                                                        @(movie.Name ?? "Unknown Movie")
+                                                                    </a>
+                                                                    <span class="fw-normal text-body">
+                                                                        as @(Model.Actor?.Name ?? "Actor")
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="fw-500 font-size-18 text-white">@(movie.ReleaseDate.Year)</span></td>
+                                                    </tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="3" class="text-center">
+                                                        <p class="text-muted">No movies found for this actor.</p>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="movies" class="tab-pane animated fadeInUp" role="tabpanel">
+                            <div class="description-content">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            @if (Model?.Movies != null && Model.Movies.Any())
+                                            {
+                                                @for (int i = 0; i < Model.Movies.Count; i++)
+                                                {
+                                                    var movie = Model.Movies[i];
+                                                    <tr>
+                                                        <td class="w-15">
+                                                            <img src="~/assets/images/movies/popular/@movie.Photo" alt="@(movie.Name ?? "Movie")" class="img-fluid person-img object-cover">
+                                                        </td>
+                                                        <td class="w-20">
+                                                            <div class="font-size-18 d-flex gap-4 text-white fw-500">
+                                                                <span>@(i + 1)</span>
+                                                                <span class="text-capitalize">
+                                                                    <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id" class="text-white text-decoration-none">
+                                                                        @(movie.Name ?? "Unknown Movie")
+                                                                    </a>
+                                                                    <span class="fw-normal text-body">
+                                                                        as @(Model.Actor?.Name ?? "Actor")
+                                                                    </span>
+                                                                </span>
+                                                            </div>
+                                                        </td>
+                                                        <td><span class="fw-500 font-size-18 text-white">@(movie.ReleaseDate.Year)</span></td>
+                                                    </tr>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <tr>
+                                                    <td colspan="3" class="text-center">
+                                                        <p class="text-muted">No movies found for this actor.</p>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

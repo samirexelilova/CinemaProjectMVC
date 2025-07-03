@@ -6,8 +6,14 @@ using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models;
 using StreamitMVC.Services.Interfaces;
 using StreamitMVC.ViewModels;
-using Stripe;
 using Stripe.Checkout;
+using MimeKit;
+using MailKit.Net.Smtp;
+using QuestPDF.Helpers;
+using QuestPDF.Fluent;
+using System.Drawing;
+using System.Drawing.Imaging;
+using QRCoder;
 
 namespace StreamitMVC.Controllers
 {
@@ -26,6 +32,211 @@ namespace StreamitMVC.Controllers
             _userManager = userManager;
             _configuration = configuration;
             _pricingService = pricingService;
+        }
+        private async Task<byte[]> GenerateTicketPdfAsync(Ticket ticket)
+        {
+            var session = await _context.Sessions
+                .Include(s => s.Movie)
+                .Include(s => s.Hall)
+                .FirstOrDefaultAsync(s => s.Id == ticket.SessionId);
+
+            var seat = await _context.Seats
+                .FirstOrDefaultAsync(s => s.Id == ticket.SeatId);
+
+            if (session == null || seat == null)
+            {
+                throw new Exception("Sessiya və ya oturacaq tapılmadı.");
+            }
+
+            byte[] qrCodeImageBytes = null;
+
+            try
+            {
+                string qrText = $"TicketId:{ticket.Id};Session:{ticket.SessionId};Seat:{seat.RowNumber}-{seat.SeatNumber};Movie:{session.Movie.Name};Date:{session.StartTime:yyyy-MM-dd-HH-mm}";
+
+                var qrGenerator = new QRCodeGenerator();
+                var qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
+                var qrCode = new BitmapByteQRCode(qrCodeData);
+                qrCodeImageBytes = qrCode.GetGraphic(12); 
+
+                Console.WriteLine($"QR kod uğurla yaradıldı. Ölçü: {qrCodeImageBytes.Length} bytes");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"QR kod yaratma xətası: {ex.Message}");
+                qrCodeImageBytes = null;
+            }
+            var document = Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Size(PageSizes.A4);
+                    page.Margin(50);
+                    page.PageColor(Colors.White);
+                    page.DefaultTextStyle(x => x.FontSize(16));
+
+                    page.Content().PaddingTop(40).Column(col =>
+                    {
+                        col.Spacing(10);
+
+                        col.Item().AlignLeft().Text("🎬 KİNO BİLETİ")
+                            .Bold().FontSize(28).FontColor(Colors.Blue.Medium);
+
+                        col.Item().LineHorizontal(2).LineColor(Colors.Grey.Medium);
+
+                        col.Item().AlignLeft().Text(text =>
+                        {
+                            text.Span("🎞️ Film: ").Bold();
+                            text.Span(session.Movie.Name).FontSize(20);
+                        });
+
+                        col.Item().Text(text =>
+                        {
+                            text.Span("📅 Tarix və Vaxt: ").Bold();
+                            text.Span(session.StartTime.ToString("dd MMMM yyyy, HH:mm"));
+                        });
+
+                        col.Item().Text(text =>
+                        {
+                            text.Span("🏛️ Zal: ").Bold();
+                            text.Span(session.Hall.Name);
+                        });
+
+                        col.Item().Text(text =>
+                        {
+                            text.Span("💺 Oturacaq: ").Bold();
+                            text.Span($"Sıra {seat.RowNumber} - Nömrə {seat.SeatNumber}");
+                        });
+
+                        col.Item().Text(text =>
+                        {
+                            text.Span("🎟️ Bilet №: ").Bold();
+                            text.Span(ticket.Id.ToString());
+                        });
+
+                        col.Item().Text(text =>
+                        {
+                            text.Span("💰 Qiymət: ").Bold();
+                            text.Span($"{ticket.Price:C}");
+                        });
+
+                        col.Item().PaddingTop(80);
+
+                        col.Item().AlignRight().Column(inner =>
+                        {
+                            inner.Spacing(5);
+
+                            if (qrCodeImageBytes != null && qrCodeImageBytes.Length > 0)
+                            {
+                                inner.Item().Text(" QR Kod:").Bold().FontSize(12);
+                                inner.Item().AlignBottom().AlignCenter().Container().Width(100).Height(100).Image(qrCodeImageBytes);
+
+                                inner.Item().AlignCenter().Text("Zalda bu kodu təqdim edin").FontSize(10).FontColor(Colors.Grey.Medium);
+                             
+                            }
+                            else
+                            {
+                                inner.Item().Text("⚠️ QR kod yaradıla bilmədi")
+                                    .FontColor(Colors.Red.Medium);
+                            }
+                        });
+                    });
+                });
+            });
+
+            using var msDoc = new MemoryStream();
+            document.GeneratePdf(msDoc);
+            return msDoc.ToArray();
+        }
+
+
+        private async Task SendTicketEmailAsync(AppUser user, Ticket ticket, byte[] pdfBytes)
+        {
+            try
+            {
+                Console.WriteLine($"Email göndərmə başlayır: {user.Email}");
+
+                var smtpHost = _configuration["EmailSettings:SmtpServer"];
+                var smtpPort = _configuration.GetValue<int>("EmailSettings:Port");
+                var smtpUser = _configuration["EmailSettings:Username"];
+                var smtpPass = _configuration["EmailSettings:Password"];
+                var smtpFrom = _configuration["EmailSettings:FromEmail"];
+                var fromName = _configuration["EmailSettings:FromName"];
+
+                if (string.IsNullOrEmpty(smtpHost) || string.IsNullOrEmpty(smtpUser))
+                {
+                    Console.WriteLine("Email konfiqurasiyası tam deyil!");
+                    return;
+                }
+
+                Console.WriteLine($"SMTP konfiqurasiyası: {smtpHost}:{smtpPort}");
+
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress(fromName ?? "Cinema", smtpFrom));
+
+                message.To.Add(new MailboxAddress(user.UserName ?? "Customer", user.Email));
+                message.Subject = "Biletiniz - Kino sistem";
+
+                var body = new BodyBuilder();
+                body.HtmlBody = @"
+            <h2>Salam!</h2>
+            <p>Biletiniz elektron formada əlavə edilmişdir.</p>
+            <p>Zəhmət olmasa zalda bu PDF-dəki QR kodu təqdim edin.</p>
+            <p>Təşəkkürlər!</p>";
+
+                if (pdfBytes != null && pdfBytes.Length > 0)
+                {
+                    body.Attachments.Add($"Bilet-{ticket.Id}.pdf", pdfBytes, new ContentType("application", "pdf"));
+                    Console.WriteLine($"PDF attachment əlavə edildi: {pdfBytes.Length} bytes");
+                }
+                else
+                {
+                    Console.WriteLine("PDF bytes boş və ya null!");
+                    return;
+                }
+
+                message.Body = body.ToMessageBody();
+
+                using var client = new SmtpClient();
+
+                try
+                {
+                    Console.WriteLine("SMTP serverə qoşulma...");
+                    await client.ConnectAsync(smtpHost, smtpPort, MailKit.Security.SecureSocketOptions.StartTls);
+
+                    Console.WriteLine("Autentifikasiya...");
+                    await client.AuthenticateAsync(smtpUser, smtpPass);
+
+                    Console.WriteLine("Email göndərilir...");
+                    await client.SendAsync(message);
+
+                    Console.WriteLine("Email uğurla göndərildi!");
+                }
+                catch (Exception smtpEx)
+                {
+                    Console.WriteLine($"SMTP xətası: {smtpEx.Message}");
+                    throw;
+                }
+                finally
+                {
+                    if (client.IsConnected)
+                    {
+                        await client.DisconnectAsync(true);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Email göndərmə xətası: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
+
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine($"Inner exception: {ex.InnerException.Message}");
+                }
+
+                throw;
+            }
         }
 
         public async Task CleanOldSessions()
@@ -60,7 +271,7 @@ namespace StreamitMVC.Controllers
                     .ThenInclude(seat => seat.SeatType)
             .Include(s => s.Hall)
                 .ThenInclude(h => h.HallType)
-                    .ThenInclude(ht => ht.HallPrices) 
+                    .ThenInclude(ht => ht.HallPrices)
             .Include(s => s.Cinema)
             .Include(s => s.HallPrice)
             .FirstOrDefaultAsync(s => s.Id == sessionId);
@@ -132,7 +343,7 @@ namespace StreamitMVC.Controllers
             var session = await _context.Sessions
          .Include(s => s.Hall)
              .ThenInclude(h => h.HallType)
-                 .ThenInclude(ht => ht.HallPrices) 
+                 .ThenInclude(ht => ht.HallPrices)
          .Include(s => s.HallPrice)
          .Include(s => s.Movie)
          .Include(s => s.Cinema)
@@ -179,7 +390,7 @@ namespace StreamitMVC.Controllers
                     SessionId = sessionId,
                     Status = BookingStatus.Reserved,
                     BookingDate = DateTime.Now,
-                    TotalAmount = selectedSeatIds.Count * sessionPrice 
+                    TotalAmount = selectedSeatIds.Count * sessionPrice
                 };
 
                 _context.Bookings.Add(booking);
@@ -211,7 +422,7 @@ namespace StreamitMVC.Controllers
                         BookingId = booking.Id,
                         SeatId = seatId,
                         SessionId = sessionId,
-                        Price = sessionPrice, 
+                        Price = sessionPrice,
                         Status = TicketStatus.Reserved,
                         PurchasedAt = DateTime.Now
                     };
@@ -222,7 +433,7 @@ namespace StreamitMVC.Controllers
                         BasketId = basket.Id,
                         SessionId = sessionId,
                         SeatId = seatId,
-                        Price = sessionPrice 
+                        Price = sessionPrice
                     };
                     basketItemsToAdd.Add(basketItem);
                 }
@@ -348,13 +559,11 @@ namespace StreamitMVC.Controllers
         }
         public async Task<IActionResult> PaymentSuccess(string session_id)
         {
-
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
                 return RedirectToAction("Login", "Account");
             }
-
 
             if (string.IsNullOrEmpty(session_id))
             {
@@ -368,7 +577,6 @@ namespace StreamitMVC.Controllers
             try
             {
                 session = service.Get(session_id);
-                Console.WriteLine($"Stripe session retrieved: {session.Id}, Status: {session.PaymentStatus}");
             }
             catch (Exception ex)
             {
@@ -384,7 +592,6 @@ namespace StreamitMVC.Controllers
 
             string userId = session.Metadata.ContainsKey("userId") ? session.Metadata["userId"] : null;
             string basketIdStr = session.Metadata.ContainsKey("basketId") ? session.Metadata["basketId"] : null;
-
 
             if (userId == null || basketIdStr == null)
             {
@@ -410,27 +617,39 @@ namespace StreamitMVC.Controllers
                 return RedirectToAction("Checkout");
             }
 
-
             using var transaction = await _context.Database.BeginTransactionAsync();
+            List<int> processedTicketIds = new List<int>();
+            List<int> processedMovieIds = new List<int>();
             try
             {
                 var sessionGroups = basket.Items.GroupBy(i => i.SessionId);
 
                 foreach (var group in sessionGroups)
                 {
+                    var booking = await _context.Bookings
+                       .FirstOrDefaultAsync(b => b.UserId == user.Id &&
+                               b.SessionId == group.Key &&
+                               b.Status == BookingStatus.Reserved);
 
-                    var booking = new Booking
+                    if (booking == null)
                     {
-                        UserId = user.Id,
-                        SessionId = group.Key,
-                        BookingDate = DateTime.Now,
-                        TotalAmount = group.Sum(i => i.Price),
-                        Status = BookingStatus.Paid
-                    };
-
-                    _context.Bookings.Add(booking);
-                    await _context.SaveChangesAsync();
-
+                        booking = new Booking
+                        {
+                            UserId = user.Id,
+                            SessionId = group.Key,
+                            BookingDate = DateTime.Now,
+                            TotalAmount = group.Sum(i => i.Price),
+                            Status = BookingStatus.Paid
+                        };
+                        _context.Bookings.Add(booking);
+                    }
+                    else
+                    {
+                        booking.Status = BookingStatus.Paid;
+                        booking.BookingDate = DateTime.Now;
+                        booking.TotalAmount = group.Sum(i => i.Price);
+                        _context.Bookings.Update(booking);
+                    }
 
                     var payment = new Payment
                     {
@@ -443,12 +662,15 @@ namespace StreamitMVC.Controllers
                     };
 
                     _context.Payments.Add(payment);
-
-                    var addedPayment = _context.Entry(payment);
-
                     await _context.SaveChangesAsync();
 
-                    var savedPayment = await _context.Payments.FirstOrDefaultAsync(p => p.Id == payment.Id);
+                    var sessionForMovie = await _context.Sessions
+                        .FirstOrDefaultAsync(s => s.Id == group.Key);
+
+                    if (sessionForMovie != null && !processedMovieIds.Contains(sessionForMovie.MovieId))
+                    {
+                        processedMovieIds.Add(sessionForMovie.MovieId);
+                    }
 
                     foreach (var item in group)
                     {
@@ -463,6 +685,7 @@ namespace StreamitMVC.Controllers
                             ticket.BookingId = booking.Id;
                             ticket.PurchasedAt = DateTime.Now;
                             _context.Tickets.Update(ticket);
+                            processedTicketIds.Add(ticket.Id);
                         }
                         else
                         {
@@ -476,29 +699,114 @@ namespace StreamitMVC.Controllers
                                 PurchasedAt = DateTime.Now
                             };
                             _context.Tickets.Add(newTicket);
+                            await _context.SaveChangesAsync();
+                            processedTicketIds.Add(newTicket.Id);
+                        }
+
+                        var seat = await _context.Seats.FirstOrDefaultAsync(s => s.Id == item.SeatId);
+                        var soldSeatType = await _context.SeatTypes.FirstOrDefaultAsync(st => st.Name == "Sold");
+
+                        if (seat != null && soldSeatType != null)
+                        {
+                            seat.SeatTypeId = soldSeatType.Id;
+                            _context.Seats.Update(seat);
                         }
                     }
 
                     await _context.SaveChangesAsync();
                 }
 
+                foreach (var movieId in processedMovieIds)
+                {
+                    var movieStats = await _context.MovieStats
+                        .FirstOrDefaultAsync(ms => ms.MovieId == movieId);
+
+                    if (movieStats == null)
+                    {
+                        movieStats = new MovieStats
+                        {
+                            MovieId = movieId,
+                            ViewCount = 1
+                        };
+                        _context.MovieStats.Add(movieStats);
+                    }
+                    else
+                    {
+                        movieStats.ViewCount += 1;
+                        _context.MovieStats.Update(movieStats);
+                    }
+                }
+
                 _context.BasketItems.RemoveRange(basket.Items);
                 basket.TotalPrice = 0;
                 _context.Baskets.Update(basket);
-
                 await _context.SaveChangesAsync();
-                await transaction.CommitAsync();
 
-                TempData["Success"] = "Ödəniş uğurla tamamlandı! Biletləriniz hazırdır.";
-                return RedirectToAction("MyTickets", "Account");
+                await transaction.CommitAsync();
+                Console.WriteLine("Database transaction successfully committed.");
             }
             catch (Exception ex)
             {
-                await transaction.RollbackAsync();
-                TempData["Error"] = $"Ödəniş sonrası işləmə zamanı xəta baş verdi: {ex.Message}";
+                Console.WriteLine($"Database transaction error: {ex.Message}");
+                try
+                {
+                    await transaction.RollbackAsync();
+                    Console.WriteLine("Transaction rolled back successfully.");
+                }
+                catch (Exception rollbackEx)
+                {
+                    Console.WriteLine($"Rollback error: {rollbackEx.Message}");
+                }
+
+                TempData["Error"] = "Ödəniş zamanı xəta baş verdi.";
                 return RedirectToAction("Checkout");
             }
+
+            Console.WriteLine("Starting email sending process...");
+            var emailErrors = new List<string>();
+
+            try
+            {
+                var ticketsToEmail = await _context.Tickets
+                    .Include(t => t.Seat)
+                    .Where(t => processedTicketIds.Contains(t.Id))
+                    .ToListAsync();
+
+                foreach (var ticket in ticketsToEmail)
+                {
+                    try
+                    {
+                        byte[] pdf = await GenerateTicketPdfAsync(ticket);
+                        await SendTicketEmailAsync(user, ticket, pdf);
+                        Console.WriteLine($"Email sent successfully for ticket {ticket.Id}");
+                    }
+                    catch (Exception ticketEmailEx)
+                    {
+                        Console.WriteLine($"Email error for ticket {ticket.Id}: {ticketEmailEx.Message}");
+                        emailErrors.Add($"Bilet {ticket.Id} üçün email xətası: {ticketEmailEx.Message}");
+                    }
+                }
+            }
+            catch (Exception generalEmailEx)
+            {
+                Console.WriteLine($"General email process error: {generalEmailEx.Message}");
+                emailErrors.Add($"Ümumi email xətası: {generalEmailEx.Message}");
+            }
+
+            if (emailErrors.Any())
+            {
+                TempData["Warning"] = $"Ödəniş uğurla tamamlandı, lakin bəzi emaillərdə problem yaşandı: {string.Join("; ", emailErrors)}";
+                Console.WriteLine($"Payment successful but with email errors: {emailErrors.Count} errors");
+            }
+            else
+            {
+                TempData["Success"] = "Ödəniş uğurla tamamlandı! Biletləriniz email ilə göndərildi.";
+                Console.WriteLine("Payment and email sending completed successfully");
+            }
+
+            return RedirectToAction("MyTickets", "Account");
         }
+
 
         [HttpGet]
         public IActionResult PaymentCancel()

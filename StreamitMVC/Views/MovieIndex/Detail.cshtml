@@ -8,10 +8,9 @@
             <div class="col-lg-12">
                 <div class="pt-0">
                     <video id="my-video" poster="~/assets/images/movies/popular/@Model.Movie.Photo"
-                           class="video-js vjs-big-play-centered w-100" controls preload="auto"
-                           data-setup='{ "techOrder"["youtube"], "sources"[{ "type""video/youtube", "src""https://www.youtube.com/watch?v=QCGq1epI9pQ"}], "youtube"{ "iv_load_policy"1 } }'>
-                        <source src="~/assets/images/video/@Model.Movie.TrailerVideo" type="video/mp4" />
-                        <source src="MY_VIDEO.html" type="video/webm" />
+                           class="video-js vjs-big-play-centered w-100" controls preload="auto">
+                        <source src="~/assets/images/movies/@Model.Movie.TrailerVideo" type="video/mp4" />
+                        Your browser does not support the video tag.
                     </video>
                 </div>
             </div>
@@ -76,11 +75,30 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li><span><i class="fa-solid fa-heart"></i></span></li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+                                        <button id="favoriteBtn"
+                                                class="btn @(Model.IsMovieFavorited ? "btn-danger" : "btn-outline-danger")"
+                                                data-movie-id="@Model.Movie.Id"
+                                                data-is-favorited="@Model.IsMovieFavorited.ToString().ToLower()">
+                                            <i class="@(Model.IsMovieFavorited ? "fas fa-heart" : "far fa-heart")"></i>
+                                            <span>
+                                                @(Model.IsMovieFavorited ? "Remove from Favorites" : "Add to Favorites")
+                                            </span>
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <a href="/Account/Login" class="btn btn-outline-danger">
+                                            <i class="far fa-heart"></i>
+                                            <span>Login to Add to Favorites</span>
+                                        </a>
+                                    }
+
                                     <li><span><i class="fa-solid fa-plus"></i></span></li>
                                     <li>
                                         <span>
-                                            <a href="~/assets/images/video/@Model.Movie.TrailerVideo" download>
+                                            <a href="~/assets/images/movies/@Model.Movie.TrailerVideo" download>
                                                 <i class="fa-solid fa-download"></i>
                                             </a>
                                         </span>
@@ -91,7 +109,6 @@
                                         <option value="1">Playlist</option>
                                         <option value="2">Zombie Island</option>
                                         <option value="3">Sand Dust</option>
-                                        <option value="4">Jumbo Queen</option>
                                     </select>
                                 </div>
                             </div>
@@ -108,7 +125,7 @@
                             </ul>
                         </div>
                         <div class="trailor-video col-md-3 col-12 mt-lg-0 mt-4 mb-md-0 mb-1 text-lg-right">
-                            <a data-fslightbox="html5-video" href="~/assets/images/video/@Model.Movie.TrailerVideo"
+                            <a data-fslightbox="html5-video" href="~/assets/images/movies/@Model.Movie.TrailerVideo"
                                class="video-open playbtn block-images position-relative playbtn_thumbnail">
                                 <img src="~/assets/images/movies/popular/@Model.Movie.Photo" class="attachment-medium-large size-medium-large wp-post-image"
                                      alt="" loading="lazy" />
@@ -388,7 +405,7 @@
                                         </div>
                                         <div class="col-8 block-description">
                                             <h6 class="iq-title">
-                                                <a href="person-detail.html" tabindex="0">@item.Actor.Name</a>
+                                                <a href="person-detail.html" tabindex="0">@item.Actor.Name @item.Actor.Surname</a>
                                             </h6>
                                         </div>
                                     </div>
@@ -864,3 +881,53 @@
         });
     });
 </script>
+
+  <style>
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+        </style>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const favoriteBtn = document.getElementById("favoriteBtn");
+
+            if (favoriteBtn) {
+                favoriteBtn.addEventListener("click", function () {
+                    const movieId = this.getAttribute("data-movie-id");
+
+                    const formData = new FormData();
+                    formData.append("movieId", movieId);
+                    formData.append("__RequestVerificationToken", document.querySelector('input[name="__RequestVerificationToken"]').value);
+
+                    fetch("/Favorites/Toggle", {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        this.classList.toggle("btn-danger", data.isFavorited);
+                        this.classList.toggle("btn-outline-danger", !data.isFavorited);
+
+                        const icon = this.querySelector("i");
+                        const span = this.querySelector("span");
+
+                        if (data.isFavorited) {
+                            icon.className = "fas fa-heart";
+                            span.textContent = "Remove from Favorites";
+                            this.setAttribute("data-is-favorited", "true");
+                        } else {
+                            icon.className = "far fa-heart";
+                            span.textContent = "Add to Favorites";
+                            this.setAttribute("data-is-favorited", "false");
+                        }
+                    })
+                    .catch(error => console.error("Xəta:", error));
+                });
+            }
+        });
+    </script>
+}

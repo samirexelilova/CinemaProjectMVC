@@ -266,7 +266,6 @@ namespace StreamitMVC.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Image")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
@@ -582,6 +581,36 @@ namespace StreamitMVC.Migrations
                     b.ToTable("CouponUsages");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.Favorite", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Favorites");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.Hall", b =>
                 {
                     b.Property<int>("Id")
@@ -841,6 +870,34 @@ namespace StreamitMVC.Migrations
                     b.HasIndex("MovieId");
 
                     b.ToTable("MovieLanguages");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.MovieStats", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ViewCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId")
+                        .IsUnique();
+
+                    b.ToTable("MovieStats");
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.MovieTag", b =>
@@ -1522,6 +1579,25 @@ namespace StreamitMVC.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.Favorite", b =>
+                {
+                    b.HasOne("StreamitMVC.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StreamitMVC.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.Hall", b =>
                 {
                     b.HasOne("StreamitMVC.Models.Cinema", "Cinema")
@@ -1605,6 +1681,17 @@ namespace StreamitMVC.Migrations
                         .IsRequired();
 
                     b.Navigation("Language");
+
+                    b.Navigation("Movie");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.MovieStats", b =>
+                {
+                    b.HasOne("StreamitMVC.Models.Movie", "Movie")
+                        .WithOne("MovieStats")
+                        .HasForeignKey("StreamitMVC.Models.MovieStats", "MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Movie");
                 });
@@ -1905,6 +1992,9 @@ namespace StreamitMVC.Migrations
                     b.Navigation("MovieCategories");
 
                     b.Navigation("MovieLanguages");
+
+                    b.Navigation("MovieStats")
+                        .IsRequired();
 
                     b.Navigation("MovieTags");
 

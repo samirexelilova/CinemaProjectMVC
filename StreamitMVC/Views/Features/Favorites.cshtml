@@ -1,0 +1,128 @@
+﻿@model List<Favorite>
+@{
+    ViewData["Title"] = "My Favorite Movies";
+}
+
+<div class="favorites-container">
+    <div class="page-header">
+        <h1><i class="fas fa-heart text-danger"></i> My Favorite Movies</h1>
+        <p class="lead">Your collection of favorite movies</p>
+    </div>
+
+    @if (Model.Any())
+    {
+        <div class="favorites-grid">
+            @foreach (var fav in Model)
+            {
+                <div class="favorite-card">
+                    <div class="movie-poster">
+                        <img src="@fav.Movie.Photo" alt="@fav.Movie.Name" />
+                        <div class="movie-overlay">
+                            <button class="btn btn-danger remove-favorite"
+                                    data-movie-id="@fav.Movie.Id"
+                                    title="Remove from favorites">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="movie-details">
+                        <h5>@fav.Movie.Name</h5>
+                        <p class="movie-description">@(fav.Movie.Description?.Length > 100 ? fav.Movie.Description.Substring(0, 100) + "..." : fav.Movie.Description)</p>
+                        <div class="movie-actions">
+                            <a href="@Url.Action("Detail", new { id = fav.Movie.Id })" class="btn btn-primary">
+                                <i class="fas fa-eye"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="empty-favorites">
+            <div class="empty-icon">
+                <i class="far fa-heart"></i>
+            </div>
+            <h3>No favorite movies yet</h3>
+            <p>Start exploring and add movies to your favorites!</p>
+            <a href="@Url.Action("Index")" class="btn btn-primary btn-lg">
+                <i class="fas fa-film"></i> Browse Movies
+            </a>
+        </div>
+    }
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.remove-favorite').forEach(button => {
+            button.addEventListener('click', function() {
+                const movieId = this.dataset.movieId;
+                const card = this.closest('.favorite-card');
+
+                if (confirm('Are you sure you want to remove this movie from your favorites?')) {
+                    fetch('@Url.Action("ToggleFavorite", "MovieIndex")', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                        },
+                        body: JSON.stringify({ movieId: parseInt(movieId) })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            card.style.transition = 'all 0.3s ease';
+                            card.style.transform = 'scale(0.8)';
+                            card.style.opacity = '0';
+
+                            setTimeout(() => {
+                                card.remove();
+
+                                const remainingCards = document.querySelectorAll('.favorite-card');
+                                if (remainingCards.length === 0) {
+                                    location.reload(); 
+                                }
+                            }, 300);
+
+                            showToast(data.message, 'success');
+                        } else {
+                            showToast('An error occurred. Please try again.', 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        showToast('An error occurred. Please try again.', 'error');
+                    });
+                }
+            });
+        });
+    });
+
+    function showToast(message, type) {
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.textContent = message;
+        toast.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            background-color: ${type === 'success' ? '#28a745' : '#dc3545'};
+        `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.style.opacity = '1', 100);
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => document.body.removeChild(toast), 300);
+        }, 300);
+    }
+</script>

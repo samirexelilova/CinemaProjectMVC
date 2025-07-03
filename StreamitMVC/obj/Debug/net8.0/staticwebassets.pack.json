@@ -2181,10 +2181,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\blog\\blog9.webp"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\00b59e50-a44b-47ea-b0fb-83dda76041ed.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\cast\\00b59e50-a44b-47ea-b0fb-83dda76041ed.jpg"
-    },
-    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\01.webp",
       "PackagePath": "staticwebassets\\assets\\images\\cast\\01.webp"
     },
@@ -2233,6 +2229,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\cast\\12.webp"
     },
     {
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg"
+    },
+    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\5d81ea80-b1ce-4bca-a0cd-e2139d4276ae.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\cast\\5d81ea80-b1ce-4bca-a0cd-e2139d4276ae.jpg"
     },
@@ -2241,12 +2241,12 @@
       "PackagePath": "staticwebassets\\assets\\images\\cast\\62ed954b-650c-4551-9cdc-b54ee9e7244c.avif"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png",
-      "PackagePath": "staticwebassets\\assets\\images\\cast\\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png"
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\def14837-aec5-4a06-a383-02f799465a1f.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\cast\\def14837-aec5-4a06-a383-02f799465a1f.webp"
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cast\\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
@@ -2469,10 +2469,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\movies\\96d4726f-6e70-4282-9856-7005a8d015b3.mp4"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\a7a14299-0c64-4c17-b163-ccee72067216.mp4",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\a7a14299-0c64-4c17-b163-ccee72067216.mp4"
-    },
-    {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4"
     },
@@ -2491,10 +2487,6 @@
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\cd7016f5-b852-4ff3-bec6-5082e802fbe3.mp4",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\cd7016f5-b852-4ff3-bec6-5082e802fbe3.mp4"
-    },
-    {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\dac1921d-2313-4409-8ccd-9c31c0009aa3.mp4"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\e13a933c-f835-4056-b599-f95303246910.mp4",
@@ -2629,8 +2621,8 @@
       "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\1fdbe33d-5900-443c-94f7-c181311eb2a2.jpg"
     },
     {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\38b51295-25da-4424-9107-4db685c003e5.jpg",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\38b51295-25da-4424-9107-4db685c003e5.jpg"
+      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\30c7d09b-a482-4c2f-b914-d9fe2618a6b6.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\30c7d09b-a482-4c2f-b914-d9fe2618a6b6.webp"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\3e20de57-e527-4d06-8770-da9240e792b2.jpg",
@@ -2639,10 +2631,6 @@
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\47722491-a4b7-42d5-b29d-7ef191f8cbfc.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\47722491-a4b7-42d5-b29d-7ef191f8cbfc.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\59effe55-2700-4384-9291-b818d5ba010d.webp",
-      "PackagePath": "staticwebassets\\assets\\images\\movies\\popular\\59effe55-2700-4384-9291-b818d5ba010d.webp"
     },
     {
       "Id": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\a04b88bb-34df-4994-ad5f-5ffe6c439e5f.jpg",

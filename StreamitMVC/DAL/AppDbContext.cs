@@ -10,6 +10,8 @@ namespace StreamitMVC.DAL
 
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorSocialMedia> ActorSocialMedias { get; set; }
+        public DbSet<MovieStats> MovieStats { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Booking> Bookings { get; set; }

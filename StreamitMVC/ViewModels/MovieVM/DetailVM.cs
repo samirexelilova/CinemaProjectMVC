@@ -8,7 +8,7 @@ namespace StreamitMVC.ViewModels
         public Movie Movie { get; set; }
         public List<Movie> RelatedMovies { get; set; }
         public List<SessionWithPriceViewModel> SessionPrices { get; set; }
-
-
+        public List<Favorite> Favorites { get; set; }
+        public bool IsMovieFavorited { get; set; }
     }
 }

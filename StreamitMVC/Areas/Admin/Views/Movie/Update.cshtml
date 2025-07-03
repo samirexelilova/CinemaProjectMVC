@@ -1,5 +1,229 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model UpdateMovieVM
+
+<h2>Filmi Yenilə</h2>
+
+<form asp-action="Update"  enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+    <input type="hidden" asp-for="PhotoPath" />
+    <input type="hidden" asp-for="TrailerVideoPath" />
+    <input type="hidden" asp-for="VideoPath" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Film Adı</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mövcud Şəkil</label><br />
+        @if (!string.IsNullOrEmpty(Model.PhotoPath))
+        {
+            <img src="~/assets/images/movies/popular/@Model.PhotoPath" alt="Şəkil" style="max-width: 200px;" />
+        }
+        <label asp-for="PhotoFile" class="form-label mt-2">Yeni Şəkil Yüklə (istəyə bağlı)</label>
+        <input asp-for="PhotoFile" type="file" class="form-control" />
+        <span asp-validation-for="PhotoFile" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mövcud Trailer Video</label><br />
+        @if (!string.IsNullOrEmpty(Model.TrailerVideoPath))
+        {
+            <video width="320" height="240" controls>
+                <source src="~/assets/images/movies/@Model.TrailerVideoPath" type="video/mp4" />
+                Sizin brauzer video oynatmağı dəstəkləmir.
+            </video>
+        }
+        <label asp-for="TrailerVideo" class="form-label mt-2">Yeni Trailer Video Yüklə (istəyə bağlı)</label>
+        <input asp-for="TrailerVideo" type="file" class="form-control" /> 
+        <span asp-validation-for="TrailerVideo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mövcud Film Video</label><br />
+        @if (!string.IsNullOrEmpty(Model.VideoPath))
+        {
+            <video width="320" height="240" controls>
+                <source src="~/assets/images/movies/@Model.VideoPath" type="video/mp4" />
+                Sizin brauzer video oynatmağı dəstəkləmir.
+            </video>
+        }
+        <label asp-for="VideoFile" class="form-label mt-2">Yeni Film Video Yüklə (istəyə bağlı)</label>
+        <input asp-for="VideoFile" type="file" class="form-control" />
+        <span asp-validation-for="VideoFile" class="text-danger"></span>
+    </div>
+
+
+    <div class="mb-3">
+        <label asp-for="Duration" class="form-label">Müddət</label>
+        <input asp-for="Duration" type="time" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Director" class="form-label">Rejissor</label>
+        <input asp-for="Director" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Country" class="form-label">Ölkə</label>
+        <input asp-for="Country" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImdbRating" class="form-label">IMDb</label>
+        <input asp-for="ImdbRating" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Təsvir</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AgeRestriction" class="form-label">Yaş Məhdudiyyəti</label>
+        <input asp-for="AgeRestriction" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ReleaseDate" class="form-label">Çıxış Tarixi</label>
+        <input asp-for="ReleaseDate" type="date" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Kateqoriyalar</label>
+        @if (Model.Categories != null)
+        {
+            foreach (var c in Model.Categories)
+            {
+                <div class="form-check">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           value="@c.Id"
+                           name="SelectedCategoryIds"
+                           @(Model.SelectedCategoryIds != null && Model.SelectedCategoryIds.Contains(c.Id) ? "checked" : "") />
+                    <label class="form-check-label">@c.Name</label>
+                </div>
+            }
+        }
+    </div>
+
+    <div class="mb-3">
+        <label>Taglar</label>
+        @if (Model.Tags != null)
+        {
+            foreach (var t in Model.Tags)
+            {
+                <div class="form-check">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           value="@t.Id"
+                           name="SelectedTagIds"
+                           @(Model.SelectedTagIds != null && Model.SelectedTagIds.Contains(t.Id) ? "checked" : "") />
+                    <label class="form-check-label">@t.Name</label>
+                </div>
+            }
+        }
+    </div>
+
+    <h4>Aktyorlar və Rollar</h4>
+    @if (Model.Actors != null)
+    {
+        var actorRoles = Model.ActorRoles ?? new List<UpdateMovieVM.ActorWithRole> { new UpdateMovieVM.ActorWithRole() };
+
+        @for (int i = 0; i < actorRoles.Count; i++)
+        {
+            <div class="mb-3 border p-2 rounded">
+                <label>Aktyor seçin</label>
+                <select name="ActorRoles[@i].ActorId" class="form-control">
+                    <option value="">-- Aktyoru seçin --</option>
+                    @foreach (var actor in Model.Actors)
+                    {
+                        var currentActorId = actorRoles[i].ActorId;
+
+                        if (actor.Id == currentActorId)
+                        {
+                            <option value="@actor.Id" selected>@actor.Name @actor.Surname</option>
+                        }
+                        else
+                        {
+                            <option value="@actor.Id">@actor.Name @actor.Surname</option>
+                        }
+                    }
+                </select>
+
+                <label class="mt-2">Rol</label>
+                <input type="text"
+                       name="ActorRoles[@i].Role"
+                       class="form-control"
+                       placeholder="Rolun adını yazın"
+                       value="@actorRoles[i].Role" />
+            </div>
+        }
+
+        <button type="button" class="btn btn-secondary" id="add-actor">+ Aktyor əlavə et</button>
+    }
+
+    <div class="mb-3">
+        <label>Dillər</label>
+        @if (Model.Languages != null)
+        {
+            foreach (var l in Model.Languages)
+            {
+                <div class="form-check">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           value="@l.Id"
+                           name="SelectedLanguageIds"
+                           @(Model.SelectedLanguageIds != null && Model.SelectedLanguageIds.Contains(l.Id) ? "checked" : "") />
+                    <label class="form-check-label">@l.Name</label>
+                </div>
+            }
+        }
+    </div>
+
+    <div class="mb-3">
+        <label>Subtitrlər</label>
+        @if (Model.Subtitles != null)
+        {
+            foreach (var s in Model.Subtitles)
+            {
+                <div class="form-check">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           value="@s.Id"
+                           name="SelectedSubtitleIds"
+                           @(Model.SelectedSubtitleIds != null && Model.SelectedSubtitleIds.Contains(s.Id) ? "checked" : "") />
+                    <label class="form-check-label">@s.Language.Name</label>
+                </div>
+            }
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Yenilə</button>
+</form>
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            $('#add-actor').click(function() {
+                var index = $('select[name^="ActorRoles"]').length;
+                var html = `
+                <div class="mb-3 border p-2 rounded">
+                    <label>Aktyor seçin</label>
+                    <select name="ActorRoles[${index}].ActorId" class="form-control">
+                        <option value="">-- Aktyoru seçin --</option>
+        @foreach (var actor in Model.Actors)
+        {
+                                <option value="@actor.Id">@actor.Name @actor.Surname</option>
+        }
+                    </select>
+
+                    <label class="mt-2">Rol</label>
+                    <input type="text"
+                           name="ActorRoles[${index}].Role"
+                           class="form-control"
+                           placeholder="Rolun adını yazın" />
+                </div>`;
+
+                $(html).insertBefore($(this));
+            });
+        });
+    </script>
 }

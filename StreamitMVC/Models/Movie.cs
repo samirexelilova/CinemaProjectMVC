@@ -22,6 +22,6 @@ namespace StreamitMVC.Models
         public List<MovieCategory> MovieCategories { get; set; }
         public List<MovieLanguage> MovieLanguages { get; set; }
         public List<Review> Reviews { get; set; }
-
+        public MovieStats MovieStats { get; set; }
     }
 }
