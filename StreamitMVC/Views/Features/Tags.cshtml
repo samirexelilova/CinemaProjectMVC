@@ -1,123 +1,65 @@
-﻿   <!--bread-crumb-->
-<div class="iq-breadcrumb" style="background-image: url(assets/images/pages/01.webp);">
+﻿@using StreamitMVC.ViewModels.TagVM
+@model TagVM
+<div class="iq-breadcrumb" style="background-image: url(/assets/images/pages/01.webp);">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-sm-12">
                 <nav aria-label="breadcrumb" class="text-center">
                     <h2 class="title">Tags</h2>
                     <ol class="breadcrumb justify-content-center">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a asp-action="Tags" asp-controller="home">Home</a></li>
                         <li class="breadcrumb-item active">Tags</li>
                     </ol>
                 </nav>
             </div>
         </div>
     </div>
-</div>      <!--bread-crumb-->
-
+</div>
 <section class="section-padding">
     <div class="container-fluid">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h4 class="main-title text-capitalize mb-0">Movie Tag</h4>
+            <h4 class="main-title text-capitalize mb-0">Movie Tags</h4>
         </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-6">
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Action
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Adventure
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Animation
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Comedy
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Drama
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Family
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Fantasy
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        History
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Horror
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Mystery
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Recommended
-                    </span>
-                </a>
-            </div>
-            <div class="col">
-                <a href="view-all-movie.html" class="iq-tag-box">
-                    <span class="iq-tag">
-                        Sci-Fi
-                    </span>
-                </a>
-            </div>
+            @foreach (var tag in Model.Tags)
+            {
+                <div class="col">
+                    <a asp-action="TagDetail" asp-route-id="@tag.Id" class="iq-tag-box">
+                        <span class="iq-tag">@tag.Name</span>
+                    </a>
+                </div>
+            }
         </div>
-        <div class="text-center">
-            <div class="iq-button">
-                <a href="javascript:void(0)" class="btn text-uppercase position-relative">
-                    <span class="button-text">load more</span>
-                    <i class="fa-solid fa-play"></i>
-                </a>
+
+      
+            <div class="text-center mt-4">
+                <nav>
+                    <ul class="pagination justify-content-center">
+
+                        <li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+                        <a class="page-link" asp-action="Tags" asp-route-page="@(Model.CurrentPage - 1)" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+
+                        @for (int i = 1; i <= Model.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                            <a class="page-link" asp-action="Tags" asp-route-page="@i">@i</a>
+                            </li>
+                        }
+
+                        <li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
+                            <a class="page-link" asp-action="Tags" asp-route-page="@(Model.CurrentPage + 1)" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
             </div>
-        </div>
     </div>
 </section>
-
-
 <style>
     .breadcrumb-item + .breadcrumb-item::before {
         content: "/";

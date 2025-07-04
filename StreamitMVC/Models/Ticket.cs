@@ -5,7 +5,7 @@ namespace StreamitMVC.Models
 {
     public class Ticket : BaseEntity
     {
-        public int BookingId { get; set; } //Biletin aid olduğu sifarişin bütün məlumatları
+        public int BookingId { get; set; } 
         public Booking Booking { get; set; } 
 
         public int SeatId { get; set; }
@@ -16,8 +16,9 @@ namespace StreamitMVC.Models
 
         public TicketStatus Status { get; set; } = TicketStatus.Available;
         public DateTime? UsedAt { get; set; }
-        public DateTime PurchasedAt { get; set; } = DateTime.Now; //Biletin alındığı vaxt
+        public DateTime PurchasedAt { get; set; } = DateTime.Now;
         public DateTime? ExpiresAt { get; set; }
+        public bool IsReminderSent { get; set; } = false;
     }
 
   

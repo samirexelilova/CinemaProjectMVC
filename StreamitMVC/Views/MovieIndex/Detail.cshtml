@@ -78,23 +78,18 @@
                                     @if (User.Identity.IsAuthenticated)
                                     {
                                         <button id="favoriteBtn"
-                                                class="btn @(Model.IsMovieFavorited ? "btn-danger" : "btn-outline-danger")"
+                                                class="favorite-icon-btn"
                                                 data-movie-id="@Model.Movie.Id"
-                                                data-is-favorited="@Model.IsMovieFavorited.ToString().ToLower()">
-                                            <i class="@(Model.IsMovieFavorited ? "fas fa-heart" : "far fa-heart")"></i>
-                                            <span>
-                                                @(Model.IsMovieFavorited ? "Remove from Favorites" : "Add to Favorites")
-                                            </span>
+                                                title="Favorilere ekle / çıkar">
+                                            <i class="@(Model.IsMovieFavorited ? "fas" : "far") fa-heart"></i>
                                         </button>
                                     }
                                     else
                                     {
-                                        <a href="/Account/Login" class="btn btn-outline-danger">
+                                        <a href="/Account/Login" class="favorite-icon-btn" title="Favorilere eklemek için giriş yap">
                                             <i class="far fa-heart"></i>
-                                            <span>Login to Add to Favorites</span>
                                         </a>
                                     }
-
                                     <li><span><i class="fa-solid fa-plus"></i></span></li>
                                     <li>
                                         <span>
@@ -104,13 +99,6 @@
                                         </span>
                                     </li>
                                 </ul>
-                                <div class="movie-detail-select">
-                                    <select name="movieselect" class="form-control movie-select select2-basic-single js-states">
-                                        <option value="1">Playlist</option>
-                                        <option value="2">Zombie Island</option>
-                                        <option value="3">Sand Dust</option>
-                                    </select>
-                                </div>
                             </div>
                             <ul class="iq-blogtag list-unstyled d-flex flex-wrap align-items-center gap-3 p-0">
                                 <li class="iq-tag-title text-primary mb-0">
@@ -221,7 +209,7 @@
                                                         </form>
                                                     </div>
                                                 </div>
-                                              
+
                                             }
                                         </div>
                                     }
@@ -301,75 +289,72 @@
                                 </div>
                             </div>
                         </div>
-
+                     
                         <div id="source-01" class="tab-pane animated fadeInUp" role="tabpanel">
+                            <form id="sessionFilterForm" class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <select id="SelectedLanguageId" name="SelectedLanguageId" class="form-select">
+                                        <option value="">Select Language</option>
+                                        @foreach (var lang in Model.Languages)
+                                        {
+                                            <option value="@lang.Id" selected="@(Model.SelectedLanguageId == lang.Id ? "selected" : null)">
+                                                @lang.Name
+                                            </option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <select id="SelectedCinemaId" name="SelectedCinemaId" class="form-select">
+                                        <option value="">Select Cinema</option>
+                                        @foreach (var cinema in Model.Cinemas)
+                                        {
+                                            <option value="@cinema.Id" selected="@(Model.SelectedCinemaId == cinema.Id ? "selected" : null)">
+                                                @cinema.Name
+                                            </option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="date" id="SelectedDate" name="SelectedDate" class="form-control" value="@(Model.SelectedDate?.ToString("yyyy-MM-dd"))" />
+                                </div>
+                            </form>
                             <div class="source-list-content table-responsive">
                                 <table class="table custom-table">
                                     <thead>
                                         <tr>
-                                            <th>
-                                                Film
-                                            </th>
-                                            <th>
-                                                SEANSLAR
-                                            </th>
-                                            <th>
-                                                KİNOTEATR
-                                            </th>
-                                            <th>
-                                                ZAL
-                                            </th>
-                                            <th>
-                                                FORMAT
-                                            </th>
-                                            <th>
-                                                QİYMƏT
-                                            </th>
+                                            <th>Film</th>
+                                            <th>SEANSLAR</th>
+                                            <th>KİNOTEATR</th>
+                                            <th>ZAL</th>
+                                            <th>FORMAT</th>
+                                            <th>QİYMƏT</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="sessionsTableBody">
                                         @foreach (var item in Model.SessionPrices)
                                         {
                                             <tr>
-                                                <td>@Model.Movie.Name</td>
+                                                <td>@item.Session.Movie.Name</td>
                                                 <td>@item.Session.StartTime.ToString("HH:mm")</td>
                                                 <td>@item.Session.Cinema?.Name</td>
                                                 <td>@item.Session.Hall?.Name</td>
                                                 <td>
-                                                    <div style="display: flex; align-items: center; gap: 20px;">
-
-                                                        @*  Orijinal Dil (Seansın dili) *@
-                                                        @if (item.Session.Language != null)
-                                                        {
-                                                            <div style="display: flex; align-items: center; padding: 4px 8px;">
-                                                                <img src="~/assets/images/@item.Session.Language.FlagIcon"
-                                                                     alt="@item.Session.Language.Name"
-                                                                     style="width:30px; height:21px; border-radius: 4px;"
-                                                                     onerror="this.style.display='none';" />
-                                                            </div>
-                                                        }
-
-                                                        @* Subtitrlər (Seansın altyazı dili) *@
-                                                        @if (item.Session.Subtitle?.Language != null)
-                                                        {
-                                                            <div style="display: flex; align-items: center; gap: 6px; font-weight: bold; font-size: 13px; color: black;">
-                                                                <span>@item.Session.Subtitle.Language.Code.ToUpper()</span>
-                                                            </div>
-                                                        }
-
-                                                    </div>
+                                                    @if (item.Session.Language != null)
+                                                    {
+                                                        <img src="~/assets/images/@item.Session.Language.FlagIcon" alt="@item.Session.Language.Name" style="width:30px; height:21px; border-radius:4px;" onerror="this.style.display='none';" />
+                                                    }
+                                                    @if (item.Session.Subtitle?.Language != null)
+                                                    {
+                                                        <span>@item.Session.Subtitle.Language.Code.ToUpper()</span>
+                                                    }
                                                 </td>
-
-
                                                 <td>@item.Price.ToString("0.00") AZN</td>
                                                 <td>
-                                                    <a asp-controller="Booking" asp-action="SelectSeats" asp-route-sessionId="@item.Session.Id" class="btn btn-primary">
-                                                        Yerləri Seç
-                                                    </a>
+                                                    <a asp-controller="Booking" asp-action="SelectSeats" asp-route-sessionId="@item.Session.Id" class="btn btn-primary">Yerləri Seç</a>
                                                 </td>
                                             </tr>
                                         }
-
                                     </tbody>
                                 </table>
                             </div>
@@ -439,14 +424,14 @@
                                 <div class="iq-card card-hover">
                                     <div class="block-images position-relative w-100">
                                         <div class="img-box w-100">
-                                            <a asp-controller="Movie" asp-action="detail" asp-route-id="@item.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                            <a asp-action="detail" asp-route-id="@item.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                             <img src="~/assets/images/movies/popular/@item.Photo" alt="movie-card" class="img-fluid object-cover w-100 d-block border-0">
                                         </div>
                                         <div class="card-description with-transition">
                                             <div class="cart-content">
                                                 <div class="content-left">
                                                     <h5 class="iq-title text-capitalize">
-                                                        <a href="movie-detail.html">@item.Name</a>
+                                                        <a asp-action="Detail" asp-route-id="@item.Id">@item.Name</a>
                                                     </h5>
                                                     <div class="movie-time d-flex align-items-center my-2">
                                                         <span class="movie-time-text font-normal">
@@ -454,14 +439,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div class="watchlist">
-                                                    <a class="watch-list-not" href="playlist.html">
-                                                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-10">
-                                                            <path d="M12 4V20M20 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                                        </svg>
-                                                        <span class="watchlist-label"> Watchlist </span>
-                                                    </a>
-                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="block-social-info align-items-center">
@@ -882,52 +860,58 @@
     });
 </script>
 
-  <style>
+<style>
     .img-box img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-        </style>
 
-@section Scripts {
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const favoriteBtn = document.getElementById("favoriteBtn");
+    .favorite-icon-btn {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 22px;
+        transition: color 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+    }
 
-            if (favoriteBtn) {
-                favoriteBtn.addEventListener("click", function () {
-                    const movieId = this.getAttribute("data-movie-id");
+        .favorite-icon-btn:hover {
+            color: red;
+            transform: scale(1.2);
+        }
 
-                    const formData = new FormData();
-                    formData.append("movieId", movieId);
-                    formData.append("__RequestVerificationToken", document.querySelector('input[name="__RequestVerificationToken"]').value);
+        .favorite-icon-btn.favorited {
+            color: red;
+        }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-                    fetch("/Favorites/Toggle", {
-                        method: "POST",
-                        body: formData
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        this.classList.toggle("btn-danger", data.isFavorited);
-                        this.classList.toggle("btn-outline-danger", !data.isFavorited);
+<script>
 
-                        const icon = this.querySelector("i");
-                        const span = this.querySelector("span");
+         $(function () {
+        $('#sessionFilterForm select, #sessionFilterForm input').on('change', function () {
+            var data = {
+                id: '@Model.Movie.Id',
+                SelectedLanguageId: $('#SelectedLanguageId').val(),
+                SelectedCinemaId: $('#SelectedCinemaId').val(),
+                SelectedDate: $('#SelectedDate').val()
+            };
 
-                        if (data.isFavorited) {
-                            icon.className = "fas fa-heart";
-                            span.textContent = "Remove from Favorites";
-                            this.setAttribute("data-is-favorited", "true");
-                        } else {
-                            icon.className = "far fa-heart";
-                            span.textContent = "Add to Favorites";
-                            this.setAttribute("data-is-favorited", "false");
-                        }
-                    })
-                    .catch(error => console.error("Xəta:", error));
-                });
-            }
+            $.ajax({
+                url: '/MovieIndex/FilterSessions',
+                type: 'GET',
+                data: data,
+                success: function (partialViewResult) {
+                    $('#sessionsTableBody').html(partialViewResult);
+                },
+                  error: function (xhr, status, error) {
+        console.log("Status: " + status);
+        console.log("Error: " + error);
+        alert('Filtrləmədə xəta baş verdi: ' + error);
+    }
+            });
         });
-    </script>
-}
+    });
+
+</script>

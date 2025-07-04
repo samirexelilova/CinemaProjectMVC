@@ -57,7 +57,7 @@ namespace StreamitMVC.Controllers
                 var qrGenerator = new QRCodeGenerator();
                 var qrCodeData = qrGenerator.CreateQrCode(qrText, QRCodeGenerator.ECCLevel.Q);
                 var qrCode = new BitmapByteQRCode(qrCodeData);
-                qrCodeImageBytes = qrCode.GetGraphic(12); 
+                qrCodeImageBytes = qrCode.GetGraphic(12);
 
                 Console.WriteLine($"QR kod uğurla yaradıldı. Ölçü: {qrCodeImageBytes.Length} bytes");
             }
@@ -132,7 +132,7 @@ namespace StreamitMVC.Controllers
                                 inner.Item().AlignBottom().AlignCenter().Container().Width(100).Height(100).Image(qrCodeImageBytes);
 
                                 inner.Item().AlignCenter().Text("Zalda bu kodu təqdim edin").FontSize(10).FontColor(Colors.Grey.Medium);
-                             
+
                             }
                             else
                             {
@@ -239,30 +239,9 @@ namespace StreamitMVC.Controllers
             }
         }
 
-        public async Task CleanOldSessions()
-        {
-            var currentTime = DateTime.Now;
-
-            var finishedSessions = await _context.Sessions
-                .Where(s => s.StartTime.AddHours(3) < currentTime)
-                .ToListAsync();
-
-            if (finishedSessions.Any())
-            {
-                var finishedSessionIds = finishedSessions.Select(s => s.Id).ToList();
-                var oldTickets = await _context.Tickets
-                    .Where(t => finishedSessionIds.Contains(t.SessionId))
-                    .ToListAsync();
-
-                _context.Tickets.RemoveRange(oldTickets);
-                _context.Sessions.RemoveRange(finishedSessions);
-                await _context.SaveChangesAsync();
-            }
-        }
 
         public async Task<IActionResult> SelectSeats(int sessionId, string error = null)
         {
-            await CleanOldSessions();
 
             var session = await _context.Sessions
             .Include(s => s.Movie)

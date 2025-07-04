@@ -22,26 +22,63 @@ namespace StreamitMVC.Controllers
             _userManager = userManager;
 
         }
-
-
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int? SelectedLanguageId, int? SelectedCinemaId, DateTime? SelectedDate, bool isAjax = false)
         {
-            var movies = _context.Movies
-            .Include(m => m.MovieLanguages)
-             .ThenInclude(ml => ml.Language)
-           .ToList();
+            var moviesQuery = _context.Movies
+                .Include(m => m.MovieLanguages).ThenInclude(ml => ml.Language)
+                .Include(m => m.Sessions)
+                .AsQueryable();
 
-            MovieVM vm = new MovieVM
+            if (SelectedLanguageId != null)
+                moviesQuery = moviesQuery.Where(m => m.MovieLanguages.Any(ml => ml.LanguageId == SelectedLanguageId));
+
+            if (SelectedCinemaId != null)
+                moviesQuery = moviesQuery.Where(m => m.Sessions.Any(s => s.CinemaId == SelectedCinemaId));
+
+            if (SelectedDate != null)
+                moviesQuery = moviesQuery.Where(m => m.Sessions.Any(s => s.StartTime.Date == SelectedDate.Value.Date));
+
+            var latestMovies = _context.Movies
+          .Where(m => !m.IsDeleted)
+         .OrderByDescending(m => m.ReleaseDate)
+         .Take(10)
+          .ToList();
+
+            var suggestedMovies = _context.Movies
+            .Where(m => !m.IsDeleted)
+            .OrderByDescending(m => m.CreatedAt)
+            .Take(6)
+            .Include(m => m.MovieTags).ThenInclude(mt => mt.Tag)
+            .ToList();
+            var vm = new MovieVM
             {
-                Movies = movies,
-                Languages = _context.Languages.ToList(),
-                Cinemas = _context.Cinemas.ToList(),
-                Slides = _context.Slides.OrderBy(s => s.Order).ToList()
+                Movies = await moviesQuery.ToListAsync(),
+                MovieSwipper = await _context.Movies
+                .Include(m => m.MovieCategories).ThenInclude(mc => mc.Category)
+                .Include(m => m.MovieLanguages).ThenInclude(ml => ml.Language)
+                .Include(m => m.Subtitles).ThenInclude(su => su.Language)
+                .Include(m => m.MovieTags).ThenInclude(mt => mt.Tag)
+                .OrderByDescending(m => m.ImdbRating).Take(3)
+                .ToListAsync(),
+                Languages = await _context.Languages.ToListAsync(),
+                Cinemas = await _context.Cinemas.ToListAsync(),
+                Slides = await _context.Slides.ToListAsync(),
+                SelectedCinemaId = SelectedCinemaId,
+                SelectedLanguageId = SelectedLanguageId,
+                SelectedDate = SelectedDate,
+                LatestMovies =latestMovies,
+                SuggestedMovies = suggestedMovies
             };
+
+            if (isAjax)
+            {
+                return PartialView("MovieListHtml", vm); 
+            }
 
             return View(vm);
         }
+
+
 
 
         public async Task<IActionResult> Detail(int? id)
@@ -66,23 +103,25 @@ namespace StreamitMVC.Controllers
             if (movie is null) return NotFound();
 
             var sessions = await _context.Sessions
-                .Where(s => s.MovieId == movie.Id)
-                .Include(s => s.Hall)
-                    .ThenInclude(h => h.HallType)
-                        .ThenInclude(ht => ht.HallPrices)
-                .Include(s => s.HallPrice)
-                .Include(s => s.Cinema)
-                .Include(s => s.Language)
-                .Include(s => s.Subtitle)
-                    .ThenInclude(st => st.Language)
-                .ToListAsync();
+    .Where(s => s.MovieId == movie.Id)
+    .Include(s => s.Movie)
+    .Include(s => s.Hall)
+        .ThenInclude(h => h.HallType)
+            .ThenInclude(ht => ht.HallPrices)
+    .Include(s => s.HallPrice)
+    .Include(s => s.Cinema)
+    .Include(s => s.Language)
+    .Include(s => s.Subtitle)
+        .ThenInclude(st => st.Language)
+    .ToListAsync();
 
             var sessionPrices = sessions
-                .Select(s => new SessionWithPriceViewModel
-                {
-                    Session = s,
-                    Price = _pricingService.CalculateSessionPrice(s)
-                }).ToList();
+      .Select(s => new SessionWithPriceViewModel
+      {
+          Session = s,
+          Price = _pricingService.CalculateSessionPrice(s)
+      }).ToList();
+
 
             var categoryIds = movie.MovieCategories.Select(mc => mc.CategoryId).ToList();
             var relatedMovies = await _context.Movies
@@ -103,19 +142,57 @@ namespace StreamitMVC.Controllers
 
                 isMovieFavorited = userFavorites.Any(f => f.MovieId == movie.Id);
             }
-
+            var languages = await _context.Languages.ToListAsync();
+            var cinemas = await _context.Cinemas.ToListAsync();
             DetailVM detailVm = new DetailVM
             {
                 Movie = movie,
                 RelatedMovies = relatedMovies,
                 SessionPrices = sessionPrices,
                 Favorites = userFavorites,
-                IsMovieFavorited = isMovieFavorited
+                IsMovieFavorited = isMovieFavorited,
+                Languages = languages,
+                Cinemas = cinemas
             };
 
             return View(detailVm);
         }
+        public async Task<IActionResult> FilterSessions(int id, int? SelectedLanguageId = null, int? SelectedCinemaId = null, DateTime? SelectedDate = null)
+        {
+            var sessionsQuery = _context.Sessions
+      .Where(s => s.MovieId == id)
+      .Include(s => s.Movie)
+      .Include(s => s.Hall)
+          .ThenInclude(h => h.HallType)
+              .ThenInclude(ht => ht.HallPrices)
+      .Include(s => s.HallPrice)
+      .Include(s => s.Cinema)
+      .Include(s => s.Language)
+      .Include(s => s.Subtitle)
+          .ThenInclude(st => st.Language)
+      .AsQueryable();
+            if (SelectedLanguageId != null)
+                sessionsQuery = sessionsQuery.Where(s => s.LanguageId == SelectedLanguageId);
+
+            if (SelectedCinemaId != null)
+                sessionsQuery = sessionsQuery.Where(s => s.CinemaId == SelectedCinemaId);
+
+            if (SelectedDate != null)
+                sessionsQuery = sessionsQuery.Where(s => s.StartTime.Date == SelectedDate.Value.Date);
+
+            var sessions = await sessionsQuery.ToListAsync();
+
+            var sessionPrices = sessions
+                .Select(s => new SessionWithPriceViewModel
+                {
+                    Session = s,
+                    Price = _pricingService.CalculateSessionPrice(s)
+                }).ToList();
+
+            return PartialView("_SessionListPartial", sessionPrices);
+        }
+
 
 
     }
-    }
+}

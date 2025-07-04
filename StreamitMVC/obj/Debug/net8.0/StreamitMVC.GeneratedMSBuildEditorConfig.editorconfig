@@ -168,6 +168,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Slide/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Slide/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Slide/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Areas/Admin/Views/Subtitle/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VidGl0bGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -264,16 +276,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcQWN0b3JzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/CategoryDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcQ2F0ZWdvcnlEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Favorites.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcRmF2b3JpdGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Genres.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcR2VucmVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/RestrictedContent.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcUmVzdHJpY3RlZENvbnRlbnQuY3NodG1s
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/TagDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZXNcVGFnRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/Tags.cshtml]
@@ -290,6 +306,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/MovieListHtml.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxNb3ZpZUxpc3RIdG1sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/_SessionListPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxfU2Vzc2lvbkxpc3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Pages/AboutUs.cshtml]
@@ -318,34 +342,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shared/_ShopLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TaG9wTGF5b3V0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/Cart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDYXJ0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/Checkout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDaGVja291dC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/MyAccount.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxNeUFjY291bnQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/OrderTracking.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxPcmRlclRyYWNraW5nLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/ProductDetail.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxQcm9kdWN0RGV0YWlsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Shop/Wishlist.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxXaXNobGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/_ViewImports.cshtml]

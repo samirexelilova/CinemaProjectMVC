@@ -1,4 +1,5 @@
 ﻿using StreamitMVC.Models.Base;
+using StreamitMVC.Utilities.Enums;
 
 namespace StreamitMVC.Models
 {

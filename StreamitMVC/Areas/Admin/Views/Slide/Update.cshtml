@@ -1,0 +1,74 @@
+﻿@model UpdateSlideVM
+
+<h2>Slayd Yenilə</h2>
+
+<form asp-action="Update" enctype="multipart/form-data" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input type="hidden" asp-for="Image" />
+    <input type="hidden" asp-for="TrailerVideo" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Slayd Adı (Title)</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mövcud Şəkil</label><br />
+        @if (!string.IsNullOrEmpty(Model.Image))
+        {
+            <img src="~/assets/images/website-images/@Model.Image" alt="Şəkil" style="max-width: 200px;" />
+        }
+        <label asp-for="Photo" class="form-label mt-2">Yeni Şəkil Yüklə (istəyə bağlı)</label>
+        <input asp-for="Photo" type="file" class="form-control" />
+        <span asp-validation-for="Photo" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Mövcud Trailer Video</label><br />
+        @if (!string.IsNullOrEmpty(Model.TrailerVideo))
+        {
+            <video width="320" height="240" controls>
+                <source src="~/assets/images/website-images/@Model.TrailerVideo" type="video/mp4" />
+                Sizin brauzer video oynatmağı dəstəkləmir.
+            </video>
+        }
+        <label asp-for="TrailerVideoURL" class="form-label mt-2">Yeni Trailer Video Yüklə (istəyə bağlı)</label>
+        <input asp-for="TrailerVideoURL" type="file" class="form-control" />
+        <span asp-validation-for="TrailerVideoURL" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Duration" class="form-label">Müddət (TimeSpan olaraq)</label>
+        <input asp-for="Duration" type="time" class="form-control" />
+        <span asp-validation-for="Duration" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImdbRating" class="form-label">IMDb Reytinqi</label>
+        <input asp-for="ImdbRating" type="number" step="0.1" min="0" max="10" class="form-control" />
+        <span asp-validation-for="ImdbRating" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ReleaseDate" class="form-label">Çıxış Tarixi</label>
+        <input asp-for="ReleaseDate" type="date" class="form-control" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Təsvir</label>
+        <textarea asp-for="Description" rows="4" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Order" class="form-label">Order (Sıra nömrəsi)</label>
+        <input asp-for="Order" type="number" min="1" class="form-control" />
+        <span asp-validation-for="Order" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Yenilə</button>
+</form>
+

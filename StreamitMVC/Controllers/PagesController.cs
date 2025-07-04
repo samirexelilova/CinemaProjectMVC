@@ -20,9 +20,6 @@ namespace StreamitMVC.Controllers
         {
             return View();
         }
-        public IActionResult PricingPlan()
-        {
-            return View();
-        }
+       
     }
 }

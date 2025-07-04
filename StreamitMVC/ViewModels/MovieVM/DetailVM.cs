@@ -10,5 +10,13 @@ namespace StreamitMVC.ViewModels
         public List<SessionWithPriceViewModel> SessionPrices { get; set; }
         public List<Favorite> Favorites { get; set; }
         public bool IsMovieFavorited { get; set; }
+        public int? SelectedLanguageId { get; set; }
+        public int? SelectedCinemaId { get; set; }
+        public DateTime? SelectedDate { get; set; }
+        public List<Language> Languages { get; set; }
+        public List<Cinema> Cinemas
+        {
+            get; set;
+        }
     }
 }

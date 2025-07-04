@@ -15,7 +15,9 @@ builder.Services.AddControllersWithViews();
 QuestPDF.Settings.License = LicenseType.Community;
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddScoped<IEmailService, EmailService>();
-
+builder.Services.AddScoped<ISessionCleanerService, SessionCleanerService>();
+builder.Services.AddHostedService<SessionCleanupBackgroundService>();
+builder.Services.AddHostedService<ReminderService>();
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {
     opt.Password.RequiredLength = 8;

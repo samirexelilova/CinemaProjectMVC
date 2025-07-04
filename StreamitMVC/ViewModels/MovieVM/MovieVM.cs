@@ -5,12 +5,15 @@ namespace StreamitMVC.ViewModels
     public class MovieVM
     {
         public List<Movie> Movies { get; set; }
-        public List<Language> Languages { get; set; }
-        public List<Cinema> Cinemas { get; set; }
-        public List<Slide> Slides { get; set; }
-
+        public List<Movie> MovieSwipper { get; set; }
+        public List<Language> Languages { get; set; } 
+        public List<Cinema> Cinemas { get; set; } 
+        public List<Slide> Slides { get; set; } 
         public int? SelectedLanguageId { get; set; }
         public int? SelectedCinemaId { get; set; }
         public DateTime? SelectedDate { get; set; }
+        public List<Movie> LatestMovies { get; set; }
+        public List<Movie> SuggestedMovies { get; set; }
+
     }
 }

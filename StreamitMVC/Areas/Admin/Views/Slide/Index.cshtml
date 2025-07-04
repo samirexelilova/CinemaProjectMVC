@@ -1,0 +1,49 @@
+﻿@model List<GetSlideVM>
+
+
+<h1>Slaydlar</h1>
+<a asp-action="Create" class="btn btn-success mb-3">Yeni Slayd Yarat</a>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Şəkil</th>
+            <th>Ad</th>
+            <th>Order</th>
+            <th>IMDb Reytinq</th>
+            <th>Müddət</th>
+            <th>Çıxış Tarixi</th>
+            <th>Yaradılma Tarixi</th>
+            <th>Təsvir</th>
+            <th>Trailer</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var slide in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/assets/images/movies/popular/@slide.Image" width="100" alt="@slide.Name" />
+                </td>
+                <td>@slide.Name</td>
+                <td>@slide.Order</td>
+                <td>@slide.ImdbRating</td>
+                <td>@slide.Duration.Hours hr : @slide.Duration.Minutes min</td>
+                <td>@slide.ReleaseDate.ToShortDateString()</td>
+                <td>@slide.CreatedAt.ToShortDateString()</td>
+                <td>@slide.Description</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(slide.TrailerVideo))
+                    {
+                        <a href="~/assets/images/movies/@slide.TrailerVideo" target="_blank">İzlət</a>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Update" asp-route-id="@slide.Id" class="btn btn-sm btn-primary">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@slide.Id" class="btn btn-sm btn-danger" onclick="return confirm('Silinsin?');">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

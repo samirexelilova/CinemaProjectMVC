@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
 using StreamitMVC.ViewModels;
+using StreamitMVC.ViewModels.TagVM;
 
 namespace StreamitMVC.Controllers
 {
@@ -18,14 +19,13 @@ namespace StreamitMVC.Controllers
             _context=context;
             _userManager = userManager;
         }
-        public IActionResult RestrictedContent()
-        {
-            return View();
-        }
+      
         [HttpPost]
-        public async Task<IActionResult> ToggleFavorite(int movieId)
+        public async Task<IActionResult> ToggleFavorite([FromBody] ToggleFavoriteRequest dto)
         {
+            int movieId = dto.MovieId;
             var userId = _userManager.GetUserId(User);
+
             var existing = await _context.Favorites
                 .FirstOrDefaultAsync(f => f.MovieId == movieId && f.UserId == userId);
 
@@ -33,7 +33,7 @@ namespace StreamitMVC.Controllers
             {
                 _context.Favorites.Remove(existing);
                 await _context.SaveChangesAsync();
-                return Json(new { success = true, isFavorited = false, message = "Movie removed from favorites" });
+                return Json(new { success = true, isFavorited = false });
             }
             else
             {
@@ -44,10 +44,12 @@ namespace StreamitMVC.Controllers
                 };
                 _context.Favorites.Add(fav);
                 await _context.SaveChangesAsync();
-                return Json(new { success = true, isFavorited = true, message = "Movie added to favorites" });
+                return Json(new { success = true, isFavorited = true });
             }
         }
 
+
+        [Authorize]
         public async Task<IActionResult> Favorites()
         {
             var userId = _userManager.GetUserId(User);
@@ -58,10 +60,7 @@ namespace StreamitMVC.Controllers
 
             return View(favorites);
         }
-        public IActionResult Genres()
-        {
-            return View();
-        }
+      
         public IActionResult Actors(int page = 1)
         {
             int pageSize = 12; 
@@ -122,9 +121,82 @@ namespace StreamitMVC.Controllers
 
             return View(vm);
         }
-        public IActionResult Tags()
+        public IActionResult Tags(int page = 1)
         {
-            return View();
+            int pageSize = 12;
+
+            var tags = _context.Tags
+                               .Skip((page - 1) * pageSize)
+                               .Take(pageSize)
+                               .ToList();
+
+            int totalTags = _context.Tags.Count();
+            int totalPages = (int)Math.Ceiling((double)totalTags / pageSize);
+
+            var vm = new TagVM
+            {
+                Tags = tags,
+                CurrentPage = page,
+                TotalPages = totalPages
+            };
+
+            return View(vm);
+        }
+
+        public IActionResult TagDetail(int id)
+        {
+            var tag = _context.Tags
+                              .Include(t => t.MovieTags)
+                                  .ThenInclude(mt => mt.Movie)
+                              .FirstOrDefault(t => t.Id == id);
+
+            if (tag == null) return NotFound();
+
+            var vm = new TagDetailVM
+            {
+                Tag = tag,
+                Movies = tag.MovieTags.Select(mt => mt.Movie).ToList()
+            };
+
+            return View(vm);
+        }
+        public IActionResult Category(int page = 1)
+        {
+            int pageSize = 12;
+
+            var categories = _context.Categories
+                                     .Skip((page - 1) * pageSize)
+                                     .Take(pageSize)
+                                     .ToList();
+
+            int totalCategories = _context.Categories.Count();
+            int totalPages = (int)Math.Ceiling((double)totalCategories / pageSize);
+
+            var vm = new CategoryIndexVM
+            {
+                Categories = categories,
+                CurrentPage = page,
+                TotalPages = totalPages
+            };
+
+            return View(vm);
+        }
+        public IActionResult CategoryDetail(int id)
+        {
+            var category = _context.Categories
+                                   .Include(c => c.MovieCategories)
+                                       .ThenInclude(mc => mc.Movie)
+                                   .FirstOrDefault(c => c.Id == id);
+
+            if (category == null) return NotFound();
+
+            var vm = new CategoryDetailVM
+            {
+                Category = category,
+                Movies = category.MovieCategories.Select(mc => mc.Movie).ToList()
+            };
+
+            return View(vm);
         }
     }
 }

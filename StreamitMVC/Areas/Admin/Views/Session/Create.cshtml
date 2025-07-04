@@ -51,8 +51,22 @@
 
                             <div class="form-group">
                                 <label asp-for="HallPriceId">Hall Price</label>
-                                <select asp-for="HallPriceId" asp-items="new SelectList(Model.HallPrices, nameof(HallPrice.Id), nameof(HallPrice.Price))" class="form-control">
+                                <select asp-for="HallPriceId" class="form-control">
                                     <option value="0" disabled selected>Choose price</option>
+                                    @foreach (var price in Model.HallPrices)
+                                    {
+                                        <option value="@price.Id">
+                                            @price.HallType.Name - @price.Price AZN
+                                            @if (price.DayOfWeek.HasValue)
+                                            {
+                                                @:(@price.DayOfWeek.Value)
+                                            }
+                                            else
+                                            {
+                                                @:(Bütün günlər)
+                                            }
+                                        </option>
+                                    }
                                 </select>
                                 <span class="text-danger" asp-validation-for="HallPriceId"></span>
                             </div>

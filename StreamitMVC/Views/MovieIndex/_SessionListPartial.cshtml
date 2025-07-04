@@ -1,0 +1,33 @@
+﻿@model List<SessionWithPriceViewModel>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>@item.Session.Movie.Name</td>
+        <td>@item.Session.StartTime.ToString("HH:mm")</td>
+        <td>@item.Session.Cinema?.Name</td>
+        <td>@item.Session.Hall?.Name</td>
+        <td>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                @if (item.Session.Language != null)
+                {
+                    <div style="display: flex; align-items: center; padding: 4px 8px;">
+                        <img src="~/assets/images/@item.Session.Language.FlagIcon" alt="@item.Session.Language.Name" style="width:30px; height:21px; border-radius: 4px;" onerror="this.style.display='none';" />
+                    </div>
+                }
+                @if (item.Session.Subtitle?.Language != null)
+                {
+                    <div style="display: flex; align-items: center; gap: 6px; font-weight: bold; font-size: 13px; color: black;">
+                        <span>@item.Session.Subtitle.Language.Code.ToUpper()</span>
+                    </div>
+                }
+            </div>
+        </td>
+        <td>@item.Price.ToString("0.00") AZN</td>
+        <td>
+            <a asp-controller="Booking" asp-action="SelectSeats" asp-route-sessionId="@item.Session.Id" class="btn btn-primary">
+                Yerləri Seç
+            </a>
+        </td>
+    </tr>
+}

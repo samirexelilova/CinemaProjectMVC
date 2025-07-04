@@ -40,10 +40,7 @@
                                         </td>
                                         <td>@item.Name</td>
                                         <td>
-                                            @foreach (var mc in item.Movies)
-                                            {
-                                                <span class="badge bg-secondary">@mc.Name</span>
-                                            }
+                                          @item.MovieCount
                                         </td>
                                         <td>
                                             <a asp-controller="Category" asp-action="Update" asp-route-id="@item.Id">Edit</a> |
