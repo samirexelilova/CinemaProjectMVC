@@ -161,21 +161,36 @@
                                                 </span>
                                             </span>
                                         </a>
+
                                         <ul class="sub-nav collapse  list-unstyled" id="features">
-                                           
-                                            <li class="nav-item">
-                                                <a class="nav-link " asp-controller="Features" asp-action="Favorites"> Favorites </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " asp-controller="Features" asp-action="category"> Genres </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " asp-controller="Features" asp-action="Actors"> Actors </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " asp-controller="Features" asp-action="Tags"> Tags </a>
-                                            </li>
+                                            @if (User.Identity != null && User.Identity.IsAuthenticated)
+                                            {
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="Favorites"> Favorites </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="category"> Genres </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="Actors"> Actors </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="Tags"> Tags </a>
+                                                </li>
+                                            }
+                                          else{
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="category"> Genres </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="Actors"> Actors </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Features" asp-action="Tags"> Tags </a>
+                                                </li>
+                                          }
                                         </ul>
+
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" data-bs-toggle="collapse" href="#pages" role="button" aria-expanded="false" aria-controls="homePages">
@@ -219,13 +234,12 @@
                                             </span>
                                         </a>
                                         <ul class="sub-nav collapse  list-unstyled" id="shop">
-                                            <li class="nav-item">
-                                                <a class="nav-link " asp-controller="Shop" asp-action="index"> Shop </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link " asp-controller="Basket" asp-action="Index"> Basket </a>
-                                            </li>
-                                          
+                                            @if (User.Identity != null && User.Identity.IsAuthenticated){
+                                           
+                                                <li class="nav-item">
+                                                    <a class="nav-link " asp-controller="Basket" asp-action="Index"> Basket </a>
+                                                </li>
+                                            }
                                         </ul>
                                     </li>
                                 </ul>
