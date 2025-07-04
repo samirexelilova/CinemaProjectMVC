@@ -1,5 +1,6 @@
 ﻿using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models.Base;
+using StreamitMVC.Utilities.Enums;
 
 namespace StreamitMVC.Models
 {
@@ -17,7 +18,8 @@ namespace StreamitMVC.Models
         public decimal TotalAmount { get; set; }  // Ümumi məbləğ
         public List<Ticket> Tickets { get; set; }
         public DateTime? ExpiresAt { get; set; }
-        public Payment Payment { get; set; }
+        public List<Payment> Payments { get; set; }
+
 
     }
 

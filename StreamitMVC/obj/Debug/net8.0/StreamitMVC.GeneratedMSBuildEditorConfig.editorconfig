@@ -228,6 +228,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeVByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Account/MyPurchases.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeVB1cmNoYXNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Account/MyTickets.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeVRpY2tldHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -248,6 +252,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Account/ViewHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxWaWV3SGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Account/Watch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxXYXRjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Basket/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -266,6 +278,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Booking/ViewBasket.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xWaWV3QmFza2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Error/Forbidden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcRm9yYmlkZGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/Features/ActorDetail.cshtml]
@@ -310,6 +326,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/MovieListHtml.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxNb3ZpZUxpc3RIdG1sLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/Watch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVJbmRleFxXYXRjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rinat_PC/Desktop/StreamitMVC/StreamitMVC/Views/MovieIndex/_SessionListPartial.cshtml]

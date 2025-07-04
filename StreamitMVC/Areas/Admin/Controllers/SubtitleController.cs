@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
@@ -9,6 +10,8 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
+
     public class SubtitleController : Controller
     {
         private readonly AppDbContext _context;
@@ -56,6 +59,14 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 model.AllLanguages = await _context.Languages.ToListAsync();
                 return View(model);
             }
+            bool movieOk = await _context.Movies.AnyAsync(m => m.Id == model.MovieId);
+            if (!movieOk) ModelState.AddModelError(nameof(model.MovieId), "Film mövcud deyil.");
+
+            bool languageOk = await _context.Languages.AnyAsync(l => l.Id == model.LanguageId);
+            if (!languageOk) ModelState.AddModelError(nameof(model.LanguageId), "Dil mövcud deyil.");
+
+            if (model.SubtitleFile == null)
+                ModelState.AddModelError(nameof(model.SubtitleFile), "Subtitle faylı seçilməlidir.");
 
             if (!model.SubtitleFile.ValidateType("text/") && !model.SubtitleFile.ValidateType("application/octet-stream"))
             {
@@ -114,43 +125,49 @@ namespace StreamitMVC.Areas.Admin.Controllers
         {
             if (id == null || id <= 0) return BadRequest();
 
-            // Əvvəlcə drop-down-lar üçün lazımi məlumatları yüklə (view üçün)
             model.AllMovies = await _context.Movies.ToListAsync();
             model.AllLanguages = await _context.Languages.ToListAsync();
 
             if (!ModelState.IsValid)
             {
-                // Əgər model valid deyil, view-ə qaytar
                 return View(model);
             }
-
             var subtitle = await _context.Subtitles.FirstOrDefaultAsync(s => s.Id == id);
-            if (subtitle == null) return NotFound();
+            if (subtitle is null) return NotFound();
 
-            // Fayl seçilibsə yoxlamaları et
+            bool movieOk = await _context.Movies.AnyAsync(m => m.Id == model.MovieId);
+            if (!movieOk) ModelState.AddModelError(nameof(model.MovieId), "Film mövcud deyil.");
+
+            bool languageOk = await _context.Languages.AnyAsync(l => l.Id == model.LanguageId);
+            if (!languageOk) ModelState.AddModelError(nameof(model.LanguageId), "Dil mövcud deyil.");
+
+            bool dup = await _context.Subtitles.AnyAsync(s =>
+                s.MovieId == model.MovieId && s.LanguageId == model.LanguageId && s.Id != id);
+            if (dup)
+                ModelState.AddModelError("", "Bu film üçün həmin dildə subtitle artıq mövcuddur.");
+
+            var existed = await _context.Subtitles.FirstOrDefaultAsync(s => s.Id == id);
+            if (existed == null) return NotFound();
+
             if (model.SubtitleFile != null)
             {
-                // Fayl tipi yoxla
                 if (!model.SubtitleFile.ValidateType("text/") && !model.SubtitleFile.ValidateType("application/octet-stream"))
                 {
                     ModelState.AddModelError(nameof(model.SubtitleFile), "Subtitrlər üçün fayl tipi düzgün deyil.");
                     return View(model);
                 }
 
-                // Fayl ölçüsü yoxla
                 if (!model.SubtitleFile.ValidateSize(FileSize.MB, 5))
                 {
                     ModelState.AddModelError(nameof(model.SubtitleFile), "Fayl ölçüsü 5MB-dan böyük ola bilməz.");
                     return View(model);
                 }
 
-                // Faylı yüklə və köhnəsini sil
                 string fileName = await model.SubtitleFile.CreateFileAsync(_env.WebRootPath, "assets", "subtitles");
                 subtitle.FilePath.DeleteFile(_env.WebRootPath, "assets", "subtitles");
                 subtitle.FilePath = fileName;
             }
 
-            // Digər sahələri yenilə
             subtitle.MovieId = model.MovieId;
             subtitle.LanguageId = model.LanguageId;
 

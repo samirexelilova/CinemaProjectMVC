@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XRElNXmXJrQNSSidievZJK5ws5Os3/M0NsIsJ7KNZV4=",
+  "Hash": "9F6esVR0k8VA6bvOvJiJnCn17x+l/sxKDhBNZTrX0HU=",
   "Source": "StreamitMVC",
   "BasePath": "_content/StreamitMVC",
   "Mode": "Default",
@@ -11168,6 +11168,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\6b26f27b-953b-4313-bbaa-b7b4f5dce70a.jpg"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.png",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/b1b3ef28-ba96-4a1b-9dcb-e9cf01844455#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8k9385wj8g",
+      "Integrity": "2LCSp/NdldC/7MTFco70I/BVuGiclzPAF3iLrXS29bE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.png"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\01.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -11714,12 +11735,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\12.webp"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg",
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\29a3ea62-376c-49dc-bbe1-be6593fa9a9f.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
       "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/images/cast/1f0a720b-005e-451e-9a64-ec69fd10fa4f#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/cast/29a3ea62-376c-49dc-bbe1-be6593fa9a9f#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11728,11 +11749,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1m9pyp7yhd",
-      "Integrity": "F63pT51wypP4jFqhtM1eJdraHdJjOwSY2JxlhpqhqPw=",
+      "Fingerprint": "e9eygkq0w2",
+      "Integrity": "TgM5cXED+2jPzQAGGSPcYgFl1mgZvoIAlxDqMqW0f1I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\29a3ea62-376c-49dc-bbe1-be6593fa9a9f.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\35b1b81c-db4d-4898-b9e7-4b81e1a95836.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/cast/35b1b81c-db4d-4898-b9e7-4b81e1a95836#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "lypzr48yh9",
+      "Integrity": "0wZGbMU0/Fa0Ok6tlxu/De1LfmO3gbwEWm6G9aOLTQw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\35b1b81c-db4d-4898-b9e7-4b81e1a95836.jpg"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\5d81ea80-b1ce-4bca-a0cd-e2139d4276ae.jpg",
@@ -11777,12 +11819,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\62ed954b-650c-4551-9cdc-b54ee9e7244c.avif"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg",
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\be372d7f-2c57-4244-9301-ad5964efcb04.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
       "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/images/cast/adc5ad70-45c9-482e-9cce-a8a8566586b3#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/cast/be372d7f-2c57-4244-9301-ad5964efcb04#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11791,11 +11833,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "v2q2h64ijz",
-      "Integrity": "hzlhyoicWIF4KgfW80sZJIO6RNcUw8kOAOortgRhuwI=",
+      "Fingerprint": "3nebcbru71",
+      "Integrity": "IRmCeJdTWRnvHu6WpIzOfvlaUAV+IoUq5bRZ5aWXwBE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\be372d7f-2c57-4244-9301-ad5964efcb04.webp"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png",
@@ -11819,12 +11861,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\d78eb5cd-6ed9-4aa0-8541-7ce43ed0fc92.png"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\dcf19386-29d5-4788-9960-b50e8440fbce.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
       "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/cast/dcf19386-29d5-4788-9960-b50e8440fbce#[.{fingerprint}]?.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -11833,11 +11875,74 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k0nppbusr8",
-      "Integrity": "xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=",
+      "Fingerprint": "rte332wbne",
+      "Integrity": "z1hycNsgw04I50yOcZMSHaShNO6hVAff+Rc6jboo9+k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\dcf19386-29d5-4788-9960-b50e8440fbce.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/cast/f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "loqt8tt1zp",
+      "Integrity": "qydfJRcsDoqLo/C/IHt0DbQo3tSCg8r0FB+0k8QmthY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cast\\f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\19de09a9-87fd-426d-bd5f-1aba5e462a12.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/cinema/19de09a9-87fd-426d-bd5f-1aba5e462a12#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ds3zcd9tvu",
+      "Integrity": "7a2C/3ggC4BqlUsnQkFuFgJyr3X8/lUeMwqQRyc5YPs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cinema\\19de09a9-87fd-426d-bd5f-1aba5e462a12.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\aedef2b2-273e-49f9-92ee-fdd4693ba53c.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/cinema/aedef2b2-273e-49f9-92ee-fdd4693ba53c#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3yy5j9kwjb",
+      "Integrity": "KzfPvbqk3iM8vZ1A6OhPUNPQy4AykT2h4W/C1LV4twM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cinema\\aedef2b2-273e-49f9-92ee-fdd4693ba53c.webp"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\continue-watch\\01.webp",
@@ -12680,6 +12785,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\02e75ad0-7818-41de-acd9-e0a71f3f0bc9.mp4"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\043a0f60-caf6-48ca-8161-32127599adf8.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/043a0f60-caf6-48ca-8161-32127599adf8#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\043a0f60-caf6-48ca-8161-32127599adf8.mp4"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\05e33c1e-14e8-419d-8f26-b3125f2159ba.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -12701,6 +12827,48 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\05e33c1e-14e8-419d-8f26-b3125f2159ba.mp4"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\09820ade-4c30-49b8-a60e-9c68791e50c9.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/09820ade-4c30-49b8-a60e-9c68791e50c9#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\09820ade-4c30-49b8-a60e-9c68791e50c9.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\14c46317-0a7d-47b5-a77f-d18566642148.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/14c46317-0a7d-47b5-a77f-d18566642148#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\14c46317-0a7d-47b5-a77f-d18566642148.mp4"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\16713095-ec32-4360-9b3e-368f49bc401b.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -12720,6 +12888,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\16713095-ec32-4360-9b3e-368f49bc401b.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\1a1ece7a-9e9a-42ff-b24d-01337452daea.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/1a1ece7a-9e9a-42ff-b24d-01337452daea#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\1a1ece7a-9e9a-42ff-b24d-01337452daea.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\2806c9db-84be-45e8-9809-855e19fd6008.mp4",
@@ -12827,6 +13016,48 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\442988e0-a23b-4c32-bcc5-5c6bca0b248f.mp4"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4c752a74-c171-431e-b301-0d594006cd04.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/4c752a74-c171-431e-b301-0d594006cd04#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\4c752a74-c171-431e-b301-0d594006cd04.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4dca4cfd-2d91-46e0-88a9-a949ad2922aa.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/4dca4cfd-2d91-46e0-88a9-a949ad2922aa#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\4dca4cfd-2d91-46e0-88a9-a949ad2922aa.mp4"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4fe9657a-01b4-45c8-b168-12ded5017345.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -12869,6 +13100,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\5232d31f-1f00-4e66-b1d0-5e6368213c6e.mp4"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\52f65671-9799-4bf5-bf8d-11c98c62d65f.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/52f65671-9799-4bf5-bf8d-11c98c62d65f#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\52f65671-9799-4bf5-bf8d-11c98c62d65f.mp4"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\54fa506f-4c45-41c0-93ba-97507e7046ba.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -12888,6 +13140,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\54fa506f-4c45-41c0-93ba-97507e7046ba.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\556ae475-416c-4679-b27e-3244a8e61c39.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/556ae475-416c-4679-b27e-3244a8e61c39#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\556ae475-416c-4679-b27e-3244a8e61c39.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\5add19d3-fc40-46ff-bd89-23772c0851b1.mp4",
@@ -12930,6 +13203,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\77911bcb-178a-4f07-98ea-ad66fec4fa68.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\800e660e-afa6-4bf4-9962-4647f6d67b32.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/800e660e-afa6-4bf4-9962-4647f6d67b32#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\800e660e-afa6-4bf4-9962-4647f6d67b32.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\8080100e-070f-49eb-9ff4-abd27db4468c.mp4",
@@ -12995,6 +13289,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\86560e43-2020-42b3-8057-45004820a74b.mp4"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\88f7444f-fbc9-4994-a858-a97527fb142d.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/88f7444f-fbc9-4994-a858-a97527fb142d#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\88f7444f-fbc9-4994-a858-a97527fb142d.mp4"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\8a060c57-7f81-43bb-addf-248d1464b848.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -13037,6 +13352,48 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\96d4726f-6e70-4282-9856-7005a8d015b3.mp4"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\9fc149a1-b403-4be3-a484-68ad1266891f.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/9fc149a1-b403-4be3-a484-68ad1266891f#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\9fc149a1-b403-4be3-a484-68ad1266891f.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\a7ea667a-bd03-48f7-a04c-28c1f5a9a807.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/a7ea667a-bd03-48f7-a04c-28c1f5a9a807#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\a7ea667a-bd03-48f7-a04c-28c1f5a9a807.mp4"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -13056,6 +13413,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\b5065918-ab41-41be-a844-fc4921648cff.mp4",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/b5065918-ab41-41be-a844-fc4921648cff#[.{fingerprint}]?.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3667wjs1i",
+      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\b5065918-ab41-41be-a844-fc4921648cff.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\banner1.webp",
@@ -13142,12 +13520,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\cd7016f5-b852-4ff3-bec6-5082e802fbe3.mp4"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\e11d556e-df03-4789-a2bb-bcbc8956b139.mp4",
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\cf03c6d9-c2e5-4620-8daa-59915a94c698.mp4",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
       "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/images/movies/e11d556e-df03-4789-a2bb-bcbc8956b139#[.{fingerprint}]?.mp4",
+      "RelativePath": "assets/images/movies/cf03c6d9-c2e5-4620-8daa-59915a94c698#[.{fingerprint}]?.mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -13160,7 +13538,7 @@
       "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\e11d556e-df03-4789-a2bb-bcbc8956b139.mp4"
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\cf03c6d9-c2e5-4620-8daa-59915a94c698.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\e13a933c-f835-4056-b599-f95303246910.mp4",
@@ -13224,27 +13602,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\ecbf16ef-4188-42c1-b5e2-dfb313164f57.mp4"
-    },
-    {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.mp4",
-      "SourceId": "StreamitMVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
-      "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/images/movies/f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55#[.{fingerprint}]?.mp4",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "e3667wjs1i",
-      "Integrity": "poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.mp4"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\f3735ce6-91e4-4f9b-9a61-e6e07362e58d.mp4",
@@ -13835,6 +14192,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\06.webp"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m8vtxrois8",
+      "Integrity": "mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\07.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -13856,6 +14234,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\07.webp"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/16522eb0-cd2c-43a7-ab06-8c1a642b5ec1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m8vtxrois8",
+      "Integrity": "mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\1fdbe33d-5900-443c-94f7-c181311eb2a2.jpg",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -13875,6 +14274,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\1fdbe33d-5900-443c-94f7-c181311eb2a2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/28e3e6cd-078d-4f74-80d9-55aa35b5e6b5#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6lmy2bkugz",
+      "Integrity": "JksKOWxMvfLc3WRMLrJCmUplemid+tVSQUGCfZsfOuI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.webp"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\30c7d09b-a482-4c2f-b914-d9fe2618a6b6.webp",
@@ -13961,6 +14381,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\47722491-a4b7-42d5-b29d-7ef191f8cbfc.jpg"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/497654b8-bed1-42bf-9fdf-f8fc1ff4ed57#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m8vtxrois8",
+      "Integrity": "mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\778795a5-f2b7-449a-9fba-ed5289fdef38.webp",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -13980,6 +14421,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\778795a5-f2b7-449a-9fba-ed5289fdef38.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\9c9242d9-91da-40f7-b4bd-29941d9d78f9.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/9c9242d9-91da-40f7-b4bd-29941d9d78f9#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "54rhohnq34",
+      "Integrity": "e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\9c9242d9-91da-40f7-b4bd-29941d9d78f9.webp"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\a04b88bb-34df-4994-ad5f-5ffe6c439e5f.jpg",
@@ -14066,27 +14528,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\a9f41f72-f76f-4c94-b18b-23509618d3b8.jpg"
     },
     {
-      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.jpg",
-      "SourceId": "StreamitMVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
-      "BasePath": "_content/StreamitMVC",
-      "RelativePath": "assets/images/movies/popular/cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf#[.{fingerprint}]?.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "l1n9muq23m",
-      "Integrity": "6QppM7UdccQkqMjtZTCy28isKnwAQggwoYV8k9cd8hE=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\da9f635f-c6d8-4377-b895-b7922d59da90.jpg",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -14106,6 +14547,48 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\da9f635f-c6d8-4377-b895-b7922d59da90.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\dab2cea3-dff6-44ba-be44-866cb46ef365.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/dab2cea3-dff6-44ba-be44-866cb46ef365#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "m8vtxrois8",
+      "Integrity": "mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\dab2cea3-dff6-44ba-be44-866cb46ef365.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\dadc424c-d5b9-46d3-97ad-fe3190a9f538.webp",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/movies/popular/dadc424c-d5b9-46d3-97ad-fe3190a9f538#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4k4eh7vqum",
+      "Integrity": "bFR8Qrb4S769G47x0Oea9BOEq2YBAFnG07YTyFeHYvg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\movies\\popular\\dadc424c-d5b9-46d3-97ad-fe3190a9f538.webp"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\recommended\\01.webp",
@@ -17510,6 +17993,27 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\user\\231c4272-53fa-43a3-878d-27870140e52b.jpg"
     },
     {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\3065b26d-1fcb-452d-96a8-e49fe441e64b.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/user/3065b26d-1fcb-452d-96a8-e49fe441e64b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d9ryzks0cn",
+      "Integrity": "f64zy3mxmzPDM10beydEN7GDwRr6H4tuGdLLfgyBRIg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user\\3065b26d-1fcb-452d-96a8-e49fe441e64b.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\35392c21-b16c-404e-b403-25986a4687f4.jpg",
       "SourceId": "StreamitMVC",
       "SourceType": "Discovered",
@@ -17550,6 +18054,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\user\\398bf604-d664-44cf-aa6d-b6d3627a1c76.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\54186852-3d11-48f4-8950-9dd2040ff8a0.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/user/54186852-3d11-48f4-8950-9dd2040ff8a0#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q0oo3io87r",
+      "Integrity": "mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user\\54186852-3d11-48f4-8950-9dd2040ff8a0.jpg"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\5a968c73-d66c-4224-b8e8-c0d3624b50cc.jpg",
@@ -17697,6 +18222,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\user\\acbdf58b-8be3-4f57-885a-281890867911.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\dcf449c6-2755-4cdb-9621-2bc30485136e.jpg",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/images/user/dcf449c6-2755-4cdb-9621-2bc30485136e#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "q0oo3io87r",
+      "Integrity": "mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\user\\dcf449c6-2755-4cdb-9621-2bc30485136e.jpg"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\fa0b9cc7-2c46-468a-9cfe-0fca39c87b61.jpg",
@@ -18159,6 +18705,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\utility.js"
+    },
+    {
+      "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\38a7b8d7-b913-4534-8022-a1f5890e8677.txt",
+      "SourceId": "StreamitMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\",
+      "BasePath": "_content/StreamitMVC",
+      "RelativePath": "assets/subtitles/38a7b8d7-b913-4534-8022-a1f5890e8677#[.{fingerprint}]?.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x0de0qid5h",
+      "Integrity": "cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\subtitles\\38a7b8d7-b913-4534-8022-a1f5890e8677.txt"
     },
     {
       "Identity": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\402ed766-2118-45fa-b699-a526fa280b9e.txt",
@@ -62713,6 +63280,88 @@
       ]
     },
     {
+      "Route": "assets/images/b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.8k9385wj8g.png",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LCSp/NdldC/7MTFco70I/BVuGiclzPAF3iLrXS29bE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:14:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8k9385wj8g"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LCSp/NdldC/7MTFco70I/BVuGiclzPAF3iLrXS29bE="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.png",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\b1b3ef28-ba96-4a1b-9dcb-e9cf01844455.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1382"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"2LCSp/NdldC/7MTFco70I/BVuGiclzPAF3iLrXS29bE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:14:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-2LCSp/NdldC/7MTFco70I/BVuGiclzPAF3iLrXS29bE="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/blog/01.qa10uurm8d.webp",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\blog\\01.webp",
       "Selectors": [],
@@ -64845,8 +65494,8 @@
       ]
     },
     {
-      "Route": "assets/images/cast/1f0a720b-005e-451e-9a64-ec69fd10fa4f.1m9pyp7yhd.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg",
+      "Route": "assets/images/cast/29a3ea62-376c-49dc-bbe1-be6593fa9a9f.e9eygkq0w2.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\29a3ea62-376c-49dc-bbe1-be6593fa9a9f.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -64855,19 +65504,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "74141"
+          "Value": "56944"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"F63pT51wypP4jFqhtM1eJdraHdJjOwSY2JxlhpqhqPw=\""
+          "Value": "\"TgM5cXED+2jPzQAGGSPcYgFl1mgZvoIAlxDqMqW0f1I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Jul 2025 14:54:43 GMT"
+          "Value": "Thu, 10 Jul 2025 08:42:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -64877,21 +65526,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "1m9pyp7yhd"
+          "Value": "e9eygkq0w2"
         },
         {
           "Name": "label",
-          "Value": "assets/images/cast/1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg"
+          "Value": "assets/images/cast/29a3ea62-376c-49dc-bbe1-be6593fa9a9f.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-F63pT51wypP4jFqhtM1eJdraHdJjOwSY2JxlhpqhqPw="
+          "Value": "sha256-TgM5cXED+2jPzQAGGSPcYgFl1mgZvoIAlxDqMqW0f1I="
         }
       ]
     },
     {
-      "Route": "assets/images/cast/1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\1f0a720b-005e-451e-9a64-ec69fd10fa4f.jpg",
+      "Route": "assets/images/cast/29a3ea62-376c-49dc-bbe1-be6593fa9a9f.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\29a3ea62-376c-49dc-bbe1-be6593fa9a9f.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -64900,19 +65549,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "74141"
+          "Value": "56944"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"F63pT51wypP4jFqhtM1eJdraHdJjOwSY2JxlhpqhqPw=\""
+          "Value": "\"TgM5cXED+2jPzQAGGSPcYgFl1mgZvoIAlxDqMqW0f1I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Jul 2025 14:54:43 GMT"
+          "Value": "Thu, 10 Jul 2025 08:42:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -64922,7 +65571,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-F63pT51wypP4jFqhtM1eJdraHdJjOwSY2JxlhpqhqPw="
+          "Value": "sha256-TgM5cXED+2jPzQAGGSPcYgFl1mgZvoIAlxDqMqW0f1I="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cast/35b1b81c-db4d-4898-b9e7-4b81e1a95836.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\35b1b81c-db4d-4898-b9e7-4b81e1a95836.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0wZGbMU0/Fa0Ok6tlxu/De1LfmO3gbwEWm6G9aOLTQw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:19:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0wZGbMU0/Fa0Ok6tlxu/De1LfmO3gbwEWm6G9aOLTQw="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cast/35b1b81c-db4d-4898-b9e7-4b81e1a95836.lypzr48yh9.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\35b1b81c-db4d-4898-b9e7-4b81e1a95836.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6123"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0wZGbMU0/Fa0Ok6tlxu/De1LfmO3gbwEWm6G9aOLTQw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:19:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "lypzr48yh9"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/cast/35b1b81c-db4d-4898-b9e7-4b81e1a95836.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0wZGbMU0/Fa0Ok6tlxu/De1LfmO3gbwEWm6G9aOLTQw="
         }
       ]
     },
@@ -65091,8 +65822,8 @@
       ]
     },
     {
-      "Route": "assets/images/cast/adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg",
+      "Route": "assets/images/cast/be372d7f-2c57-4244-9301-ad5964efcb04.3nebcbru71.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\be372d7f-2c57-4244-9301-ad5964efcb04.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -65101,56 +65832,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "67685"
+          "Value": "348162"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"hzlhyoicWIF4KgfW80sZJIO6RNcUw8kOAOortgRhuwI=\""
+          "Value": "\"IRmCeJdTWRnvHu6WpIzOfvlaUAV+IoUq5bRZ5aWXwBE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Jul 2025 17:34:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-hzlhyoicWIF4KgfW80sZJIO6RNcUw8kOAOortgRhuwI="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/cast/adc5ad70-45c9-482e-9cce-a8a8566586b3.v2q2h64ijz.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "67685"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"hzlhyoicWIF4KgfW80sZJIO6RNcUw8kOAOortgRhuwI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 03 Jul 2025 17:34:43 GMT"
+          "Value": "Thu, 10 Jul 2025 08:58:47 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -65160,15 +65854,52 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "v2q2h64ijz"
+          "Value": "3nebcbru71"
         },
         {
           "Name": "label",
-          "Value": "assets/images/cast/adc5ad70-45c9-482e-9cce-a8a8566586b3.jpg"
+          "Value": "assets/images/cast/be372d7f-2c57-4244-9301-ad5964efcb04.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hzlhyoicWIF4KgfW80sZJIO6RNcUw8kOAOortgRhuwI="
+          "Value": "sha256-IRmCeJdTWRnvHu6WpIzOfvlaUAV+IoUq5bRZ5aWXwBE="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cast/be372d7f-2c57-4244-9301-ad5964efcb04.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\be372d7f-2c57-4244-9301-ad5964efcb04.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "348162"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IRmCeJdTWRnvHu6WpIzOfvlaUAV+IoUq5bRZ5aWXwBE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 08:58:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IRmCeJdTWRnvHu6WpIzOfvlaUAV+IoUq5bRZ5aWXwBE="
         }
       ]
     },
@@ -65255,8 +65986,8 @@
       ]
     },
     {
-      "Route": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
+      "Route": "assets/images/cast/dcf19386-29d5-4788-9960-b50e8440fbce.rte332wbne.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\dcf19386-29d5-4788-9960-b50e8440fbce.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -65265,56 +65996,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "17790"
+          "Value": "44782"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/jpeg"
+          "Value": "image/webp"
         },
         {
           "Name": "ETag",
-          "Value": "\"xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=\""
+          "Value": "\"z1hycNsgw04I50yOcZMSHaShNO6hVAff+Rc6jboo9+k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 12:30:44 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.k0nppbusr8.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "17790"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 16 Jun 2025 12:30:44 GMT"
+          "Value": "Thu, 10 Jul 2025 09:01:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -65324,15 +66018,298 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k0nppbusr8"
+          "Value": "rte332wbne"
         },
         {
           "Name": "label",
-          "Value": "assets/images/cinema/6061c685-dda3-4ac8-a9d9-b127b6a530af.jpg"
+          "Value": "assets/images/cast/dcf19386-29d5-4788-9960-b50e8440fbce.webp"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xOU1AYbxqC0Y6Vpge9BgzIft0H6qv0h2DcGE39QSgwI="
+          "Value": "sha256-z1hycNsgw04I50yOcZMSHaShNO6hVAff+Rc6jboo9+k="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cast/dcf19386-29d5-4788-9960-b50e8440fbce.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\dcf19386-29d5-4788-9960-b50e8440fbce.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "44782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z1hycNsgw04I50yOcZMSHaShNO6hVAff+Rc6jboo9+k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:01:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z1hycNsgw04I50yOcZMSHaShNO6hVAff+Rc6jboo9+k="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cast/f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qydfJRcsDoqLo/C/IHt0DbQo3tSCg8r0FB+0k8QmthY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:18:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qydfJRcsDoqLo/C/IHt0DbQo3tSCg8r0FB+0k8QmthY="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cast/f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.loqt8tt1zp.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cast\\f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11549"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qydfJRcsDoqLo/C/IHt0DbQo3tSCg8r0FB+0k8QmthY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:18:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "loqt8tt1zp"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/cast/f74ebdaa-73a0-49b3-bcf5-7b7b93e7a1f4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qydfJRcsDoqLo/C/IHt0DbQo3tSCg8r0FB+0k8QmthY="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/19de09a9-87fd-426d-bd5f-1aba5e462a12.ds3zcd9tvu.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\19de09a9-87fd-426d-bd5f-1aba5e462a12.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7a2C/3ggC4BqlUsnQkFuFgJyr3X8/lUeMwqQRyc5YPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:03:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ds3zcd9tvu"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/cinema/19de09a9-87fd-426d-bd5f-1aba5e462a12.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7a2C/3ggC4BqlUsnQkFuFgJyr3X8/lUeMwqQRyc5YPs="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/19de09a9-87fd-426d-bd5f-1aba5e462a12.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\19de09a9-87fd-426d-bd5f-1aba5e462a12.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7a2C/3ggC4BqlUsnQkFuFgJyr3X8/lUeMwqQRyc5YPs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:03:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7a2C/3ggC4BqlUsnQkFuFgJyr3X8/lUeMwqQRyc5YPs="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/aedef2b2-273e-49f9-92ee-fdd4693ba53c.3yy5j9kwjb.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\aedef2b2-273e-49f9-92ee-fdd4693ba53c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29222"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KzfPvbqk3iM8vZ1A6OhPUNPQy4AykT2h4W/C1LV4twM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:02:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3yy5j9kwjb"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/cinema/aedef2b2-273e-49f9-92ee-fdd4693ba53c.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-KzfPvbqk3iM8vZ1A6OhPUNPQy4AykT2h4W/C1LV4twM="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/cinema/aedef2b2-273e-49f9-92ee-fdd4693ba53c.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\cinema\\aedef2b2-273e-49f9-92ee-fdd4693ba53c.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "29222"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"KzfPvbqk3iM8vZ1A6OhPUNPQy4AykT2h4W/C1LV4twM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:02:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-KzfPvbqk3iM8vZ1A6OhPUNPQy4AykT2h4W/C1LV4twM="
         }
       ]
     },
@@ -68617,6 +69594,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/043a0f60-caf6-48ca-8161-32127599adf8.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\043a0f60-caf6-48ca-8161-32127599adf8.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:20:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/043a0f60-caf6-48ca-8161-32127599adf8.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/043a0f60-caf6-48ca-8161-32127599adf8.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\043a0f60-caf6-48ca-8161-32127599adf8.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:20:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/05e33c1e-14e8-419d-8f26-b3125f2159ba.e3667wjs1i.mp4",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\05e33c1e-14e8-419d-8f26-b3125f2159ba.mp4",
       "Selectors": [],
@@ -68699,6 +69758,170 @@
       ]
     },
     {
+      "Route": "assets/images/movies/09820ade-4c30-49b8-a60e-9c68791e50c9.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\09820ade-4c30-49b8-a60e-9c68791e50c9.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:56:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/09820ade-4c30-49b8-a60e-9c68791e50c9.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/09820ade-4c30-49b8-a60e-9c68791e50c9.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\09820ade-4c30-49b8-a60e-9c68791e50c9.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:56:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/14c46317-0a7d-47b5-a77f-d18566642148.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\14c46317-0a7d-47b5-a77f-d18566642148.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:56:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/14c46317-0a7d-47b5-a77f-d18566642148.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/14c46317-0a7d-47b5-a77f-d18566642148.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\14c46317-0a7d-47b5-a77f-d18566642148.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:56:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/16713095-ec32-4360-9b3e-368f49bc401b.e3667wjs1i.mp4",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\16713095-ec32-4360-9b3e-368f49bc401b.mp4",
       "Selectors": [],
@@ -68767,6 +69990,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 24 Jun 2025 18:13:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/1a1ece7a-9e9a-42ff-b24d-01337452daea.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\1a1ece7a-9e9a-42ff-b24d-01337452daea.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/1a1ece7a-9e9a-42ff-b24d-01337452daea.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/1a1ece7a-9e9a-42ff-b24d-01337452daea.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\1a1ece7a-9e9a-42ff-b24d-01337452daea.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:21:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -69191,6 +70496,170 @@
       ]
     },
     {
+      "Route": "assets/images/movies/4c752a74-c171-431e-b301-0d594006cd04.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4c752a74-c171-431e-b301-0d594006cd04.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:24:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/4c752a74-c171-431e-b301-0d594006cd04.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/4c752a74-c171-431e-b301-0d594006cd04.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4c752a74-c171-431e-b301-0d594006cd04.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:24:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/4dca4cfd-2d91-46e0-88a9-a949ad2922aa.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4dca4cfd-2d91-46e0-88a9-a949ad2922aa.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:20:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/4dca4cfd-2d91-46e0-88a9-a949ad2922aa.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/4dca4cfd-2d91-46e0-88a9-a949ad2922aa.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4dca4cfd-2d91-46e0-88a9-a949ad2922aa.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:20:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/4fe9657a-01b4-45c8-b168-12ded5017345.e3667wjs1i.mp4",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\4fe9657a-01b4-45c8-b168-12ded5017345.mp4",
       "Selectors": [],
@@ -69355,6 +70824,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/52f65671-9799-4bf5-bf8d-11c98c62d65f.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\52f65671-9799-4bf5-bf8d-11c98c62d65f.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 12:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/52f65671-9799-4bf5-bf8d-11c98c62d65f.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/52f65671-9799-4bf5-bf8d-11c98c62d65f.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\52f65671-9799-4bf5-bf8d-11c98c62d65f.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 12:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/54fa506f-4c45-41c0-93ba-97507e7046ba.e3667wjs1i.mp4",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\54fa506f-4c45-41c0-93ba-97507e7046ba.mp4",
       "Selectors": [],
@@ -69423,6 +70974,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 24 Jun 2025 18:10:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/556ae475-416c-4679-b27e-3244a8e61c39.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\556ae475-416c-4679-b27e-3244a8e61c39.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:26:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/556ae475-416c-4679-b27e-3244a8e61c39.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/556ae475-416c-4679-b27e-3244a8e61c39.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\556ae475-416c-4679-b27e-3244a8e61c39.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:26:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -69597,6 +71230,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/800e660e-afa6-4bf4-9962-4647f6d67b32.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\800e660e-afa6-4bf4-9962-4647f6d67b32.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 12:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/800e660e-afa6-4bf4-9962-4647f6d67b32.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/800e660e-afa6-4bf4-9962-4647f6d67b32.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\800e660e-afa6-4bf4-9962-4647f6d67b32.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 12:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
         }
       ]
     },
@@ -69847,6 +71562,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/88f7444f-fbc9-4994-a858-a97527fb142d.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\88f7444f-fbc9-4994-a858-a97527fb142d.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 10:02:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/88f7444f-fbc9-4994-a858-a97527fb142d.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/88f7444f-fbc9-4994-a858-a97527fb142d.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\88f7444f-fbc9-4994-a858-a97527fb142d.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 10:02:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/8a060c57-7f81-43bb-addf-248d1464b848.e3667wjs1i.mp4",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\8a060c57-7f81-43bb-addf-248d1464b848.mp4",
       "Selectors": [],
@@ -70011,6 +71808,170 @@
       ]
     },
     {
+      "Route": "assets/images/movies/9fc149a1-b403-4be3-a484-68ad1266891f.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\9fc149a1-b403-4be3-a484-68ad1266891f.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:26:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/9fc149a1-b403-4be3-a484-68ad1266891f.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/9fc149a1-b403-4be3-a484-68ad1266891f.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\9fc149a1-b403-4be3-a484-68ad1266891f.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:26:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/a7ea667a-bd03-48f7-a04c-28c1f5a9a807.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\a7ea667a-bd03-48f7-a04c-28c1f5a9a807.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/a7ea667a-bd03-48f7-a04c-28c1f5a9a807.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/a7ea667a-bd03-48f7-a04c-28c1f5a9a807.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\a7ea667a-bd03-48f7-a04c-28c1f5a9a807.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/ad664b44-9ff4-4e38-80e0-9fad67bc8f20.e3667wjs1i.mp4",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\ad664b44-9ff4-4e38-80e0-9fad67bc8f20.mp4",
       "Selectors": [],
@@ -70079,6 +72040,88 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 24 Jun 2025 18:05:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/b5065918-ab41-41be-a844-fc4921648cff.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\b5065918-ab41-41be-a844-fc4921648cff.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:24:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3667wjs1i"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/b5065918-ab41-41be-a844-fc4921648cff.mp4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/b5065918-ab41-41be-a844-fc4921648cff.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\b5065918-ab41-41be-a844-fc4921648cff.mp4",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12468551"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "video/mp4"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:24:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -70421,8 +72464,8 @@
       ]
     },
     {
-      "Route": "assets/images/movies/e11d556e-df03-4789-a2bb-bcbc8956b139.e3667wjs1i.mp4",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\e11d556e-df03-4789-a2bb-bcbc8956b139.mp4",
+      "Route": "assets/images/movies/cf03c6d9-c2e5-4620-8daa-59915a94c698.e3667wjs1i.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\cf03c6d9-c2e5-4620-8daa-59915a94c698.mp4",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -70443,7 +72486,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 19:00:43 GMT"
+          "Value": "Thu, 10 Jul 2025 10:02:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -70457,7 +72500,7 @@
         },
         {
           "Name": "label",
-          "Value": "assets/images/movies/e11d556e-df03-4789-a2bb-bcbc8956b139.mp4"
+          "Value": "assets/images/movies/cf03c6d9-c2e5-4620-8daa-59915a94c698.mp4"
         },
         {
           "Name": "integrity",
@@ -70466,8 +72509,8 @@
       ]
     },
     {
-      "Route": "assets/images/movies/e11d556e-df03-4789-a2bb-bcbc8956b139.mp4",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\e11d556e-df03-4789-a2bb-bcbc8956b139.mp4",
+      "Route": "assets/images/movies/cf03c6d9-c2e5-4620-8daa-59915a94c698.mp4",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\cf03c6d9-c2e5-4620-8daa-59915a94c698.mp4",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -70488,7 +72531,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 19:00:43 GMT"
+          "Value": "Thu, 10 Jul 2025 10:02:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -70735,88 +72778,6 @@
         {
           "Name": "Last-Modified",
           "Value": "Tue, 24 Jun 2025 18:08:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/movies/f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.e3667wjs1i.mp4",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.mp4",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12468551"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "video/mp4"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 19:00:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "e3667wjs1i"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/movies/f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.mp4"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/movies/f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.mp4",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\f2fa37d5-7a43-4b5d-aa1a-3c25a2a88d55.mp4",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "12468551"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "video/mp4"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"poQt5woHlP+d5tNMIsHWe4kiPouVZHdJpAAw4solIuo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 19:00:43 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -73127,6 +75088,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/popular/06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:20:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.m8vtxrois8.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:20:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m8vtxrois8"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/06b6da29-9e8b-4b8d-8d9b-e2baa9da3eac.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/popular/07.sbs5j8riy7.webp",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\07.webp",
       "Selectors": [],
@@ -73209,6 +75252,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/popular/16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:24:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.m8vtxrois8.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:24:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m8vtxrois8"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/16522eb0-cd2c-43a7-ab06-8c1a642b5ec1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/popular/1fdbe33d-5900-443c-94f7-c181311eb2a2.80fx8yscnw.jpg",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\1fdbe33d-5900-443c-94f7-c181311eb2a2.jpg",
       "Selectors": [],
@@ -73287,6 +75412,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-yKV5lq7UcQei1b2RFt5pPMQODvp8CCc4Svf9gCabp68="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.6lmy2bkugz.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23826"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JksKOWxMvfLc3WRMLrJCmUplemid+tVSQUGCfZsfOuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:56:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6lmy2bkugz"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JksKOWxMvfLc3WRMLrJCmUplemid+tVSQUGCfZsfOuI="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\28e3e6cd-078d-4f74-80d9-55aa35b5e6b5.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "23826"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JksKOWxMvfLc3WRMLrJCmUplemid+tVSQUGCfZsfOuI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:56:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JksKOWxMvfLc3WRMLrJCmUplemid+tVSQUGCfZsfOuI="
         }
       ]
     },
@@ -73619,6 +75826,88 @@
       ]
     },
     {
+      "Route": "assets/images/movies/popular/497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:26:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.m8vtxrois8.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:26:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m8vtxrois8"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/497654b8-bed1-42bf-9fdf-f8fc1ff4ed57.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/movies/popular/778795a5-f2b7-449a-9fba-ed5289fdef38.tcf8dtoen6.webp",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\778795a5-f2b7-449a-9fba-ed5289fdef38.webp",
       "Selectors": [],
@@ -73697,6 +75986,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-vcB3lxNuaEVvaVx4+zuPZB7zRKDJ26ZVZtwXPE+xlpc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/9c9242d9-91da-40f7-b4bd-29941d9d78f9.54rhohnq34.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\9c9242d9-91da-40f7-b4bd-29941d9d78f9.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 12:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "54rhohnq34"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/9c9242d9-91da-40f7-b4bd-29941d9d78f9.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/9c9242d9-91da-40f7-b4bd-29941d9d78f9.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\9c9242d9-91da-40f7-b4bd-29941d9d78f9.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "97732"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 12:32:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-e3D3S8GvNQa8K6T5WEQpgdvw4kRaDyUrrurv2eB1xWc="
         }
       ]
     },
@@ -74029,88 +76400,6 @@
       ]
     },
     {
-      "Route": "assets/images/movies/popular/cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35977"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6QppM7UdccQkqMjtZTCy28isKnwAQggwoYV8k9cd8hE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 19:00:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-6QppM7UdccQkqMjtZTCy28isKnwAQggwoYV8k9cd8hE="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/movies/popular/cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.l1n9muq23m.jpg",
-      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "35977"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"6QppM7UdccQkqMjtZTCy28isKnwAQggwoYV8k9cd8hE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 04 Jul 2025 19:00:43 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "l1n9muq23m"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/movies/popular/cba9ce36-327a-4ba1-8a42-9f6bbbecf0bf.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-6QppM7UdccQkqMjtZTCy28isKnwAQggwoYV8k9cd8hE="
-        }
-      ]
-    },
-    {
       "Route": "assets/images/movies/popular/da9f635f-c6d8-4377-b895-b7922d59da90.80fx8yscnw.jpg",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\da9f635f-c6d8-4377-b895-b7922d59da90.jpg",
       "Selectors": [],
@@ -74189,6 +76478,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-yKV5lq7UcQei1b2RFt5pPMQODvp8CCc4Svf9gCabp68="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/dab2cea3-dff6-44ba-be44-866cb46ef365.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\dab2cea3-dff6-44ba-be44-866cb46ef365.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/dab2cea3-dff6-44ba-be44-866cb46ef365.m8vtxrois8.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\dab2cea3-dff6-44ba-be44-866cb46ef365.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "232042"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 09 Jul 2025 09:21:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "m8vtxrois8"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/dab2cea3-dff6-44ba-be44-866cb46ef365.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mq+neMYs6hi6aknhJW2sSzzODZkX9zzwWAdN+AefNVQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/dadc424c-d5b9-46d3-97ad-fe3190a9f538.4k4eh7vqum.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\dadc424c-d5b9-46d3-97ad-fe3190a9f538.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "121122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bFR8Qrb4S769G47x0Oea9BOEq2YBAFnG07YTyFeHYvg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 10:02:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4k4eh7vqum"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/movies/popular/dadc424c-d5b9-46d3-97ad-fe3190a9f538.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bFR8Qrb4S769G47x0Oea9BOEq2YBAFnG07YTyFeHYvg="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/movies/popular/dadc424c-d5b9-46d3-97ad-fe3190a9f538.webp",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\movies\\popular\\dadc424c-d5b9-46d3-97ad-fe3190a9f538.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "121122"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bFR8Qrb4S769G47x0Oea9BOEq2YBAFnG07YTyFeHYvg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 10:02:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bFR8Qrb4S769G47x0Oea9BOEq2YBAFnG07YTyFeHYvg="
         }
       ]
     },
@@ -87477,6 +89930,88 @@
       ]
     },
     {
+      "Route": "assets/images/user/3065b26d-1fcb-452d-96a8-e49fe441e64b.d9ryzks0cn.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\3065b26d-1fcb-452d-96a8-e49fe441e64b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f64zy3mxmzPDM10beydEN7GDwRr6H4tuGdLLfgyBRIg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 07:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d9ryzks0cn"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/user/3065b26d-1fcb-452d-96a8-e49fe441e64b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f64zy3mxmzPDM10beydEN7GDwRr6H4tuGdLLfgyBRIg="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/user/3065b26d-1fcb-452d-96a8-e49fe441e64b.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\3065b26d-1fcb-452d-96a8-e49fe441e64b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "59013"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f64zy3mxmzPDM10beydEN7GDwRr6H4tuGdLLfgyBRIg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 07:20:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-f64zy3mxmzPDM10beydEN7GDwRr6H4tuGdLLfgyBRIg="
+        }
+      ]
+    },
+    {
       "Route": "assets/images/user/35392c21-b16c-404e-b403-25986a4687f4.1m9pyp7yhd.jpg",
       "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\35392c21-b16c-404e-b403-25986a4687f4.jpg",
       "Selectors": [],
@@ -87633,6 +90168,88 @@
         {
           "Name": "label",
           "Value": "assets/images/user/398bf604-d664-44cf-aa6d-b6d3627a1c76.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/user/54186852-3d11-48f4-8950-9dd2040ff8a0.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\54186852-3d11-48f4-8950-9dd2040ff8a0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 07:07:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/user/54186852-3d11-48f4-8950-9dd2040ff8a0.q0oo3io87r.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\54186852-3d11-48f4-8950-9dd2040ff8a0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 07:07:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q0oo3io87r"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/user/54186852-3d11-48f4-8950-9dd2040ff8a0.jpg"
         },
         {
           "Name": "integrity",
@@ -88211,6 +90828,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-f64zy3mxmzPDM10beydEN7GDwRr6H4tuGdLLfgyBRIg="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/user/dcf449c6-2755-4cdb-9621-2bc30485136e.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\dcf449c6-2755-4cdb-9621-2bc30485136e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 15:01:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/images/user/dcf449c6-2755-4cdb-9621-2bc30485136e.q0oo3io87r.jpg",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\images\\user\\dcf449c6-2755-4cdb-9621-2bc30485136e.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "110124"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 15:01:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "q0oo3io87r"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/images/user/dcf449c6-2755-4cdb-9621-2bc30485136e.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-mnocpccX5l0sSC+qRafXo0zwwlUNc6qrpAvofIhBrSQ="
         }
       ]
     },
@@ -90015,6 +92714,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-6JCAOmGwmsrxq8oX6JuHjJMkuycQsYjDScJg8Ji1GPg="
+        }
+      ]
+    },
+    {
+      "Route": "assets/subtitles/38a7b8d7-b913-4534-8022-a1f5890e8677.x0de0qid5h.txt",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\38a7b8d7-b913-4534-8022-a1f5890e8677.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "94304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:15:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x0de0qid5h"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/subtitles/38a7b8d7-b913-4534-8022-a1f5890e8677.txt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE="
+        }
+      ]
+    },
+    {
+      "Route": "assets/subtitles/38a7b8d7-b913-4534-8022-a1f5890e8677.txt",
+      "AssetFile": "C:\\Users\\Rinat_PC\\Desktop\\StreamitMVC\\StreamitMVC\\wwwroot\\assets\\subtitles\\38a7b8d7-b913-4534-8022-a1f5890e8677.txt",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "94304"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 10 Jul 2025 09:15:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cUGAW80a8opIospM+FROD1tWQBIDrLsm0ud16aHhONE="
         }
       ]
     },

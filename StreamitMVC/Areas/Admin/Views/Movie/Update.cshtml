@@ -86,42 +86,44 @@
         <label asp-for="ReleaseDate" class="form-label">Çıxış Tarixi</label>
         <input asp-for="ReleaseDate" type="date" class="form-control" />
     </div>
-
     <div class="mb-3">
-        <label>Kateqoriyalar</label>
-        @if (Model.Categories != null)
-        {
-            foreach (var c in Model.Categories)
-            {
-                <div class="form-check">
-                    <input class="form-check-input"
-                           type="checkbox"
-                           value="@c.Id"
-                           name="SelectedCategoryIds"
-                           @(Model.SelectedCategoryIds != null && Model.SelectedCategoryIds.Contains(c.Id) ? "checked" : "") />
-                    <label class="form-check-label">@c.Name</label>
-                </div>
-            }
-        }
+        <label asp-for="DirectPurchasePrice" class="form-label">Birbaşa Satış Qiyməti (₼)</label>
+        <input asp-for="DirectPurchasePrice" class="form-control" />
+        <span asp-validation-for="DirectPurchasePrice" class="text-danger"></span>
     </div>
 
+    <div class="mb-3 form-check">
+        <input asp-for="IsAvailableForDirectPurchase" class="form-check-input" type="checkbox" />
+        <label asp-for="IsAvailableForDirectPurchase" class="form-check-label">Birbaşa Satış üçün Mümkündür</label>
+        <span asp-validation-for="IsAvailableForDirectPurchase" class="text-danger"></span>
+    </div>
+   <div class="mb-3">
+    <label for="SelectedCategoryIds">Kateqoriyalar</label>
+    <select id="SelectedCategoryIds" name="SelectedCategoryIds" multiple class="form-select">
+        @foreach (var c in Model.Categories)
+        {
+                <option value="@c.Id" selected="@(Model.SelectedCategoryIds.Contains(c.Id) ? "selected" : null)">
+                    @c.Name
+                </option>
+        }
+    </select>
+</div>
+
     <div class="mb-3">
-        <label>Taglar</label>
+    <label for="SelectedTagIds" class="form-label">Tag</label>
+    <select id="SelectedTagIds" name="SelectedTagIds" class="form-select" multiple size="5">
         @if (Model.Tags != null)
         {
             foreach (var t in Model.Tags)
             {
-                <div class="form-check">
-                    <input class="form-check-input"
-                           type="checkbox"
-                           value="@t.Id"
-                           name="SelectedTagIds"
-                           @(Model.SelectedTagIds != null && Model.SelectedTagIds.Contains(t.Id) ? "checked" : "") />
-                    <label class="form-check-label">@t.Name</label>
-                </div>
+                    <option value="@t.Id" selected="@(Model.SelectedTagIds.Contains(t.Id) ? "selected" : null)">
+                        @t.Name
+                    </option>
             }
         }
-    </div>
+    </select>
+</div>
+
 
     <h4>Aktyorlar və Rollar</h4>
     @if (Model.Actors != null)
@@ -161,41 +163,39 @@
         <button type="button" class="btn btn-secondary" id="add-actor">+ Aktyor əlavə et</button>
     }
 
-    <div class="mb-3">
-        <label>Dillər</label>
+   <div class="mb-3">
+    <label for="SelectedLanguageId" class="form-label">Dil</label>
+    <select id="SelectedLanguageId" name="SelectedLanguageId" class="form-select">
+        <option value="" disabled>-- Dil seçin --</option>
         @if (Model.Languages != null)
         {
             foreach (var l in Model.Languages)
             {
-                <div class="form-check">
-                    <input class="form-check-input"
-                           type="checkbox"
-                           value="@l.Id"
-                           name="SelectedLanguageIds"
-                           @(Model.SelectedLanguageIds != null && Model.SelectedLanguageIds.Contains(l.Id) ? "checked" : "") />
-                    <label class="form-check-label">@l.Name</label>
-                </div>
+                    <option value="@l.Id" selected="@(Model.SelectedLanguageIds.Contains(l.Id) ? "selected" : null)">
+                        @l.Name
+                    </option>
             }
         }
-    </div>
+    </select>
+</div>
+
 
     <div class="mb-3">
-        <label>Subtitrlər</label>
+    <label for="SelectedSubtitleIds" class="form-label">Subtitr</label>
+    <select id="SelectedSubtitleIds" name="SelectedSubtitleIds" class="form-select" multiple size="5">
         @if (Model.Subtitles != null)
         {
             foreach (var s in Model.Subtitles)
             {
-                <div class="form-check">
-                    <input class="form-check-input"
-                           type="checkbox"
-                           value="@s.Id"
-                           name="SelectedSubtitleIds"
-                           @(Model.SelectedSubtitleIds != null && Model.SelectedSubtitleIds.Contains(s.Id) ? "checked" : "") />
-                    <label class="form-check-label">@s.Language.Name</label>
-                </div>
+                    <option value="@s.Id" selected="@(Model.SelectedSubtitleIds.Contains(s.Id) ? "selected" : null)">
+                        @s.Language.Name
+                    </option>
+
             }
         }
-    </div>
+    </select>
+</div>
+
 
     <button type="submit" class="btn btn-primary">Yenilə</button>
 </form>

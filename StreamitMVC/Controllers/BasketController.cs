@@ -39,6 +39,8 @@ namespace StreamitMVC.Controllers
                 .Include(b => b.Items)
                     .ThenInclude(i => i.Seat)
                         .ThenInclude(s => s.SeatType)
+                .Include(b => b.Items)
+                    .ThenInclude(i => i.Movie)
                 .FirstOrDefaultAsync(b => b.UserId == user.Id);
 
             if (basket == null || !basket.Items.Any())
@@ -49,7 +51,6 @@ namespace StreamitMVC.Controllers
 
             return View(basket);
         }
-
         [HttpPost]
         public async Task<IActionResult> RemoveFromCart(int? itemId)
         {

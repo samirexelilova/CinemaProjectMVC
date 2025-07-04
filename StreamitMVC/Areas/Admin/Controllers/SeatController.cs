@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
@@ -7,6 +8,8 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class SeatController : Controller
     {
         private readonly AppDbContext _context;
@@ -179,7 +182,20 @@ namespace StreamitMVC.Areas.Admin.Controllers
         {
             var seat = await _context.Seats.FindAsync(seatId);
             if (seat == null) return NotFound();
+            bool typeExists = await _context.SeatTypes.AnyAsync(st => st.Id == seatTypeId);
+            if (!typeExists)
+            {
+                TempData["Error"] = "Seçilmiş oturacaq tipi mövcud deyil.";
+                return RedirectToAction("Index", new { hallId = seat.HallId });
+            }
 
+            bool hasFutureTickets = await _context.Tickets
+                .AnyAsync(t => t.SeatId == seatId && t.Session.StartTime > DateTime.Now);
+            if (hasFutureTickets)
+            {
+                TempData["Error"] = "Bu yer gələcək seansda satılıb, tipini dəyişmək olmaz.";
+                return RedirectToAction("Index", new { hallId = seat.HallId });
+            }
             seat.SeatTypeId = seatTypeId;
             await _context.SaveChangesAsync();
 

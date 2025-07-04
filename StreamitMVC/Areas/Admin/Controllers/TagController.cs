@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
@@ -7,6 +8,8 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
+
     public class TagController : Controller
     {
         private readonly AppDbContext _context;
@@ -42,7 +45,12 @@ namespace StreamitMVC.Areas.Admin.Controllers
             {
                 return View(model);
             }
-
+            bool name = await _context.Tags.AnyAsync(C => C.Name == model.Name);
+            if (name)
+            {
+                ModelState.AddModelError(nameof(CreateTagVM.Name), $"{model.Name} bu adli tag artiq movcuddur");
+                return View();
+            }
             Tag tag = new Tag
             {
                 Name = model.Name

@@ -14,6 +14,9 @@ using QuestPDF.Fluent;
 using System.Drawing;
 using System.Drawing.Imaging;
 using QRCoder;
+using System.Linq;
+using Stripe;
+using StreamitMVC.Utilities.Enums;
 
 namespace StreamitMVC.Controllers
 {
@@ -350,6 +353,7 @@ namespace StreamitMVC.Controllers
             var takenSeatIds = await GetTakenSeatsForSession(sessionId);
             var conflictingSeats = selectedSeatIds.Intersect(takenSeatIds).ToList();
 
+
             if (conflictingSeats.Any())
             {
                 return RedirectToAction("SelectSeats",
@@ -457,23 +461,24 @@ namespace StreamitMVC.Controllers
                 .Include(b => b.Items.Where(i => !i.IsDeleted))
                     .ThenInclude(i => i.Session)
                         .ThenInclude(s => s.Movie)
-                .Include(b => b.Items)
+                .Include(b => b.Items.Where(i => !i.IsDeleted))
                     .ThenInclude(i => i.Session)
                         .ThenInclude(s => s.Hall)
-                .Include(b => b.Items)
+                .Include(b => b.Items.Where(i => !i.IsDeleted))
                     .ThenInclude(i => i.Session)
                         .ThenInclude(s => s.Cinema)
-                .Include(b => b.Items)
+                .Include(b => b.Items.Where(i => !i.IsDeleted))
                     .ThenInclude(i => i.Seat)
                         .ThenInclude(s => s.SeatType)
+                .Include(b => b.Items.Where(i => !i.IsDeleted))
+                    .ThenInclude(i => i.Movie) 
                 .FirstOrDefaultAsync(b => b.UserId == user.Id);
 
-            if (basket == null || !basket.Items.Any())
+            if (basket == null || basket.Items == null || !basket.Items.Any())
             {
                 TempData["Error"] = "Səbətiniz boşdur.";
                 return RedirectToAction("Index", "Home");
             }
-
             return View(basket);
         }
 
@@ -488,6 +493,8 @@ namespace StreamitMVC.Controllers
                 .Include(b => b.Items)
                     .ThenInclude(i => i.Session)
                         .ThenInclude(s => s.Movie)
+                .Include(b => b.Items)
+                    .ThenInclude(i => i.Movie) 
                 .Include(b => b.Items)
                     .ThenInclude(i => i.Session)
                         .ThenInclude(s => s.Cinema)
@@ -514,8 +521,12 @@ namespace StreamitMVC.Controllers
                         Currency = "azn",
                         ProductData = new SessionLineItemPriceDataProductDataOptions
                         {
-                            Name = item.Session.Movie.Name,
-                            Description = $"Kinoteatr: {item.Session.Cinema.Name}, Zal: {item.Session.Hall.Name}, Yer: {item.Seat.RowNumber}-{item.Seat.SeatNumber}, Vaxt: {item.Session.StartTime:dd.MM.yyyy HH:mm}"
+                            Name = item.Type == BasketItemType.DirectMoviePurchase ?
+                                   $"Film: {item.Movie.Name}" :
+                                   item.Session.Movie.Name,
+                            Description = item.Type == BasketItemType.DirectMoviePurchase ?
+                                        "Filmi evdə izləmək üçün" :
+                                        $"Kinoteatr: {item.Session.Cinema.Name}, Zal: {item.Session.Hall.Name}, Yer: {item.Seat.RowNumber}-{item.Seat.SeatNumber}, Vaxt: {item.Session.StartTime:dd.MM.yyyy HH:mm}"
                         }
                     },
                     Quantity = 1,
@@ -533,16 +544,13 @@ namespace StreamitMVC.Controllers
             var service = new SessionService();
             var session = service.Create(options);
 
-
             return Json(new { id = session.Id });
         }
         public async Task<IActionResult> PaymentSuccess(string session_id)
         {
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
-            {
                 return RedirectToAction("Login", "Account");
-            }
 
             if (string.IsNullOrEmpty(session_id))
             {
@@ -559,7 +567,7 @@ namespace StreamitMVC.Controllers
             }
             catch (Exception ex)
             {
-                TempData["Error"] = "Ödəniş məlumatlarını əldə etmək mümkün olmadı.";
+                TempData["Error"] = $"Ödəniş sessiyası alınmadı: {ex.Message}";
                 return RedirectToAction("Checkout");
             }
 
@@ -569,18 +577,12 @@ namespace StreamitMVC.Controllers
                 return RedirectToAction("Checkout");
             }
 
-            string userId = session.Metadata.ContainsKey("userId") ? session.Metadata["userId"] : null;
-            string basketIdStr = session.Metadata.ContainsKey("basketId") ? session.Metadata["basketId"] : null;
+            string userId = session.Metadata.GetValueOrDefault("userId");
+            string basketIdStr = session.Metadata.GetValueOrDefault("basketId");
 
-            if (userId == null || basketIdStr == null)
+            if (userId == null || basketIdStr == null || user.Id != userId)
             {
-                TempData["Error"] = "Ödəniş məlumatları tam deyil.";
-                return RedirectToAction("Checkout");
-            }
-
-            if (user.Id != userId)
-            {
-                TempData["Error"] = "İstifadəçi məlumatı uyğun gəlmir.";
+                TempData["Error"] = "Ödəniş məlumatları uyğun gəlmir.";
                 return RedirectToAction("Checkout");
             }
 
@@ -588,6 +590,7 @@ namespace StreamitMVC.Controllers
 
             var basket = await _context.Baskets
                 .Include(b => b.Items)
+                .ThenInclude(i => i.Session)
                 .FirstOrDefaultAsync(b => b.Id == basketId && b.UserId == userId);
 
             if (basket == null || !basket.Items.Any())
@@ -597,195 +600,233 @@ namespace StreamitMVC.Controllers
             }
 
             using var transaction = await _context.Database.BeginTransactionAsync();
-            List<int> processedTicketIds = new List<int>();
-            List<int> processedMovieIds = new List<int>();
+
+            var processedTicketIds = new List<int>();
+            var processedMoviePurchaseIds = new List<int>();
+            var processedMovieIds = new List<int>();
+
             try
             {
-                var sessionGroups = basket.Items.GroupBy(i => i.SessionId);
+                var sessionTickets = basket.Items.Where(i => i.Type == BasketItemType.SessionTicket).ToList();
+                var directPurchases = basket.Items.Where(i => i.Type == BasketItemType.DirectMoviePurchase).ToList();
 
-                foreach (var group in sessionGroups)
+                if (sessionTickets.Any())
                 {
-                    var booking = await _context.Bookings
-                       .FirstOrDefaultAsync(b => b.UserId == user.Id &&
-                               b.SessionId == group.Key &&
-                               b.Status == BookingStatus.Reserved);
+                    var sessionGroups = sessionTickets.GroupBy(i => i.SessionId);
 
-                    if (booking == null)
+                    foreach (var group in sessionGroups)
                     {
-                        booking = new Booking
+                        Booking booking = null;
+
+                        var existingBooking = await _context.Bookings
+                            .FirstOrDefaultAsync(b => b.UserId == user.Id && b.SessionId == group.Key && b.Status == BookingStatus.Reserved);
+
+                        if (existingBooking == null)
                         {
-                            UserId = user.Id,
-                            SessionId = group.Key,
-                            BookingDate = DateTime.Now,
-                            TotalAmount = group.Sum(i => i.Price),
-                            Status = BookingStatus.Paid
-                        };
-                        _context.Bookings.Add(booking);
-                    }
-                    else
-                    {
-                        booking.Status = BookingStatus.Paid;
-                        booking.BookingDate = DateTime.Now;
-                        booking.TotalAmount = group.Sum(i => i.Price);
-                        _context.Bookings.Update(booking);
-                    }
+                            booking = new Booking
+                            {
+                                UserId = user.Id,
+                                SessionId = group.Key.Value,
+                                BookingDate = DateTime.Now,
+                                TotalAmount = group.Sum(i => i.Price),
+                                Status = BookingStatus.Paid
+                            };
 
-                    var payment = new Payment
-                    {
-                        Method = Extensions.Enums.PaymentMethod.Stripe,
-                        Amount = booking.TotalAmount,
-                        PaidAt = DateTime.Now,
-                        BookingId = booking.Id,
-                        Status = PaymentStatus.Completed,
-                        FailureReason = null
-                    };
+                            _context.Bookings.Add(booking);
+                            await _context.SaveChangesAsync(); 
 
-                    _context.Payments.Add(payment);
-                    await _context.SaveChangesAsync();
-
-                    var sessionForMovie = await _context.Sessions
-                        .FirstOrDefaultAsync(s => s.Id == group.Key);
-
-                    if (sessionForMovie != null && !processedMovieIds.Contains(sessionForMovie.MovieId))
-                    {
-                        processedMovieIds.Add(sessionForMovie.MovieId);
-                    }
-
-                    foreach (var item in group)
-                    {
-                        var ticket = await _context.Tickets
-                            .FirstOrDefaultAsync(t => t.SeatId == item.SeatId &&
-                                                      t.SessionId == item.SessionId &&
-                                                      t.Status == TicketStatus.Reserved);
-
-                        if (ticket != null)
-                        {
-                            ticket.Status = TicketStatus.Sold;
-                            ticket.BookingId = booking.Id;
-                            ticket.PurchasedAt = DateTime.Now;
-                            _context.Tickets.Update(ticket);
-                            processedTicketIds.Add(ticket.Id);
+                            booking = await _context.Bookings.FindAsync(booking.Id);
                         }
                         else
                         {
-                            var newTicket = new Ticket
-                            {
-                                BookingId = booking.Id,
-                                SeatId = item.SeatId,
-                                SessionId = item.SessionId,
-                                Price = item.Price,
-                                Status = TicketStatus.Sold,
-                                PurchasedAt = DateTime.Now
-                            };
-                            _context.Tickets.Add(newTicket);
+                            existingBooking.Status = BookingStatus.Paid;
+                            existingBooking.BookingDate = DateTime.Now;
+                            existingBooking.TotalAmount = group.Sum(i => i.Price);
+
+                            _context.Bookings.Update(existingBooking);
                             await _context.SaveChangesAsync();
-                            processedTicketIds.Add(newTicket.Id);
+
+                            booking = existingBooking;
                         }
 
-                        var seat = await _context.Seats.FirstOrDefaultAsync(s => s.Id == item.SeatId);
-                        var soldSeatType = await _context.SeatTypes.FirstOrDefaultAsync(st => st.Name == "Sold");
-
-                        if (seat != null && soldSeatType != null)
+                        if (booking?.Id <= 0)
                         {
-                            seat.SeatTypeId = soldSeatType.Id;
-                            _context.Seats.Update(seat);
+                            throw new Exception("Booking ID əldə edilmədi");
                         }
-                    }
 
-                    await _context.SaveChangesAsync();
+                        var payment = new Payment
+                        {
+                            Method = Extensions.Enums.PaymentMethod.Stripe,
+                            Amount = booking.TotalAmount,
+                            PaidAt = DateTime.Now,
+                            BookingId = booking.Id, 
+                            Status = PaymentStatus.Completed
+                        };
+
+                        _context.Payments.Add(payment);
+                        await _context.SaveChangesAsync();
+
+                        foreach (var item in group)
+                        {
+                            var ticket = await _context.Tickets
+                                .FirstOrDefaultAsync(t => t.SeatId == item.SeatId && t.SessionId == item.SessionId && t.Status == TicketStatus.Reserved);
+
+                            if (ticket == null)
+                            {
+                                ticket = new Ticket
+                                {
+                                    BookingId = booking.Id, 
+                                    SeatId = item.SeatId.Value,
+                                    SessionId = item.SessionId.Value,
+                                    Price = item.Price,
+                                    Status = TicketStatus.Sold,
+                                    PurchasedAt = DateTime.Now
+                                };
+                                _context.Tickets.Add(ticket);
+                            }
+                            else
+                            {
+                                ticket.Status = TicketStatus.Sold;
+                                ticket.BookingId = booking.Id; 
+                                ticket.PurchasedAt = DateTime.Now;
+                                _context.Tickets.Update(ticket);
+                            }
+
+                            var seat = await _context.Seats.FirstOrDefaultAsync(s => s.Id == item.SeatId);
+                            var soldSeatType = await _context.SeatTypes.FirstOrDefaultAsync(st => st.Name == "Sold");
+                            if (seat != null && soldSeatType != null)
+                            {
+                                seat.SeatTypeId = soldSeatType.Id;
+                                _context.Seats.Update(seat);
+                            }
+
+                            if (item.Session?.MovieId != null)
+                                processedMovieIds.Add(item.Session.MovieId);
+                        }
+
+                        await _context.SaveChangesAsync();
+                    }
                 }
 
-                foreach (var movieId in processedMovieIds)
+                foreach (var item in directPurchases)
                 {
-                    var movieStats = await _context.MovieStats
-                        .FirstOrDefaultAsync(ms => ms.MovieId == movieId);
-
-                    if (movieStats == null)
+                    var moviePurchase = new MoviePurchase
                     {
-                        movieStats = new MovieStats
-                        {
-                            MovieId = movieId,
-                            ViewCount = 1
-                        };
-                        _context.MovieStats.Add(movieStats);
+                        UserId = user.Id,
+                        MovieId = item.MovieId.Value,
+                        Price = item.Price,
+                        PurchaseDate = DateTime.Now,
+                        ExpiresAt = DateTime.Now.AddDays(365),
+                        Status = MoviePurchaseStatus.Active
+                    };
+
+                    _context.MoviePurchases.Add(moviePurchase);
+                    await _context.SaveChangesAsync();
+
+                    if (moviePurchase?.Id <= 0)
+                    {
+                        throw new Exception("MoviePurchase ID əldə edilmədi");
+                    }
+
+                    var moviePayment = new Payment
+                    {
+                        Method = Extensions.Enums.PaymentMethod.Stripe,
+                        Amount = item.Price,
+                        PaidAt = DateTime.Now,
+                        Status = PaymentStatus.Completed,
+                        MoviePurchaseId = moviePurchase.Id, 
+                        BookingId = null, 
+                        FailureReason = null
+                    };
+
+                    _context.Payments.Add(moviePayment);
+                    await _context.SaveChangesAsync();
+
+                    processedMoviePurchaseIds.Add(moviePurchase.Id);
+                }
+
+                foreach (var movieId in processedMovieIds.Distinct())
+                {
+                    var stat = await _context.MovieStats.FirstOrDefaultAsync(ms => ms.MovieId == movieId);
+                    if (stat == null)
+                    {
+                        _context.MovieStats.Add(new MovieStats { MovieId = movieId, ViewCount = 1 });
                     }
                     else
                     {
-                        movieStats.ViewCount += 1;
-                        _context.MovieStats.Update(movieStats);
+                        stat.ViewCount += 1;
+                        _context.MovieStats.Update(stat);
+                    }
+                }
+                var basketItems = await _context.BasketItems.Where(bi => bi.BasketId == basket.Id).ToListAsync();
+                _context.BasketItems.RemoveRange(basketItems);
+
+                basket.TotalPrice = 0;
+                _context.Baskets.Update(basket);
+
+                await _context.SaveChangesAsync();
+
+                if (sessionTickets.Any())
+                {
+                    foreach (var group in sessionTickets.GroupBy(i => i.SessionId))
+                    {
+                        var latestBooking = await _context.Bookings
+                            .Include(b => b.Tickets)
+                            .FirstOrDefaultAsync(b => b.UserId == user.Id && b.SessionId == group.Key && b.Status == BookingStatus.Paid);
+
+                        if (latestBooking != null)
+                        {
+                            processedTicketIds.AddRange(latestBooking.Tickets.Select(t => t.Id));
+                        }
                     }
                 }
 
-                _context.BasketItems.RemoveRange(basket.Items);
-                basket.TotalPrice = 0;
-                _context.Baskets.Update(basket);
-                await _context.SaveChangesAsync();
-
                 await transaction.CommitAsync();
-                Console.WriteLine("Database transaction successfully committed.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Database transaction error: {ex.Message}");
-                try
-                {
-                    await transaction.RollbackAsync();
-                    Console.WriteLine("Transaction rolled back successfully.");
-                }
-                catch (Exception rollbackEx)
-                {
-                    Console.WriteLine($"Rollback error: {rollbackEx.Message}");
-                }
+                await transaction.RollbackAsync();
 
-                TempData["Error"] = "Ödəniş zamanı xəta baş verdi.";
+                var errorMessage = ex.Message;
+                if (ex.InnerException != null)
+                    errorMessage += " | Inner Exception: " + ex.InnerException.Message;
+
+                TempData["Error"] = $"Ödəniş zamanı xəta baş verdi: {errorMessage}";
                 return RedirectToAction("Checkout");
             }
 
-            Console.WriteLine("Starting email sending process...");
-            var emailErrors = new List<string>();
-
-            try
+            if (processedTicketIds.Any())
             {
-                var ticketsToEmail = await _context.Tickets
+                var tickets = await _context.Tickets
                     .Include(t => t.Seat)
+                    .Include(t => t.Session)
+                    .ThenInclude(s => s.Movie)
                     .Where(t => processedTicketIds.Contains(t.Id))
                     .ToListAsync();
 
-                foreach (var ticket in ticketsToEmail)
+                foreach (var ticket in tickets)
                 {
-                    try
-                    {
-                        byte[] pdf = await GenerateTicketPdfAsync(ticket);
-                        await SendTicketEmailAsync(user, ticket, pdf);
-                        Console.WriteLine($"Email sent successfully for ticket {ticket.Id}");
-                    }
-                    catch (Exception ticketEmailEx)
-                    {
-                        Console.WriteLine($"Email error for ticket {ticket.Id}: {ticketEmailEx.Message}");
-                        emailErrors.Add($"Bilet {ticket.Id} üçün email xətası: {ticketEmailEx.Message}");
-                    }
+                    var pdf = await GenerateTicketPdfAsync(ticket);
+                    await SendTicketEmailAsync(user, ticket, pdf);
                 }
             }
-            catch (Exception generalEmailEx)
-            {
-                Console.WriteLine($"General email process error: {generalEmailEx.Message}");
-                emailErrors.Add($"Ümumi email xətası: {generalEmailEx.Message}");
-            }
 
-            if (emailErrors.Any())
-            {
-                TempData["Warning"] = $"Ödəniş uğurla tamamlandı, lakin bəzi emaillərdə problem yaşandı: {string.Join("; ", emailErrors)}";
-                Console.WriteLine($"Payment successful but with email errors: {emailErrors.Count} errors");
-            }
-            else
-            {
-                TempData["Success"] = "Ödəniş uğurla tamamlandı! Biletləriniz email ilə göndərildi.";
-                Console.WriteLine("Payment and email sending completed successfully");
-            }
+            var messages = new List<string>();
+            if (processedTicketIds.Any()) messages.Add($"{processedTicketIds.Count} bilet");
+            if (processedMoviePurchaseIds.Any()) messages.Add($"{processedMoviePurchaseIds.Count} film alışı");
 
-            return RedirectToAction("MyTickets", "Account");
+            TempData["Success"] = $"Ödəniş uğurla tamamlandı! {string.Join(", ", messages)}.";
+
+            if (processedTicketIds.Any())
+            {
+                return RedirectToAction("MyTickets", "Account");
+            }
+            else if (processedMoviePurchaseIds.Any())
+            {
+                return RedirectToAction("MyPurchases", "Account");
+            }
+            return RedirectToAction("Index", "Home");
         }
-
 
         [HttpGet]
         public IActionResult PaymentCancel()
@@ -793,6 +834,8 @@ namespace StreamitMVC.Controllers
             TempData["Warning"] = "Ödəniş ləğv edildi. Rezervasiyanız səbətdə qalır.";
             return RedirectToAction("Checkout");
         }
+
+     
 
         [HttpPost]
         public async Task<IActionResult> RemoveFromBasket(int basketItemId)
@@ -922,5 +965,74 @@ namespace StreamitMVC.Controllers
                 await _context.SaveChangesAsync();
             }
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddDirectPurchaseToBasket(int movieId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return RedirectToAction("Login", "Account");
+
+            var movie = await _context.Movies.FindAsync(movieId);
+            if (movie == null || !movie.IsAvailableForDirectPurchase)
+            {
+                TempData["Error"] = "Bu film birbaşa satış üçün mövcud deyil.";
+                return RedirectToAction("Details", new { id = movieId });
+            }
+
+            var existingPurchase = await _context.MoviePurchases
+                .AnyAsync(mp => mp.UserId == user.Id &&
+                               mp.MovieId == movieId &&
+                               mp.Status == MoviePurchaseStatus.Active &&
+                               (mp.ExpiresAt == null || mp.ExpiresAt > DateTime.Now));
+
+            if (existingPurchase)
+            {
+                TempData["Error"] = "Bu filmi artıq almısınız.";
+                return RedirectToAction("Details", new { id = movieId });
+            }
+
+            var basket = await _context.Baskets
+                .Include(b => b.Items)
+                .FirstOrDefaultAsync(b => b.UserId == user.Id);
+
+            if (basket == null)
+            {
+                basket = new Basket
+                {
+                    UserId = user.Id,
+                    TotalPrice = 0
+                };
+                _context.Baskets.Add(basket);
+                await _context.SaveChangesAsync();
+            }
+
+            var existingItem = basket.Items.FirstOrDefault(i => i.MovieId == movieId && i.Type == BasketItemType.DirectMoviePurchase);
+            if (existingItem != null)
+            {
+                TempData["Error"] = "Bu film artıq səbətinizdə var.";
+                return RedirectToAction("Details", new { id = movieId });
+            }
+
+            var basketItem = new BasketItem
+            {
+                BasketId = basket.Id,
+                MovieId = movieId,
+                Price = movie.DirectPurchasePrice ?? 0,
+                Type = BasketItemType.DirectMoviePurchase
+            };
+
+            _context.BasketItems.Add(basketItem);
+            basket.TotalPrice += basketItem.Price;
+            await _context.SaveChangesAsync();
+
+            TempData["Success"] = "Film səbətə əlavə edildi.";
+            return RedirectToAction("Checkout", "Booking");
+        }
+
+
+      
+
+
     }
 }

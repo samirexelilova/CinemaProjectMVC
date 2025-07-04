@@ -1,7 +1,5 @@
 ﻿@model CreateMovieVM
 
-
-
 <h2>Yeni Film Əlavə Et</h2>
 
 <form asp-action="Create" enctype="multipart/form-data" method="post">
@@ -29,7 +27,6 @@
     <div class="mb-3">
         <label asp-for="Duration" class="form-label">Müddət</label>
         <input asp-for="Duration" type="time" class="form-control" />
-
     </div>
     <div class="mb-3">
         <label asp-for="Director" class="form-label">Rejissor</label>
@@ -61,84 +58,125 @@
         <input asp-for="ReleaseDate" type="date" class="form-control" />
     </div>
 
+    <div class="mb-3">
+        <label asp-for="DirectPurchasePrice" class="form-label">Birbaşa Satınalma Qiyməti</label>
+        <input asp-for="DirectPurchasePrice" type="number" step="0.01" min="0" class="form-control" />
+        <span asp-validation-for="DirectPurchasePrice" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="IsAvailableForDirectPurchase" class="form-check-input" type="checkbox" />
+        <label asp-for="IsAvailableForDirectPurchase" class="form-check-label">Birbaşa Satınalma Mövcuddur</label>
+    </div>
+
+    ---
 
     <div class="mb-3">
-        <label>Kateqoriyalar</label>
+        <label class="form-label">Kateqoriyalar</label>
         @if (Model.Categories != null)
         {
-            @foreach (var c in Model.Categories)
-            {
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="@c.Id" name="SelectedCategoryIds" />
-                    <label class="form-check-label">@c.Name</label>
-                </div>
-            }
-        }
-    </div>
-
-    <div class="mb-3">
-        <label>Taglar</label>
-         @if (Model.Tags != null)
-        {
-        @foreach (var t in Model.Tags)
-        {
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="@t.Id" name="SelectedTagIds" />
-                <label class="form-check-label">@t.Name</label>
-            </div>
-        }
-        }
-    </div>
-
-    <h4>Aktyorlar və Rollar</h4>
-        @if (Model.Actors != null)
-        {
-    @for (int i = 0; i < 1; i++) 
-    {
-        <div class="mb-3 border p-2 rounded">
-            <label>Aktyor seçin</label>
-            <select name="ActorRoles[@i].ActorId" class="form-control">
-                <option disabled selected>-- Aktyoru seçin --</option>
-                @foreach (var actor in Model.Actors)
+            <select asp-for="SelectedCategoryIds" class="form-control" multiple>
+                @foreach (var c in Model.Categories)
                 {
-                    <option value="@actor.Id">@actor.Name @actor.Surname</option>
+                    <option value="@c.Id">@c.Name</option>
                 }
             </select>
-
-            <label class="mt-2">Rol</label>
-            <input type="text" name="ActorRoles[@i].Role" class="form-control" placeholder="Rolun adını yazın" />
-        </div>
-    }
-    }
-
-
-    <div class="mb-3">
-        <label>Dillər</label>
-         @if (Model.Languages != null)
-        {
-        @foreach (var l in Model.Languages)
-        {
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="@l.Id" name="SelectedLanguageIds" />
-                <label class="form-check-label">@l.Name</label>
-            </div>
-        }
         }
     </div>
 
     <div class="mb-3">
-        <label>Subtitrlər</label>
-         @if (Model.Subtitles != null)
+        <label class="form-label">Taglar</label>
+        @if (Model.Tags != null)
         {
-        @foreach (var s in Model.Subtitles)
+            <select asp-for="SelectedTagIds" class="form-control" multiple>
+                @foreach (var t in Model.Tags)
+                {
+                    <option value="@t.Id">@t.Name</option>
+                }
+            </select>
+        }
+    </div>
+
+    ---
+
+    <h4>Aktyorlar və Rollar</h4>
+    <div id="actorRolesContainer">
+        @if (Model.Actors != null)
         {
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="@s.Id" name="SelectedSubtitleIds" />
-                <label class="form-check-label">@s.Language.Name</label>
+            <div class="mb-3 border p-2 rounded actor-role-item">
+                <label>Aktyor seçin</label>
+                <select name="ActorRoles[0].ActorId" class="form-control">
+                    <option disabled selected>-- Aktyoru seçin --</option>
+                    @foreach (var actor in Model.Actors)
+                    {
+                        <option value="@actor.Id">@actor.Name @actor.Surname</option>
+                    }
+                </select>
+                <label class="mt-2">Rol</label>
+                <input type="text" name="ActorRoles[0].Role" class="form-control" placeholder="Rolun adını yazın" />
             </div>
         }
+    </div>
+    <button type="button" class="btn btn-secondary mb-3" id="addActorRole">Aktyor/Rol Əlavə Et</button>
+
+    ---
+
+    <div class="mb-3">
+        <label class="form-label">Dillər</label>
+        @if (Model.Languages != null)
+        {
+            <select asp-for="SelectedLanguageIds" class="form-control" multiple>
+                @foreach (var l in Model.Languages)
+                {
+                    <option value="@l.Id">@l.Name</option>
+                }
+            </select>
+        }
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Subtitrlər</label>
+        @if (Model.Subtitles != null)
+        {
+            <select asp-for="SelectedSubtitleIds" class="form-control" multiple>
+                @foreach (var s in Model.Subtitles)
+                {
+                    <option value="@s.Id">@s.Language.Name</option>
+                }
+            </select>
         }
     </div>
 
     <button type="submit" class="btn btn-success">Əlavə et</button>
 </form>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let actorRoleIndex = @(Model.ActorRoles?.Count ?? 0);
+
+            document.getElementById('addActorRole').addEventListener('click', function () {
+                const container = document.getElementById('actorRolesContainer');
+                const newActorRoleHtml = `
+                    <div class="mb-3 border p-2 rounded actor-role-item">
+                        <label>Aktyor seçin</label>
+                        <select name="ActorRoles[${actorRoleIndex}].ActorId" class="form-control">
+                            <option disabled selected>-- Aktyoru seçin --</option>
+        @if (Model.Actors != null)
+        {
+            foreach (var actor in Model.Actors)
+            {
+                                                    <option value="@actor.Id">@actor.Name @actor.Surname</option>
+            }
+        }
+                        </select>
+                        <label class="mt-2">Rol</label>
+                        <input type="text" name="ActorRoles[${actorRoleIndex}].Role" class="form-control" placeholder="Rolun adını yazın" />
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', newActorRoleHtml);
+                actorRoleIndex++;
+            });
+        });
+    </script>
+}

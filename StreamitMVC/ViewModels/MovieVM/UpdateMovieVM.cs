@@ -14,8 +14,9 @@ namespace StreamitMVC.ViewModels
             public IFormFile? PhotoFile { get; set; }
             public IFormFile? TrailerVideo { get; set; }
             public IFormFile? VideoFile { get; set; }
-
-            public TimeSpan Duration { get; set; }
+        public decimal? DirectPurchasePrice { get; set; }
+        public bool IsAvailableForDirectPurchase { get; set; }
+        public TimeSpan Duration { get; set; }
             public string Director { get; set; }
             public string Country { get; set; }
             public decimal ImdbRating { get; set; }

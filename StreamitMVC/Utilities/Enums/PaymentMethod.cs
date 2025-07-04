@@ -5,7 +5,7 @@ namespace StreamitMVC.Extensions.Enums
 {
     public enum PaymentMethod
     {
-        CreditCard,
+        Card,
         DebitCard,
         Stripe,
         BankTransfer 

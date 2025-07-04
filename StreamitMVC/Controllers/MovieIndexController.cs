@@ -5,6 +5,7 @@ using StreamitMVC.DAL;
 using StreamitMVC.Extensions.Enums;
 using StreamitMVC.Models;
 using StreamitMVC.Services.Interfaces;
+using StreamitMVC.Utilities.Enums;
 using StreamitMVC.ViewModels;
 
 namespace StreamitMVC.Controllers
@@ -192,7 +193,7 @@ namespace StreamitMVC.Controllers
             return PartialView("_SessionListPartial", sessionPrices);
         }
 
-
+       
 
     }
 }

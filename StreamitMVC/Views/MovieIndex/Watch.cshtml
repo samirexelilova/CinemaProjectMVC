@@ -1,0 +1,26 @@
+﻿@model Movie
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h2>@Model.Name</h2>
+
+            <!-- Video Player -->
+            <div class="embed-responsive embed-responsive-16by9">
+                <video controls class="embed-responsive-item w-100" style="height: 500px;">
+                    <source src="@Model.VideoUrl" type="video/mp4">
+                    Brauzeriniz video formatını dəstəkləmir.
+                </video>
+            </div>
+
+            <!-- Film məlumatları -->
+            <div class="mt-4">
+                <p><strong>Rejissor:</strong> @Model.Director</p>
+                <p><strong>Ölkə:</strong> @Model.Country</p>
+                <p><strong>Müddət:</strong> @Model.Duration</p>
+                <p><strong>IMDB:</strong> @Model.ImdbRating</p>
+                <p><strong>Təsvir:</strong> @Model.Description</p>
+            </div>
+        </div>
+    </div>
+</div>

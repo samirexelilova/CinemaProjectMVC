@@ -14,8 +14,7 @@
                <div class="row align-items-center iq-ltr-direction h-100">
                   <div class="col-lg-7 col-md-12">
                      <h1 class="texture-text big-font-5 letter-spacing-1 line-count-1 text-uppercase mb-0 RightAnimate">
-                        another
-                        danger
+                       @item.Name
                      </h1>
                      <div class="d-flex flex-wrap align-items-center r-mb-23 RightAnimate-two">
                         <div class="slider-ratting d-flex align-items-center">
@@ -66,7 +65,7 @@
                      </div>
                      <div class="RightAnimate-four">
                         <div class="iq-button">
-                            <a href="movie-detail.html" class="btn text-uppercase position-relative">
+                            <a asp-action="detail" asp-controller="movieindex" asp-route-id="@Model.Movie.Id" class="btn text-uppercase position-relative">
                                 <span class="button-text">play now</span>
                                 <i class="fa-solid fa-play"></i>
                             </a>
@@ -189,7 +188,7 @@
                                                 </li>
                                             </ul>
                                             <div class="iq-button">
-                                                <a href="@Url.Action("MovieDetail", "Movie", new { id = movie.Id })" class="btn text-uppercase position-relative rounded-circle">
+                                                <a href="@Url.Action("Detail", "MovieIndex", new { id = movie.Id })" class="btn text-uppercase position-relative rounded-circle">
                                                     <i class="fa-solid fa-play ms-0"></i>
                                                 </a>
                                             </div>
@@ -225,14 +224,14 @@
                                 <div class="iq-card card-hover">
                                     <div class="block-images position-relative w-100">
                                         <div class="img-box w-100">
-                                            <a asp-action="Detail" asp-controller="Movie" asp-route-id="@movie.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
+                                            <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id" class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                             <img src="~/assets/images/movies/popular/@movie.Photo" alt="@movie.Name" class="img-fluid object-cover w-100 d-block border-0">
                                         </div>
                                         <div class="card-description with-transition">
                                             <div class="cart-content">
                                                 <div class="content-left">
                                                     <h5 class="iq-title text-capitalize">
-                                                        <a asp-action="Detail" asp-controller="Movie" asp-route-id="@movie.Id">@movie.Name</a>
+                                                        <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id">@movie.Name</a>
                                                     </h5>
                                                     <div class="movie-time d-flex align-items-center my-2">
                                                         <span class="movie-time-text font-normal">@movie.Duration.Hours hr : @movie.Duration.Minutes mins</span>
@@ -258,7 +257,7 @@
                                                 </li>
                                             </ul>
                                             <div class="iq-button">
-                                                <a asp-action="Detail" asp-controller="Movie" asp-route-id="@movie.Id" class="btn text-uppercase position-relative rounded-circle">
+                                                <a asp-action="Detail" asp-controller="MovieIndex" asp-route-id="@movie.Id" class="btn text-uppercase position-relative rounded-circle">
                                                     <i class="fa-solid fa-play ms-0"></i>
                                                 </a>
                                             </div>
@@ -297,7 +296,7 @@
                                 <div class="iq-card card-hover">
                                     <div class="block-images position-relative w-100">
                                         <div class="img-box w-100">
-                                            <a asp-controller="Movie" asp-action="Detail" asp-route-id="@movie.Id"
+                                            <a asp-controller="MovieIndex" asp-action="Detail" asp-route-id="@movie.Id"
                                                class="position-absolute top-0 bottom-0 start-0 end-0"></a>
                                             <img src="~/assets/images/movies/popular/@movie.Photo"
                                                  alt="@movie.Name" class="img-fluid object-cover w-100 d-block border-0">
@@ -306,7 +305,7 @@
                                             <div class="cart-content">
                                                 <div class="content-left">
                                                     <h5 class="iq-title text-capitalize">
-                                                        <a asp-controller="Movie" asp-action="Detail" asp-route-id="@movie.Id">@movie.Name</a>
+                                                        <a asp-controller="MovieIndex" asp-action="Detail" asp-route-id="@movie.Id">@movie.Name</a>
                                                     </h5>
                                                     <div class="movie-time d-flex align-items-center my-2">
                                                         <span class="movie-time-text font-normal">@movie.Duration.Hours hr : @movie.Duration.Minutes mins</span>
@@ -341,7 +340,7 @@
                                                 </li>
                                             </ul>
                                             <div class="iq-button">
-                                                <a asp-controller="Movie" asp-action="Detail" asp-route-id="@movie.Id"
+                                                <a asp-controller="MovieIndex" asp-action="Detail" asp-route-id="@movie.Id"
                                                    class="btn text-uppercase position-relative rounded-circle">
                                                     <i class="fa-solid fa-play ms-0"></i>
                                                 </a>
@@ -403,7 +402,7 @@
                <p class="line-count-2 w-75 mb-5">@Model.TopMovieOfYear.Description</p>
                <div class="parallax-buttons">
                   <div class="iq-button">
-                      <a asp-controller="Movie" asp-action="Detail" asp-route-id="@Model.TopMovieOfYear.Id" class="btn text-uppercase position-relative">
+                            <a asp-controller="MovieIndex" asp-action="Detail" asp-route-id="@Model.TopMovieOfYear.Id" class="btn text-uppercase position-relative">
                           <span class="button-text">play now</span>
                           <i class="fa-solid fa-play"></i>
                       </a>
@@ -413,7 +412,7 @@
          </div>
          <div class="col-xl-7 col-lg-12 col-md-12 mt-5 mt-xl-0">
             <div class="parallax-img">
-               <a asp-controller="Movie" asp-action="Detail" asp-route-id="@Model.TopMovieOfYear.Id">
+                    <a asp-controller="MovieIndex" asp-action="Detail" asp-route-id="@Model.TopMovieOfYear.Id">
                   <img src="@Url.Content($"~/assets/images/movies/popular/{Model.TopMovieOfYear.Photo}")" class="img-fluid w-100" loading="lazy" alt="@Model.TopMovieOfYear.Name">
                </a>
             </div>

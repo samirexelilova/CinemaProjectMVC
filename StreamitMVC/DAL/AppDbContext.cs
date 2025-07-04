@@ -43,6 +43,8 @@ namespace StreamitMVC.DAL
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Slide> Slides { get; set; }
         public DbSet<ReviewReaction> ReviewReactions { get; set; }
+        public DbSet<MoviePurchase> MoviePurchases { get; set; }
+        public DbSet<MovieViewHistory> MovieViewHistories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -132,9 +134,58 @@ namespace StreamitMVC.DAL
                 .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<Booking>()
-    .HasOne(b => b.Payment)
-    .WithOne(p => p.Booking)
-    .HasForeignKey<Payment>(p => p.BookingId)
+           .HasMany(b => b.Payments)  
+           .WithOne(p => p.Booking)   
+           .HasForeignKey(p => p.BookingId)
+           .IsRequired(false) 
+           .OnDelete(DeleteBehavior.Cascade); 
+
+
+            modelBuilder.Entity<MoviePurchase>()
+      .HasOne(mp => mp.Payment)
+      .WithOne(p => p.MoviePurchase)
+      .HasForeignKey<Payment>(p => p.MoviePurchaseId);
+
+
+            modelBuilder.Entity<MovieViewHistory>()
+       .HasOne(m => m.Movie)
+       .WithMany()
+       .HasForeignKey(m => m.MovieId)
+       .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MovieViewHistory>()
+                .HasOne(m => m.User)
+                .WithMany()
+                .HasForeignKey(m => m.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<MovieViewHistory>()
+                .HasOne(m => m.MoviePurchase)
+                .WithMany()
+                .HasForeignKey(m => m.PurchaseId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Cinema>()
+       .HasMany(c => c.Halls)
+       .WithOne(h => h.Cinema)
+       .HasForeignKey(h => h.CinemaId)
+       .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Hall>()
+                .HasMany(h => h.Seats)
+                .WithOne(s => s.Hall)
+                .HasForeignKey(s => s.HallId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Seat>()
+                .HasMany(s => s.Tickets)
+                .WithOne(t => t.Seat)
+                .HasForeignKey(t => t.SeatId)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Hall>()
+    .HasMany(h => h.Sessions)
+    .WithOne(s => s.Hall)
+    .HasForeignKey(s => s.HallId)
     .OnDelete(DeleteBehavior.Cascade);
         }
 

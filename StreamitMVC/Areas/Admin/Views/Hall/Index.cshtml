@@ -1,9 +1,10 @@
 ﻿@model List<GetHallVM>
 
 <h2>Hall List</h2>
-<a asp-area="Admin" asp-controller="hall" asp-action="create" >create</a>
 
 <table class="table">
+    <a asp-area="Admin" asp-controller="hall" asp-action="create" class="btn btn-sm btn-danger">Create</a>
+
     <thead>
         <tr>
             <th>Name</th>
@@ -22,9 +23,9 @@
                 <td>@hall.HallTypeName</td>
                 <td>@hall.Capacity</td>
                 <td>
-                    <a asp-area="Admin" asp-controller="Seat" asp-action="Index" asp-route-hallId="@hall.Id">View Seats</a>
-                    <a asp-controller="hall" asp-action="update" asp-route-id="@hall.Id">Update</a>
-                    <a asp-controller="hall" asp-action="delete" asp-route-id="@hall.Id">Delete</a>
+                    <a asp-area="Admin" asp-controller="Seat" asp-action="Index" asp-route-hallId="@hall.Id" class="btn btn-sm btn-info">View Seats</a>
+                    <a asp-controller="hall" asp-action="update" asp-route-id="@hall.Id" class="btn btn-sm btn-warning">Update</a>
+                    <a asp-controller="hall" asp-action="delete" asp-route-id="@hall.Id" class="btn btn-sm btn-danger">Delete</a>
                 </td>
             </tr>
         }

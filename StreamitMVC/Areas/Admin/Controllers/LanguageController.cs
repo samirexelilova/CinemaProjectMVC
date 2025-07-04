@@ -1,4 +1,5 @@
 ﻿using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
@@ -11,6 +12,8 @@ using System.Drawing;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
+
     public class LanguageController : Controller
     {
         private readonly AppDbContext _context;
@@ -55,11 +58,39 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 model.AllMovies = _context.Movies.ToList();
                 return View(model);
             }
+            if (string.IsNullOrWhiteSpace(model.Name))
+            {
+                ModelState.AddModelError(nameof(CreateLanguageVM.Name), "Ad boş ola bilməz.");
+                return View(model);
+
+            }
+
+            if (string.IsNullOrWhiteSpace(model.Code))
+            {
+                ModelState.AddModelError(nameof(CreateLanguageVM.Code), "Kod boş ola bilməz.");
+                return View(model);
+
+            }
+
+            bool nameExists = await _context.Languages.AnyAsync(l => l.Name== model.Name);
+            if (nameExists)
+            {
+                ModelState.AddModelError(nameof(CreateLanguageVM.Name), "Bu adla artıq dil mövcuddur.");
+                return View(model);
+
+            }
+
+            bool codeExists = await _context.Languages.AnyAsync(l => l.Code.ToLower() == model.Code.ToLower());
+            if (codeExists)
+            {
+                ModelState.AddModelError(nameof(CreateLanguageVM.Code), "Bu kodla artıq dil mövcuddur.");
+                return View(model);
+            }
 
             if (model.FlagImage == null)
             {
                 ModelState.AddModelError(nameof(CreateLanguageVM.FlagImage), "Zəhmət olmasa şəkil seçin.");
-                return View();
+                return View(model);
             }
 
             if (!model.FlagImage.ValidateType("image/"))
@@ -117,6 +148,20 @@ namespace StreamitMVC.Areas.Admin.Controllers
             {
                 model.AllMovies = await _context.Movies.ToListAsync();
                 return View(model);
+            }
+            bool nameExists = await _context.Languages.AnyAsync(p => p.Name == model.Name && p.Id != id);
+            if (nameExists)
+            {
+                ModelState.AddModelError(nameof(CreateLanguageVM.Name), "Bu adla artıq dil mövcuddur.");
+                return View(model);
+
+            }
+            bool codeExists = await _context.Languages.AnyAsync(l => l.Code.ToLower() == model.Code.ToLower() && l.Id != id);
+            if (codeExists)
+            {
+                ModelState.AddModelError(nameof(model.Code), "Bu kodla artıq başqa dil mövcuddur.");
+                return View(model);
+
             }
 
             Language? existed = await _context.Languages

@@ -26,6 +26,8 @@
             <th>Subtitrlər</th>
             <th>Seanslar</th>
             <th>Rəylər</th>
+            <th>Birbaşa Satış</th>
+            <th>Satış Qiyməti</th>
             <th></th>
         </tr>
     </thead>
@@ -87,6 +89,12 @@
                 </td>
                 <td>@item.SessionCount</td>
                 <td>@item.ReviewCount</td>
+                <td>
+                    @(item.IsAvailableForDirectPurchase ? "✔️ Bəli" : "❌ Xeyr")
+                </td>
+                <td>
+                    @(item.DirectPurchasePrice.HasValue ? $"{item.DirectPurchasePrice} ₼" : "-")
+                </td>
                 <td>
                     <a  asp-action="Update" asp-route-id="@item.Id">Edit</a> |
                     <a  asp-action="Delete" asp-route-id="@item.Id">Delete</a>

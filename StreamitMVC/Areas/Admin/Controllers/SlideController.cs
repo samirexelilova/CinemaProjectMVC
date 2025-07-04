@@ -10,6 +10,8 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class SlideController : Controller
     {
         private readonly AppDbContext _context;

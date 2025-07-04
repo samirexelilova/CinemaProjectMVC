@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
 using StreamitMVC.ViewModels;
+using System.Runtime.Intrinsics.Arm;
 
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
 
     public class HallController : Controller
     {
@@ -55,6 +58,21 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 model.HallTypes = await _context.HallTypes.ToListAsync();
                 return View(model);
             }
+            if (string.IsNullOrWhiteSpace(model.Name))
+                ModelState.AddModelError(nameof(CreateHallVM.Name), "Ad boş ola bilməz.");
+
+            if (model.Rows <= 0)
+                ModelState.AddModelError(nameof(CreateHallVM.Rows), "Sətir sayı 0‑dan böyük olmalıdır.");
+
+            if (model.SeatsPerRow <= 0)
+                ModelState.AddModelError(nameof(CreateHallVM.SeatsPerRow), "Sətirdə oturacaq sayı 0‑dan böyük olmalıdır.");
+
+            bool dup = await _context.Halls.AnyAsync(h =>
+                 h.CinemaId == model.CinemaId &&
+                 h.Name.ToLower() == model.Name.Trim().ToLower());
+
+            if (dup)
+                ModelState.AddModelError(nameof(CreateHallVM.Name), "Bu kinoteatrda həmin adla zal artıq var.");
 
             var hall = new Hall
             {
@@ -124,7 +142,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? id,UpdateHallVM model)
+        public async Task<IActionResult> Update(int? id, UpdateHallVM model)
         {
             if (!ModelState.IsValid)
             {
@@ -133,9 +151,43 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 return View(model);
             }
 
+            bool exists = await _context.Halls
+                .AnyAsync(h => h.Id != id
+                           && h.CinemaId == model.CinemaId
+                           && h.Name.ToLower() == model.Name.Trim().ToLower());
+
+            if (exists)
+            {
+                ModelState.AddModelError(nameof(UpdateHallVM.Name), "Bu adla zal artıq mövcuddur.");
+                model.Cinemas = await _context.Cinemas.ToListAsync();
+                model.HallTypes = await _context.HallTypes.ToListAsync();
+                return View(model);
+            }
+
+            if (model.Rows <= 0)
+                ModelState.AddModelError(nameof(UpdateHallVM.Rows), "Sətir sayı 0-dan böyük olmalıdır.");
+
+            if (model.SeatsPerRow <= 0)
+                ModelState.AddModelError(nameof(UpdateHallVM.SeatsPerRow), "Sətirdə oturacaq sayı 0-dan böyük olmalıdır.");
+
             var hall = await _context.Halls.FindAsync(id);
             if (hall == null)
                 return NotFound();
+
+            bool cinemaExists = await _context.Cinemas.AnyAsync(c => c.Id == model.CinemaId);
+            if (!cinemaExists)
+                ModelState.AddModelError(nameof(UpdateHallVM.CinemaId), "Seçilmiş kinoteatr mövcud deyil.");
+
+            bool hallTypeExists = await _context.HallTypes.AnyAsync(ht => ht.Id == model.HallTypeId);
+            if (!hallTypeExists)
+                ModelState.AddModelError(nameof(UpdateHallVM.HallTypeId), "Seçilmiş zal tipi mövcud deyil.");
+
+            if (!ModelState.IsValid)
+            {
+                model.Cinemas = await _context.Cinemas.ToListAsync();
+                model.HallTypes = await _context.HallTypes.ToListAsync();
+                return View(model);
+            }
 
             hall.Name = model.Name;
             hall.CinemaId = model.CinemaId;

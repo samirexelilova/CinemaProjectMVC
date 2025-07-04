@@ -411,7 +411,7 @@ namespace StreamitMVC.Controllers
             var bookingIds = userBookings.Select(b => b.Id).ToList();
 
             var payments = await _context.Payments
-                .Where(p => bookingIds.Contains(p.BookingId))
+                .Where(p => bookingIds.Contains(p.BookingId.Value))
                 .ToListAsync();
 
             foreach (var booking in userBookings)
@@ -847,7 +847,43 @@ namespace StreamitMVC.Controllers
             return View("MyProfile", viewModel);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> MyPurchases()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return RedirectToAction("Login", "Account");
 
+            var purchases = await _context.MoviePurchases
+                .Include(mp => mp.Movie)
+                .Where(mp => mp.UserId == user.Id && mp.Status == MoviePurchaseStatus.Active)
+                .ToListAsync();
 
+            return View(purchases);
+        }
+        public async Task<IActionResult> Watch(int id)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return RedirectToAction("Login", "Account");
+
+            var movie = await _context.Movies.FindAsync(id);
+            if (movie == null)
+                return NotFound();
+
+            var hasAccess = await _context.MoviePurchases
+                .AnyAsync(mp => mp.UserId == user.Id &&
+                               mp.MovieId == id &&
+                               mp.Status == MoviePurchaseStatus.Active &&
+                               (mp.ExpiresAt == null || mp.ExpiresAt > DateTime.Now));
+
+            if (!hasAccess)
+            {
+                TempData["Error"] = "Bu filmi izləmək üçün əvvəlcə satın almalısınız.";
+                return RedirectToAction("Details", new { id });
+            }
+
+            return View(movie);
+        }
     }
 }

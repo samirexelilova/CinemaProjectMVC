@@ -1,0 +1,24 @@
+﻿@model List<MovieViewHistory>
+
+<div class="container">
+    <h2>İzləmə Tarixçəsi</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Film</th>
+                <th>İzləmə Tarixi</th>
+                <th>Dayandırıldığı dəqiqə</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Movie.Name</td>
+                    <td>@item.ViewDate.ToString("dd.MM.yyyy HH:mm")</td>
+                    <td>@(item.StoppedAtMinute?.ToString() ?? "Tam izlənilib")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

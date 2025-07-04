@@ -1,38 +1,68 @@
 ﻿@using Microsoft.Extensions.Options
 @using StreamitMVC.DAL
+@using StreamitMVC.Utilities.Enums
 @model Basket
 @inject IOptions<StripeSettings> Stripe
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-info">@TempData["Error"]</div>
+}
 
 
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-8">
             <div class="card">
-                <div class="card-header">
-                    <h4 class="card-title">Bilet Məlumatları</h4>
+                <div class="card-header  bg-dark">
+                    <h4 class="card-title">Səbət Məlumatları</h4>
                 </div>
                 <div class="card-body">
                     @foreach (var item in Model.Items)
                     {
-                        <div class="row mb-3 p-3 border rounded">
-                            <div class="col-md-3">
-                                <img src="~/assets/images/movies/popular/@item.Session.Movie.Photo"
-                                     alt="@item.Session.Movie.Name"
-                                     class="img-fluid rounded" />
+                        @if (item.Type == BasketItemType.DirectMoviePurchase && item.Movie != null)
+                        {
+                            <div class="row mb-3 p-3 border rounded bg-dark">
+                                <div class="col-md-3">
+                                    <img src="~/assets/images/movies/popular/@item.Movie.Photo"
+                                         alt="@item.Movie.Name"
+                                         class="img-fluid rounded" />
+                                </div>
+                                <div class="col-md-9">
+                                    <h5>@item.Movie.Name</h5>
+                                    <p><strong>Tip:</strong> <span class="badge bg-success">Filmi evdə izləmək</span></p>
+                                    <p><strong>Müddət:</strong> 1 il</p>
+                                    <p><strong>Rejissor:</strong> @item.Movie.Director</p>
+                                    <p><strong>IMDB:</strong> @item.Movie.ImdbRating</p>
+                                    <p><strong>Qiymət:</strong> @item.Price.ToString("0.00") AZN</p>
+                                    <button type="button" class="btn btn-sm btn-danger" onclick="removeFromBasket(@item.Id)">
+                                        <i class="fa fa-trash"></i> Sil
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-md-9">
-                                <h5>@item.Session.Movie.Name</h5>
-                                <p><strong>Kinoteatr:</strong> @item.Session.Cinema.Name</p>
-                                <p><strong>Zal:</strong> @item.Session.Hall.Name</p>
-                                <p><strong>Yer:</strong> @item.Seat.RowNumber sıra, @item.Seat.SeatNumber nömrə</p>
-                                <p><strong>Tarix:</strong> @item.Session.StartTime.ToString("dd.MM.yyyy")</p>
-                                <p><strong>Vaxt:</strong> @item.Session.StartTime.ToString("HH:mm")</p>
-                                <p><strong>Qiymət:</strong> @item.Price.ToString("0.00") AZN</p>
-                                <button type="button" class="btn btn-sm btn-danger" onclick="removeFromBasket(@item.Id)">
-                                    <i class="fa fa-trash"></i> Sil
-                                </button>
+                        }
+                        else if (item.Type == BasketItemType.SessionTicket && item.Session != null && item.Session.Movie != null)
+                        {
+                            <div class="row mb-3 p-3 border rounded">
+                                <div class="col-md-3">
+                                    <img src="~/assets/images/movies/popular/@item.Session.Movie.Photo"
+                                         alt="@item.Session.Movie.Name"
+                                         class="img-fluid rounded" />
+                                </div>
+                                <div class="col-md-9">
+                                    <h5>@item.Session.Movie.Name</h5>
+                                    <p><strong>Tip:</strong> <span class="badge bg-primary">Kino bileti</span></p>
+                                    <p><strong>Kinoteatr:</strong> @item.Session.Cinema?.Name</p>
+                                    <p><strong>Zal:</strong> @item.Session.Hall?.Name</p>
+                                    <p><strong>Yer:</strong> @item.Seat?.RowNumber sıra, @item.Seat?.SeatNumber nömrə</p>
+                                    <p><strong>Tarix:</strong> @item.Session.StartTime.ToString("dd.MM.yyyy")</p>
+                                    <p><strong>Vaxt:</strong> @item.Session.StartTime.ToString("HH:mm")</p>
+                                    <p><strong>Qiymət:</strong> @item.Price.ToString("0.00") AZN</p>
+                                    <button type="button" class="btn btn-sm btn-danger" onclick="removeFromBasket(@item.Id)">
+                                        <i class="fa fa-trash"></i> Sil
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        }
                     }
                 </div>
             </div>
@@ -40,12 +70,12 @@
 
         <div class="col-lg-4">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header  bg-dark">
                     <h4 class="card-title">Ödəniş Məlumatları</h4>
                 </div>
                 <div class="card-body">
                     <div class="row mb-3">
-                        <div class="col-6">Bilet sayı:</div>
+                        <div class="col-6">Məhsul sayı:</div>
                         <div class="col-6 text-end">@Model.Items.Count</div>
                     </div>
                     <div class="row mb-3">
@@ -54,10 +84,21 @@
                     </div>
                     <hr>
 
-                    <div class="alert alert-info">
-                        <i class="fa fa-info-circle"></i>
-                        Rezervasiyanız 15 dəqiqə ərzində etibarlıdır. Bu müddət ərzində ödəniş etməzsəniz, yerləriniz sərbəst buraxılacaq.
-                    </div>
+                    @if (Model.Items.Any(i => i.Type == BasketItemType.SessionTicket))
+                    {
+                        <div class="alert alert-info">
+                            <i class="fa fa-info-circle"></i>
+                            Kino biletləri üçün rezervasiyanız 15 dəqiqə ərzində etibarlıdır. Bu müddət ərzində ödəniş etməzsəniz, yerləriniz sərbəst buraxılacaq.
+                        </div>
+                    }
+
+                    @if (Model.Items.Any(i => i.Type == BasketItemType.DirectMoviePurchase))
+                    {
+                        <div class="alert alert-success">
+                            <i class="fa fa-play-circle"></i>
+                            Filmi aldıqdan sonra 1 il müddətinə istədiyiniz vaxt izləyə bilərsiniz.
+                        </div>
+                    }
 
                     <button id="checkout-button" class="btn btn-primary btn-lg w-100">Ödəniş et</button>
 
@@ -103,7 +144,7 @@
         });
 
         function removeFromBasket(basketItemId) {
-            if (confirm('Bu bileti səbətdən silmək istədiyinizdən əminsiniz?')) {
+            if (confirm('Bu məhsulu səbətdən silmək istədiyinizdən əminsiniz?')) {
                 $.ajax({
                     url: '@Url.Action("RemoveFromBasket")',
                     type: 'POST',
@@ -122,20 +163,31 @@
             }
         }
 
-        let reservationTime = 15 * 60;
-        let timer = setInterval(function() {
-            let minutes = Math.floor(reservationTime / 60);
-            let seconds = reservationTime % 60;
+        @if (Model.Items.Any(i => i.Type == BasketItemType.SessionTicket))
+        {
+            <text>
+                    // JavaScript kodunu burada yazmırıq!
+            </text>
+        }
 
-            document.title = `Ödəniş (${minutes}:${seconds.toString().padStart(2, '0')})`;
+        var hasSessionTickets = @(Model.Items.Any(i => i.Type == BasketItemType.SessionTicket).ToString().ToLower());
 
-            if (reservationTime <= 0) {
-                clearInterval(timer);
-                alert('Rezervasiya müddəti bitdi. Səhifə yenilənəcək.');
-                location.reload();
-            }
+        if (hasSessionTickets) {
+            let reservationTime = 15 * 60;
+            let timer = setInterval(function() {
+                let minutes = Math.floor(reservationTime / 60);
+                let seconds = reservationTime % 60;
 
-            reservationTime--;
-        }, 1000);
+                document.title = `Ödəniş (${minutes}:${seconds.toString().padStart(2, '0')})`;
+
+                if (reservationTime <= 0) {
+                    clearInterval(timer);
+                    alert('Rezervasiya müddəti bitdi. Səhifə yenilənəcək.');
+                    location.reload();
+                }
+
+                reservationTime--;
+            }, 1000);
+        }
     </script>
 }

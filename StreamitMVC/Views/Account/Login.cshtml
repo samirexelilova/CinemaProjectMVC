@@ -64,9 +64,26 @@
                         </div>
                         <div class="mb-3">
                             <label asp-for="Password" class="text-white fw-500 mb-2">Password</label>
-                            <input asp-for="Password" type="password" class="form-control rounded-0" placeholder="Enter your password" required="">
+
+                            <div class="input-group password-group">
+                                <input asp-for="Password"
+                                       id="password-input"
+                                       type="password"
+                                       class="form-control rounded-0"
+                                       placeholder="Enter your password"
+                                       required />
+
+                                <button type="button"
+                                        id="toggle-password"
+                                        class="input-group-text bg-transparent border-0 px-3">
+                                    <i class="fas fa-eye-slash text-white"></i>
+                                </button>
+                            </div>
+
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
+
+
                         <div class="text-end mb-3">
                             <a asp-action="ForgotPassword" class="text-primary fw-semibold fst-italic">
                                 <i class="fas fa-key"></i> Forgot Password?
@@ -190,3 +207,35 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.getElementById('toggle-password').addEventListener('click', function () {
+        const pwd  = document.getElementById('password-input');
+        const icon = this.querySelector('i');
+        if (pwd.type === 'password') {
+            pwd.type = 'text';
+            icon.classList.replace('fa-eye-slash', 'fa-eye');
+        } else {
+            pwd.type = 'password';
+            icon.classList.replace('fa-eye', 'fa-eye-slash');
+        }
+    });
+</script>
+
+<style>
+    #toggle-password {
+        position: absolute;
+        right: 0.75rem; 
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        background: transparent;
+        padding: 0;
+    }
+
+    .password-group .input-group-text {
+        cursor: pointer; 
+        line-height: 1;
+    }
+</style>

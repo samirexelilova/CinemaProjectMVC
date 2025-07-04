@@ -70,7 +70,7 @@
     <!-- loader END -->
     <aside class="sidebar sidebar-base sidebar-white sidebar-default navs-rounded-all " id="first-tour" data-toggle="main-sidebar" data-sidebar="responsive">
         <div class="sidebar-header d-flex align-items-center justify-content-start">
-            <a href="../dashboard/index.html" class="navbar-brand">
+            <a asp-controller="home" asp-action="index" class="navbar-brand">
 
                 <!--Logo start-->
                 <img class="logo-normal" src="~/admin/images/logo.png" alt="#">
@@ -96,7 +96,7 @@
                 <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
-                           href="../dashboard/index.html">
+                         asp-controller="home" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard"
                                data-bs-original-title="Dashboard">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +113,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page"
-                           href="../dashboard/rating.html">
+                           asp-controller="Actor" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Rating"
                                data-bs-original-title="Rating">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,12 +124,12 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Rating</span>
+                            <span class="item-name">Actor</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " aria-current="page"
-                           href="../dashboard/comment.html">
+                           asp-controller="AdminReview" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Comment" data-bs-placement="right" aria-label="Comment"
                                data-bs-original-title="Comment">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -141,12 +141,12 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Comments</span>
+                            <span class="item-name">Review</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link "
-                           href="../dashboard/app/user-list.html">
+                           asp-controller="Category" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="User" data-bs-placement="right" aria-label="User"
                                data-bs-original-title="User">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,12 +157,12 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Users</span>
+                            <span class="item-name">Category</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link "
-                           href="../dashboard/movie/movie-list.html">
+                           asp-controller="Cinema" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Movie List" data-bs-placement="right"
                                aria-label="Movie List" data-bs-original-title="Movie List">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,12 +173,12 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Movie List</span>
+                            <span class="item-name">Cinema</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-Shows" role="button" aria-expanded="false"
-                           aria-controls="sidebar-user">
+                        <a class="nav-link"
+                        asp-controller="Hall" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="TV Shows" data-bs-placement="right" aria-label="TV Shows"
                                data-bs-original-title="TV Shows">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,50 +189,12 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">TV Shows</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" class="icon-18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
+                            <span class="item-name">Hall</span>
                         </a>
-                        <ul class="sub-nav collapse" id="sidebar-Shows" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/tv-shows/show-list.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Show Lists" data-bs-placement="right"
-                                       aria-label="Show Lists" data-bs-original-title="Show Lists">
-                                        <i class="fa-solid fa-film"></i>
-                                    </i>
-                                    <span class="item-name">Show Lists</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/tv-shows/season.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Seasons" data-bs-placement="right"
-                                       aria-label="Seasons" data-bs-original-title="Seasons">
-                                        <i class="fa-solid fa-film"></i>
-                                    </i>
-                                    <span class="item-name">Seasons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/tv-shows/episodes.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Episodes" data-bs-placement="right"
-                                       aria-label="Episodes" data-bs-original-title="Episodes">
-                                        <i class="fa-solid fa-film"></i>
-                                    </i>
-                                    <span class="item-name">Episodes</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link "
-                           href="../dashboard/special-pages/pricing.html">
+                           asp-controller="HallPrice" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Pricing" data-bs-placement="right" aria-label="Pricing"
                                data-bs-original-title="Pricing">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -245,13 +207,12 @@
                                     <circle cx="18" cy="11.8999" r="1" fill="currentColor"></circle>
                                 </svg>
                             </i>
-                            <span class="item-name">Pricing</span>
+                            <span class="item-name">Hall Price</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-auth" role="button" aria-expanded="false"
-                           aria-controls="sidebar-auth">
+                        <a class="nav-link"  asp-controller="HallType" asp-area="admin" asp-action="index" >
                             <i class="icon" data-bs-toggle="tooltip" title="Authentication" data-bs-placement="right"
                                aria-label="Authentication" data-bs-original-title="Authentication">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -262,83 +223,11 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Authentication</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" class="icon-18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
+                            <span class="item-name">Hall Type</span>
                         </a>
-                        <ul class="sub-nav collapse" id="sidebar-auth" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/sign-in.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Login" data-bs-placement="right" aria-label="Login"
-                                       data-bs-original-title="Login">
-                                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-                                    </i>
-                                    <span class="item-name">Login</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/sign-up.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Register" data-bs-placement="right"
-                                       aria-label="Register" data-bs-original-title="Register">
-                                        <i class="fa-regular fa-registered"></i>
-                                    </i>
-                                    <span class="item-name">Register</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/recoverpw.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Recover Password" data-bs-placement="right"
-                                       aria-label="Recover Password" data-bs-original-title="Recover Password">
-                                        <i class="fa-solid fa-voicemail"></i>
-                                    </i>
-                                    <span class="item-name">Recover Password</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/confirm-mail.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Confirm Mail" data-bs-placement="right"
-                                       aria-label="Confirm Mail" data-bs-original-title="Confirm Mail">
-                                        <i class="fa-regular fa-file"></i>
-                                    </i>
-                                    <span class="item-name">Confirm Mail</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/two-factor.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Two Factor Authentication" data-bs-placement="right"
-                                       aria-label="Two Factor Authentication" data-bs-original-title="Two Factor Authentication">
-                                        <i class="fa-solid fa-fingerprint"></i>
-                                    </i>
-                                    <span class="item-name">2FA</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/account-deactivate.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Account Deactivate" data-bs-placement="right"
-                                       aria-label="Account Deactivate" data-bs-original-title="Account Deactivate">
-                                        <i class="fa-solid fa-user-xmark"></i>
-                                    </i>
-                                    <span class="item-name">Account Deactivate</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../dashboard/auth/lock-screen.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Lock Screen" data-bs-placement="right"
-                                       aria-label="Lock Screen" data-bs-original-title="Lock Screen">
-                                        <i class="fa-solid fa-lock"></i>
-                                    </i>
-                                    <span class="item-name">Lock Screen</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#utilities-error" role="button" aria-expanded="false"
-                           aria-controls="utilities-error">
+                        <a class="nav-link"  asp-controller="Language" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Utilities" data-bs-placement="right" aria-label="Utilities"
                                data-bs-original-title="Utilities">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -350,60 +239,12 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Utilities</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" class="icon-18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
+                            <span class="item-name">Language</span>
                         </a>
-                        <ul class="sub-nav collapse" id="utilities-error" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/errors/error404.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Error 404" data-bs-placement="right"
-                                       aria-label="Error 404" data-bs-original-title="Error 404">
-                                        <i class="fa-solid fa-circle-exclamation"> </i>
-                                    </i>
-                                    <span class="item-name">Error 404</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/errors/error500.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Error 500" data-bs-placement="right"
-                                       aria-label="Error 500" data-bs-original-title="Error 500">
-                                        <i class="fa-solid fa-circle-exclamation"> </i>
-                                    </i>
-                                    <span class="item-name">Error 500</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/errors/maintenance.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Maintenance" data-bs-placement="right"
-                                       aria-label="Maintenance" data-bs-original-title="Maintenance">
-                                        <i class="fa-solid fa-box-archive"></i>
-                                    </i>
-                                    <span class="item-name">Maintenance</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/errors/coming-soon.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Coming Soon" data-bs-placement="right"
-                                       aria-label="Coming Soon" data-bs-original-title="Coming Soon">
-                                        <i class="fa-solid fa-clock"></i>
-                                    </i>
-                                    <span class="item-name">Coming Soon</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link "
-                           href="../dashboard/blank-page.html">
+                           asp-controller="Subtitle" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Blank Page" data-bs-placement="right"
                                aria-label="Blank Page" data-bs-original-title="Blank Page">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -415,12 +256,11 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Blank Page</span>
+                            <span class="item-name">Subtitle</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#ui" role="button" aria-expanded="false"
-                           aria-controls="utilities-error">
+                        <a class="nav-link" asp-controller="Movie" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="UI Elements" data-bs-placement="right"
                                aria-label="UI Elements" data-bs-original-title="UI Elements">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -435,230 +275,11 @@
                                     </path>
                                 </svg>
                             </i>
-                            <span class="item-name">UI Elements</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
+                            <span class="item-name">Movie</span>
                         </a>
-                        <ul class="sub-nav collapse" id="ui" data-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-avatars.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Avatars" data-bs-placement="right"
-                                       aria-label="Avatars" data-bs-original-title="Avatars">
-                                        <i class="fa-regular fa-user"></i>
-                                    </i>
-                                    <span class="item-name">Avatars</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-alerts.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Alerts" data-bs-placement="right"
-                                       aria-label="Alerts" data-bs-original-title="Alerts">
-                                        <i class="fa-regular fa-bell"></i>
-                                    </i>
-                                    <span class="item-name">Alerts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-badges.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Badges" data-bs-placement="right"
-                                       aria-label="Badges" data-bs-original-title="Badges">
-                                        <i class="fa-brands fa-atlassian"></i>
-                                    </i>
-                                    <span class="item-name">Badge</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-breadcrumb.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Breadcrumb" data-bs-placement="right"
-                                       aria-label="Breadcrumb" data-bs-original-title="Breadcrumb">
-                                        <i class="fa-solid fa-bars"></i>
-                                    </i>
-                                    <span class="item-name">Breadcrumb</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-buttons.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Buttons" data-bs-placement="right"
-                                       aria-label="Buttons" data-bs-original-title="Buttons">
-                                        <i class="fa-solid fa-ticket-simple"></i>
-                                    </i>
-                                    <span class="item-name">Buttons</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-buttons-group.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Button Group" data-bs-placement="right"
-                                       aria-label="Button Group" data-bs-original-title="Button Group">
-                                        <i class="fa-solid fa-server"></i>
-                                    </i>
-                                    <span class="item-name">Buttons Group</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-offcanvas.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Offcanvas" data-bs-placement="right"
-                                       aria-label="Offcanvas" data-bs-original-title="Offcanvas">
-                                        <i class="fa-solid fa-expand"></i>
-                                    </i>
-                                    <span class="item-name">Offcanvas</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-color.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Colors" data-bs-placement="right"
-                                       aria-label="Colors" data-bs-original-title="Colors">
-                                        <i class="fa-solid fa-palette"></i>
-                                    </i>
-                                    <span class="item-name">Colors</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-cards.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Cards" data-bs-placement="right" aria-label="Cards"
-                                       data-bs-original-title="Cards">
-                                        <i class="fa-regular fa-address-card"></i>
-                                    </i>
-                                    <span class="item-name">Cards</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-carousel.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Carousel" data-bs-placement="right"
-                                       aria-label="Carousel" data-bs-original-title="Carousel">
-                                        <i class="fa-solid fa-sliders"></i>
-                                    </i>
-                                    <span class="item-name">Carousel</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-grid.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Grid" data-bs-placement="right" aria-label="Grid"
-                                       data-bs-original-title="Grid">
-                                        <i class="fa-solid fa-table-cells-large"></i>
-                                    </i>
-                                    <span class="item-name">Grid</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-images.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Images" data-bs-placement="right"
-                                       aria-label="Images" data-bs-original-title="Images">
-                                        <i class="fa-solid fa-image"></i>
-                                    </i>
-                                    <span class="item-name">Images</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-list-group.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="List Group" data-bs-placement="right"
-                                       aria-label="List Group" data-bs-original-title="List Group">
-                                        <i class="fa-solid fa-list-check"></i>
-                                    </i>
-                                    <span class="item-name">List Group</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-modal.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Modal" data-bs-placement="right" aria-label="Modal"
-                                       data-bs-original-title="Modal">
-                                        <i class="fa-solid fa-table-columns"></i>
-                                    </i>
-                                    <span class="item-name">Modal</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-notifications.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Notifications" data-bs-placement="right"
-                                       aria-label="Notifications" data-bs-original-title="Notifications">
-                                        <i class="fa-solid fa-bell"></i>
-                                    </i>
-                                    <span class="item-name">Notifications</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-pagination.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Pagination" data-bs-placement="right"
-                                       aria-label="Pagination" data-bs-original-title="Pagination">
-                                        <i class="fa-solid fa-ellipsis"></i>
-                                    </i>
-                                    <span class="item-name">Pagination</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-popovers.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Popovers" data-bs-placement="right"
-                                       aria-label="Popovers" data-bs-original-title="Popovers">
-                                        <i class="fa-solid fa-eraser"></i>
-                                    </i>
-                                    <span class="item-name">Popovers</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-typography.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Typography" data-bs-placement="right"
-                                       aria-label="Typography" data-bs-original-title="Typography">
-                                        <i class="fa-solid fa-keyboard"></i>
-                                    </i>
-                                    <span class="item-name">Typography</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-tabs.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Tabs" data-bs-placement="right" aria-label="Tabs"
-                                       data-bs-original-title="Tabs">
-                                        <i class="fa-solid fa-layer-group"></i>
-                                    </i>
-                                    <span class="item-name">Tabs</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-tooltips.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Tooltips" data-bs-placement="right"
-                                       aria-label="Tooltips" data-bs-original-title="Tooltips">
-                                        <i class="fa-solid fa-magnet fa-rotate-180"></i>
-                                    </i>
-                                    <span class="item-name">Tooltips</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/ui-elements/ui-embed-video.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Video" data-bs-placement="right" aria-label="Video"
-                                       data-bs-original-title="Video">
-                                        <i class="fa-solid fa-video"></i>
-                                    </i>
-                                    <span class="item-name">Video</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-widget" role="button" aria-expanded="false"
-                           aria-controls="sidebar-widget">
+                        <a class="nav-link" asp-controller="Position" asp-area="admin" asp-action="index" >
                             <i class="icon" data-bs-toggle="tooltip" title="Widgets" data-bs-placement="right" aria-label="Widgets"
                                data-bs-original-title="Widgets">
                                 <svg width="20" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -669,105 +290,11 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Widgets</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" class="icon-18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
+                            <span class="item-name">Actor Position</span>
                         </a>
-                        <ul class="sub-nav collapse" id="sidebar-widget" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/widget/widgetbasic.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Widget Basic" data-bs-placement="right"
-                                       aria-label="Widget Basic" data-bs-original-title="Widget Basic">
-                                        <i class="fa-solid fa-box"></i>
-                                    </i>
-                                    <span class="item-name">Widget Basic</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/widget/widgetchart.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Widget Chart" data-bs-placement="right"
-                                       aria-label="Widget Chart" data-bs-original-title="Widget Chart">
-                                        <i class="fa-solid fa-box"></i>
-                                    </i>
-                                    <span class="item-name">Widget Chart</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/widget/widgetcard.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Widget Card" data-bs-placement="right"
-                                       aria-label="Widget Card" data-bs-original-title="Widget Card">
-                                        <i class="fa-solid fa-box"></i>
-                                    </i>
-                                    <span class="item-name">Widget Card</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-form" role="button" aria-expanded="false"
-                           aria-controls="sidebar-form">
-                            <i class="icon" data-bs-toggle="tooltip" title="Form" data-bs-placement="right" aria-label="Form"
-                               data-bs-original-title="Form">
-                                <svg width="20" class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path opacity="0.4"
-                                          d="M16.191 2H7.81C4.77 2 3 3.78 3 6.83V17.16C3 20.26 4.77 22 7.81 22H16.191C19.28 22 21 20.26 21 17.16V6.83C21 3.78 19.28 2 16.191 2Z"
-                                          fill="currentColor"></path>
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M8.07996 6.6499V6.6599C7.64896 6.6599 7.29996 7.0099 7.29996 7.4399C7.29996 7.8699 7.64896 8.2199 8.07996 8.2199H11.069C11.5 8.2199 11.85 7.8699 11.85 7.4289C11.85 6.9999 11.5 6.6499 11.069 6.6499H8.07996ZM15.92 12.7399H8.07996C7.64896 12.7399 7.29996 12.3899 7.29996 11.9599C7.29996 11.5299 7.64896 11.1789 8.07996 11.1789H15.92C16.35 11.1789 16.7 11.5299 16.7 11.9599C16.7 12.3899 16.35 12.7399 15.92 12.7399ZM15.92 17.3099H8.07996C7.77996 17.3499 7.48996 17.1999 7.32996 16.9499C7.16996 16.6899 7.16996 16.3599 7.32996 16.1099C7.48996 15.8499 7.77996 15.7099 8.07996 15.7399H15.92C16.319 15.7799 16.62 16.1199 16.62 16.5299C16.62 16.9289 16.319 17.2699 15.92 17.3099Z"
-                                          fill="currentColor"></path>
-                                </svg>
-                            </i>
-                            <span class="item-name">Form</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" class="icon-18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
-                        </a>
-                        <ul class="sub-nav collapse" id="sidebar-form" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/form/form-element.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Elements" data-bs-placement="right"
-                                       aria-label="Elements" data-bs-original-title="Elements">
-                                        <i class="fa-solid fa-book"></i>
-                                    </i>
-                                    <span class="item-name">Elements</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/form/form-wizard.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Wizard" data-bs-placement="right"
-                                       aria-label="Wizard" data-bs-original-title="Wizard">
-                                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                                    </i>
-                                    <span class="item-name">Wizard</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/form/form-validation.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Validation" data-bs-placement="right"
-                                       aria-label="Validation" data-bs-original-title="Validation">
-                                        <i class="fa-solid fa-pen-to-square"></i>
-                                    </i>
-                                    <span class="item-name">Validation</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-table" role="button" aria-expanded="false"
-                           aria-controls="sidebar-table">
+                        <a class="nav-link" asp-controller="session" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Table" data-bs-placement="right" aria-label="Table"
                                data-bs-original-title="Table">
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="20" viewBox="0 0 24 24" fill="none">
@@ -777,60 +304,12 @@
                                           stroke="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">Table</span>
-                            <i class="right-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" class="icon-18" fill="none" viewBox="0 0 24 24"
-                                     stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </i>
+                            <span class="item-name">Session</span>
                         </a>
-                        <ul class="sub-nav collapse" id="sidebar-table" data-bs-parent="#sidebar-menu">
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/table/bootstrap-table.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Bootstrap Table" data-bs-placement="right"
-                                       aria-label="Bootstrap Table" data-bs-original-title="Bootstrap Table">
-                                        <i class="fa-brands fa-bootstrap"></i>
-                                    </i>
-                                    <span class="item-name">Bootstrap Table</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/table/table-data.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Datatable" data-bs-placement="right"
-                                       aria-label="Datatable" data-bs-original-title="Datatable">
-                                        <i class="fa-solid fa-table-list"></i>
-                                    </i>
-                                    <span class="item-name">Datatable</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/table/border-table.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="Bordered Table" data-bs-placement="right"
-                                       aria-label="Bordered Table" data-bs-original-title="Bordered Table">
-                                        <i class="fa-solid fa-table-list"></i>
-                                    </i>
-                                    <span class="item-name">Bordered Table</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link "
-                                   href="../dashboard/table/fixed-table.html">
-                                    <i class="icon" data-bs-toggle="tooltip" title="FixedTable" data-bs-placement="right"
-                                       aria-label="Fixed Tabl" data-bs-original-title="Fixed Tabl">
-                                        <i class="fa-solid fa-table-cells"></i>
-                                    </i>
-                                    <span class="item-name">Fixed Table</span>
-                                </a>
-                            </li>
-                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link "
-                           href="../dashboard/icons/font-awesome.html">
+                           asp-controller="tag" asp-area="admin" asp-action="index">
                             <i class="icon" data-bs-toggle="tooltip" title="Icons" data-bs-placement="right" aria-label="Icons"
                                data-bs-original-title="Icons">
                                 <svg width="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -844,17 +323,7 @@
                                           fill="currentColor"></path>
                                 </svg>
                             </i>
-                            <span class="item-name">FontAwesome</span>
-                        </a>
-                    </li>
-                    <li class="nav-item mb-4">
-                        <a class="nav-link "
-                           href="../dashboard/access-control.html">
-                            <i class="icon" data-bs-toggle="tooltip" title="Access Control" data-bs-placement="right"
-                               aria-label="Access Control" data-bs-original-title="Access Control">
-                                <i class="fas fa-user-lock"></i>
-                            </i>
-                            <span class="item-name">Access Control</span>
+                            <span class="item-name">Tags</span>
                         </a>
                     </li>
                 </ul>
@@ -894,39 +363,7 @@
                                 <ul class="iq-nav-menu list-unstyled">
                                     <li class="nav-item">
                                         <a class="nav-link active"
-                                           href="../dashboard/index.html">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link "
-                                           href="../dashboard/movie/movie-list.html">Movie List</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link menu-arrow "
-                                           data-bs-toggle="collapse" href="#tv-shows" role="button" aria-expanded="false"
-                                           aria-controls="tv-shows">
-                                            TV Shows
-                                            <i class="right-icon">
-                                                <svg class="icon-20" width="20" viewBox="0 0 24 24" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.5 5L15.5 12L8.5 19" stroke="currentColor" stroke-width="1.5"
-                                                          stroke-linecap="round" stroke-linejoin="round"></path>
-                                                </svg>
-                                            </i>
-                                        </a>
-                                        <ul aria-expanded="false" class="iq-header-sub-menu left list-unstyled collapse" id="tv-shows">
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="../dashboard/tv-shows/show-list.html">Show List</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="../dashboard/tv-shows/season.html">Season</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link "
-                                                   href="../dashboard/tv-shows/episodes.html">Episodes</a>
-                                            </li>
-                                        </ul>
+                                           asp-controller="home" asp-area="admin" asp-action="index">Home</a>
                                     </li>
                                 </ul>
                             </div>

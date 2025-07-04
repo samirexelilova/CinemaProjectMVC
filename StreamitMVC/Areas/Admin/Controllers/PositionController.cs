@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Models;
@@ -7,6 +8,8 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
+
     public class PositionController : Controller
     {
         private readonly AppDbContext _context;

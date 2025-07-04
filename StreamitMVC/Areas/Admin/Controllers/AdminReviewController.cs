@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StreamitMVC.DAL;
 using StreamitMVC.Extensions.Enums;
@@ -6,6 +7,8 @@ using StreamitMVC.Extensions.Enums;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
+    [Authorize(Roles = "Admin")]
+
     public class AdminReviewController : Controller
     {
         private readonly AppDbContext _context;

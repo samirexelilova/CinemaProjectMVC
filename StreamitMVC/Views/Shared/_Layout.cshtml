@@ -29,8 +29,6 @@
 
 
 
-
-
     <!-- Streamit Design System Css -->
     <link rel="stylesheet" href="~/assets/css/streamit.min848f.css?v=5.2.1" />
 
@@ -79,7 +77,7 @@
                             </div>
                             <!--Logo -->
                             <div class="logo-default">
-                                <a class="navbar-brand text-primary" href="index.html">
+                                <a class="navbar-brand text-primary" asp-action="Index" asp-controller="Home">
                                     <img class="img-fluid logo" src="~/assets/images/logo.webp" loading="lazy" alt="streamit" />
                                 </a>
                             </div>
@@ -177,6 +175,12 @@
                                                 <li class="nav-item">
                                                     <a class="nav-link " asp-controller="Features" asp-action="Tags"> Tags </a>
                                                 </li>
+                                                @if (User.IsInRole("Admin"))
+                                                {
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" asp-controller="Home" asp-action="Index" asp-area="admin">Admin Dashboard</a>
+                                                    </li>
+                                                }
                                             }
                                           else{
                                                 <li class="nav-item">
@@ -222,26 +226,15 @@
                                         <a class="nav-link" asp-controller="Blog" asp-action="Index">Blog</a>
                                     </li>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-bs-toggle="collapse" href="#shop" role="button" aria-expanded="false" aria-controls="shop">
-                                            <span class="item-name">Shop</span>
-                                            <span class="menu-icon">
-                                                <i class="fa fa-caret-down toggledrop-desktop right-icon" aria-hidden="true"></i>
-                                                <span class="toggle-menu">
-                                                    <i class="fa fa-plus arrow-active text-white" aria-hidden="true"></i>
-                                                    <i class="fa fa-minus arrow-hover text-white" aria-hidden="true"></i>
-                                                </span>
-                                            </span>
-                                        </a>
-                                        <ul class="sub-nav collapse  list-unstyled" id="shop">
-                                            @if (User.Identity != null && User.Identity.IsAuthenticated){
-                                           
-                                                <li class="nav-item">
-                                                    <a class="nav-link " asp-controller="Basket" asp-action="Index"> Basket </a>
-                                                </li>
-                                            }
-                                        </ul>
-                                    </li>
+                                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                                    {
+                                        <li class="nav-item">
+                                            <a asp-controller="Basket" asp-action="Index" class="nav-link">
+                                                <span class="item-name">Basket</span>
+                                            </a>
+                                        </li>
+                                    }
+                                   
                                 </ul>
                             </div>
                             <!-- container-fluid.// -->

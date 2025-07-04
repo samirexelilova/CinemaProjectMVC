@@ -1,82 +1,181 @@
-﻿@* @model UpdateSessionVM *@
+﻿@model StreamitMVC.ViewModels.UpdateSessionVM
+@using System.Text.Json
 
-@* <div class="content-inner container-fluid pb-0" id="page_layout"> *@
-@*     <div> *@
-@*         <div class="row"> *@
-@*             <div class="col-sm-12 col-lg-6"> *@
-@*                 <div class="card"> *@
-@*                     <div class="card-header d-flex justify-content-between"> *@
-@*                         <div class="header-title"> *@
-@*                             <h4 class="card-title">Update Session</h4> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                     <div class="card-body"> *@
-@*                         <form method="post"> *@
-@*                             <input type="hidden" asp-for="Id" /> *@
+<div class="content-inner container-fluid pb-0" id="page_layout">
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                    <div class="header-title">
+                        <h4 class="card-title">Update Session</h4>
+                    </div>
+                </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="StartTime">Start Time</label> *@
-@*                                 <input asp-for="StartTime" type="datetime-local" class="form-control" /> *@
-@*                                 <span class="text-danger" asp-validation-for="StartTime"></span> *@
-@*                             </div> *@
+                <div class="card-body">
+                    <form method="post">
+                        <div class="form-group">
+                            <label asp-for="StartTime" class="form-label"></label>
+                            <input asp-for="StartTime" type="datetime-local" class="form-control" />
+                            <span asp-validation-for="StartTime" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="EndTime">End Time</label> *@
-@*                                 <input asp-for="EndTime" type="datetime-local" class="form-control" /> *@
-@*                                 <span class="text-danger" asp-validation-for="EndTime"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="EndTime" class="form-label"></label>
+                            <input asp-for="EndTime" type="datetime-local" class="form-control" />
+                            <span asp-validation-for="EndTime" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="MovieId">Movie</label> *@
-@*                                 <select asp-for="MovieId" asp-items="new SelectList(Model.Movies, "Id", "Name", Model.MovieId)" class="form-control"> *@
-@*                                     <option disabled>Choose movie</option> *@
-@*                                 </select> *@
-@*                                 <span class="text-danger" asp-validation-for="MovieId"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="MovieId"></label>
+                            <select asp-for="MovieId"
+                                    id="movieSelect"
+                                    asp-items="@(new SelectList(Model.Movies, nameof(Movie.Id), nameof(Movie.Name), Model.MovieId))"
+                                    class="form-control">
+                                <option value="0" disabled>Choose movie</option>
+                            </select>
+                            <span asp-validation-for="MovieId" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="HallId">Hall</label> *@
-@*                                 <select asp-for="HallId" asp-items="new SelectList(Model.Halls, "Id", "Name", Model.HallId)" class="form-control"> *@
-@*                                     <option disabled>Choose hall</option> *@
-@*                                 </select> *@
-@*                                 <span class="text-danger" asp-validation-for="HallId"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="HallId"></label>
+                            <select asp-for="HallId"
+                                    asp-items="@(new SelectList(Model.Halls, nameof(Hall.Id), nameof(Hall.Name), Model.HallId))"
+                                    class="form-control">
+                                <option value="0" disabled>Choose hall</option>
+                            </select>
+                            <span asp-validation-for="HallId" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="CinemaId">Cinema</label> *@
-@*                                 <select asp-for="CinemaId" asp-items="new SelectList(Model.Cinemas, "Id", "Name", Model.CinemaId)" class="form-control"> *@
-@*                                     <option disabled>Choose cinema</option> *@
-@*                                 </select> *@
-@*                                 <span class="text-danger" asp-validation-for="CinemaId"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="CinemaId"></label>
+                            <select asp-for="CinemaId"
+                                    asp-items="@(new SelectList(Model.Cinemas, nameof(Cinema.Id), nameof(Cinema.Name), Model.CinemaId))"
+                                    class="form-control">
+                                <option value="0" disabled>Choose cinema</option>
+                            </select>
+                            <span asp-validation-for="CinemaId" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="HallPriceId">Hall Price</label> *@
-@*                                 <select asp-for="HallPriceId" asp-items="new SelectList(Model.HallPrices, "Id", "Price", Model.HallPriceId)" class="form-control"> *@
-@*                                     <option disabled>Choose price</option> *@
-@*                                 </select> *@
-@*                                 <span class="text-danger" asp-validation-for="HallPriceId"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="HallPriceId"></label>
+                            <select asp-for="HallPriceId" class="form-control">
+                                <option value="0" disabled>Choose price</option>
+                                @if (Model.HallPrices != null)
+                                {
+                                    @foreach (var price in Model.HallPrices)
+                                    {
+                                        @if (price.Id == Model.HallPriceId)
+                                        {
+                                            <option value="@price.Id" selected>
+                                                @price.HallType?.Name&nbsp;-&nbsp;@price.Price&nbsp;AZN
+                                                @if (price.DayOfWeek.HasValue)
+                                                {
+                                                    @: (@price.DayOfWeek.Value)
+                                                }
+                                                else
+                                                {
+                                                    @: (Bütün günlər)
+                                                }
+                                            </option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@price.Id">
+                                                @price.HallType?.Name&nbsp;-&nbsp;@price.Price&nbsp;AZN
+                                                @if (price.DayOfWeek.HasValue)
+                                                {
+                                                    @: (@price.DayOfWeek.Value)
+                                                }
+                                                else
+                                                {
+                                                    @: (Bütün günlər)
+                                                }
+                                            </option>
+                                        }
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="HallPriceId" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="LanguageId">Language</label> *@
-@*                                 <select asp-for="LanguageId" asp-items="new SelectList(Model.Languages, "Id", "Name", Model.LanguageId)" class="form-control"> *@
-@*                                     <option disabled>Choose language</option> *@
-@*                                 </select> *@
-@*                                 <span class="text-danger" asp-validation-for="LanguageId"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="LanguageId"></label>
+                            <select asp-for="LanguageId"
+                                    id="languageSelect"
+                                    asp-items="@(new SelectList(Model.Languages, nameof(Language.Id), nameof(Language.Name), Model.LanguageId))"
+                                    class="form-control">
+                                <option value="0" disabled>Choose language</option>
+                            </select>
+                            <span asp-validation-for="LanguageId" class="text-danger"></span>
+                        </div>
 
-@*                             <div class="form-group"> *@
-@*                                 <label asp-for="AvailableSeats">Available Seats</label> *@
-@*                                 <input asp-for="AvailableSeats" class="form-control" /> *@
-@*                                 <span class="text-danger" asp-validation-for="AvailableSeats"></span> *@
-@*                             </div> *@
+                        <div class="form-group">
+                            <label asp-for="SubtitleId"></label>
+                            <select asp-for="SubtitleId" id="subtitleSelect" class="form-control">
+                                <option value="">-- Altyazı seçin --</option>
+                                @if (Model.Subtitles != null)
+                                {
+                                    @foreach (var s in Model.Subtitles)
+                                    {
+                                        @if (s.Id == Model.SubtitleId)
+                                        {
+                                            <option value="@s.Id" selected>@s.Language?.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@s.Id">@s.Language?.Name</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="SubtitleId" class="text-danger"></span>
+                        </div>
 
-@*                             <button type="submit" class="btn btn-primary">Submit</button> *@
-@*                         </form> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-@*     </div> *@
-@* </div> *@
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const movieSelect    = document.getElementById('movieSelect');
+            const languageSelect = document.getElementById('languageSelect');
+            const subtitleSelect = document.getElementById('subtitleSelect');
+
+            const initialSubtitleId = @Json.Serialize(Model.SubtitleId);
+
+            function loadSubtitles() {
+                subtitleSelect.innerHTML = '<option value="">-- Altyazı seçin --</option>';
+
+                const mId = movieSelect.value;
+                const lId = languageSelect.value;
+                if (mId === '0' || lId === '0') return;
+
+                fetch(`/Admin/Session/GetSubtitles?movieId=${mId}&languageId=${lId}`)
+                    .then(r => r.ok ? r.json() : [])
+                    .then(list => {
+                        list.forEach(s => {
+                            const opt = document.createElement('option');
+                            opt.value = s.id;
+                            opt.textContent = s.name;
+                            if (initialSubtitleId && s.id === Number(initialSubtitleId)) {
+                                opt.selected = true;
+                            }
+                            subtitleSelect.appendChild(opt);
+                        });
+                    })
+                    .catch(err => console.error('Subtitle load error:', err));
+            }
+
+            movieSelect.addEventListener('change', loadSubtitles);
+            languageSelect.addEventListener('change', loadSubtitles);
+
+            loadSubtitles();
+        });
+    </script>
+}

@@ -29,18 +29,25 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.SignIn.RequireConfirmedEmail = true;
     opt.User.RequireUniqueEmail = true;
     opt.Tokens.EmailConfirmationTokenProvider = TokenOptions.DefaultEmailProvider;
-}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+
+}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders().AddRoles<IdentityRole>();
 
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = GoogleDefaults.AuthenticationScheme;
-}).AddCookie()
+}).AddCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.AccessDeniedPath = "/Error/Forbidden";
+})
+
 .AddGoogle(GoogleDefaults.AuthenticationScheme,options =>
 {
     options.ClientId = builder.Configuration.GetSection("GoogleKeys:ClientId").Value;
@@ -56,6 +63,11 @@ app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    ServeUnknownFileTypes = true,
+    DefaultContentType = "application/octet-stream"
+});
 StripeConfiguration.ApiKey = builder.Configuration["Stripe:Secretkey"];
 app.MapControllerRoute(
     "admin",

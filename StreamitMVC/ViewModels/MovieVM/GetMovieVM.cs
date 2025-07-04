@@ -25,6 +25,8 @@ namespace StreamitMVC.ViewModels
         public List<Language> Subtitles { get; set; }
         public int SessionCount { get; set; }
         public int ReviewCount { get; set; }
+        public bool IsAvailableForDirectPurchase { get; set; }
+        public decimal? DirectPurchasePrice { get; set; }
 
     }
 }

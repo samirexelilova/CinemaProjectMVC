@@ -1,4 +1,5 @@
 ﻿using StreamitMVC.Models.Base;
+using StreamitMVC.Utilities.Enums;
 
 namespace StreamitMVC.Models
 {
@@ -23,6 +24,6 @@ namespace StreamitMVC.Models
         public int AvailableSeats { get; set; }
         public List<Booking> Bookings { get; set; } 
         public List<Ticket> Tickets { get; set; } 
-        public List<BasketItem> BasketItems { get; set; } 
+        public List<BasketItem> BasketItems { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 {
     public enum BasketItemType
     {
-        Ticket,
-        Product
+        SessionTicket, // Mövcud seans bileti
+        DirectMoviePurchase // Birbaşa film alışı
     }
 }

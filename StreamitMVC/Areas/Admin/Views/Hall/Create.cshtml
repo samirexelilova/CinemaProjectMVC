@@ -1,47 +1,66 @@
-﻿@model SeatCreateVM
+﻿@model CreateHallVM
 
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow-lg">
                 <div class="card-header bg-primary text-white text-center">
-                    <h3><i class="fas fa-plus-circle me-2"></i>Yeni Oturacaq Əlavə Et</h3>
+                    <h3><i class="fas fa-plus-circle me-2"></i>Yeni Zal Əlavə Et</h3>
                 </div>
                 <div class="card-body">
-                    <div class="alert alert-info">
-                        <i class="fas fa-info-circle me-2"></i>
-                        <strong>Zal:</strong> @Model.HallName <br>
-                        <strong>Yerləşmə:</strong> @Model.RowNumber-ci sıra, @Model.SeatNumber-ci yer
-                    </div>
-
                     <form asp-action="Create" method="post">
-                        <input type="hidden" asp-for="HallId" />
-                        <input type="hidden" asp-for="RowNumber" />
-                        <input type="hidden" asp-for="SeatNumber" />
-                        <input type="hidden" asp-for="HallName" />
+                        <div class="mb-3">
+                            <label asp-for="Name" class="form-label">Zalın adı</label>
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
 
                         <div class="mb-3">
-                            <label asp-for="SeatTypeId" class="form-label">
-                                <i class="fas fa-chair me-1"></i>Oturacaq Tipi
-                            </label>
-                            <select asp-for="SeatTypeId" class="form-select" required>
-                                <option value="">-- Oturacaq tipi seçin --</option>
-                                @foreach (var seatType in Model.SeatTypes)
+                            <label asp-for="CinemaId" class="form-label">Cinema</label>
+                            <select asp-for="CinemaId" class="form-select" required>
+                                <option value="">-- Kino seçin --</option>
+                                @foreach (var cinema in Model.Cinemas)
                                 {
-                                    <option value="@seatType.Id">@seatType.Name</option>
+                                    <option value="@cinema.Id">@cinema.Name</option>
                                 }
                             </select>
-                            <span asp-validation-for="SeatTypeId" class="text-danger"></span>
+                            <span asp-validation-for="CinemaId" class="text-danger"></span>
                         </div>
 
-                        <div class="d-flex justify-content-between">
-                            <a asp-action="Index" asp-route-hallId="@Model.HallId" class="btn btn-secondary">
-                                <i class="fas fa-arrow-left me-1"></i>Geri qayıt
-                            </a>
-                            <button type="submit" class="btn btn-success">
-                                <i class="fas fa-save me-1"></i>Oturacağı əlavə et
-                            </button>
+                        <div class="mb-3">
+                            <label asp-for="Capacity" class="form-label">Tutum</label>
+                            <input asp-for="Capacity" class="form-control" type="number" />
+                            <span asp-validation-for="Capacity" class="text-danger"></span>
                         </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Rows" class="form-label">Sıra sayı</label>
+                            <input asp-for="Rows" class="form-control" type="number" />
+                            <span asp-validation-for="Rows" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="SeatsPerRow" class="form-label">Hər sıradakı yer sayı</label>
+                            <input asp-for="SeatsPerRow" class="form-control" type="number" />
+                            <span asp-validation-for="SeatsPerRow" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="HallTypeId" class="form-label">Zal tipi</label>
+                            <select asp-for="HallTypeId" class="form-select" required>
+                                <option value="">-- Zal tipi seçin --</option>
+                                @foreach (var hallType in Model.HallTypes)
+                                {
+                                    <option value="@hallType.Id">@hallType.Name</option>
+                                }
+                            </select>
+                            <span asp-validation-for="HallTypeId" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-save me-1"></i>Yarat
+                        </button>
+                        <a asp-action="Index" class="btn btn-secondary ms-2">Ləğv et</a>
                     </form>
                 </div>
             </div>

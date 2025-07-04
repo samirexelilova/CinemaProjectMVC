@@ -1,0 +1,38 @@
+﻿@model List<MoviePurchase>
+
+<div class="container mt-4">
+    <h2>Mənim Filmlərim</h2>
+
+    @if (Model.Any())
+    {
+        <div class="row">
+            @foreach (var purchase in Model)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                    <div class="card h-100">
+                        <img src="~/assets/images/movies/popular/@purchase.Movie.Photo" class="card-img-top" alt="@purchase.Movie.Name" style="height: 250px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">@purchase.Movie.Name</h5>
+                            <p class="card-text">
+                                <strong>Alınma tarixi:</strong> @purchase.PurchaseDate.ToString("dd.MM.yyyy")<br>
+                                <strong>Bitmə tarixi:</strong> @(purchase.PurchaseDate.AddYears(1).ToString("dd.MM.yyyy"))<br>
+                                <strong>Qiymət:</strong> @purchase.Price.ToString("0.00") AZN
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="Watch" asp-controller="Account" asp-route-id="@purchase.MovieId" class="btn btn-primary w-100">
+                                <i class="fa fa-play"></i> İzlə
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">
+            Heç bir film alışınız yoxdur.
+        </div>
+    }
+</div>

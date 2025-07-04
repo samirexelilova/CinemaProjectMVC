@@ -50,29 +50,48 @@
                                         <tr>
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    @if (!string.IsNullOrEmpty(item.Session.Movie.Photo))
+                                                    @if (item.Session?.Movie != null && !string.IsNullOrEmpty(item.Session.Movie.Photo))
                                                     {
-                                                        <img src="~/assets/images/movies/popular/@item.Session.Movie.Photo" alt="@item.Session.Movie.Name"
-                                                             class="rounded me-3" style="width: 60px; height: 90px; object-fit: cover;">
+                                                        <img src="~/assets/images/movies/popular/@item.Session.Movie.Photo"
+                                                             alt="@item.Session.Movie.Name"
+                                                             class="rounded me-3"
+                                                             style="width: 60px; height: 90px; object-fit: cover;">
                                                     }
                                                     <div>
-                                                        <h6 class="mb-1">@item.Session.Movie.Name</h6>
-                                                        <small class="text-muted">@item.Session.Movie.Duration dəq</small>
+                                                        <h6 class="mb-1">@(item.Session?.Movie?.Name ?? "Film məlumatı yoxdur")</h6>
+                                                        @if (item.Session?.Movie?.Duration != null)
+                                                        {
+                                                            <small class="text-muted">@item.Session.Movie.Duration dəq</small>
+                                                        }
                                                     </div>
                                                 </div>
                                             </td>
-                                            <td>@item.Session.Cinema.Name</td>
-                                            <td>@item.Session.Hall.Name</td>
+                                            <td>@(item.Session?.Cinema?.Name ?? "-")</td>
+                                            <td>@(item.Session?.Hall?.Name ?? "-")</td>
                                             <td>
-                                                <span class="badge bg-primary">
-                                                    @item.Seat.RowNumber - @item.Seat.SeatNumber
-                                                </span>
+                                                @if (item.Seat != null)
+                                                {
+                                                    <span class="badge bg-primary">
+                                                        @item.Seat.RowNumber - @item.Seat.SeatNumber
+                                                    </span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge bg-secondary">Yer seçilməyib</span>
+                                                }
                                             </td>
                                             <td>
-                                                <div>
-                                                    <div>@item.Session.StartTime.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("az-AZ"))</div>
-                                                    <small class="text-muted">@item.Session.StartTime.ToString("HH:mm")</small>
-                                                </div>
+                                                @if (item.Session != null)
+                                                {
+                                                    <div>
+                                                        <div>@item.Session.StartTime.ToString("dd MMMM yyyy", new System.Globalization.CultureInfo("az-AZ"))</div>
+                                                        <small class="text-muted">@item.Session.StartTime.ToString("HH:mm")</small>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div>-</div>
+                                                }
                                             </td>
                                             <td>
                                                 <strong>@item.Price.ToString("F2") ₼</strong>

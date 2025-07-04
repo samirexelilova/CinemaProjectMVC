@@ -29,6 +29,6 @@ namespace StreamitMVC.ViewModels
 
         public List<Subtitle>? Subtitles { get; set; }
 
-        public int? SubtitleId { get; set; }  // Seçilmiş altyazı
+        public int? SubtitleId { get; set; }  
     }
 }

@@ -378,18 +378,26 @@ namespace StreamitMVC.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("MovieId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("SeatId")
+                    b.Property<int?>("SeatId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SessionId")
+                    b.Property<int?>("SessionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Type")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BasketId");
+
+                    b.HasIndex("MovieId");
 
                     b.HasIndex("SeatId");
 
@@ -762,6 +770,9 @@ namespace StreamitMVC.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal?>("DirectPurchasePrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<string>("Director")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -771,6 +782,9 @@ namespace StreamitMVC.Migrations
 
                     b.Property<decimal>("ImdbRating")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsAvailableForDirectPurchase")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -872,6 +886,51 @@ namespace StreamitMVC.Migrations
                     b.ToTable("MovieLanguages");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.MoviePurchase", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PaymentId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("PurchaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MoviePurchases");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.MovieStats", b =>
                 {
                     b.Property<int>("Id")
@@ -921,6 +980,47 @@ namespace StreamitMVC.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("MovieTags");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.MovieViewHistory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PurchaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("StoppedAtMinute")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("ViewDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("PurchaseId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MovieViewHistories");
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.Notification", b =>
@@ -973,7 +1073,7 @@ namespace StreamitMVC.Migrations
                     b.Property<decimal>("Amount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("BookingId")
+                    b.Property<int?>("BookingId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
@@ -988,6 +1088,9 @@ namespace StreamitMVC.Migrations
                     b.Property<int>("Method")
                         .HasColumnType("int");
 
+                    b.Property<int?>("MoviePurchaseId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("PaidAt")
                         .HasColumnType("datetime2");
 
@@ -996,8 +1099,11 @@ namespace StreamitMVC.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookingId")
-                        .IsUnique();
+                    b.HasIndex("BookingId");
+
+                    b.HasIndex("MoviePurchaseId")
+                        .IsUnique()
+                        .HasFilter("[MoviePurchaseId] IS NOT NULL");
 
                     b.ToTable("Payments");
                 });
@@ -1589,19 +1695,21 @@ namespace StreamitMVC.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("StreamitMVC.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId");
+
                     b.HasOne("StreamitMVC.Models.Seat", "Seat")
                         .WithMany("BasketItems")
-                        .HasForeignKey("SeatId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SeatId");
 
                     b.HasOne("StreamitMVC.Models.Session", "Session")
                         .WithMany("BasketItems")
-                        .HasForeignKey("SessionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SessionId");
 
                     b.Navigation("Basket");
+
+                    b.Navigation("Movie");
 
                     b.Navigation("Seat");
 
@@ -1752,6 +1860,25 @@ namespace StreamitMVC.Migrations
                     b.Navigation("Movie");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.MoviePurchase", b =>
+                {
+                    b.HasOne("StreamitMVC.Models.Movie", "Movie")
+                        .WithMany("MoviePurchases")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StreamitMVC.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.MovieStats", b =>
                 {
                     b.HasOne("StreamitMVC.Models.Movie", "Movie")
@@ -1782,6 +1909,33 @@ namespace StreamitMVC.Migrations
                     b.Navigation("Tag");
                 });
 
+            modelBuilder.Entity("StreamitMVC.Models.MovieViewHistory", b =>
+                {
+                    b.HasOne("StreamitMVC.Models.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("StreamitMVC.Models.MoviePurchase", "MoviePurchase")
+                        .WithMany()
+                        .HasForeignKey("PurchaseId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("StreamitMVC.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("MoviePurchase");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StreamitMVC.Models.Notification", b =>
                 {
                     b.HasOne("StreamitMVC.Models.AppUser", "User")
@@ -1796,12 +1950,17 @@ namespace StreamitMVC.Migrations
             modelBuilder.Entity("StreamitMVC.Models.Payment", b =>
                 {
                     b.HasOne("StreamitMVC.Models.Booking", "Booking")
+                        .WithMany("Payments")
+                        .HasForeignKey("BookingId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("StreamitMVC.Models.MoviePurchase", "MoviePurchase")
                         .WithOne("Payment")
-                        .HasForeignKey("StreamitMVC.Models.Payment", "BookingId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StreamitMVC.Models.Payment", "MoviePurchaseId");
 
                     b.Navigation("Booking");
+
+                    b.Navigation("MoviePurchase");
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.Product", b =>
@@ -1900,7 +2059,7 @@ namespace StreamitMVC.Migrations
                     b.HasOne("StreamitMVC.Models.Hall", "Hall")
                         .WithMany("Sessions")
                         .HasForeignKey("HallId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StreamitMVC.Models.HallPrice", "HallPrice")
@@ -1969,7 +2128,7 @@ namespace StreamitMVC.Migrations
                     b.HasOne("StreamitMVC.Models.Seat", "Seat")
                         .WithMany("Tickets")
                         .HasForeignKey("SeatId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StreamitMVC.Models.Session", "Session")
@@ -2012,8 +2171,7 @@ namespace StreamitMVC.Migrations
 
             modelBuilder.Entity("StreamitMVC.Models.Booking", b =>
                 {
-                    b.Navigation("Payment")
-                        .IsRequired();
+                    b.Navigation("Payments");
 
                     b.Navigation("Tickets");
                 });
@@ -2071,6 +2229,8 @@ namespace StreamitMVC.Migrations
 
                     b.Navigation("MovieLanguages");
 
+                    b.Navigation("MoviePurchases");
+
                     b.Navigation("MovieStats")
                         .IsRequired();
 
@@ -2081,6 +2241,12 @@ namespace StreamitMVC.Migrations
                     b.Navigation("Sessions");
 
                     b.Navigation("Subtitles");
+                });
+
+            modelBuilder.Entity("StreamitMVC.Models.MoviePurchase", b =>
+                {
+                    b.Navigation("Payment")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("StreamitMVC.Models.Position", b =>

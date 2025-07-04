@@ -8,6 +8,8 @@ using StreamitMVC.ViewModels;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class HallPriceController : Controller
     {
         private readonly AppDbContext _context;
@@ -52,6 +54,19 @@ namespace StreamitMVC.Areas.Admin.Controllers
                 model.HallTypes = await _context.HallTypes.Where(ht => !ht.IsDeleted).ToListAsync();
                 return View(model);
             }
+            bool hallTypeExists = await _context.HallTypes.AnyAsync(ht => ht.Id == model.HallTypeId && !ht.IsDeleted);
+            if (!hallTypeExists)
+            {
+                ModelState.AddModelError(nameof(CreateHallPrice.HallTypeId), "Seçilmiş zal tipi mövcud deyil.");
+                model.HallTypes = await _context.HallTypes.Where(ht => !ht.IsDeleted).ToListAsync();
+                return View(model);
+            }
+            if (model.Price <= 0)
+            {
+                ModelState.AddModelError(nameof(CreateHallPrice.Price), "Qiymət 0-dan böyük olmalıdır.");
+                model.HallTypes = await _context.HallTypes.Where(ht => !ht.IsDeleted).ToListAsync();
+                return View(model);
+            }
 
             var hallPrice = new HallPrice
             {
@@ -86,8 +101,10 @@ namespace StreamitMVC.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Update(int? id,UpdateHallPrice model)
+        public async Task<IActionResult> Update(int? id, UpdateHallPrice model)
         {
+            if (id is null || id <= 0) return BadRequest();
+
             if (!ModelState.IsValid)
             {
                 model.HallTypes = await _context.HallTypes.Where(ht => !ht.IsDeleted).ToListAsync();
@@ -97,6 +114,22 @@ namespace StreamitMVC.Areas.Admin.Controllers
             var hallPrice = await _context.HallPrices.FirstOrDefaultAsync(x => x.Id == id);
             if (hallPrice is null) return NotFound();
 
+            bool hallTypeExists = await _context.HallTypes.AnyAsync(ht => ht.Id == model.HallTypeId && !ht.IsDeleted);
+            if (!hallTypeExists)
+            {
+                ModelState.AddModelError(nameof(model.HallTypeId), "Seçilmiş zal tipi mövcud deyil.");
+                model.HallTypes = await _context.HallTypes.Where(ht => !ht.IsDeleted).ToListAsync();
+                return View(model);
+            }
+
+            if (model.Price <= 0)
+            {
+                ModelState.AddModelError(nameof(model.Price), "Qiymət 0-dan böyük olmalıdır.");
+                model.HallTypes = await _context.HallTypes.Where(ht => !ht.IsDeleted).ToListAsync();
+                return View(model);
+            }
+
+
             hallPrice.HallTypeId = model.HallTypeId;
             hallPrice.Price = model.Price;
             hallPrice.DayOfWeek = model.DayOfWeek;
@@ -105,6 +138,7 @@ namespace StreamitMVC.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
 
         public async Task<IActionResult> Delete(int? id)
         {

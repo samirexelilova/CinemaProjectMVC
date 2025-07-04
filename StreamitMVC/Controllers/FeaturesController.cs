@@ -49,7 +49,6 @@ namespace StreamitMVC.Controllers
         }
 
 
-        [Authorize]
         public async Task<IActionResult> Favorites()
         {
             var userId = _userManager.GetUserId(User);
