@@ -13,7 +13,6 @@ using StreamitMVC.ViewModels.ActorVM;
 namespace StreamitMVC.Areas.Admin.Controllers
 {
     [Area("admin")]
-    [Authorize(Roles = "Admin")]
     public class ActorController : Controller
     {
         private readonly AppDbContext _context;
